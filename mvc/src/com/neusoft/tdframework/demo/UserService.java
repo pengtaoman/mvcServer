@@ -12,7 +12,7 @@ import com.neusoft.tdframework.base.BaseService;
 import com.neusoft.tdframework.entity.User;
 
 @Service
-public class UserService extends BaseService {
+public class UserService extends BaseService {  
 	
 	@Autowired
 	UserDAO userDao;
