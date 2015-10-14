@@ -40,7 +40,7 @@ public class UserService extends BaseService {
     	User uss6 = new User();
     	uss6.setId(Math.round(Math.random()*100000));
     	uss6.setLastname("AAAVVV" + Math.round(Math.random()*100000));
-    	uss6.setPhoneNum("23232323");
+    	uss6.setPhoneNum("2323232333333333333333333555555555555$$$$$$$$$$$$$$$$$");
     	otherDAO.create(uss6);
     	
     	//throw new RuntimeException("RRRRRRRRRRRRRRaaaaaaaaaaaaaaaaaaaaa");
