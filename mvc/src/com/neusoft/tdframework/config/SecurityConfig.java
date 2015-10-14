@@ -78,6 +78,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		//AuthenticationEntryPoint aa;
 		//SecurityContextPersistenceFilter
 		 //Boolean.TRUE
+		
+		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 111111111111111111111111111");
 	}
 	
 
@@ -85,9 +87,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(AuthenticationManagerBuilder registry)
 			throws Exception {
-		registry.userDetailsService(userDetailsService()).passwordEncoder(new BCryptPasswordEncoder(9));  
+		registry.userDetailsService(tdUserDetailService).passwordEncoder(bCryptPasswordEncoder());  
+		registry.authenticationProvider(tdUserAuthenticationProvider());
 		//registry.userDetailsService(tdUserDetailService);
 		//registry.authenticationProvider(authenticationProvider)
+		
+		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 22222222222222222222222222");
 		
 	}
 
@@ -97,22 +102,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		//web.
 		web.ignoring().antMatchers("/resources/**","/main/tdlogin", "/main/register", "/main/logout");
 		//web.
+		
+		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 333333333333333333333333333333333");
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		//System.out.println("******************* SecurityConfig configure:::   " + concurrentSessionFilter);
-//		http.addFilter(usernamePasswordAuthenticationFilter());
-//		http.addFilterBefore(concurrentSessionFilter(),UsernamePasswordAuthenticationFilter.class);
-//		DelegatingFilterProxy aa;
-//		http.userDetailsService(tdUserDetailService);
-//		http.i
-//		http.addFilterBefore(securityContextPersistenceFilter(),SecurityContextPersistenceFilter.class);
+
 		
-		
-		
-		http.addFilterBefore(new TDCaptchaFilter(), UsernamePasswordAuthenticationFilter.class);
-		http.addFilterBefore(new TDSecurityFilter(), TDCaptchaFilter.class);
+		http.addFilterBefore(new TDSecurityFilter(), UsernamePasswordAuthenticationFilter.class);
 		http.addFilterBefore(concurrentSessionFilter(), TDSecurityFilter.class);
+		http.addFilterBefore(new TDCaptchaFilter(), ConcurrentSessionFilter.class);
 		
 		http.csrf().disable().authorizeRequests()
 		        .antMatchers("/**").hasRole("tduser")
@@ -134,11 +133,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		        .logoutUrl("/main/tdlogout")
 		        .logoutSuccessUrl("/main/tdlogin?logoutSuccess")  
                 .invalidateHttpSession(true);
-		
-		http.authenticationProvider(new TDUserAuthenticationProvider(tdUserDetailService));
-		//http.authenticationProvider(new DaoAuthenticationProvider());
-		//http.authenticationProvider(authenticationProvider)
 
+		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 44444444444444444444444444444444444");
 		
 	}
 	
@@ -217,19 +213,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		return new BCryptPasswordEncoder(16);
+		return new BCryptPasswordEncoder(11);
 	}
 	
+	@Bean
+	public TDUserAuthenticationProvider tdUserAuthenticationProvider() throws Exception {
 
-//	public TDUserAuthenticationProvider authenticationManagerBeanaa() throws Exception {
-////		 System.out.println("()()()()()()()()()");
-////		 List<AuthenticationProvider> providers = Collections.emptyList();
-////		 
-////		 providers.add(new TDUserAuthenticationProvider());
-////		 ProviderManager providerManager = new ProviderManager(providers);
-//		 return new TDUserAuthenticationProvider();
-//	    //return super.authenticationManagerBean();
-//	}
+		 return new TDUserAuthenticationProvider();
+		 
+	}
 
 
 

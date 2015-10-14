@@ -13,6 +13,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.util.matcher.RequestMatcher;
@@ -45,27 +47,29 @@ public class TDCaptchaFilter  extends OncePerRequestFilter {
        System.out.println("??????? TDCaptchaFilter 11111111111111111111111111111::" + request.getRequestURL());
        try {
         	if (sPath.indexOf("main/login") != -1) {
-        		System.out.println("??????? TDCaptchaFilter 11111111111111111111111111111");
-			    if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
-			    	
-			    	throw new BadCredentialsException("No Username and/or Password Provided.");
-			    	
-			    }else if(StringUtils.isEmpty(request.getParameter("jcaptcha"))) {
-			    	
-			        throw new BadCredentialsException("Captcha Response is Empty");
-			        
-			    }else {
-			        // Send HTTP request to validate user's Captcha
-			        boolean captchaPassed = TDCaptchaServlet.validateResponse(request, request.getParameter("jcaptcha"));
-		
-			        // Check if valid
-			        if (captchaPassed) {
-			            logger.error("Captcha is valid!");
-			        } else {
-			            logger.error("Captcha is invalid!");
-			            throw new BadCredentialsException("Invalid Captcha.");
-			        }
-			    }
+        		System.out.println("??????? TDCaptchaFilter 11111111111111111111111111111>>>" + request.getServletContext().getAttribute("isforuttest"));
+        		if (!"justforuttest".equals(request.getServletContext().getAttribute("isforuttest")) ) {
+				    if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
+				    	
+				    	throw new BadCredentialsException("No Username and/or Password Provided.");
+				    	
+				    }else if(StringUtils.isEmpty(request.getParameter("jcaptcha"))) {
+				    	
+				        throw new BadCredentialsException("Captcha Response is Empty");
+				        
+				    }else {
+				        // Send HTTP request to validate user's Captcha
+				        boolean captchaPassed = TDCaptchaServlet.validateResponse(request, request.getParameter("jcaptcha"));
+			
+				        // Check if valid
+				        if (captchaPassed) {
+				            logger.error("Captcha is valid!");
+				        } else {
+				            logger.error("Captcha is invalid!");
+				            throw new BadCredentialsException("Invalid Captcha.");
+				        }
+				    }
+	        	}
         	}
         } catch (BadCredentialsException ex) {
         	//failureHandler.onAuthenticationFailure(request, response, ex);
@@ -73,9 +77,9 @@ public class TDCaptchaFilter  extends OncePerRequestFilter {
         	System.out.println("<font color='red'>验证码输入错误.</font>");
         	request.setAttribute("captchaerror", "<font color='red'>验证码输入错误.</font>");
         	
-        	request.getRequestDispatcher("/main/tdlogin").forward(request, response);
-        	
-        	
+        	//request.getRequestDispatcher("/main/tdlogin").forward(request, response);
+        	RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+        	redirectStrategy.sendRedirect(request, response, "/main/tdlogin?captchaerror");
         	 System.out.println("??????? TDCaptchaFilter 22222222222222222222222222::" );
         	 return;
         }

@@ -19,14 +19,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.neusoft.tdframework.entity.User;
 import com.neusoft.tdframework.security.pojo.TDSecurityUser;
+import com.neusoft.tdframework.security.service.TDUserDetailService;
 
 public class TDUserAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 	
 	
-	private UserDetailsService userDetailsService;
-	
-	public TDUserAuthenticationProvider(UserDetailsService userDetailsService) {
-		this.userDetailsService = userDetailsService;
+
+	public TDUserAuthenticationProvider() {
+
 	}
 
 	@Override
@@ -34,45 +34,8 @@ public class TDUserAuthenticationProvider extends AbstractUserDetailsAuthenticat
 			UsernamePasswordAuthenticationToken authentication)
 			throws AuthenticationException {
 		// TODO Auto-generated method stub
-		
 	}
 
-	@Override
-	protected UserDetails retrieveUser(String username,
-			UsernamePasswordAuthenticationToken authentication)
-			throws AuthenticationException {
-		UserDetails loadedUser;
-        System.out.println("()()()()()()()()()()()() TDUserAuthenticationProvider :: " + this.getUserDetailsService());
-		try {
-			loadedUser = this.getUserDetailsService().loadUserByUsername(username);
-		}
-		catch (UsernameNotFoundException notFound) {
-//			if (authentication.getCredentials() != null) {
-//				String presentedPassword = authentication.getCredentials().toString();
-//				passwordEncoder.isPasswordValid(userNotFoundEncodedPassword,
-//						presentedPassword, null);
-//			}
-			throw notFound;
-		}
-		catch (Exception repositoryProblem) {
-			throw new InternalAuthenticationServiceException(
-					repositoryProblem.getMessage(), repositoryProblem);
-		}
-
-		if (loadedUser == null) {
-			throw new InternalAuthenticationServiceException(
-					"UserDetailsService returned null, which is an interface contract violation");
-		}
-		return loadedUser;
-	}
-	
-	public void setUserDetailsService(UserDetailsService userDetailsService) {
-		this.userDetailsService = userDetailsService;
-	}
-
-	protected UserDetailsService getUserDetailsService() {
-		return userDetailsService;
-	}
 	
 	@Override
 	public Authentication authenticate(Authentication authentication)
@@ -97,9 +60,18 @@ public class TDUserAuthenticationProvider extends AbstractUserDetailsAuthenticat
 			return result;
 		}
 		
-		return new DaoAuthenticationProvider().authenticate(authentication);
+		return null;
 
 		
 	}
+
+	@Override
+	protected UserDetails retrieveUser(String username,
+			UsernamePasswordAuthenticationToken authentication)
+			throws AuthenticationException {
+		return null;
+	}
+
+
 
 }

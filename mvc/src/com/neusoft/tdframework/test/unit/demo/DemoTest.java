@@ -6,7 +6,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.security.test.context.support.WithSecurityContext;
 import org.springframework.security.test.context.support.WithUserDetails;
+import org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -48,8 +50,12 @@ public class DemoTest extends BaseUnitTest{
 	public void testLogin() {
 		
 		try {
-			
-			mockMvc.perform(formLogin().user("100000").password("123456"))
+			//MockMvcRequestBuilders.get("").buildRequest(servletContext)
+			//MockMvcRequestBuilders.MockHttpServletRequest
+			wac.getServletContext().setAttribute("isforuttest", "justforuttest");
+			RequestBuilder requestBuilder = formLogin("/main/login?isforuttest=justforuttest").user("100000").password("1234256");
+			//requestBuilder.buildRequest(wac.getServletContext());
+			mockMvc.perform(requestBuilder)
 			        .andExpect(unauthenticated());
 			
 		} catch (Exception e) {

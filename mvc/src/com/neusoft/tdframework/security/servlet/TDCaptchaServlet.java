@@ -34,7 +34,7 @@ public class TDCaptchaServlet extends HttpServlet implements Servlet {
 		httpServletResponse.setDateHeader("Expires", 0L);
 		WebApplicationContext wac = WebApplicationContextUtils.getWebApplicationContext(httpServletRequest.getServletContext());
 		GenericManageableCaptchaService genericManageableCaptchaService = wac.getBean(GenericManageableCaptchaService.class);
-		System.out.println("MMMMMMMMMMMMMMMMMMMMMMMMMM " + genericManageableCaptchaService);
+		//System.out.println("MMMMMMMMMMMMMMMMMMMMMMMMMM " + genericManageableCaptchaService);
 		httpServletResponse.setHeader("Cache-Control",
 				"no-store, no-cache, must-revalidate");
 
@@ -47,7 +47,7 @@ public class TDCaptchaServlet extends HttpServlet implements Servlet {
 		String ss = genericManageableCaptchaService.getQuestionForID(httpServletRequest
 				.getSession(true).getId(), Locale.CHINA);
 		
-		System.out.println("?MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  " + ss);
+		//System.out.println("?MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  " + ss);
 		BufferedImage bi = genericManageableCaptchaService.getImageChallengeForID(httpServletRequest
 				.getSession(true).getId());
 

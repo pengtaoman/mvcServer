@@ -21,7 +21,7 @@ public class TDSecurityController extends BaseController {
 
 	private Logger logger = LogManager.getLogger(this.getClass());
 
-	@RequestMapping(value = "/tdlogin")
+	@RequestMapping(value = "/tdlogin") //, method = RequestMethod.POST
 	public String forwardLoginForm(HttpServletRequest request) {
 		logger.trace("++++++++++++++  forwardLoginForm  forwardLoginForm  ++++++++++++++++" + request.getParameter("name"));
 		logger.trace("++++++++++++++  forwardLoginForm  forwardLoginForm  ++++++++++++++++" + request.getRequestURL());
