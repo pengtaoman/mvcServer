@@ -33,6 +33,8 @@
 	alert("111");
 	todoApp.controller('DoubleController', ['$scope', function($scope) {
 		alert("22222");
+		var aa = angular.element(document.getElementById("cctr")).scope();
+		alert(aa);
 		  $scope.double = function(value) { return value * 2; };
     }]);
 </script>
@@ -68,8 +70,8 @@
 	<script>
 	alert("333333");
 	</script>
-	<div ng-controller="DoubleController">
-	  Two times <input ng-model="num"> equals {{ double(num) }}
+	<div id="cctr" ng-controller="DoubleController">
+	  Two times <input id="nnum" ng-model="num"> equals {{ double(num) }}
 	</div>
 	<div class="btn btn-default">{{"AngularJS"}}</div>
 </body>

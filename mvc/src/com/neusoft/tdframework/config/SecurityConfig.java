@@ -88,10 +88,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder registry)
 			throws Exception {
 		registry.userDetailsService(tdUserDetailService).passwordEncoder(bCryptPasswordEncoder());  
-		registry.authenticationProvider(tdUserAuthenticationProvider());
-		//registry.userDetailsService(tdUserDetailService);
-		//registry.authenticationProvider(authenticationProvider)
-		
+		registry.authenticationProvider(tdUserAuthenticationProvider());		
 		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 22222222222222222222222222");
 		
 	}
