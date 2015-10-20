@@ -1,7 +1,11 @@
 package com.neusoft.tdframework.entity;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
+import org.hibernate.annotations.GenericGenerator;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -18,6 +22,8 @@ public class OmSystemT implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid")
 	@Column(name="F_SYSTEM_ID")
 	private String fSystemId;
 

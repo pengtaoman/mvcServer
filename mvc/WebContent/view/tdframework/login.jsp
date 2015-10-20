@@ -17,21 +17,20 @@
 
 <link rel="stylesheet" type="stylesheet" media="screen"
 	href="<%=contextPath%>/resources/tdframework/signin.css">
-			<script src="<%=contextPath%>/resources/jquery/jquery-1.11.3.min.js"></script>
-		<script src="<%=contextPath%>/resources/bootstrap3.3.5/js/bootstrap.min.js"></script>
+<script src="<%=contextPath%>/resources/jquery/jquery-1.11.3.min.js"></script>
+<script
+	src="<%=contextPath%>/resources/bootstrap3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div class="navbar-wrapper">
 		<div class="container-fluid">
-           <tiles:insertAttribute name="header" />
-		   <tiles:insertAttribute name="body" />
+			<tiles:insertAttribute name="header" />
+			<tiles:insertAtdtribute name="body" />
 
 		</div>
 
-        <tiles:insertAttribute name="footer" />
-
-
+		<tiles:insertAttribute name="footer" />
 </body>
 
 </html>
