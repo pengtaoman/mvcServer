@@ -2213,21 +2213,21 @@ NG_DOCS={
   "versions": {
     "stable": [
       {
-        "src": "/mvc/resources/ui-grid/release/ui-grid.js",
+        "src": "/mvc/resources/common/ui-grid/release/ui-grid.js",
         "type": "script"
       },
       {
-        "src": "/mvc/resources/ui-grid/release/ui-grid.css",
+        "src": "/mvc/resources/common/ui-grid/release/ui-grid.css",
         "type": "css"
       }
     ],
     "unstable": [
       {
-        "src": "/mvc/resources/ui-grid/release/ui-grid-unstable.js",
+        "src": "/mvc/resources/common/ui-grid/release/ui-grid-unstable.js",
         "type": "script"
       },
       {
-        "src": "/mvc/resources/ui-grid/release/ui-grid-unstable.css",
+        "src": "/mvc/resources/common/ui-grid/release/ui-grid-unstable.css",
         "type": "css"
       }
     ]

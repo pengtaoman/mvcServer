@@ -58,7 +58,7 @@
 
     $scope.waiting = 'Waiting for row template...';
 
-    $http.get('/mvc/resources/ui-grid/data/100.json')
+    $http.get('/mvc/resources/common/ui-grid/data/100.json')
       .success(function (data) {
         $scope.data = data;
       });

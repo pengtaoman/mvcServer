@@ -49,13 +49,24 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="index.html">Vertical Menu</a></li>
 					<li><a href="metisFolder.html">Folder View</a></li>
 					<li><a href="hover.html">Hover Option For Desktop</a></li>
 					<li><a href="zurb.html">Foundation | Zurb</a></li>
+					<li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="#">Action</a></li>
+		                <li><a href="#">Another action</a></li>
+		                <li><a href="#">Something else here</a></li>
+		                <li role="separator" class="divider"></li>
+		                <li class="dropdown-header">Nav header</li>
+		                <li><a href="#">Separated link</a></li>
+		                <li><a href="#">One more separated link</a></li>
+		              </ul>
+		            </li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -66,7 +77,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-				<div id="sidebarDiv" class="col-sm-3 col-md-2 sidebarDiv clearfix ">
+				<div id="sidebarDiv" class="col-sm-3 col-md-2 sidebarDiv clearfix " ng-controller="menuController">
 					<aside class="sidebar">
 						<nav class="sidebar-nav">
 							<ul class="metismenu" id="menu">
@@ -183,7 +194,7 @@
 				<div class="panel panel-default bodyPanel"></div>
 				-->
 					<div class="panel-body bodyPanel">
-						<div id="tabsTitle" style="border-radius:0px;padding:0px;height:100%;">
+						<div id="tabsTitle" style="border-radius:0px;padding:0px;height:100%;" ng-controller="tabsController">
 							<ul id="tabsHeader" style="border-radius:0px;padding:0px;padding-left:2px;background-color: #428bca;">
 							</ul>
 						</div>
@@ -219,29 +230,7 @@
   </script>
 	<script>
 $(document).ready(function(){
-	tabs = $('#tabsTitle').tabs();
-	tabs.tabs('option', 'fx', { opacity: 'toggle' });  
-    createTab('hellotdf',"欢迎----alalasdfasdfasdfasdfsd");
-    
-	tabs.tabs({
-	    select: function(event, ui) {
-        
-        }
-	});
-	tabs.on( "click",'span.ui-icon-close', function() {
-	    var panelId = $( this ).closest( "li" ).attr( "aria-controls" );
-	    $( "#" + panelId ).remove();
-	    $( this ).closest( "li" ).remove();
 
-	    tabs.tabs( "refresh" );
-	    
-	    //alert("BBBBB  " + tabs.tabs( 'length' ));
-	    if (tabs.tabs( 'length' ) == 0) {
-	    	createTab('hellotdf',"欢迎----alalasdfasdfasdfasdfsd");
-	    	tabs.tabs('select' , 0); 
-	    } 
-	    
-	});
 	alert("AAAAAAAAAAAAAAAAAAAA");
 
 	$('#navbar').collapse({
@@ -275,20 +264,8 @@ $(document).ready(function(){
 });
 
 
-var tabTemplate = "<li id='@{tabliid}'><a href='@{href}'>@{label} </a><span class='ui-icon ui-icon-close' style='float:right;cursor:pointer;'>Remove Tab</span></li>";
 
-function createTab(id, label) {
-	//alert(document.getElementById("tabdiv_" + id));
-	if (!document.getElementById("tabdiv_" + id)) {
-	    var li = $( tabTemplate.replace( /@\{tabliid\}/g, "tabli_" + id ).replace( /@\{href\}/g, "#tabdiv_" + id ).replace( /@\{label\}/g, label ) );
-		tabs.find( ".ui-tabs-nav" ).append( li );
-		tabs.append( "<div id='tabdiv_" + id + "' style='height:100%;padding:0px;'><iframe id='tabiframe_" + id + "' class='iframecss' src='<%=contextPath%>/main/hello11.do'></iframe></div>" );
-		tabs.tabs( "refresh" );
-	    tabs.tabs('select' , "#tabdiv_"+id); 
-	} else {
-		tabs.tabs('select' , "#tabdiv_"+id); 
-	}
-}
+
 
 /*
  * 

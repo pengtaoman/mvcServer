@@ -49,7 +49,7 @@
     ];
 
     var canceler = $q.defer();
-    $http.get('/mvc/resources/ui-grid/data/10000_complex.json', {timeout: canceler.promise})
+    $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json', {timeout: canceler.promise})
       .success(function(data) {
         $scope.gridOptions.data = data;
       });

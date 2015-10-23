@@ -106,7 +106,7 @@ are loaded only when that row is expanded.  They have a 2 second delay to simula
         }
       };
 
-     $http.get('/mvc/resources/ui-grid/data/500_complex.json')
+     $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
      .success(function(data) {
        for ( var i = 0; i < data.length; i++ ){
          data[i].state = data[i].address.state;

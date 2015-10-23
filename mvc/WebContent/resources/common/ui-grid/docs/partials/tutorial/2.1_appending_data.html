@@ -76,7 +76,7 @@ of setting gridOptions.data to a string value that specifies an object on your s
       var sec = $interval(function () {
         $scope.callsPending++;
         
-        $http.get('/mvc/resources/ui-grid/data/500_complex.json')
+        $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
           .success(function(data) {
             $scope.callsPending--;
 

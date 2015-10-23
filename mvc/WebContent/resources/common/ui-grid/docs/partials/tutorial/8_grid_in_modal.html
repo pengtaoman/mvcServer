@@ -61,7 +61,7 @@
 
     $rootScope.gridOptions = {  };
 
-    $http.get('/mvc/resources/ui-grid/data/100.json')
+    $http.get('/mvc/resources/common/ui-grid/data/100.json')
       .success(function(data) {
         $rootScope.gridOptions.data = data;
       });

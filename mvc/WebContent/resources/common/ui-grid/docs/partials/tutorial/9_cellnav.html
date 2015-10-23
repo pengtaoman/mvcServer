@@ -41,7 +41,7 @@
       { name: 'address.city' }
     ];
 
-    $http.get('/mvc/resources/ui-grid/data/500_complex.json')
+    $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
       .success(function(data) {
         $scope.gridOptions.data = data;
       });
