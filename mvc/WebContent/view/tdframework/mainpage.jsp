@@ -27,6 +27,10 @@
 <script src="<%=contextPath%>/resources/common/angular/angular.min.js"></script>
 
 <script src="<%=contextPath%>/view/tdframework/mainpage.js"></script>
+<script>
+var contextPath='<%=contextPath%>';
+
+</script>
 
 </head>
 
@@ -211,89 +215,7 @@
 
 
 
-	<script>
-    $(function() {
 
-      $('#menu').metisMenu();
-
-      $('#menu2').metisMenu({
-        toggle: false
-      });
-
-      $('#menu3').metisMenu({
-        doubleTapToGo: true
-      });
-
-      $('#menu4').metisMenu();
-
-    });
-  </script>
-	<script>
-$(document).ready(function(){
-
-	alert("AAAAAAAAAAAAAAAAAAAA");
-
-	$('#navbar').collapse({
-	  toggle: false
-	});
-	/*
-	$('#sidebarCtrl').on("click",function(){
-		
-		if ($('#sidebarCtrl').attr('class') == 'glyphicon glyphicon-chevron-left sidebarCtrl') {
-			$('#sidebarDiv').css('transition-duration','.5s');
-			//$('#sidebarDiv').css('position','relative');
-			$('#sidebarDiv').css('margin-left',-1-$('#sidebarDiv').width());//.attr('class','display: none;');
-			
-			$('#mainDiv').css('transition-duration','.5s');
-			$('#mainDiv').attr('class','col-md-12 main');
-			//$('#mainDiv').css('position','relative');
-			//$('#mainDiv').removeAttr('left');
-			$('#sidebarCtrl').attr('class','glyphicon glyphicon-chevron-right sidebarCtrl');
-	
-		} else {
-			$('#sidebarDiv').css('transition-duration','.5s');
-			//$('#sidebarDiv').css('position','relative');
-			$('#sidebarDiv').css('margin-left','0px');
-			//$('#sidebarDiv').attr('class','col-sm-3 col-md-2 sidebarDiv');//.attr('class','display: none;');
-			$('#mainDiv').attr('class','col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main');
-			$('#mainDiv').css('left',null);
-			$('#sidebarCtrl').attr('class','glyphicon glyphicon-chevron-left sidebarCtrl');
-		}
-	});
-	*/
-});
-
-
-
-
-
-/*
- * 
- var tabCounter = 1;
-function clickMenu() {
-	//$("#tabsHeader").append("<li class='ui-state-default ui-corner-top'><a href='#' class='ui-tabs-anchor' role='presentation'>erere</a> <span class='ui-icon ui-icon-close'>Remove Tab</span></li>");
-	
-    var label = "Tab_" + tabCounter;
-    var id = "tabs-" + tabCounter;
-    var li = $( tabTemplate.replace( /@\{href\}/g, "#" + id ).replace( /@\{label\}/g, label ) )
-    
-    
-    var tabContentHtml = "Tab_" + tabCounter + " content.";
-    //var li = "<li><a href='#'>Yabbb</a> <span class='ui-icon ui-icon-close'>Remove Tab</span></li>"
-	tabs.find( ".ui-tabs-nav" ).append( li );
-	tabs.append( "<div id='" + id + "' height='100%'><iframe id='iframe_" + id + "' class='iframecss'></iframe></div>" );
-    tabs.tabs( "refresh" );
-
-    alert($('#'+id).css('height'));
-	tabCounter++;
-	
-	
-}
-*/
-
-
-
-</script>
 
 </body>
 
