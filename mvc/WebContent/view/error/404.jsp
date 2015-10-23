@@ -13,12 +13,12 @@
 <title>metisMenu</title>
 
 <link rel="stylesheet" type="stylesheet" media="screen"
-	href="<%=contextPath%>/resources/bootstrap3.3.5/css/bootstrap.css">
+	href="<%=contextPath%>/resources/common/bootstrap/css/bootstrap.css">
 
 <link rel="stylesheet" type="stylesheet" media="screen"
 	href="<%=contextPath%>/resources/tdframework/signin.css">
-			<script src="<%=contextPath%>/resources/jquery/jquery-1.11.3.min.js"></script>
-		<script src="<%=contextPath%>/resources/bootstrap3.3.5/js/bootstrap.min.js"></script>
+			<script src="<%=contextPath%>/resources/common/jquery/jquery-1.11.3.min.js"></script>
+		<script src="<%=contextPath%>/resources/common/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container-fluid">

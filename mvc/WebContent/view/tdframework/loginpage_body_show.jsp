@@ -1,46 +1,29 @@
-<%
-    String contextPath = request.getContextPath();
-%>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-		<li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>TDF3</h1>
-					<p>简介</p>
-					<p></p>
-				</div>
-			</div>
+<div ng-controller="CarouselCtrl" class="carousel">
+	<div style="height: 105px">
+		<uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+		<uib-slide ng-repeat="slide in slides" active="slide.active">
+		<img ng-src="{{slide.image}}" style="margin: auto;">
+		<div class="carousel-caption">
+			<h4>Slide {{$index}}</h4>
+			<p>{{slide.text}}</p>
 		</div>
-		<div class="item">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>Another example headline.</h1>
-					<p>VVVVV</p>
+		</uib-slide> </uib-carousel>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<button type="button" class="btn btn-info" ng-click="addSlide()">
+				Add Slide
+				</button>
+				<div class="checkbox">
+					<label> <input type="checkbox" ng-model="noWrapSlides">
+						Disable Slide Looping
+					</label>
 				</div>
-			</div>
 		</div>
-		<div class="item">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>One more for good measure.</h1>
-					<p>TTTT</p>
-				</div>
-			</div>
+		<div class="col-md-6">
+			Interval, in milliseconds: <input type="number" class="form-control"
+				ng-model="myInterval"> <br />Enter a negative number or 0
+			to stop the interval.
 		</div>
 	</div>
-	<a class="left carousel-control" href="#myCarousel" role="button"
-		data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
-		aria-hidden="true"></span> <span class="sr-only">Previous</span>
-	</a> <a class="right carousel-control" href="#myCarousel" role="button"
-		data-slide="next"> <span class="glyphicon glyphicon-chevron-right"
-		aria-hidden="true"></span> <span class="sr-only">Next</span>
-	</a>
 </div>

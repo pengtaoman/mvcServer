@@ -11,28 +11,28 @@
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
 <title>metisMenu</title>
 
-<link type="text/css" media="screen" href="<%=contextPath%>/resources/bootstrap3.3.5/css/bootstrap.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="screen" href="<%=contextPath%>/resources/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.0.custom.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="<%=contextPath%>/resources/jquery-ui-bootstrap/assets/css/docs.css	" rel="stylesheet">
-<link rel="stylesheet" href="<%=contextPath%>/resources/bootstrap3.3.5/css/font-awesome.min.css">
-<link rel="stylesheet" href="<%=contextPath%>/resources/metismenu/metisMenu.min.css">
-<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework/sidebar.css">
-<script src="<%=contextPath%>/resources/jquery/jquery-1.11.3.min.js"></script>
-<script src="<%=contextPath%>/resources/bootstrap3.3.5/js/bootstrap.min.js"></script>
-<script src="<%=contextPath%>/resources/metismenu/metisMenu.min.js"></script>
+<link media="screen" href="<%=contextPath%>/resources/common/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link media="screen" href="<%=contextPath%>/resources/common/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet"/>
+<link media="screen" href="<%=contextPath%>/resources/common/jquery-ui-bootstrap/assets/css/docs.css" rel="stylesheet">
+<link media="screen" href="<%=contextPath%>/resources/common/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+<link media="screen" href="<%=contextPath%>/resources/common/metismenu/metisMenu.min.css" rel="stylesheet">
+<link media="screen" href="<%=contextPath%>/resources/tdframework/sidebar.css" rel="stylesheet">
+
+<script src="<%=contextPath%>/resources/common/jquery/jquery-1.11.3.min.js"></script>
+<script src="<%=contextPath%>/resources/common/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=contextPath%>/resources/common/metismenu/metisMenu.min.js"></script>
 
 
-<script src="<%=contextPath%>/resources/jquery-ui-bootstrap/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+<script src="<%=contextPath%>/resources/common/jquery-ui-bootstrap/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+<script src="<%=contextPath%>/resources/common/angular/angular.min.js"></script>
 
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<script src="<%=contextPath%>/view/tdframework/mainpage.js"></script>
+
 </head>
 
-<body>
+<body ng-app="td.main">
 
-	<nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation" ng-controller="headController">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -45,7 +45,7 @@
 				<a class="navbar-brand" href="#">TDFramework3.0&nbsp;<span
 					id="sidebarCtrl"
 					class="glyphicon glyphicon-chevron-left sidebarCtrl"
-					aria-hidden="true"></span></span></a>
+					aria-hidden="true" ng-click="sidebarClick()"></span></span></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -247,7 +247,7 @@ $(document).ready(function(){
 	$('#navbar').collapse({
 	  toggle: false
 	});
-	
+	/*
 	$('#sidebarCtrl').on("click",function(){
 		
 		if ($('#sidebarCtrl').attr('class') == 'glyphicon glyphicon-chevron-left sidebarCtrl') {
@@ -271,6 +271,7 @@ $(document).ready(function(){
 			$('#sidebarCtrl').attr('class','glyphicon glyphicon-chevron-left sidebarCtrl');
 		}
 	});
+	*/
 });
 
 

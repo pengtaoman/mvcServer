@@ -8,13 +8,14 @@
 			placeholder="验证码" required />
 	</div>
 	<div class="col-md-3 form-pading">
-		<img id="jcaptchaimg" src="<%=contextPath%>/resources/jcaptcha.jpg" />
+		<img id="jcaptchaimg" src="<%=contextPath%>/resources/jcaptcha.jpg" ng-click="refleshCaptcha('<%=contextPath%>')"/>
 	</div>
 </div>
 
 
 
 <script type="text/javascript">
+/*
 		$(document).ready(function(){
 			
 			$("#jcaptchaimg").on("click",function(){
@@ -23,5 +24,5 @@
 			
 			
 		});
-		
+*/	
 </script>

@@ -42,7 +42,6 @@ import com.neusoft.tdframework.web.controller.TDWebController;
 @ComponentScan(basePackages = {"com.neusoft.tdframework"}, 
         excludeFilters = {@Filter(type = FilterType.ANNOTATION, value=Controller.class ),
 		                  @Filter(type = FilterType.ASSIGNABLE_TYPE, value=WebConfig.class )})
-//@ComponentScan(basePackages = {"com.neusoft.tdframework"})
 @EnableScheduling
 @EnableAspectJAutoProxy
 @EnableCaching

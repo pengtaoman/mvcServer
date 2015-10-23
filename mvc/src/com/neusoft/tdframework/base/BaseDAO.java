@@ -25,7 +25,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 
-
 public class BaseDAO extends ApplicationObjectSupport {
 	
 	@PersistenceContext(unitName="entityManagerFactory")

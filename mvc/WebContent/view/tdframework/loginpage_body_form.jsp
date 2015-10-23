@@ -4,7 +4,7 @@
 
     String captchaError = (String)request.getAttribute("captchaerror");
 %>
-<div >
+<div style="position:relative;top:80px;" ng-controller="loginCtrl">
 <form class="form-signin" name="login" id="login"
 	action="<%=contextPath%>/main/login" method='POST'>
 	<p class="form-signin-heading">请填写登录信息  {{username}}<%out.print(captchaError); %></p>
@@ -13,7 +13,7 @@
 			<label for="inputEmail" class="sr-only">用户名</label> 
 			<input
 				type="text" name="username" class="form-control" placeholder="用户名"
-				
+				ng-model="username"
 				required autofocus>
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 			<label for="inputPassword" class="sr-only">密码</label> 
 			<input
 				type="password" name="password" class="form-control"
-				
+				ng-model="userpassword"
 				placeholder="密码" required>
 		</div>
 	</div>
