@@ -65,7 +65,7 @@ public class TDWebController extends BaseController {
 
 		// System.out.println("?????????????????  po2.getName() :: " +
 		// user.getLastname());
-		model.addAttribute("message", "/helloWorld/{awt} ����" + awt);
+		model.addAttribute("message", "/helloWorld/{awt}" + awt);
 		return "hello";
 	}
 

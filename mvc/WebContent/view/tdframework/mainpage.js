@@ -29,6 +29,9 @@
 		});
 	});
 	
+
+
+	
 	var tabTemplate = "<li id='@{tabliid}'><a href='@{href}'>@{label} </a><span class='ui-icon ui-icon-close' style='float:right;cursor:pointer;'>Remove Tab</span></li>";
 
 	var createTab = function createTab(id, label) {
@@ -45,8 +48,45 @@
 		}
 	}
 
-    todoApp.controller('headController', function($scope,$location) {
+    todoApp.controller('headController', function($scope,$location, $http) {
     	alert("###########  " + $location.path());
+    	
+    	$scope.sysParent = [];
+    	$scope.sysSub = [];
+    	$http({
+			url: contextPath+"/main/getSys",
+			method:'GET'
+			}).success(function(data,header,config,status){
+			//响应成功
+				
+			   // alert(angular.toJson(data));
+				//alert(data);
+				angular.forEach(data, function(system) {
+					//console.log(angular.toJson(system));
+					//console.log("----" + system['fparentSystemId']);
+					if (angular.equals(system['fparentSystemId'],'')) {
+						$scope.sysParent.push(system);
+					} else {
+						$scope.sysSub.push(system);
+					}
+				});
+				console.log("++++PPPPP : " + angular.toJson($scope.sysParent));
+				console.log("++++SSSSS : " + angular.toJson($scope.sysSub));
+			}).error(function(data,header,config,status){
+			//处理响应失败
+		});
+    	
+    	
+    	
+    	$scope.subSysFilter =  function(a, b) {
+				console.log("++++=========AAAA="+a+"---------" + b );
+				//console.log("####################  "+$scope.parentSystem);
+				if (angular.equals(a, b)) {
+					return true;
+				}
+				return false;
+		};
+        
     	$scope.sidebarClick = function() {
     		//alert($('#sidebarDiv').css('margin-left'));
 	    	if ($('#sidebarDiv').css('margin-left') == '0px') {
@@ -86,14 +126,6 @@
     
     todoApp.controller('menuController', function($scope, $http) {
     	
-    	$http({
-			url: contextPath+"/main/getMenu",
-			method:'GET'
-			}).success(function(data,header,config,status){
-			//响应成功
-			
-			}).error(function(data,header,config,status){
-			//处理响应失败
-		});
+    	
     });
     

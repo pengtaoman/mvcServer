@@ -1,5 +1,7 @@
 package com.neusoft.tdframework.auth.menu.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +27,10 @@ public class SystemService extends BaseService {
 		String id = eDao.createSystem(sys);
 		
 		return sys;
+	}
+	
+	public List<OmSystemT> getSys() {
+		return eDao.getSys();
 	}
 	
 

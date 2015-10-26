@@ -55,10 +55,12 @@ var contextPath='<%=contextPath%>';
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html">Vertical Menu</a></li>
-					<li><a href="metisFolder.html">Folder View</a></li>
-					<li><a href="hover.html">Hover Option For Desktop</a></li>
-					<li><a href="zurb.html">Foundation | Zurb</a></li>
+					<li class="dropdown" ng-repeat="parentSystem in sysParent">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{parentSystem.fsystemName}} <span class="caret"></span></a>
+					    <ul class="dropdown-menu">
+					        <li ng-repeat="subSystem in sysSub|filter:{fparentSystemId:parentSystem.fsystemId}:subSysFilter"><a href="#">{{subSystem.fsystemName}}</a></li>
+					    </ul>
+					</li>
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 		              <ul class="dropdown-menu">

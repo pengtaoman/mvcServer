@@ -19,5 +19,9 @@ public class BaseController extends WebApplicationObjectSupport{
 		return null;
 	}
 	
+	protected <T> T getService(Class<T> T) {
+		return this.getApplicationContext().getBean(T);
+	}
+	
 
 }
