@@ -58,7 +58,10 @@ var contextPath='<%=contextPath%>';
 					<li class="dropdown" ng-repeat="parentSystem in sysParent">
 					    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{parentSystem.fsystemName}} <span class="caret"></span></a>
 					    <ul class="dropdown-menu">
+					    <!-- 
 					        <li ng-repeat="subSystem in sysSub|filter:{fparentSystemId:parentSystem.fsystemId}:subSysFilter"><a href="#">{{subSystem.fsystemName}}</a></li>
+					    -->
+					    <li ng-repeat="subSystem in sysSub|getSubSystem:parentSystem"><a href="#">{{subSystem.fsystemName}}</a></li>
 					    </ul>
 					</li>
 					<li class="dropdown">

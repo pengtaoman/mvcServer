@@ -1,7 +1,23 @@
 .sidebarDiv {
-  display: none;
+  	   
+	    top: 50px;
+	    bottom: 0;
+	    left: 0;
+	    z-index: 1000;
+	    display: none;
+	    padding: 0px;
+	    overflow-x: hidden;
+	    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
+	    background-color: #333;
+	    border-right: 1px solid #ff0000;
+}
+.sidebarCtrl {
+	display: inline;
 }
 @media (min-width: 768px) {
+	.sidebarCtrl {
+	    display: inline;
+    }
 	.sidebarDiv {
 	    position: fixed;
 	    top: 50px;
@@ -94,7 +110,6 @@
     display: inline-block;
 }
 .main {
-	  position: fixed;
       padding: 0px;
       top: 50px;
       overflow-x: hidden;
