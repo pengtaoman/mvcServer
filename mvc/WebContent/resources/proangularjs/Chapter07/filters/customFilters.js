@@ -4,6 +4,8 @@
 angular.module("customFilters", [])
 .filter("unique", function () {
     return function (data, propertyName) {
+    	console.log("###############unique data#####################");
+    	console.log(angular.toJson(data));
         if (angular.isArray(data) && angular.isString(propertyName)) {
             var results = [];
             var keys = {};
@@ -22,6 +24,10 @@ angular.module("customFilters", [])
 })
 .filter("range", function ($filter) {
     return function (data, page, size) {
+    	console.log("######################.filter( range ) ###########################")
+    	console.log("filter( range ) data : " + angular.toJson(data));
+    	console.log("filter( range ) page : " + page);
+    	console.log("filter( range ) size : " + size);
         if (angular.isArray(data) && angular.isNumber(page) && angular.isNumber(size)) {
             var start_index = (page - 1) * size;
             if (data.length < start_index) {

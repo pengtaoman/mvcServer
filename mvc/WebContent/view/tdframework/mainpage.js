@@ -35,7 +35,12 @@
 		    
 		});
 	}).filter("getSubSystem",function(){
-		return function(data, pro) {
+		return function(data, pro, inx) {
+			
+			console.log("############  " + inx + "---" + pro.fsystemName);
+			
+			console.log("############  "+ angular.toJson(data));
+			
 			if (angular.isArray(data)) {
 				var rtn = [];
 				for (var i =0; i < data.length; i++)  {
@@ -73,7 +78,7 @@
 	}
 
     todoApp.controller('headController', function($scope,$location, $http) {
-    	alert("###########  " + $location.path());
+    	//alert("###########  " + $location.path());
     	
     	$scope.sysParent = [];
     	$scope.sysSub = [];

@@ -19,6 +19,7 @@
         }
 
         $scope.categoryFilterFn = function (product) {
+        	console.log("################ $scope.categoryFilterFn product :" + angular.toJson(product));
             return selectedCategory == null ||
                 product.category == selectedCategory;
         }
