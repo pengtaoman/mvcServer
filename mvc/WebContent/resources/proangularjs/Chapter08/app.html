@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="sportsStore">
 <head>
     <title>SportsStore</title>
@@ -10,23 +10,21 @@
         .config(function ($routeProvider) {
 
             $routeProvider.when("/complete", {
-                templateUrl: "/views/thankYou.html"
+                templateUrl: "views/thankYou.html"
             });
 
-            $routeProvider.when("/placeorder", {
-                templateUrl: "/views/placeOrder.html"
-            });
+
 
             $routeProvider.when("/checkout", {
-                templateUrl: "/views/checkoutSummary.html"
+                templateUrl: "views/checkoutSummary.html"
             });
 
             $routeProvider.when("/products", {
-                templateUrl: "/views/productList.html"
+                templateUrl: "views/productList.html"
             });
 
             $routeProvider.otherwise({
-                templateUrl: "/views/productList.html"
+                templateUrl: "views/productList.html"
             });
         });
     </script>
@@ -47,5 +45,6 @@
         <a href="/app.html" class="alert-link">Click here to try again</a>
     </div>
     <ng-view />
+
 </body>
 </html>

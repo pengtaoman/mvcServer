@@ -19,6 +19,7 @@
 
         myApp.directive("highlight", function () {
             return function (scope, element, attrs) {
+            	console.log("=========" + scope.day);
                 if (scope.day == attrs["highlight"]) {
                     element.css("color", "red");
                 } 
@@ -28,7 +29,9 @@
         myApp.filter("dayName", function () {
             var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday",
                             "Thursday", "Friday", "Saturday"];
-            return function (input) {
+            return function (input, a) {
+            	console.log("MMMMMMMMMMMMMMMMMM  " + input);
+            	console.log("MMMMMMMMMMMMMMMMMM  " + a);
                 return angular.isNumber(input) ? dayNames[input] : input;
             };
         });
@@ -40,7 +43,7 @@
         <div class="page-header">
             <h3>AngularJS App</h3>
         </div>
-        <h4 ng-controller="dayCtrl" highlight="Monday">
+        <h4 ng-controller="dayCtrl" highlight="Friday">
             Today is {{day || "(unknown)" | dayName}}
         </h4>
         <h4 ng-controller="tomorrowCtrl">
