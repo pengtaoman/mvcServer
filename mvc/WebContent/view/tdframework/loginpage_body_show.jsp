@@ -1,5 +1,3 @@
-<!-- 
-<div class="col-sm-9 col-md-9">
 <div ng-controller="CarouselCtrl" class="carousel">
 	<div style="height: 105px">
 		<uib-carousel interval="myInterval" no-wrap="noWrapSlides">
@@ -29,6 +27,3 @@
 		</div>
 	</div>
 </div>
-
-</div>
- -->

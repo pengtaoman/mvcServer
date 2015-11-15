@@ -15,11 +15,11 @@
                 "exampleApp.Services", "exampleApp.Directives"]);
 
         myApp.constant("startTime", new Date().toLocaleTimeString());
-        myApp.config(function (startTime) {
-            console.log("Main module config: " + startTime);
+        myApp.config(function (startTime, patha) {
+            console.log("Main module config: " + startTime + patha);
         });
-        myApp.run(function (startTime) {
-            console.log("Main module run: " + startTime);
+        myApp.run(function (startTime, patha) {
+            console.log("Main module run: " + startTime + patha);
         });
 
         angular.module("exampleApp.Directives", [])
@@ -38,15 +38,16 @@
         myApp.value("nowValue", now);
 
         angular.module("exampleApp.Services", [])
+        .constant("patha", "/mvc/sadfsfasdfsdfa")
             .service("days", function (nowValue) {
                 this.today = nowValue.getDay();
                 this.tomorrow = this.today + 1;
             })
-            .config(function() {
-                console.log("Services module config: (no time)");
+            .config(function( ) {
+                console.log("Services11111 module config: (no time)");
             })
             .run(function (startTime) {
-                console.log("Services module run: " + startTime);
+                console.log("Services11111 module run: " + startTime);
             });
 
     </script>

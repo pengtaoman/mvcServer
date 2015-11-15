@@ -7,7 +7,7 @@
 	    display: none;
 	    padding: 0px;
 	    overflow-x: hidden;
-	    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
+	    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 	    background-color: #333;
 	    border-right: 1px solid #ff0000;
 }
@@ -27,7 +27,7 @@
 	    display: block;
 	    padding: 0px;
 	    overflow-x: hidden;
-	    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
 	    background-color: #333;
 	    border-right: 1px solid #ff0000;
 	    /* width: 230px; */

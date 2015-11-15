@@ -61,7 +61,7 @@ var contextPath='<%=contextPath%>';
 					    <!-- 
 					        <li ng-repeat="subSystem in sysSub|filter:{fparentSystemId:parentSystem.fsystemId}:subSysFilter"><a href="#">{{subSystem.fsystemName}}</a></li>
 					    -->
-					    <li ng-repeat="subSystem in sysSub|getSubSystem:parentSystem:$index"><a href="#">{{subSystem.fsystemName}}</a></li>
+					    <li ng-repeat="subSystem in sysSub|getSubSystem:parentSystem"><a href="#">{{subSystem.fsystemName}}</a></li>
 					    </ul>
 					</li>
 					<li class="dropdown">
