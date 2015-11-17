@@ -24,14 +24,15 @@ a:hover {
 }
 
 #header h1 {
-    background: url("img/logo.png") no-repeat scroll 0 0 transparent;
+    /*background: url("img/logo.png") no-repeat scroll 0 0 transparent;
     height: 31px;
     left: 15px;
     line-height: 600px;
     overflow: hidden;
     position: relative;
     top: 24px;
-    width: 191px;
+    width: 191px;*/
+    color:#808080;
 }
 
 #header h1 a {
@@ -42,21 +43,21 @@ a:hover {
 #search {
 	position: absolute;
 	z-index: 25;
-	top: 6px;
-	left: 230px;
+	top: 40px;
+	left: 1px;
 }
 #search input[type=text] {
 	border-radius: 4px 0 0 4px;
 	padding: 4px 10px 5px;
 	border: 0;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.7) inset, 0 1px 0 rgba(255,255,255,0.2); 
-	width: 100px;
+	width: 175px;
 }
 
 #search button {
 	border: 0;
 	margin-top: -11px;
-	padding: 5px 10px 4px;
+	padding: 4px 10px 5px;
 	border-radius: 0 4px 4px 0;
 	box-shadow: -2px 2px 3px rgba(0,0,0,0.7) inset, 0 1px 0 rgba(255,255,255,0.2); 
 }

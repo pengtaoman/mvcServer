@@ -7,25 +7,26 @@
 		<title>Unicorn Admin</title>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="<%=contextPath%>/resources/common/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" href="<%=contextPath%>/resources/common/bootstrap/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework//fullcalendar.css" />	
-		<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework//unicorn.main.css" />
-		<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework//unicorn.grey.css" class="skin-color" />
+		<link rel="stylesheet" href="<%=contextPath%>/resources/common/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework/css/fullcalendar.css" />	
+		<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework/css/unicorn.main.css" />
+		<link rel="stylesheet" href="<%=contextPath%>/resources/tdframework/css/unicorn.grey.css" class="skin-color" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 	<body>
 		
 		
-		<div id="header">
-			<h1><a href="./dashboard.html">Unicorn Admin</a></h1>		
+		<div id="header" >
+			<h1>TDFramework3</h1>
+			<div id="search">
+				<input type="text" placeholder="Search here..." /><button type="submit" class="tip-right" title="Search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+			</div>	
 		</div>
+		<!--  -->
+
 		
-		<div id="search">
-			<input type="text" placeholder="Search here..." /><button type="submit" class="tip-right" title="Search"><i class="icon-search icon-white"></i></button>
-		</div>
 		<div id="user-nav" class="navbar navbar-inverse">
             <ul class="nav btn-group">
-                <li class="btn btn-inverse"><a title="" href="#"><i class="icon icon-user"></i> <span class="text">Profile</span></a></li>
+                <li class="btn btn-inverse"><a title="" href="#"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> <span class="text">Profile</span></a></li>
                 <li class="btn btn-inverse dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a class="sAdd" title="" href="#">new message</a></li>
@@ -36,6 +37,7 @@
                 </li>
                 <li class="btn btn-inverse"><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
                 <li class="btn btn-inverse"><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+                
             </ul>
         </div>
             
@@ -152,15 +154,19 @@
 		</div>
 		
 
-            <script src="<%=contextPath%>/resources/common/jquery/excanvas.min.js"></script>
+            
             <script src="<%=contextPath%>/resources/common/jquery/jquery-1.11.3.min.js"></script>
             <script src="<%=contextPath%>/resources/common/jquery-ui-bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
             <script src="<%=contextPath%>/resources/common/bootstrap/js/bootstrap.min.js"></script>
-            <script src="<%=contextPath%>/resources/common/jquery/jquery.flot.min.js"></script>
-            <script src="<%=contextPath%>/resources/common/jquery/jquery.flot.resize.min.js"></script>
+            <script src="<%=contextPath%>/resources/tdframework/js/excanvas.min.js"></script>
             <script src="<%=contextPath%>/resources/common/jquery/jquery.peity.min.js"></script>
-            <script src="<%=contextPath%>/resources/common/jquery/fullcalendar.min.js"></script>
-            <script src="<%=contextPath%>/resources/common/jquery/unicorn.js"></script>
-            <script src="<%=contextPath%>/resources/common/jquery/unicorn.dashboard.js"></script>
+            <script src="<%=contextPath%>/resources/tdframework/js/fullcalendar.min.js"></script>
+            <script src="<%=contextPath%>/resources/tdframework/js/unicorn.js"></script>
+            <script>
+                (function() {
+                	
+                	 $( "#user-nav" ).draggable();
+                })();
+            </script>
 	</body>
 </html>

@@ -4,6 +4,9 @@
 
     String captchaError = (String)request.getAttribute("captchaerror");
 %>
+
+<div id="loginForm"
+	class="col-sm-12 col-sm-offset-12 col-md-12 col-md-offset-0" >
 <div style="position:relative;top:80px;" ng-controller="loginCtrl">
 <form class="form-signin" name="login" id="login"
 	action="<%=contextPath%>/main/login" method='POST'>
@@ -37,4 +40,5 @@
 	<input type="submit" class="btn btn-lg btn-primary btn-block"
 		value="登录"></input>
 </form>
+</div>
 </div>

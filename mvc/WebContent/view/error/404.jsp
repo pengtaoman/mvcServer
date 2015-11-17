@@ -8,7 +8,7 @@ response.setHeader("X-Frame-Options", "SAMEORIGIN");
 <head>
 <meta name="X-Frame-Options" content="SAMEORIGIN">
 <%
-    String contextPath = request.getContextPath();
+	String contextPath = request.getContextPath();
 %>
 <meta charset="utf-8">
 
@@ -19,10 +19,11 @@ response.setHeader("X-Frame-Options", "SAMEORIGIN");
 <link rel="stylesheet" type="stylesheet" media="screen"
 	href="<%=contextPath%>/resources/common/bootstrap/css/bootstrap.css">
 
-<link rel="stylesheet" type="stylesheet" media="screen"
-	href="<%=contextPath%>/resources/tdframework/signin.css">
-			<script src="<%=contextPath%>/resources/common/jquery/jquery-1.11.3.min.js"></script>
-		<script src="<%=contextPath%>/resources/common/bootstrap/js/bootstrap.min.js"></script>
+
+<script
+	src="<%=contextPath%>/resources/common/jquery/jquery-1.11.3.min.js"></script>
+<script
+	src="<%=contextPath%>/resources/common/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container-fluid">

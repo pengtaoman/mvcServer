@@ -16,7 +16,7 @@
 <link media="screen" href="<%=contextPath%>/resources/common/jquery-ui-bootstrap/assets/css/docs.css" rel="stylesheet">
 <link media="screen" href="<%=contextPath%>/resources/common/bootstrap/css/font-awesome.min.css" rel="stylesheet">
 <link media="screen" href="<%=contextPath%>/resources/common/metismenu/metisMenu.min.css" rel="stylesheet">
-<link media="screen" href="<%=contextPath%>/resources/tdframework/sidebar.css" rel="stylesheet">
+<link media="screen" href="<%=contextPath%>/resources/tdframework/css/sidebar.css" rel="stylesheet">
 
 <script src="<%=contextPath%>/resources/common/jquery/jquery-1.11.3.min.js"></script>
 <script src="<%=contextPath%>/resources/common/bootstrap/js/bootstrap.min.js"></script>
