@@ -26,7 +26,7 @@
 <script src="<%=contextPath%>/resources/common/jquery-ui-bootstrap/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
 <script src="<%=contextPath%>/resources/common/angular/angular.min.js"></script>
 
-<script src="<%=contextPath%>/view/tdframework/mainpage.js"></script>
+<script src="<%=contextPath%>/resources/tdframework/js/mainpage.js"></script>
 <script>
 var contextPath='<%=contextPath%>';
 
@@ -96,7 +96,7 @@ var contextPath='<%=contextPath%>';
 										class="fa arrow"></span>
 								</a>
 									<ul aria-expanded="true">
-										<li><a href="javascript:createTab('forkdemo','åå­');">
+										<li><a href="javascript:createTab('forkdemo','Fork');">
 												<span class="sidebar-nav-item-icon fa fa-code-fork"></span>
 												Fork
 										</a></li>

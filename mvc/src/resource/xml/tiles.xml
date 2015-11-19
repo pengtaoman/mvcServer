@@ -5,7 +5,7 @@
        
 <tiles-definitions>
 	<!--  -->    
-	<definition name="mainpage" template="/view/tdframework/mainpage.jsp"
+	<definition name="mainpage" template="/WEB-INF/view/tdframework/mainpage.jsp"
 	        preparer="com.neusoft.tdframework.web.page.preparer.MainPagePreparer">
 	    <put-attribute name="htmlhead" value="mainpage.htmlhead" />
 		<put-attribute name="header" value="mainpage.header" />
@@ -14,36 +14,36 @@
 		<put-attribute name="footer" value="mainpage.footer" />
 	</definition>
 	
-	<definition name="mainpage.htmlhead" template="/view/tdframework/html_head.jsp">
+	<definition name="mainpage.htmlhead" template="/WEB-INF/view/tdframework/html_head.jsp">
 	</definition>
-	<definition name="mainpage.header" template="/view/tdframework/mainpage_header.jsp">
+	<definition name="mainpage.header" template="/WEB-INF/view/tdframework/mainpage_header.jsp">
 	</definition>
-    <definition name="mainpage.body" template="/view/tdframework/mainpage_body.jsp">
+    <definition name="mainpage.body" template="/WEB-INF/view/tdframework/mainpage_body.jsp">
         <put-attribute name="menu" value="mainpage.body.menu" />
         <put-attribute name="content" value="mainpage.body.content" />
 	</definition>
-    <definition name="mainpage.footer" template="/view/tdframework/mainpage_footer.jsp">
+    <definition name="mainpage.footer" template="/WEB-INF/view/tdframework/mainpage_footer.jsp">
 	</definition>
 	
-	<definition name="mainpage.body.menu" template="/view/tdframework/mainpage_body_menu.jsp">
+	<definition name="mainpage.body.menu" template="/WEB-INF/view/tdframework/mainpage_body_menu.jsp">
 	</definition>
-	<definition name="mainpage.body.content" template="/view/tdframework/mainpage_body_content.jsp">
+	<definition name="mainpage.body.content" template="/WEB-INF/view/tdframework/mainpage_body_content.jsp">
 	    <put-attribute name="bodyheader" value="mainpage.body.content.header" />
 	    <put-attribute name="bodysrc" value="mainpage.body.content.src" />
 	</definition>
 	
-	<definition name="mainpage.body.content.header" template="/view/tdframework/mainpage_body_content_header.jsp">
+	<definition name="mainpage.body.content.header" template="/WEB-INF/view/tdframework/mainpage_body_content_header.jsp">
 	</definition>
-	<definition name="mainpage.body.content.src" template="/view/tdframework/mainpage_body_content_src.jsp">
+	<definition name="mainpage.body.content.src" template="/WEB-INF/view/tdframework/mainpage_body_content_src.jsp">
 	</definition>
 	
-	<definition name="tiles.crm.bus" template="/view/app/a.jsp">
+	<definition name="tiles.crm.bus" template="/WEB-INF/view/app/a.jsp">
 		<put-attribute name="footer" value="tiles.crm.bus.footer" />
 	</definition>
-    <definition name="tiles.crm.bus.footer" template="/view/app/b.jsp">
+    <definition name="tiles.crm.bus.footer" template="/WEB-INF/view/app/b.jsp">
 	</definition>
 	
-	<definition name="loginpage" template="/view/tdframework/login.jsp"
+	<definition name="loginpage" template="/WEB-INF/view/tdframework/login.jsp"
 	        preparer="com.neusoft.tdframework.web.page.preparer.MainPagePreparer">
 	    <put-attribute name="htmlhead" value="mainpage.htmlhead" />
 		<put-attribute name="header" value="loginpage.header" />
@@ -51,25 +51,25 @@
 		<put-attribute name="footer" value="loginpage.footer" />
 	</definition>
 	
-	<definition name="loginpage.header" template="/view/tdframework/loginpage_header.jsp">
+	<definition name="loginpage.header" template="/WEB-INF/view/tdframework/loginpage_header.jsp">
 	</definition>
 	
-	<definition name="loginpage.body" template="/view/tdframework/loginpage_body.jsp">
+	<definition name="loginpage.body" template="/WEB-INF/view/tdframework/loginpage_body.jsp">
 	    <put-attribute name="bodyshow" value="loginpage.body.show" />
 	    <put-attribute name="bodyform" value="loginpage.body.form" />
 	</definition>
 	
-	<definition name="loginpage.footer" template="/view/tdframework/loginpage_footer.jsp">
+	<definition name="loginpage.footer" template="/WEB-INF/view/tdframework/loginpage_footer.jsp">
 	</definition>
 	
-	<definition name="loginpage.body.show" template="/view/tdframework/loginpage_body_show.jsp">
+	<definition name="loginpage.body.show" template="/WEB-INF/view/tdframework/loginpage_body_show.jsp">
 	</definition>
 	
-	<definition name="loginpage.body.form" template="/view/tdframework/loginpage_body_form.jsp">
+	<definition name="loginpage.body.form" template="/WEB-INF/view/tdframework/loginpage_body_form.jsp">
 	    <put-attribute name="captcha" value="loginpage.body.form.captcha" />
 	</definition>
 	
-	<definition name="loginpage.body.form.captcha" template="/view/tdframework/loginpage_body_form_captcha.jsp">
+	<definition name="loginpage.body.form.captcha" template="/WEB-INF/view/tdframework/loginpage_body_form_captcha.jsp">
 	</definition>
 	
 </tiles-definitions>  

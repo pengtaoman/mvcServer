@@ -30,7 +30,7 @@
 <script src="<%=contextPath%>/resources/common/angular/angular-sanitize.js"></script>
 <script src="<%=contextPath%>/resources/common/ui-bootstrap/ui-bootstrap-tpls-0.14.2.js"></script>
 
-<script src="<%=contextPath%>/view/tdframework/login.js"></script>
+<script src="<%=contextPath%>/resources/tdframework/js/login.js"></script>
 </head>
 
 <body>

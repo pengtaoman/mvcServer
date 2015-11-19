@@ -64,7 +64,9 @@
 		if (!document.getElementById("tabdiv_" + id)) {
 		    var li = $( tabTemplate.replace( /@\{tabliid\}/g, "tabli_" + id ).replace( /@\{href\}/g, "#tabdiv_" + id ).replace( /@\{label\}/g, label ) );
 			tabs.find( ".ui-tabs-nav" ).append( li );
-			tabs.append( "<div id='tabdiv_" + id + "' style='height:100%;padding:0px;'><iframe id='tabiframe_" + id + "' class='iframecss' src='"+contextPath+"/main/hello11.do'></iframe></div>" );
+			tabs.append( "<div id='tabdiv_" + id + "' style='height:100%;padding:0px;'>"
+					//+"<iframe id='tabiframe_" + id + "' class='iframecss' src='"+contextPath+"/main/hello11.do'></iframe>"
+			        +"</div>" );
 			tabs.tabs( "refresh" );
 		    tabs.tabs('select' , "#tabdiv_"+id); 
 		} else {
