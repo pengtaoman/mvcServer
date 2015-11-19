@@ -20,7 +20,8 @@ public class TDEcxeptionResolver implements HandlerExceptionResolver{
 		
 		System.out.println("????????????????????????  resolveException ?????? " + ex.getMessage());
 		logger.error(ex.getMessage());
-		ModelAndView mav=new ModelAndView("/error/500.jsp");
+		ex.printStackTrace();
+		ModelAndView mav=new ModelAndView("/error/500");
         return mav;
 	}
 

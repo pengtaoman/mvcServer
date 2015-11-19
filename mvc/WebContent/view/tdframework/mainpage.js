@@ -73,32 +73,27 @@
 	}
 
     todoApp.controller('headController', function($scope,$location, $http) {
-    	alert("###########  " + $location.path());
-    	
+
     	$scope.sysParent = [];
     	$scope.sysSub = [];
     	$http({
 			url: contextPath+"/main/getSys",
 			method:'GET'
 			}).success(function(data,header,config,status){
-			//响应成功
-				
-			   // alert(angular.toJson(data));
-				//alert(data);
 				angular.forEach(data, function(system) {
-					//console.log(angular.toJson(system));
-					//console.log("----" + system['fparentSystemId']);
 					if (angular.equals(system['fparentSystemId'],'')) {
 						$scope.sysParent.push(system);
 					} else {
 						$scope.sysSub.push(system);
 					}
 				});
-				//console.log("++++PPPPP : " + angular.toJson($scope.sysParent));
-				//console.log("++++SSSSS : " + angular.toJson($scope.sysSub));
 			}).error(function(data,header,config,status){
-			//处理响应失败
+			
 		});
+    	
+    	$scope.createSubSys = function() {
+    		
+    	}
     	
     	
     	

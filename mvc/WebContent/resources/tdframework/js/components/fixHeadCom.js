@@ -1,5 +1,5 @@
-﻿angular.module("cart", [])
-.factory("cart", function () {
+angular.module("fixHeadCom", [])
+.factory("fixHeadCom", function () {
 
     var cartData = [];
 
@@ -35,11 +35,10 @@
         }
     }
 })
-.directive("cartSummary", function (cart) {
-	console.log("::::::::::::::::::::::::::::::::" + angular.toJson(cart));
+.directive("fixHeadCom", function (cart) {
     return {
         restrict: "E",
-        templateUrl: "components/cart/cartSummary.html",
+        templateUrl: "html/fixHeadCom.html",
         controller: function ($scope) {
 
             var cartData = cart.getProducts();

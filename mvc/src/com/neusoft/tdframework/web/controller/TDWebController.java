@@ -6,10 +6,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.net.ssl.X509TrustManager;
 import javax.servlet.http.HttpServletRequest;
 //import javax.transaction.Transactional;
 
-
+import org.apache.http.HttpHost;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
@@ -29,6 +37,8 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
 import org.springframework.http.MediaType;
+
+import com.github.kevinsawicki.http.HttpRequest;
 import com.neusoft.tdframework.base.BaseController;
 import com.neusoft.tdframework.demo.UserService;
 import com.neusoft.tdframework.entity.User;
@@ -71,8 +81,8 @@ public class TDWebController extends BaseController {
 
 	@RequestMapping(value = "/hello11.do")
 	public String hello(HttpServletRequest request) {
-		logger.debug("+++++++++++++logger.trace  logger.trace  logger.trace++++++++++++++++");
-		logger.debug("++++++++++++++++++@hello11111+++++++??????????????++++++++++");
+		System.out.println("+++++++++++++logger.trace  logger.trace  logger.trace++++++++++++++++");
+		System.out.println("++++++++++++++++++@hello11111+++++++??????????????++++++++++");
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("status", "safasdfasdfasdfasdfasdfasd");
 		map.put("reason", "3234234234234234234234");
@@ -86,9 +96,9 @@ public class TDWebController extends BaseController {
 					+ user.getPhoneNum() + "<BR>");
 		}
 
-		User userGet = userService.getUsers(100003L);
-		sb.append("<BR><BR>" + userGet.getId() + "::" + userGet.getLastname()
-				+ "::" + userGet.getPhoneNum() + "<BR>");
+//		User userGet = userService.getUsers(100003L);
+//		sb.append("<BR><BR>" + userGet.getId() + "::" + userGet.getLastname()
+//				+ "::" + userGet.getPhoneNum() + "<BR>");
 
 		// sb.append("<BR><BR>USER :: " + this.getTDSecurityUser().getId());
 
@@ -96,7 +106,7 @@ public class TDWebController extends BaseController {
 
 		request.setAttribute("msg", sb.toString());
 		// request.setAttribute("bodyjsp", "/view/hello11.jsp");
-		return "hello11aa";
+		return "hello11";
 		// return "mainpage";
 	}
 
@@ -200,6 +210,21 @@ public class TDWebController extends BaseController {
 	public ModelAndView handleRequest() {
 		ModelAndView mav = new ModelAndView();
 		return mav;
+	}
+	
+	@RequestMapping(value = "/tss")
+	@ResponseBody
+	public String tss() {
+		System.out.println("++++++++++++++++++@tss+++++++??????????????++++++++++");
+		 String url = "https://192.168.1.178:8443/testssl";  
+		    HttpRequest request = HttpRequest.post(url);  
+		    //针对单项证书给予忽略（注意，双向证书需要导入证书文件）  
+		    request.trustAllCerts();  
+		    //信任所有地址  
+		    request.trustAllHosts();  
+		    String response = request.body();  
+		    System.out.println("Response was: " + response);  
+		return response;
 	}
 
 }

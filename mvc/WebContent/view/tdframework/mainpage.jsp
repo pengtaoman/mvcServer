@@ -96,7 +96,7 @@ var contextPath='<%=contextPath%>';
 										class="fa arrow"></span>
 								</a>
 									<ul aria-expanded="true">
-										<li><a href="javascript:createTab('forkdemo','叉子');">
+										<li><a href="javascript:createTab('forkdemo','åå­');">
 												<span class="sidebar-nav-item-icon fa fa-code-fork"></span>
 												Fork
 										</a></li>
