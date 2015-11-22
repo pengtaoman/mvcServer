@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%">
 
 <head>
 
@@ -34,7 +34,7 @@ var contextPath='<%=contextPath%>';
 
 </head>
 
-<body ng-app="td.main">
+<body ng-app="td.main" style="height:100%;">
 
 	<nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation" ng-controller="headController">
 		<div class="container-fluid">
@@ -84,7 +84,7 @@ var contextPath='<%=contextPath%>';
 	</nav>
 
 
-	<div class="container-fluid">
+	<div id="mainContent" class="container-fluid">
 		<div class="row">
 				<div id="sidebarDiv" class="col-sm-3 col-md-2 sidebarDiv clearfix " ng-controller="menuController">
 					<aside class="sidebar">
@@ -208,11 +208,13 @@ var contextPath='<%=contextPath%>';
 							</ul>
 						</div>
 					</div>
+					<!-- 
 					<footer class="bodyfooter">
 						<div>
 							dddddddddddddd=============================ddddddddddddddddddd
 						</div>
 					</footer>
+					 -->
 			</div>
 		</div>
 	</div>

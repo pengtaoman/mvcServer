@@ -38,10 +38,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import org.springframework.http.MediaType;
 
-import com.github.kevinsawicki.http.HttpRequest;
 import com.neusoft.tdframework.base.BaseController;
 import com.neusoft.tdframework.demo.UserService;
 import com.neusoft.tdframework.entity.User;
+import com.neusoft.tdframework.util.HttpRequest;
 import com.neusoft.tdframework.web.pojo.PojoOne;
 
 @Controller
