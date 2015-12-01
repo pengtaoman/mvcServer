@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views xmlns:bsdesign="http://workflow.neusoft.com/bsdesign/">
+	<Preferences>
+		<AttrPage viewMethod="jsp" />
+	</Preferences>
+	<Manage>
+		<FileBar>
+			<newFileBtn visible="true" enable="true">
+				<new_process visible="true" />
+				<new_process_by_mode visible="true" />
+			</newFileBtn>
+			<importBtn visible="true" enable="true">
+				<import_process_from_db visible="true" />
+				<import_process_from_file visible="true" />
+				<export_to_file visible="true" />
+				<export_to_image visible="true" />
+			</importBtn>
+		</FileBar>
+		<CommonBar>
+			<saveBtn visible="true" enable="true" />
+			<validateBtn visible="true" enable="true" />
+			<copyBtn visible="true" enable="true" />
+			<pasteBtn visible="true" enable="true" />
+			<delBtn visible="true" enable="true" />
+			<BackToParent visible="true" enable="true"/>
+			<OpenSubproc visible="true" enable="true"/>
+		</CommonBar>
+		<LayoutBar>
+			<alignLeftBtn visible="true" enable="true" />
+			<alignCenterBtn visible="true" enable="true" />
+			<alignRightBtn visible="true" enable="true" />
+			<alignTopBtn visible="true" enable="true" />
+			<alignMiddleBtn visible="true" enable="true" />
+			<alignBottomBtn visible="true" enable="true" />
+		</LayoutBar>
+		<ZoomBar>
+			<zoomNoBtn visible="true" enable="true" />
+			<zoomOutBtn visible="true" enable="true" />
+			<zoomInBtn visible="true" enable="true" />
+		</ZoomBar>
+		<ResourceBar>
+		 	<ViewBtn visible="true" enable="true">
+				<view_property visible="false" />
+				<view_resource visible="true" />
+			</ViewBtn>
+		</ResourceBar>
+		<ToolPanel>
+			<selectBtn visible="true" enable="true" />
+			<transitionBtn visible="true" enable="true" />
+			<startNodeBtn visible="true" enable="true" />
+			<endNodeBtn visible="true" enable="true" />
+			<choiceNodeBtn visible="true" enable="true" />
+			<manualNodeBtn visible="true" enable="true" />
+			<autoNodeBtn visible="true" enable="true" />
+			<subprocNodeBtn visible="true" enable="true" />
+			<parallelNodeBtn visible="true" enable="true" />
+		</ToolPanel>
+		<PropertyPage>
+			<GeneralSection visible="true" enable="true" />
+			<ExpirationSection visible="true" enable="true" />
+			<EventSection visible="true" enable="true" />
+			<ExtendPropertiesSection visible="true" enable="true" />
+			<ManualOperationSection visible="true" enable="true" />
+			<ManualEventSection visible="true" enable="true" />
+			<AutoApplicationSection visible="true" enable="true" />
+			<SubNodeSubprocSection visible="true" enable="true" />
+			<ProcessInfoSection visible="true" enable="true" />
+			<TransitionDetailSection visible="true" enable="true" />
+			<TransitionConditionSection visible="true" enable="true" />
+			<DataDetailSection visible="true" enable="true" />
+			<ApplicationDetailSection visible="true" enable="true" />
+			<ProcessEventSection visible="true" enable="true" />
+		</PropertyPage>
+		<ManagerView>
+			<NodeTemplet openAttrPageEnable="true" visible="true">
+				<Buttons>
+					<AddToDB visible="true" />
+					<AddToProc visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</NodeTemplet>
+			<AppView openAttrPageEnable="true" visible="true">
+				<Buttons>
+					<AddToDB visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</AppView>
+			<ExtendpropertyView openAttrPageEnable="true" visible="false">
+				<Buttons>
+					<AddToDB visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</ExtendpropertyView>
+		</ManagerView>
+		<Renderers layOutEnable="true" keyboardDelEnable="true">
+			<ProcessRenderer openAttrPageEnable="true" />
+			<TransitionRenderer openAttrPageEnable="true" />
+			<ManualNodeRenderer openAttrPageEnable="true" />
+			<AutoNodeRenderer openAttrPageEnable="true" />
+			<SubprocNodeRenderer openAttrPageEnable="true" />
+			<ChoiceNodeRenderer openAttrPageEnable="true" />
+			<ParalleNodeRenderer openAttrPageEnable="true" />
+			<BranchRenderer openAttrPageEnable="true" />
+			<BranchStartNodeRenderer openAttrPageEnable="true" />
+			<BranchEndNodeRenderer openAttrPageEnable="true" />
+			<StartNodeRenderer openAttrPageEnable="true" />
+			<EndNodeRenderer openAttrPageEnable="true" />
+		</Renderers>
+	</Manage>
+	<Define>
+		<FileBar>
+			<newFileBtn visible="true" enable="true">
+				<new_process visible="true" />
+				<new_process_by_mode visible="true" />
+			</newFileBtn>
+			<importBtn visible="true" enable="true">
+				<import_process_from_db visible="true" />
+				<import_process_from_file visible="true" />
+				<export_to_file visible="true" />
+				<export_to_image visible="true" />
+			</importBtn>
+		</FileBar>
+		<CommonBar>
+			<tempSaveBtn visible="false" enable="true" />
+			<saveBtn visible="true" enable="true" />
+			<validateBtn visible="true" enable="true" />
+			<copyBtn visible="true" enable="true" />
+			<pasteBtn visible="true" enable="true" />
+			<delBtn visible="true" enable="true" />
+			<BackToParent visible="true" enable="true"/>
+			<OpenSubproc visible="true" enable="true"/>
+		</CommonBar>
+		<LayoutBar>
+			<alignLeftBtn visible="true" enable="true" />
+			<alignCenterBtn visible="true" enable="true" />
+			<alignRightBtn visible="true" enable="true" />
+			<alignTopBtn visible="true" enable="true" />
+			<alignMiddleBtn visible="true" enable="true" />
+			<alignBottomBtn visible="true" enable="true" />
+		</LayoutBar>
+		<ZoomBar>
+			<zoomNoBtn visible="true" enable="true" />
+			<zoomOutBtn visible="true" enable="true" />
+			<zoomInBtn visible="true" enable="true" />
+		</ZoomBar>
+		<ResourceBar>
+		 	<ViewBtn visible="true" enable="true">
+				<view_property visible="false" />
+				<view_resource visible="true" />
+			</ViewBtn>
+		</ResourceBar>
+		<ToolPanel>
+			<selectBtn visible="true" enable="true" />
+			<transitionBtn visible="true" enable="true" />
+			<startNodeBtn visible="true" enable="true" />
+			<endNodeBtn visible="true" enable="true" />
+			<choiceNodeBtn visible="true" enable="true" />
+			<manualNodeBtn visible="true" enable="true" />
+			<autoNodeBtn visible="true" enable="true" />
+			<subprocNodeBtn visible="true" enable="true" />
+			<parallelNodeBtn visible="true" enable="true" />
+		</ToolPanel>
+		<PropertyPage>
+			<GeneralSection visible="true" enable="true" />
+			<ExpirationSection visible="true" enable="true" />
+			<EventSection visible="true" enable="true" />
+			<ExtendPropertiesSection visible="true" enable="true" />
+			<ManualOperationSection visible="true" enable="true" />
+			<ManualEventSection visible="true" enable="true" />
+			<AutoApplicationSection visible="true" enable="true" />
+			<SubNodeSubprocSection visible="true" enable="true" />
+			<ProcessInfoSection visible="true" enable="true" />
+			<TransitionDetailSection visible="true" enable="true" />
+			<TransitionConditionSection visible="true" enable="true" />
+			<DataDetailSection visible="true" enable="true" />
+			<ApplicationDetailSection visible="true" enable="true" />
+			<ProcessEventSection visible="true" enable="true" />
+		</PropertyPage>
+		<ManagerView>
+			<NodeTemplet openAttrPageEnable="true" visible="true">
+				<Buttons>
+					<AddToDB visible="true" />
+					<AddToProc visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</NodeTemplet>
+			<AppView openAttrPageEnable="true" visible="true">
+				<Buttons>
+					<AddToDB visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</AppView>
+			<ExtendpropertyView openAttrPageEnable="true" visible="false">
+				<Buttons>
+					<AddToDB visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</ExtendpropertyView>
+		</ManagerView>
+		<Renderers layOutEnable="true" keyboardDelEnable="true">
+			<ProcessRenderer openAttrPageEnable="true" />
+			<TransitionRenderer openAttrPageEnable="true" />
+			<ManualNodeRenderer openAttrPageEnable="true" />
+			<AutoNodeRenderer openAttrPageEnable="true" />
+			<SubprocNodeRenderer openAttrPageEnable="true" />
+			<ChoiceNodeRenderer openAttrPageEnable="true" />
+			<ParalleNodeRenderer openAttrPageEnable="true" />
+			<BranchRenderer openAttrPageEnable="true" />
+			<BranchStartNodeRenderer openAttrPageEnable="true" />
+			<BranchEndNodeRenderer openAttrPageEnable="true" />
+			<StartNodeRenderer openAttrPageEnable="true" />
+			<EndNodeRenderer openAttrPageEnable="true" />
+		</Renderers>
+	</Define>
+	<Read>
+		<FileBar>
+			<newFileBtn visible="true" enable="true">
+				<new_process visible="true" />
+				<new_process_by_mode visible="true" />
+			</newFileBtn>
+			<importBtn visible="true" enable="true">
+				<import_process_from_db visible="true" />
+				<import_process_from_file visible="true" />
+				<export_to_file visible="true" />
+				<export_to_image visible="true" />
+			</importBtn>
+		</FileBar>
+		<CommonBar>
+			<tempSaveBtn visible="false" enable="true" />
+			<saveBtn visible="true" enable="true" />
+			<validateBtn visible="true" enable="true" />
+			<copyBtn visible="true" enable="true" />
+			<pasteBtn visible="true" enable="true" />
+			<delBtn visible="true" enable="true" />
+			<BackToParent visible="true" enable="true"/>
+			<OpenSubproc visible="true" enable="true"/>
+		</CommonBar>
+		<LayoutBar>
+			<alignLeftBtn visible="true" enable="true" />
+			<alignCenterBtn visible="true" enable="true" />
+			<alignRightBtn visible="true" enable="true" />
+			<alignTopBtn visible="true" enable="true" />
+			<alignMiddleBtn visible="true" enable="true" />
+			<alignBottomBtn visible="true" enable="true" />
+		</LayoutBar>
+		<ZoomBar>
+			<zoomNoBtn visible="true" enable="true" />
+			<zoomOutBtn visible="true" enable="true" />
+			<zoomInBtn visible="true" enable="true" />
+		</ZoomBar>
+		<ResourceBar>
+		 	<ViewBtn visible="true" enable="true">
+				<view_property visible="false" />
+				<view_resource visible="true" />
+			</ViewBtn>
+		</ResourceBar>
+		<ToolPanel>
+			<selectBtn visible="true" enable="true" />
+			<transitionBtn visible="true" enable="true" />
+			<startNodeBtn visible="true" enable="true" />
+			<endNodeBtn visible="true" enable="true" />
+			<choiceNodeBtn visible="true" enable="true" />
+			<manualNodeBtn visible="true" enable="true" />
+			<autoNodeBtn visible="true" enable="true" />
+			<subprocNodeBtn visible="true" enable="true" />
+			<parallelNodeBtn visible="true" enable="true" />
+		</ToolPanel>
+		<PropertyPage>
+			<GeneralSection visible="true" enable="true" />
+			<ExpirationSection visible="true" enable="true" />
+			<EventSection visible="true" enable="true" />
+			<ExtendPropertiesSection visible="true" enable="true" />
+			<ManualOperationSection visible="true" enable="true" />
+			<ManualEventSection visible="true" enable="true" />
+			<AutoApplicationSection visible="true" enable="true" />
+			<SubNodeSubprocSection visible="true" enable="true" />
+			<ProcessInfoSection visible="true" enable="true" />
+			<TransitionDetailSection visible="true" enable="true" />
+			<TransitionConditionSection visible="true" enable="true" />
+			<DataDetailSection visible="true" enable="true" />
+			<ApplicationDetailSection visible="true" enable="true" />
+			<ProcessEventSection visible="true" enable="true" />
+		</PropertyPage>
+		<ManagerView>
+			<NodeTemplet openAttrPageEnable="true" visible="true">
+				<Buttons>
+					<AddToDB visible="true" />
+					<AddToProc visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</NodeTemplet>
+			<AppView openAttrPageEnable="true" visible="true">
+				<Buttons>
+					<AddToDB visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</AppView>
+			<ExtendpropertyView openAttrPageEnable="true" visible="false">
+				<Buttons>
+					<AddToDB visible="true" />
+					<Del visible="true" />
+					<Refrsh visible="true" />
+					<Deploy visible="true" />
+				</Buttons>
+			</ExtendpropertyView>
+		</ManagerView>
+		<Renderers layOutEnable="true" keyboardDelEnable="true">
+			<ProcessRenderer openAttrPageEnable="true" />
+			<TransitionRenderer openAttrPageEnable="true" />
+			<ManualNodeRenderer openAttrPageEnable="true" />
+			<AutoNodeRenderer openAttrPageEnable="true" />
+			<SubprocNodeRenderer openAttrPageEnable="true" />
+			<ChoiceNodeRenderer openAttrPageEnable="true" />
+			<ParalleNodeRenderer openAttrPageEnable="true" />
+			<BranchRenderer openAttrPageEnable="true" />
+			<BranchStartNodeRenderer openAttrPageEnable="true" />
+			<BranchEndNodeRenderer openAttrPageEnable="true" />
+			<StartNodeRenderer openAttrPageEnable="true" />
+			<EndNodeRenderer openAttrPageEnable="true" />
+		</Renderers>
+	</Read>
+</views>

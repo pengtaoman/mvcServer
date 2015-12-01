@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电力TestCase</title>
+		<style type="text/css">
+			@import "../../../themes/default/css/unieap.css";
+		</style>
+
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="parseOnLoad:true"></script>
+		<script type="text/javascript" src="edemoData.js"></script>
+		<script type="text/javascript" src="edemoEvent.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.form.ComboBox");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.form.Form");
+			dojo.require("unieap.form.DateTextBox");
+			dataCenter = new unieap.ds.DataCenter(edata);
+        </script>
+    </head>
+    <body class="unieap">
+    	<form jsId="dwCondition" dojoType="unieap.form.Form">
+			<table>
+				<tr>
+					<td width="55px">
+						请选择单位：
+					</td>
+					<td><table>
+					    <tr>
+					    <td>
+						<input readOnly="ture" jsId="orgNameJsId" required="ture" dojoType="unieap.form.TextBox" />
+						</td>
+						<td>
+						<div dojoType="unieap.form.Button" label="供电单位" onClick="doOrgSelect"></div>
+						</td>
+						</tr>
+						</table>
+					</td>
+					<td width="35px">
+						年月：
+					</td>
+					<td>
+						<input jsId="yearMonth" required="ture" dojoType="unieap.form.DateTextBox" displayFormatter="{dataFormat:'yyyyMM'}"  />
+					</td>
+					<td>
+						<button dojoType="unieap.form.Button" label="查询" onClick="onQuery()"></button>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<div jsId="test" dojoType="unieap.layout.TitlePane" title="数据详细信息(单位：亿kWh;％)">
+			<div jsId="tabPage" dojoType="unieap.layout.TabContainer"  style="width:100%;height:350px">
+				<div id="empTab1" dojoType="unieap.layout.ContentPane" title="累计">
+					<div id="gridEmp1" jsId="gridEmp" dojoType="unieap.grid.Grid" binding={store:'acmr/10_kv_down_line_loss_sum'}  width="auto" height="100%">
+						<header>
+						<row>
+						<cell label="单位" name="ORG_NAME" rowSpan="2" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="线损率" isMulTitle="true" colSpan="4" headerStyles="text-align:center;"></cell>
+						<cell label="供电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="售电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="损失电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="无损电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="有损线损率" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						</row>
+						<row>
+						<cell label="计划值" name="ADDUP_LLR_TAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="ADDUP_LLR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="SAME_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="比计划" name="YEAR_PLAN" width="6%" formatter2="doAmtFormat" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="ADDUP_PS" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="PS_SUM_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="ADDUP_PU" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="PU_SUM_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="ADDUP_PL" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="PL_SUM_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="ADDUP_PQ_NL" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="CP_SUM_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="ADDUP_LL_HL" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="LL_HL_SUM_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						</row>
+						</header>
+					</div>
+				</div>
+				<div id="deptTab1" dojoType="unieap.layout.ContentPane" title="本月" >
+					<div id="gridDept2" jsId="gridDept" dojoType="unieap.grid.Grid" binding={store:'acmr/10_kv_down_line_loss'}  width="auto" height="100%">
+						<header>
+						<row>
+						<cell label="单位" name="ORG_NAME" rowSpan="2" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="线损率" isMulTitle="true" colSpan="4" headerStyles="text-align:center;"></cell>
+						<cell label="供电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="售电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="损失电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="无损电量" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						<cell label="有损线损率" isMulTitle="true" colSpan="2" headerStyles="text-align:center;"></cell>
+						</row>
+						<row>
+						<cell label="计划值" name="LLR_TM_TAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="LLR_TM" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="SAME_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="比计划" name="YEAR_PLAN" width="6%" formatter2="doAmtFormat" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="PS_TM" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="PS_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="PU_TM" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="PU_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="PL_TM" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="PL_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="PQ_NL_TM" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="CP_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="实际值" name="LL_HL_TM" width="6%" headerStyles="text-align:center;"></cell>
+						<cell label="同比" name="LL_HL_YEAR" width="6%" headerStyles="text-align:center;"></cell>
+						</row>
+						</header>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div>
+			<button dojoType="unieap.form.Button" label="线路完成" onClick="onShow10kvFinish()"></button>
+			<button dojoType="unieap.form.Button" label="有损分布" onClick="onShow10kvLossLineLineLoss()"></button>
+			<button dojoType="unieap.form.Button" label="台区完成" onClick="onShowTQLineLoss()"></button>
+			<button dojoType="unieap.form.Button" label="台区分布" onClick="onShowTQLineLoseDistributing()"></button>
+			<button dojoType="unieap.form.Button" label="关闭" onClick="window.close()"></button>
+		</div>
+
+		
+		<form name="form_component" action="/web_inp/component.dox" method="post">
+		    <input type="hidden" name="name" value=""/>
+		    <input type="hidden" name="event" value=""/>
+		    <input type="hidden" name="parameter" value=""/>
+		    <input type="hidden" name="data" value=""/>
+			<input type="hidden" name="type" value=""/>
+		    <input type="hidden" name="writer" value=""/>
+			<input type="hidden" name="identifier" value=""/>
+		</form>
+    </body>
+</html>

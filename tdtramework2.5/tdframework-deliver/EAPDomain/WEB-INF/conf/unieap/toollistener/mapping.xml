@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<mapping>
+		<type>example</type>
+		<response-class>com.neusoft.unieap.example.toollistener.server.ExampleCommand</response-class>
+	</mapping>
+    <mapping>
+		<type>menu</type>
+		<response-class>com.neusoft.unieap.comp.menu.listener.MenuCommand</response-class>
+		<command name="add" method="addMenu" />
+		<command name="del" method="delMenu" />
+		<command name="order" method="changeOrder" />
+		<command name="property" method="changeProperty" />
+		<command name="menu" method="getMenu" />
+		<command name="menus" method="getMenus" />
+		<command name="purview" method="changePurview" />
+		<command name="sequence" method="getPurviewSequence" />
+		<command name="copyauth" method="copyauth" />
+		<command name="deleteauth" method="deleteauth" />
+		<command name="undo" method="undo" />
+	</mapping>
+	<mapping>
+		<type>resource</type>
+		<response-class>com.neusoft.unieap.service.security.resource.listener.ResourceCommand</response-class>
+		<command name="getResourceTypePermissions" method="getResourceTypePermissions" />
+		<command name="getResources" method="getResources" />
+		<command name="getRolePermission" method="getRolePermission" />
+		<command name="changeRolePermission" method="changeRolePermission" />
+		<command name="delRolePermission" method="delRolePermission" />
+		<command name="copyauth" method="copyauth" />
+		<command name="deleteauth" method="deleteauth" />
+		<command name="undo" method="undo" />
+	</mapping>
+	<mapping>
+		<type>pageAuthcopy</type>
+		<response-class>com.neusoft.unieap.example.permissionconf.authcopy.toollistener.PageAuthcopyCommand</response-class>
+		<command name="copyauth" method="copyauth" />
+		<command name="undo" method="undo" />
+	</mapping>
+
+	<mapping>
+		<type>logconfig</type>
+		<response-class>com.neusoft.unieap.service.log.listener.config.LogConfigCommand</response-class>
+		<command name="AddCategory" method="AddCategory" />
+		<command name="UpdateCategory" method="UpdateCategory" />
+		<command name="RemoveCategory" method="RemoveCategory" />
+		<command name="AddAppender" method="AddAppender" />				
+		<command name="UpdateAppender" method="UpdateAppender" />
+		<command name="RemoveAppender" method="RemoveAppender" />	
+		<command name="getAppenders" method="getAppenders" />
+		<command name="getCategorys" method="getCategorys" />
+		<command name="getColsMap" method="getColsMap" />
+		<command name="getProperty" method="getProperty" />
+		<command name="setProperty" method="setProperty" />
+	</mapping>
+	<mapping>
+		<type>actipurview</type>
+		<response-class>com.neusoft.unieap.comp.workitemhandler.listener.config.ActipurviewCommand</response-class>
+		<command name="getTree" method="getTree" />
+		<command name="changePurview" method="changePurview" />
+		<command name="getUrlList" method="getUrlList"/>
+		<command name="authcopy" method="authcopy" />
+	</mapping>	
+  <mapping>
+		<type>modulepurview</type>	
+ <response-class>com.neusoft.unieap.comp.workitemhandler.listener.config.ModuleCommand</response-class>
+		<command name="getTree" method="getTree" />
+		<command name="getselected" method="getSelectedNodes" />
+		<command name="changePurview" method="changePurview" />
+        <command name="geturls" method="getUrls" />	
+	</mapping>		
+	<mapping>
+		<type>logview</type>
+		<response-class>com.neusoft.unieap.service.log.listener.view.LogViewCommand</response-class>
+	</mapping>
+	
+	<mapping>
+	    <type>application</type>
+	    <response-class>com.neusoft.unieap.config.ApplicationCommand</response-class>
+	    <command name="appsfromcache" method="getApplications" />
+	    <command name="appsfromfile" method="getAppInfo" />
+		<command name="modify" method="saveElementValue" />
+		<command name="startapp" method="getStartedApplications" />
+	</mapping>
+		<mapping>
+		<type>license</type>
+		<response-class>com.neusoft.unieap.misc.license.listener.LicenseCommand</response-class>
+			<command name="updateFile" method="updateFile" />
+			<command name="getLicenseDetail" method="getLicenseDetail" />
+	</mapping>
+	<mapping>
+		<type>org</type>
+		<response-class>com.neusoft.unieap.service.org.listener.OrgCommand</response-class>
+	</mapping>
+	<mapping>
+		<type>dataauth</type>
+		<response-class>com.neusoft.unieap.service.security.data.newdata.toollistener.DataAuthCommand</response-class>
+			<command name="createRowFilter" method="createRowFilter" />
+			<command name="createColFilter" method="createColFilter" />
+			<command name="createRoleFilterMap" method="createRoleFilterMap" />
+       	 	<command name="createPsnFilterMap" method="createPsnFilterMap" />	
+			<command name="getAllColFilters" method="getAllColFilters" />
+			<command name="getAllDataSources" method="getAllDataSources" />
+			<command name="getAllPsnFilterMaps" method="getAllPsnFilterMaps" />
+       	 	<command name="getAllRoleFilterMaps" method="getAllRoleFilterMaps" />
+			<command name="getAllRowFilters" method="getAllRowFilters" />
+			<command name="getAllTablesByDSName" method="getAllTablesByDSName" />
+			<command name="getColumns" method="getColumns" />
+       	 	<command name="getFiltersByPsnID" method="getFiltersByPsnID" />
+			<command name="getFiltersByRoleID" method="getFiltersByRoleID" />
+			<command name="removeAllColFilters" method="removeAllColFilters" />
+			<command name="removeAllPsnFilterMaps" method="removeAllPsnFilterMaps" />
+       	 	<command name="removeAllRoleFilterMaps" method="removeAllRoleFilterMaps" />
+			<command name="removeAllRowFilters" method="removeAllRowFilters" />
+       	 	<command name="removeColFilter" method="removeColFilter" />
+			<command name="removePsnFilterMap" method="removePsnFilterMap" />
+			<command name="removeRoleFilterMap" method="removeRoleFilterMap" />
+			<command name="removeRowFilter" method="removeRowFilter" />
+       	 	<command name="updateColFilter" method="updateColFilter" />
+       	 	<command name="updateRowFilter" method="updateRowFilter" />
+			<command name="copyauth" method="copyauth" />
+			<command name="deleteauth" method="deleteauth" />
+			<command name="undo" method="undo" />
+	</mapping>
+	<mapping>
+		<type>serverdatapriv</type>
+		<response-class>com.neusoft.unieap.service.security.data.toollistener.server.DataPrivCommand</response-class>
+		<command name="getViewVector"  	method="getViewVector" />
+		<command name="execfilteradd"  	method="execfilteradd" />		
+		<command name="execfilteredit" 	method="execfilteredit" />
+		<command name="execrowpriv"     method="execrowpriv" />
+		<command name="execcolpriv"     method="execcolpriv" />
+		<command name="execpsnpriv"     method="execpsnpriv" />
+		<command name="execrolepriv"    method="execrolepriv" />
+		<command name="getFilterList" method="getFilterListView" /> 
+		<command name="execprivedit" method="execprivedit" /> 
+	</mapping>
+	<mapping>
+		<type>dbtools</type>
+		<response-class>com.neusoft.unieap.service.security.data.toollistener.server.DbtoolsCommand</response-class>
+		<command name="gettab"  	method="getTabView" />
+		<command name="getcol"  	method="getColView" />	
+		<!--add by wanghx-->
+		<command name="getalldatasources"  	method="getAllDataSources" />
+			
+	</mapping>
+	<!-- edoc and form server controller -->
+	<mapping>
+		<type>serverController</type>
+		<response-class>com.neusoft.unieap.service.servermanager.toollistener.ServerControllerCommand</response-class>
+		<command name="saveEdoc"  	method="saveEdoc" />
+		<command name="saveForm"  	method="saveForm" />
+		<command name="getForm"  	method="getForm" />			
+	</mapping>
+	<!-- 策略文件的导入导出 -->
+    <mapping>
+		<type>policy</type>
+		<response-class>com.neusoft.unieap.service.policy.toollistener.PolicyServiceCommand</response-class>
+		<command name="importpolicy"  	method="importpolicy" />
+		<command name="exportpolicy"  	method="exportpolicy" />		
+	</mapping>
+</config>

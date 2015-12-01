@@ -1,0 +1,448 @@
+<%@ page language="java" contentType="text/html;charset=GBK" %>
+<%
+String webapp=request.getContextPath();
+
+%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>首页</title>
+
+	<!-- 禁止 windows 主题风格 -->
+	<meta http-equiv="MSThemeCompatible" content="no" />
+
+	<!-- 禁止缓存 headers -->
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<!-- end 禁止缓存 headers -->
+
+
+<!-- 公共css  -->
+<link rel="stylesheet" type="text/css" href="../common/css/td_style.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/td_style_home.css" />
+<!-- 公共js  -->
+<script type="text/javascript" src="../common/js/td_common.js" ></script>
+<script type="text/javascript" src="../common/js/td_element.js" ></script>
+
+<script type="text/javascript" src="../common/js/prototypeajax.js" ></script>
+
+<script language="JavaScript" src="../common/js/eccn.js" ></script>
+
+<script language="JavaScript" src="../home/homepage.js" ></script>
+
+
+<!-- 页面级js  -->
+<script type="text/javascript">
+<!--
+// 
+var APP_PATH="..";
+
+var ModTree=new ModTreeClass();
+
+var ModTemplate=[];
+ModTemplate[0]=null;
+ModTemplate[1]=null;
+ModTemplate[2]=null;
+var SubModTemplate=[];
+SubModTemplate[0]=null;
+SubModTemplate[1]="<span class=\"submodLoading\">正在载入中...</span>";
+SubModTemplate[2]=null;
+
+var DateSelectTemplate=null;
+
+var hideAll=false;
+
+ModTree.createMod(ModTree.ROOT_ID,"首页","");
+ModTree.createMod("R0","我的工作计划","");
+ModTree.createMod("R01","工作计划","R0","/query.do?actionMethod=query&ecid=R01form",12);
+
+ModTree.createMod("R1","我的销售机会","");
+ModTree.createMod("R11","销售机会","R1","/query.do?actionMethod=query&ecid=R11_form",12);
+
+
+
+ModTree.createMod("R2","我的任务","");
+ModTree.createMod("R21","营销任务","R2","/query.do?actionMethod=query&ecid=R21_form",12);
+ModTree.createMod("R22","销售任务","R2","/query.do?actionMethod=query&ecid=R22_form",12);
+ModTree.createMod("R23","维系与挽留任务","R2","/home/RetainTaskStatResult.jsp",13);
+
+/*
+ModTree.createMod("R24","代理商资料审核任务","R2","../query.do?actionMethod=query&ecid=R24_form");
+ModTree.createMod("R25","产品审批任务","R2","../query.do?actionMethod=query&ecid=R25_form");
+ModTree.createMod("R26","维系与挽留审批任务","R2","../query.do?actionMethod=query&ecid=R26_form");
+
+
+ModTree.createMod("R3","我的工单","");
+ModTree.createMod("R31","问题单","R3","../query.do?actionMethod=query&ecid=R31_form");
+ModTree.createMod("R32","督办单","R3","../query.do?actionMethod=query&ecid=R32_form");
+ModTree.createMod("R33","维修单","R3","../query.do?actionMethod=query&ecid=R33_form");
+ModTree.createMod("R34","服务开通工单","R3","../query.do?actionMethod=query&ecid=R34_form");
+ModTree.createMod("R35","流程管理","R3","../query.do?actionMethod=query&ecid=R35_form");
+
+
+ModTree.createMod("R4","我的客户","");
+ModTree.createMod("R41","客户需求","R4","../query.do?actionMethod=query&ecid=R41_form");
+ModTree.createMod("R42","个人客户","R4","../query.do?actionMethod=query&ecid=R42_form");
+ModTree.createMod("R43","集团客户","R4","../query.do?actionMethod=query&ecid=R43_form");
+
+
+ModTree.createMod("R5","我的报表","");
+ModTree.createMod("R51","日报表","R5","../query.do?actionMethod=query&ecid=R51_form");
+ModTree.createMod("R52","受理日报表","R5","../query.do?actionMethod=query&ecid=R52_form");
+ModTree.createMod("R53","日收报表","R5","../query.do?actionMethod=query&ecid=R53_form");
+ModTree.createMod("R54","营业厅日收报表","R5","../query.do?actionMethod=query&ecid=R54_form");
+ModTree.createMod("R55","日收话费报表","R5","../query.do?actionMethod=query&ecid=R55_form");
+ModTree.createMod("R56","营业厅日收话费报表","R5","../query.do?actionMethod=query&ecid=R56_form");
+ModTree.createMod("R57","业务资源统计报表","R5","../query.do?actionMethod=query&ecid=R57_form");
+
+ModTree.createMod("R6","我的通知","");
+ModTree.createMod("R61","通知","R6","../query.do?actionMethod=query&ecid=R61_form");
+
+*/
+
+function init(){
+
+	ModTree.loadSubMod();
+
+}
+
+// -->
+</script>
+
+</head>
+
+<body  class="mainBody" onload="init();" style="padding:0px;">
+<!-- =============== 模板 ============= -->
+<textarea id="mod_template_s" rows="" cols=""  style="display:none;">
+	<div class="modDiv">
+	<a name="#{mod_id}_an"></a>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="modTable">
+	<tr class="modHead">
+		<td class="modLeft">&#160;</td><td class="modCenter">
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" >
+		<tr>
+		<td nowrap="nowrap"><span class="modTitle">#{mod_name}</span></td>
+		<td align="right"  width="100%" >&#160;</td>
+		<td>
+			<button class="collapseImgButtonS" type="button" id="#{mod_id}" onclick="showOrHideMod(this)"></button>
+		</td>
+		</tr>
+	</table>
+		</td><td class="modRight">&#160;</td>
+	</tr>
+	<tr class="modBody" id="#{mod_id}_body">
+		<td class="modLeft">&#160;</td><td class="modCenter">
+</textarea>
+<textarea id="mod_template_e" rows="" cols=""  style="display:none;">
+		</td><td class="modRight">&#160;</td>
+	</tr>
+	<tr class="modFoot">
+		<td class="modLeft">&#160;</td><td class="modCenter">&#160;</td><td class="modRight">&#160;</td>
+	</tr>
+	</table>
+	</div>
+</textarea>
+<textarea id="submod_template_s" rows="" cols=""  style="display:none;">
+	<div class="subModDiv" >
+		<table class="subModHead" border="0" cellspacing="0" cellpadding="0"  >
+			<tr>
+			<td nowrap="nowrap"><span class="subModTitle">#{submod_name}</span></td>
+			<td align="right"  width="70%"  >#{date_select}</td>
+			<td align="right"  width="30%" id="#{submod_id}_total" >&#160;</td>
+			<td align="right" >
+				<input type="button" class="collapseImgButtonS2"  id="#{submod_id}" onclick="showOrHideSubMod(this)" />
+			</td>
+			</tr>
+		</table>
+		<div  id="#{submod_id}_body" >
+</textarea>
+<textarea id="submod_template_e" rows="" cols=""  style="display:none;">
+			</div>
+		</div>
+</textarea>
+<textarea id="dateselect_template" rows="" cols=""  style="display:none;">
+	显示<select class="dateselect" onchange="reloadSubModByDate('#{submod_id}',this);" >
+		<option value="startTime=2006-10-23&endTime=2006-10-23">今天</option>
+		<option value="startTime=2006-10-24&endTime=2006-10-24">明天</option>
+		<option value="startTime=2006-10-23&endTime=2006-10-29">本周</option>
+		<option value="startTime=2006-10-30&endTime=2006-11-05">下周</option>
+		<option value="startTime=2006-10-01&endTime=2006-10-31">本月</option>
+		<option value="startTime=2006-11-01&endTime=2006-11-30">下月</option>
+		<option value="">所有</option>
+	</select>的记录
+</textarea>
+<!-- =============== end of 模板 ============= -->
+
+
+<table cellspacing="0" cellpadding="0" width="100%" height="100%" style=""  >
+<tr>
+	<td width="100%" valign="top">
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%"  class="modMenu">
+<tr>
+	<td onclick="hideMenu();"><span id="ajaxWaitng" class="ajaxWaitng" style="visibility:hidden">正在执行操作,请稍候...</span></td>
+	<td onclick="hideMenu();">&#160;<a href="javascript:showOrHideAll();hideMenu();" >全部展开/折叠</a>&#160;&#160;</td>
+	<td>&#160;<a href="javascript:showOrHideMenu();" onmouseover="showMenu();">首页导航</a>&#160;&#160;</td>
+</tr>
+</table>
+<div class="bottomShadow" onclick="hideMenu();"></div>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" height="99%" onclick="hideMenu();" >
+<div style="width:100%;height:100%;overflow-y:auto;padding-left:2px;padding-right:2px;" >
+
+<script type="text/javascript">
+	ModTemplate[0]=$("mod_template_s").value;
+	ModTemplate[2]=$("mod_template_e").value;
+	SubModTemplate[0]=$("submod_template_s").value;
+	SubModTemplate[2]=$("submod_template_e").value;
+	DateSelectTemplate=$("dateselect_template").value;
+	ModTree.buildMod();
+	ModTree.showModTree();
+</script>
+
+
+<!-- ================================== -->
+<!-- 模块 -->
+<div class="modDiv">
+<a name="#{mod_id}_an"></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="modTable">
+<tr class="modHead">
+	<td class="modLeft">&#160;</td><td class="modCenter">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" >
+	<tr>
+	<td nowrap="nowrap"><span class="modTitle">演示:模块</span></td>
+	<td align="right"  width="100%" >&#160;</td>
+	<td>
+		<button class="collapseImgButtonS" type="button" id="#{mod_id}" onclick="showOrHideMod(this)"></button>
+	</td>
+	</tr>
+</table>
+	</td><td class="modRight">&#160;</td>
+</tr>
+<tr class="modBody" id="#{mod_id}_body">
+	<td class="modLeft">&#160;</td><td class="modCenter">
+<!-- 子模块 -->
+<div class="subModDiv" >
+	<table class="subModHead" border="0" cellspacing="0" cellpadding="0"  >
+		<tr>
+		<td nowrap="nowrap"><span class="subModTitle">子模块</span></td>
+		<td align="right"  width="100%" >&#160;</td>
+		<td align="right" >
+			<input type="button" class="collapseImgButtonS2"  id="#{submod_id}" onclick="showOrHideSubMod(this)" />
+		</td>
+		</tr>
+	</table>
+	<div  id="#{submod_id}_body" >
+	<!-- 子模块内容 -->
+
+
+<form id="RTest0"  action="/ec/query.do?actionMethod=query"  method="post" >
+<div>
+<input type="hidden"  name="ec_i"  value="RTest0" />
+<input type="hidden"  name="RTest0_crd"  value="5" />
+<input type="hidden"  name="RTest0_p"  value="1" />
+<input type="hidden"  name="ecid"  value="RTest0" />
+<input type="hidden"  name="actionMethod"  value="query" />
+</div>
+<div class="eXtremeTable" >
+<table cellspacing="0"  cellpadding="0"  class="tableBox"  width="100%" >
+	<tr>
+	<td width="100%" >
+<table id="RTest0_table"  border="0"  cellspacing="1"  cellpadding="0"  class="tableRegion"  width="100%" >
+	<thead>
+	<tr>
+		<td class="tableHeader"  width="15" ><input type="checkbox"  id="chkBoxNameXXX_selector"  name="chkBoxNameXXX_selector"  title="全选/全消"  class="checkbox"  onclick="EccnUtil.checkAll('RTest0','chkBoxNameXXX','chkBoxNameXXX_selector')" ></td>
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="odd"  onmouseover="this.className='highlight'"  onmouseout="this.className='odd'" >
+		<td width="15" ><input type="checkbox"  name="chkBoxNameXXX"  value="chkValue_nkn_0"  class="checkbox" /></td>
+		<td><div>测试数据asdasdsasdf</div></td>
+		<td><div>测试数据asdasdwrwer</div></td>
+		<td><div>测试数据zxczxcwer</div></td>
+		<td><div>测试数据asdasczwer</div></td>
+	</tr>
+	<tr class="even"  onmouseover="this.className='highlight'"  onmouseout="this.className='even'" >
+		<td width="15" ><input type="checkbox"  name="chkBoxNameXXX"  value="chkValue_nkn_1"  class="checkbox" /></td>
+		<td><div>测试数据asdasdsasdf</div></td>
+		<td><div>测试数据asdasdwrwer</div></td>
+		<td><div>测试数据zxczxcwer</div></td>
+		<td><div>测试数据asdasczwer</div></td>
+	</tr>
+	<tr class="odd"  onmouseover="this.className='highlight'"  onmouseout="this.className='odd'" >
+		<td width="15" ><input type="checkbox"  name="chkBoxNameXXX"  value="chkValue_nkn_2"  class="checkbox" /></td>
+		<td><div>测试数据asdasdsasdf</div></td>
+		<td><div>测试数据asdasdwrwer</div></td>
+		<td><div>测试数据zxczxcwer</div></td>
+		<td><div>测试数据asdasczwer</div></td>
+	</tr>
+	<tr class="even"  onmouseover="this.className='highlight'"  onmouseout="this.className='even'" >
+		<td width="15" ><input type="checkbox"  name="chkBoxNameXXX"  value="chkValue_nkn_3"  class="checkbox" /></td>
+		<td><div>测试数据asdasdsasdf</div></td>
+		<td><div>测试数据asdasdwrwer</div></td>
+		<td><div>测试数据zxczxcwer</div></td>
+		<td><div>测试数据asdasczwer</div></td>
+	</tr>
+	<tr class="odd"  onmouseover="this.className='highlight'"  onmouseout="this.className='odd'" >
+		<td width="15" ><input type="checkbox"  name="chkBoxNameXXX"  value="chkValue_nkn_4"  class="checkbox" /></td>
+		<td><div>测试数据asdasdsasdf</div></td>
+		<td><div>测试数据asdasdwrwer</div></td>
+		<td><div>测试数据zxczxcwer</div></td>
+		<td><div>测试数据asdasczwer</div></td>
+	</tr>
+	</tbody>
+</table></td>
+</tr>
+</table><input type="hidden"  name="RTest0_totalpages"  value="22" /><input type="hidden"  name="RTest0_totalrows"  value="108" /><table border="0"  cellspacing="0"  cellpadding="0"  class="tableRegionToolbar"  width="100%"  style="margin:0px;" >
+	<tr style="padding: 0px;" >
+		<td colspan="4" >
+		<table border="0"  cellpadding="0"  cellspacing="0"  width="100%" >
+			<tr>
+				<td class="toolbar"  align="left" >
+				<table border="0"  cellpadding="1"  cellspacing="2" >
+					<tr>
+				<td class="statusBar" ></td>
+					</tr>
+				</table></td>
+	<td></td>
+					<td class="statusBar" >共108条记录&#160;&#160;<span class="rowsdisplayed" >每页<select name="RTest0_rd"  onchange="EccnUtil.changeRowsDisplayed('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti',this);" >
+				<option value="5"  selected="selected">5</option><option value="50" >50</option><option value="100" >100</option><option value="108" >全部</option>
+				</select>条</span>&#160;&#160;<input type="button"  disabled="disabled"  class="pageNav firstPaged"  onclick="javascript:EccnUtil.gotoPage('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti',1);"  title="第一页" /><input type="button"  disabled="disabled"  class="pageNav prevPaged"  onclick="javascript:EccnUtil.gotoPage('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti',0);"  title="上一页"  disabled="disabled" /><input type="button"  class="pageNav nextPage"  onclick="javascript:EccnUtil.gotoPage('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti',2);"  title="下一页" /><input type="button"  class="pageNav lastPage"  onclick="javascript:EccnUtil.gotoPage('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti',22);"  title="最后页" /><input type="button"  class="pageNav jumpPage"  onclick="EccnUtil.gotoPageByInput('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti','RTest0_pg');"  title="页面跳转" /><input type="text"  name="RTest0_pg"  value="1"  class="jumpPageInput"  onkeydown="if (event.keyCode && event.keyCode==13 ) {EccnUtil.gotoPageByInput('RTest0','/ec/query.do?actionMethod=query','post','RTest0_p','eti','RTest0_pg');;return false; } " />/22页</td>
+			</tr>
+		</table>
+		</td>
+	</tr>		
+</table>
+</div>
+</form>
+
+
+
+
+	</div>
+</div>
+	</td><td class="modRight">&#160;</td>
+</tr>
+<tr class="modFoot">
+	<td class="modLeft">&#160;</td><td class="modCenter">&#160;</td><td class="modRight">&#160;</td>
+</tr>
+</table>
+</div>
+
+
+
+<!-- ================================== -->
+<!--
+
+
+
+	<div class="eXtremeTable">
+<table class="tableRegion" width="100%" border="0" cellpadding="2" cellspacing="1" style="" >
+<tr >
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+	<td class="tableHeader">表头</td>
+</tr>
+<tr class="odd">
+	<td><div title="测试数据测试数据测试数据">测试数据测试数据测试数据</div></td>
+	<td><div>测试数据asdasdsasdf</div></td>
+	<td><div>测试数据asdasdwrwer</div></td>
+	<td><div>测试数据zxczxcwer</div></td>
+	<td><div>测试数据asdasczwer</div></td>
+</tr>
+<tr class="even">
+	<td><div>测试数据asdaczxc</div></td>
+	<td><div>测试数据zxczxcsdfs</div></td>
+	<td><div>测试数据测试数据测试数据</div></td>
+	<td><div>测试数据asdzxcasd</div></td>
+	<td><div>测试数据zasdczxv</div></td>
+</tr>
+<tr class="odd">
+	<td><div>测试数据cvasbxcv</div></td>
+	<td><div>测试数据zxczxcwer</div></td>
+	<td><div>测试数据asdassdf</div></td>
+	<td><div>测试数据测试数据测试数据</div></td>
+	<td><div>测试数据adasdsd</div></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="subModFoot">
+<tr>
+	<td >&#160;共108条记录</td>
+	<td class="statusBar" ><input type="text"  name="ec_pg"  value="1"  onkeydown="if (event.keyCode && event.keyCode==13 ) {EccnUtil.gotoPageByInput('ec','/jt/query.do?actionMethod=query2','post','ec_p','eti','ec_pg');;return false; } " />/11页</td>
+	<td >
+	<span class="rowsdisplayed" >每页<select name="ec_rd"  style="width:50px;height:15px;border:1px;" onchange="EccnUtil.changeRowsDisplayed('ec','/jt/query.do?actionMethod=query2','post','ec_p','eti',this);" >
+				<option value="10"  selected="selected">10</option><option value="50" >50</option><option value="100" >100</option><option value="108" >全部</option>
+				</select>条</span>
+	</td>
+	<td  >
+	<img src="../common/images/home/page_nav_s.gif" width="96" height="15" border="0" alt="" />&#160;</td>
+</tr>
+</table>
+</div>
+
+
+
+
+
+1)	我的工作计划
+		工作计划
+2)	我的销售机会	
+		销售机会	menutype=11
+3)	我的任务	
+ 		营销任务	
+ 		销售任务	
+ 		维系与挽留任务	menutype=13	  pagelink=/retain/retaintaskmgr.do?operType=statTaskForIndex
+ 	*	代理商资源审批任务 
+ 		代理商资料审核任务
+ 		产品审批任务	
+ 		维系与挽留审批任务	
+4)	我的工单
+ 		问题单
+ 		督办单
+ 		维修单
+ 		服务开通工单
+ 		流程管理
+5)	我的客户
+ 		客户需求	menutype=11
+ 		个人客户	menutype=11
+ 		集团客户	menutype=11
+6)	我的报表
+ 		日报表
+ 		受理日报表
+ 		日收报表
+ 		营业厅日收报表
+ 		日收话费报表
+ 		营业厅日收话费报表
+ 		业务资源统计报表（卡、号码、终端、礼品）
+7)	我的公告通知
+		公告通知
+
+
+无缩进 menutype=10
+无标识的缩进 menutype=12
+
+-->
+
+
+</div>
+	</td>
+</tr>
+</table>
+
+<div id="menu" style="display:none;position :absolute;z-index:99;top:20px;left:10px;width:100px;border:1px solid #cccccc;background-color:#f9f9f9;padding:2px">
+<script type="text/javascript">
+ModTree.showNav(document);
+</script>
+</div>
+
+</body>
+</html>

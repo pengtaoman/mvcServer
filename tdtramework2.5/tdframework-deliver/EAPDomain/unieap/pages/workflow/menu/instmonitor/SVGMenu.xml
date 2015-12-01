@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="myCustomMenu"> 
+ <item action="Find" id="Find">查找文字</item>
+ <item action="Copy" id="Copy">复制文字</item>
+ <separator/>
+ <item onactivate="viewProcDetail()">查看流程定义信息</item>
+ <item onactivate="viewPocRelDateDetail()">查看流程实例相关数据</item> 
+  <item onactivate="viewPocDefRelDateDetail()">查看流程定义相关数据</item> 
+</menu>

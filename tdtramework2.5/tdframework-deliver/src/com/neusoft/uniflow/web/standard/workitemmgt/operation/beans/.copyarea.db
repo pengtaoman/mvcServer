@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\standard\workitemmgt\operation\beans
+2
+4
+14:ParticipantBean.java|1|13b896abe77|3c5|169f4636|447eab5126204aafbf0ec3c1650d328a|0
+13:TransitionBean.java|1|13b896abf81|12f8|3cea6de4|a46ba6215d5c4234b5fd9a54adeaa21e|0
+10:ActParaBean.java|1|13b896abdcb|570|20e2be75|fed792dbcfa6496c8a60cc9c3a6b4236|0
+12:AdhocStepBean.java|1|13b896abe39|93b|6e17fae9|fd2cc9747a3b4135bbb9b708dc0e8c87|0

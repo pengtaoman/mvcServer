@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	文件仅有一个元素ConfFolder，其属性包括default、engine、timer、appmgr、common,
+	值为从工程WEB-INF下开始到文件所在目录，不包含文件名。
+	如engine.xml按照系统默认路径配置，engine="conf/unieap/workflow". 
+	配置文件目录读取规则：
+	1、如果没有该文件，系统仍按原有路径读取配置文件；
+    2、如果有该文件，按照如下逻辑进行读取：
+      (1)有具体文件设置，按照其设置的路径读取；没有具体设置，按照default属性读取；
+      (2)如果default属性没设置，default属性值为原有路径(即conf/unieap/workflow)。
+-->
+<ConfFolder/>

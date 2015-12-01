@@ -1,0 +1,13 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow\authorization\uniform
+2
+9
+12:oldprocessview.jsp|1|13b8960055d|1617|655865eb|a46a9c1d985945939b0184db2c8df0ff|0
+e:appletauth.jar|1|13b895fffde|e02de|854547a4|8f206f324ad043be9e02c85134fff6c2|0
+d:authorize.jsp|1|13b89600175|105b|a17120d2|2a0776ac41af41c4be22a235808a6103|0
+d:partitree.jsp|1|13b89600686|c04|c85af421|718df4e9df7e41899b8b44bb8a116bec|0
+8:xpp3.jar|1|13b89600f9e|cc88|f5cf696a|97d3203652bf45659c27f01e07161bb0|0
+9:alloy.jar|1|13b895ffcb2|5049b|503521a5|27821046929043698e95d7889be8fdd7|0
+12:formauthWindow.jsp|1|13b896003e6|495|9c738175|efb8d2ae32324f138783fa194d605998|0
+f:processview.jsp|1|13b89600770|1613|3bcb648d|9d8c309269c548599965a61c01bfcd0f|0
+d:closepage.jsp|1|13b8960029e|2dd|4e1ef421|e9b86bd9490d48b79da300c3b75445b6|0

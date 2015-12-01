@@ -1,0 +1,35 @@
+<!-- 
+		学生信息Excel解析模板
+		
+root标签：	表示文件个数（Excel文件内表的个数）
+file标签：
+	name标签：	表示File的名字
+	col标签:		表示列数
+	space标签:	表示开始行
+	row标签：	表示数据行数，-1表示数据行数不定
+	column标签：
+		name标签：	表示列名
+		type标签：	表示数据类型
+-->
+<root file="2">
+	<file name="StudentOfClass" col="1"  space="1" row="1">
+		<column>
+	     	<name>ClassName</name>
+	      	<type>java.lang.String</type>
+	    </column>
+	</file>
+	<file name="Student" col="3" space="3" row="-1">
+	    <column>
+	      	<name>Name</name>
+            <type>java.lang.String</type>
+	    </column>
+	    <column>
+	       <name>Age</name>
+	       <type>java.lang.Integer</type>
+	    </column>
+	    <column>
+	       <name>Sex</name>  
+	       <type>java.lang.String</type>
+	    </column>
+	</file>
+</root>

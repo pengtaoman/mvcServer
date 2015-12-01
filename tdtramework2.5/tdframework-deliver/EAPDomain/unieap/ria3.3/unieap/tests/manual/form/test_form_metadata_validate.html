@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>元数据校验测试</title>
+        <style>
+            @import "../../../../unieap/themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/global.js">
+        </script>
+		
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.form.Form");
+			dojo.require("unieap.form.TextBox");
+			dojo.require("unieap.ds");
+			dojo.require("unieap.form.DateTextBox");
+			dojo.require("unieap.form.NumberTextBox");
+			dojo.require("unieap.form.Button");
+			
+			var ds=new unieap.ds.DataStore("demo",[
+				{name:null,age:'19891111',sal:'10001'}
+			]);
+			ds.addMetaData("name",{
+				nullable:false,
+				maxLength:6,
+				minLength:2,
+				defaultValue:'psd',
+				pattern:"^[a-zA-Z-]+$",
+				prompts:{
+					 pattern:'只能输入字母',
+					 nullable:'姓名不可以为空',
+					 maxLength:'最多只能输入6个字符',
+					 minLength:'至少输入2个字符'
+					}
+				}
+			);
+			ds.addMetaData("age",{
+				prompts: {
+					past:'输入值不合法，日期必须大于1987-12-12',
+					future:'输入值不合法，日期必须小于1988-12-12'
+				},
+				past:566236800000,
+				future:597859200000 
+			});
+			ds.addMetaData("sal",{
+				nullable:false,
+				prompts:{
+					nullable:'工资怎么可以为空,你想喝西北风呀?',
+					precision:'整数最多只能为5位，小数最多2位',
+					scale:'整数最多只能为5位，小数最多2位',
+					max:"不能大于10000",
+					min:'不能小于5000',
+					pattern:'工资只能为数字'
+				},
+				max:10000,
+				min:5000,
+				precision:7,
+				scale:2
+			})
+			dataCenter.addDataStore(ds);
+			
+			
+			function getMetaDataInfo(){
+				
+				var ds=dataCenter.getDataStore('demo');
+				unieap.debug(ds.metaData.columns)
+			}
+
+	        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+				测试功能点：
+				<li>元数据校验测试</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height=500px style="float:left;width:35%" >
+			<div dojoType="unieap.form.Form" id='frm' binding="{store:'demo'}">
+				<div dojoType="unieap.form.TextBox"  binding="{name:'name'}"></div>
+				<div dojoType="unieap.form.DateTextBox" valueFormatter="{dataFormat:'yyyyMMdd'}"  binding="{name:'age'}" id='x'></div>
+				<div dojoType="unieap.form.NumberTextBox"  binding="{name:'sal'}"></div>
+			</div>
+			
+			<p></p>
+			
+			<div dojoType="unieap.form.Button" label="查看元数据信息" onClick="getMetaDataInfo"></div>
+
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height=500px style="float:right;width:65%">
+			<table border="1" bordercolor="#99BBE8">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td >TextBox元数据校验</td>
+					<td >默认值、非空、正则、最大长度、最小长度校验</td>
+					<td >
+						1.默认值为"psd" <br />
+						2.非空提示"姓名不可以为空" <br />
+						3.正则校验提示"只能输入字母" <br />
+						4.最大长度校验提示"最多只能输入6个字符" <br />
+						5.最小长度校验提示"至少输入2个字符"
+					</td>
+				</tr>
+				<tr height="50px">
+					<td >DateTextBox元数据校验</td>
+					<td >最小日期、最大日期校验</td>
+					<td >
+						1.最小日期校验提示"输入值不合法，日期必须大于1987-12-12"<br />
+						2.最大日期校验提示"输入值不合法，日期必须小于1988-12-12"
+					</td>
+				</tr>
+				<tr height="50px">
+					<td >NumberTextBox元数据校验</td>
+					<td >非空、正则、最大值、最小值、精度校验</td>
+					<td >
+						1.非空提示"工资怎么可以为空,你想喝西北风呀?" <br />
+						2.最大值校验提示"不能大于10000" <br />
+						3.最小值校验提示"不能小于5000" <br />
+						4.精度校验提示"只能输入2位小数" <br/>
+						5.正则校验提示"工资只能输入数字"
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+    </body>
+</html>

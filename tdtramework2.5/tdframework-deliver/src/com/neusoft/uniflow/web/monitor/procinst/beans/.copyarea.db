@@ -1,0 +1,14 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\monitor\procinst\beans
+2
+a
+e:Transtion.java|1|13b896a29a8|fc7|b8c851c5|9b8c27087a8142c6940057b1725a08b7|0
+18:SVGMonitorConstants.java|1|13b896a27b4|d4|a256449c|eab7829a42aa447bb875f04fae201546|0
+15:SVGCreateFactory.java|1|13b896a2756|9664|1f9765fd|aef2bd59398f400cb29b2aadd180f36b|0
+11:WorkItemBean.java|1|13b896a2a06|85f|aea58e6e|e39c3790ef07443e83d064aaed0d5989|0
+18:SVGTranstionManager.java|1|13b896a293b|45a|1ec3b19f|6681b85a584e49e4835e9bd52f44fdfa|0
+16:DynamicBranchInfo.java|1|13b896a24d6|3d4|8fd94583|f27a257a563343f5a9e0c5d5444f06af|0
+10:ActParaBean.java|1|13b896a23fb|31a|2b4ff6b5|f11705f01e9747378bdbe3af0348a9a6|0
+11:SVGTranstion.java|1|13b896a289f|64ef|76de45e9|5f289a1af60b403e953a03a63f4e3734|0
+11:EventVarBean.java|1|13b896a2543|20f|5781aaa5|701fe0bf90794570b7a5c57512ed7128|0
+18:OldSVGCreateFactory.java|1|13b896a264d|8cdb|85318189|a86eba48c2c6478eb574b45bf94d2c71|0

@@ -1,0 +1,456 @@
+@charset "utf-8";
+/* ************************** */
+/* ************************** */
+/*-----全局样式-----*/
+
+body {
+	color:#000000;
+	background-color:#FFFFFF;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	font-family: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+div {
+	font-size:12px;
+	font-family: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+	margin:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+span {
+	font-size:12px;
+	font-family: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+table {
+	padding:0px;
+	margin:0px;
+}
+td {
+	font-size:12px;
+	font-family: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+	vertical-align:middle;
+}
+P {
+	font-size:12px;
+	font-family: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+	margin:2px;
+}
+img {
+	border:0px;
+	margin:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+form {
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+BUTTON {
+	font-size:12px;
+	word-break:keep-all;
+	word-wrap:normal;
+	white-space:nowrap;
+}
+OPTION {
+	font-size:12px;
+}
+label {
+	vertical-align:middle;
+}
+INPUT {
+	font-size:12px;
+	width:auto;
+	vertical-align:middle;
+}
+input[type="button"] {
+	height:28px;
+}
+INPUT.text {
+	width: 125px;
+}
+INPUT.radio {
+	font-size:12px;
+	width: 20px;
+}
+INPUT.checkbox {
+	font-size:12px;
+	width: auto;
+}
+INPUT.dateField {
+	font-size:12px;
+	width: 108px;
+	ime-mode:disabled;
+}
+SELECT {
+	font-size:12px;
+	width:133px;
+	vertical-align:middle;
+}
+textarea {
+	font-family: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size:12px;
+	overflow:auto;
+	width:98%;
+	word-wrap:break-word;
+	word-break:break-all;
+}
+LI {
+	font-size:12px;
+}
+A {
+	color:#000;
+	text-decoration:none;
+	vertical-align:middle;
+}
+A:link {
+}
+A:visited {
+}
+A:hover {
+}
+A:active {
+}
+/* ************************** */
+/* ************************** */
+/*-----main样式------*/
+#header_logo {
+	background-image: url(../images/main/header_logo.gif);
+	height: 50px;
+	width: 330px;
+}
+#header_button {
+	background-image: url(../images/main/header_right_bg.gif);
+	height: 25px;
+	vertical-align:bottom;
+	text-align:right;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 4px;
+	padding-left: 0;
+}
+#header_button a {
+	margin:0 0 0 15px;
+}
+#header_favori{
+	background-image: url(../images/main/header_favori_bg.gif);
+	height: 18px;
+	font-size:13px;
+	vertical-align:middle;
+	text-align:right;
+	color:#799efb;
+}
+#header_favori a {
+	margin:0 2px 0 2px;
+	color:#2e4d9c;
+}
+#header_favori a:hover {
+	margin:0 2px 0 2px;
+	color:#799efb;
+}
+#footer {
+	background-image: url(../images/main/footer_bg.gif);
+	height: 23px;
+	padding:0 5px 0 5px;
+}
+.login_info {
+	padding:0 0 0 5px;
+	font-size: 12px;
+	line-height: 23px;
+	color: #717171;
+	text-align: left;
+	vertical-align: middle;
+}
+.footer_date {
+	padding:0 0 0 5px;
+	background-image: url(../images/main/footer_line.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 150px;
+}
+.date_show {
+	border:none;
+	background-color: transparent;
+}
+.button_mail {
+	background-image: url(../images/main/button_mail.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_mail_o {
+	background-image: url(../images/main/button_mail_o.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_mail_d {
+	background-image: url(../images/main/button_mail_d.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_calendar {
+	background-image: url(../images/main/button_calendar.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_calendar_o {
+	background-image: url(../images/main/button_calendar_o.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_calendar_d {
+	background-image: url(../images/main/button_calendar_d.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_ds {
+	background-image: url(../images/main/button_ds.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_ds_o {
+	background-image: url(../images/main/button_ds_o.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_ds_d {
+	background-image: url(../images/main/button_ds_d.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_notepad {
+	background-image: url(../images/main/button_notepad.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_notepad_o {
+	background-image: url(../images/main/button_notepad_o.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_notepad_d {
+	background-image: url(../images/main/button_notepad_d.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_calculator {
+	background-image: url(../images/main/button_calculator.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_calculator_o {
+	background-image: url(../images/main/button_calculator_o.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+.button_calculator_d {
+	background-image: url(../images/main/button_calculator_d.gif);
+	height: 23px;
+	width: 23px;
+	border:0;
+}
+#note_div {
+	position:absolute;
+	left:4px;
+	bottom:12px;
+	width:200px;
+	height:0px;
+	overflow:hidden;
+}
+.note_tl {
+	background-image: url(../images/main/note/note_bg_tl.gif);
+	height: 3px;
+	width: 3px;
+}
+.note_t {
+	background-image: url(../images/main/note/note_bg_t.gif);
+	height: 3px;
+}
+.note_tr {
+	background-image: url(../images/main/note/note_bg_tr.gif);
+	height: 3px;
+	width: 3px;
+}
+.note_l {
+	background-image: url(../images/main/note/note_bg_l.gif);
+	width: 3px;
+}
+.note_tc {
+	background-color: #d6e3f8;
+}
+.note_tc_title {
+	font-size:13px;
+	text-align:center;
+	height:20px;
+	color:#1b367b;
+}
+.note_button {
+	display:inline;
+	float:right;
+	cursor:pointer;
+	padding:0 5px 0 0;
+}
+.note_c {
+	padding:5px;
+	font-size:12px;
+	color:#000;
+	background-color: #fff;
+	border: 1px solid #92a6ca;
+}
+.note_r {
+	background-image: url(../images/main/note/note_bg_r.gif);
+	width: 3px;
+}
+.note_bl {
+	background-image: url(../images/main/note/note_bg_bl.gif);
+	height: 3px;
+	width: 3px;
+}
+.note_b {
+	background-image: url(../images/main/note/note_bg_b.gif);
+	height: 3px;
+}
+.note_br {
+	background-image: url(../images/main/note/note_bg_br.gif);
+	height: 3px;
+	width: 3px;
+}
+/* ************************** */
+/* ************************** */
+/*-----content样式------*/
+.content_bg {
+	background-image: url(../images/main/content_bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #e9f1f5;
+	padding:3px;
+}
+/* ************************** */
+/* ************************** */
+/*-----portal样式------*/
+.portal_div{
+	display:block;
+	margin:20px 5px 0 5px;
+	float:left;
+}
+.portal_tl{
+	background-image: url(../images/portal/portal_tl.png);
+	height: 27px;
+	width: 6px;
+	font-size:1px;
+}
+.portal_t{
+	background-image: url(../images/portal/portal_t.png);
+	height: 27px;
+	line-height:27px;
+}
+.portal_tr{
+	background-image: url(../images/portal/portal_tr.png);
+	height: 27px;
+	width: 6px;
+	font-size:1px;
+}
+.portal_l{
+	background-image: url(../images/portal/portal_l.png);
+	width: 6px;
+	font-size:1px;
+}
+.portal_c{
+	background-color:#FFF;
+	vertical-align:top;
+	padding:5px 0 0 0;
+}
+.portal_r{
+	background-image: url(../images/portal/portal_r.png);
+	width: 6px;
+	font-size:1px;
+}
+.portal_bl{
+	background-image: url(../images/portal/portal_bl.png);
+	height: 6px;
+	width: 6px;
+	font-size:1px;
+}
+.portal_b{
+	background-image: url(../images/portal/portal_b.png);
+	height: 6px;
+	font-size:1px;
+}
+.portal_br{
+	background-image: url(../images/portal/portal_br.png);
+	height: 6px;
+	width: 6px;
+	font-size:1px;
+}
+.portal_title_l{
+	font-size: 12px;
+	font-weight: bold;
+	color: #1b517b;
+	float:left;
+}
+.portal_title_r{
+	float:right;
+	line-height:27px;
+}
+.portal_title_r a{
+	margin:0 2px 0 2px;
+}
+.portal_job_left{
+	line-height:25px;
+	text-align:left;
+}
+.portal_orange{
+	color:#ff9000;
+}
+.portal_job_right{
+	line-height:25px;
+	text-align:right;
+}
+.portal_job_right a{
+	font-size: 12px;
+	color: #2e4d9c;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.portal_list{
+	margin:0;
+	padding:0;
+}
+.portal_list ul{
+	margin:0;
+	padding:0 0 0 18px;}
+.portal_list li{
+	line-height:25px;
+	list-style-image: url(../images/portal/portal_arrow.gif);
+	list-style-position: outside;
+	margin:0;
+	padding:0;
+}
+.portal_list a{
+	margin:0;
+}
+.portal_list li a:hover{
+	text-decoration: underline;
+}
+.portal_more{
+	padding:80px 0 0 0;
+	text-align: right;
+	vertical-align: bottom;
+}

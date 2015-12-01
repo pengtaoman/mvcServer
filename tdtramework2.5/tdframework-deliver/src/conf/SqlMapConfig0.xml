@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+  <settings
+     cacheModelsEnabled="true"
+     enhancementEnabled="true"
+     lazyLoadingEnabled="true"
+     maxRequests="32"
+     maxSessions="10"
+     maxTransactions="5"
+     useStatementNamespaces="true" />
+     
+     
+      <!-- 配置domain对象 -->
+	   <typeAlias alias="ibatis3goods" type="com.neusoft.tdframework.ibaguice.pot.domain.Ibatis3Goods" />
+	   <typeAlias alias="ibatis3orders" type="com.neusoft.tdframework.ibaguice.pot.domain.Ibatis3Orders" />
+	   <typeAlias alias="ibatis3users" type="com.neusoft.tdframework.ibaguice.pot.domain.Ibatis3Users" />
+	   <typeAlias alias="ordersrefgoods" type="com.neusoft.tdframework.ibaguice.pot.domain.OrdersRefGoods" />
+
+
+      <!-- 配置xml映射文件 -->
+	   <sqlMap resource="com/neusoft/tdframework/ibaguice/pot/domain/sqlmap/Ibatis3GoodsSqlMap.xml" />
+	   <sqlMap resource="com/neusoft/tdframework/ibaguice/pot/domain/sqlmap/Ibatis3OrdersSqlMap.xml" />
+	   <sqlMap resource="com/neusoft/tdframework/ibaguice/pot/domain/sqlmap/Ibatis3UsersSqlMap.xml" />
+	   <sqlMap resource="com/neusoft/tdframework/ibaguice/pot/domain/sqlmap/OrdersRefGoodsSqlMap.xml" />
+	   
+</sqlMapConfig>

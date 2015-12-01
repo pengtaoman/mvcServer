@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\paramMaint
+2
+4
+16:ParamPowerDAOImpl.java|1|13b896714c1|b11|291c7244|fee3fff76dbe47c4b86e9d78a89229dd|0
+14:ParamPowerMaint.java|1|13b896716c4|6177|f9b184df|9ebe4f6e90134ba390039bb094e3f383|0
+14:ParamCommonTool.java|1|13b89671463|b168|a008c00e|b25bb6dfa95c45178eda5a2d826c197c|0
+12:ParamPowerDAO.java|1|13b89671492|32b|afb6415a|e9809efcaf624f4a9527f8db6b8c01c6|0

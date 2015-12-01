@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<services>
+   <Item name="Form">
+      <ip>192.168.210.64</ip>
+      <port>8080</port>
+   </Item>
+   
+   <Item name="Query">
+      <ip>192.168.210.100</ip>
+      <port>8080</port>
+   </Item>
+   
+   <Item name="GIS">
+      <ip>192.168.210.122</ip>
+      <port></port>
+   </Item>
+    
+   <Item name="Edoc">
+      <ip>192.168.210.67</ip>
+      <port>8080</port>
+   </Item>
+   
+   <Item name="Report">
+   	  <ip>192.168.210.68</ip>
+   <port>8080</port>
+   </Item>
+</services>

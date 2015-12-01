@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ComboBox</title>
+<link href="../../../../../unieap/themes/default/css/unieap.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true, locale:'zh'" ></script>
+<script type="text/javascript" src="../../../../../dijit/dijit.js" ></script>
+<script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8" ></script>
+<script type="text/javascript" src="../../../../../unieap/form/ComboBox.js" ></script>
+<script type="text/javascript" src="../../../../../unieap/form/TextBox.js" ></script>
+<script type="text/javascript" src="../../../../../unieap/dialog/Dialog.js"></script>
+<script type="text/javascript" src="../../../../../unieap/dialog/DialogUtil.js"></script>
+<script type="text/javascript" src="../../../../../unieap/rpc.js" ></script>
+
+<script type="text/javascript" src="combo.js"></script>
+</head>
+<body class="unieap">
+	<div id="combo1" dojoType="unieap.form.ComboBox" required="true" dataProvider="{store:'city_store'}" popup="{displayStyle:'table'}" onChange="comboChange"></div>
+	<div id="combo1_filter" dojoType="unieap.form.ComboBox" dataFilter="{filter:myfilter}" required="true" dataProvider="{store:'city_store'}" popup="{displayStyle:'table'}" onChange="comboChange"></div>
+	<button onclick="getValue()"> getValue</button>
+	<button onclick="setValue()">setValue</button>
+	<button onclick="toggleVisible()">toggleVisible</button>
+	<button onclick="addItem()">addItem</button>
+	<button onclick="toggleReq()">toggle required</button>
+	<br/>
+	<div id="text1" dojoType="unieap.form.TextBox"></div>
+	<button onclick="togReq4t()">toggle required</button>
+	<button onclick="setTextValue()">setTextValue</button>
+	<button onclick="toggleTextVisible()">toggleTextVisible</button>
+	<br/>
+	<div required="true" dojoType="unieap.form.ComboBox" id="multiCombo" dataProvider="{store:'city_store'}" popup="{displayStyle:'multi',onSelect:fn}" ></div>
+	<button onclick="getselection()">getSelection()</button>
+	<button onclick="openCombo()">open</button>
+	<br/>
+	<div dojoType="unieap.layout.TitlePane" title="combo级联">
+		<div dojoType="unieap.form.ComboBox" id="p_combo" popup="{displayStyle:'table'}" dataProvider="{store:'province_store'}"></div>
+		<div dojoType="unieap.form.ComboBox" id="c_combo" popup="{displayStyle:'table'}" dataProvider="{store:'city_store'}" cascade="{primary:'p_combo',filterAttr:'filter',filterNull:'none'}"></div>
+		<button onclick="getCurrentItems()">getCurrentItems</button>
+		<button onclick="getItems()">getItems</button>
+	</div>
+	<div dojoType="unieap.layout.TitlePane" title="setValue(null)">
+		<div dojoType="unieap.form.ComboBox" id="nullvalueCombo" dataProvider="{store:'city_store'}"></div>
+		<button onclick="setnull()">setValue(null)</button>
+		<button onclick="getnullvalue()">getValue()</button>
+	</div>
+	<div dojoType="unieap.layout.TitlePane" title="with dialog">
+		<div dojoType="unieap.form.ComboBox" id="combo_withDialog" dataProvider="{store:'city_store'}"></div>
+	</div>
+	<label>测试popup随页面的onscroll事件变化</label>
+	<div style="height:800px;background-color:gray;"></div>
+</body>
+</html>

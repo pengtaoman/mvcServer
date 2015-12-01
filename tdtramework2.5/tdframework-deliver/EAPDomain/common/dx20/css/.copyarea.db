@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\common\dx20\css
+2
+7
+f:login_style.css|1|13b89082358|9c0|5e1f1a05|4da7c6bf1dc14cb29af931b06ffd21e2|0
+12:workarea_style.css|1|13b890827ef|1cb2|5439d5ca|137f710be6ad4f188d7f6d15ef497522|0
+e:main_style.css|1|13b890824e0|21cd|c78d951f|992042e8944240fa81136e260b5263b0|0
+c:crm6_tab.css|1|13b89082d33|1cdc|5c7e5854|acbe0be704dd4c92b1352da5aae53185|0
+13:crm6_tab_middle.css|1|13b890830a0|1ac5|ccb8aa2c|ca751a28b98e460c8da1365f37bffe63|0
+d:crm6_main.css|1|13b89082b3d|5bf|d8f4fe99|ae5cb69f64494463a95bb1589a66651b|0
+f:crm6_portal.css|1|13b89083322|1a7e|9fe69b26|68738ec6493b44e18c523506949e5a68|0

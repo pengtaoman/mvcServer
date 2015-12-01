@@ -1,0 +1,72 @@
+.ComboBoxDiv{
+ position:  relative;
+ z-index: 100
+}
+input.ComboBoxInput {
+	/* font-size: 0.8em; */
+	border: 0px;
+	
+}
+
+span.spanMatchText{
+   text-decoration: underline;
+   font-weight: bold;
+  
+}
+span.specialMatchClass{
+   color: #345456;
+   font-weight: bold;
+  
+}
+table.ComboBox {
+	border: 1px solid #afafaf;
+	background-color: white;
+}
+.ComboBoxListDiv{
+        border: 1px solid #afafaf;
+}
+.ComboBoxItem {
+	padding-left: 2px;
+	padding-top: 2px;
+	margin: 0px;
+}
+
+.ComboBoxItemEven {
+	background-color: #f4f4f4;
+}
+
+.ComboBoxItemOdd {
+	background-color: white;
+}
+
+.ComboBoxItemHighlight {
+	background-color: #63709A;
+	color: white;
+}
+.arrowButton{	
+	width:16px;
+	margin-top:1px;
+	margin-right:1px;
+	cursor: hand;
+	background-image: url(../../images/combobox/arrow2.gif);
+	background-repeat: no-repeat;
+	cursor: hand;
+}
+.arrowButton2{	
+	width:16px;
+	margin-top:1px;
+	margin-right:1px;
+	cursor: hand;
+	background-image: url(../../images/combobox/arrow1.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+}
+.arrowButton3{	
+	width:16px;
+	margin-top:1px;
+	margin-right:1px;
+	cursor: hand;
+	background-image: url(../../images/combobox/arrow3.gif);
+	background-repeat: no-repeat;
+	cursor: hand;
+}

@@ -1,0 +1,40 @@
+<html>
+<body>
+<SCRIPT language="javascript" src="generate_result_table.js"></SCRIPT> 
+<script>
+var table_header=new Array();
+var table_info=new Array();
+var display_sum="true";
+var sum_flag_array=new Array();
+var sum_symbol=new Array(false,true);
+var appendix_str=new Array();
+
+table_header[0]="西";
+table_header[1]="东";
+table_info[0]=new Array("1","2");
+table_info[1]=new Array("3","4");
+table_info[2]=new Array("5","6");
+table_info[3]=new Array("7","8");
+events="";
+row_id="";
+display_col=new Array("true","true");
+row_id_table=new Array("true","true");
+check_radio_type="radio";
+border_table="1";
+width_table=" 620";
+sum_flag_array=new Array(false,true);
+wjj=generate_result_table(table_header,table_info,events,row_id_table,row_id,display_col,check_radio_type,display_sum,sum_flag_array,sum_symbol,border_table,width_table,appendix_str);
+document.write("<b>多条数据按行显示<b>");
+document.write(wjj);
+
+document.write("<br><b>一条数据按每行显示几列画表格<b>");
+table_header=new Array("东","西","南","北");
+table_info=new Array("1","2","3","4");
+//wjj_col=generate_table_by_col(table_header,table_info,"1","620","3");
+//document.write(wjj_col);
+</script>
+
+
+
+</body>
+</html>

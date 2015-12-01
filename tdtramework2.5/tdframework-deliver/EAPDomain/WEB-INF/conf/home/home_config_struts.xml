@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources/>
+	<form-beans/>
+	<global-exceptions>
+		<exception key="unknownException" path="/../common/jsp/ExceptionGuideJSP.jsp" type="com.neusoft.tdframework.exception.ActionException"/>
+		<exception key="unknownException" path="/../common/jsp/ExceptionGuideJSP.jsp" type="com.neusoft.tdframework.exception.SysException"/>
+	</global-exceptions>
+	<global-forwards>
+		<forward name="Login" path="/../views/mainframe/jsp/auth/login.jsp" redirect="true"/>
+		<forward name="blank" path="/../views/blank.html" redirect="true"/>
+		<forward name="sessionInvalid" path="/../views/mainframe/jsp/auth/session_invalid.jsp" redirect="true"/>
+	</global-forwards>
+	<action-mappings>
+	  <!--HOME PAGE-->
+		<action path="/homepage" type="com.neusoft.tdframework.home.action.HomePageAction" parameter="actionMethod">
+         <forward name="homepage" path="/../home/homepage.jsp" />
+      </action>
+      <action path="/portalpage" type="com.neusoft.tdframework.home.action.PortalPageAction" parameter="actionMethod">
+         <forward name="homepage" path="/../home/portalpage.jsp" />
+      </action>
+      <!--PROMPT MESSAGE-->
+      <action path="/promptInfoMsgAction" type="com.neusoft.tdframework.message.action.PromptInfoAction" parameter="method">
+         <forward name="reloadScusess" path="/../tdframework/admin/server/promptMessageCacheReload.jsp" />
+         <forward name="compressJsCss" path="/../tdframework/admin/server/compressJsCss.jsp" />
+         <forward name="compressBusJsCss" path="/../tdframework/admin/server/compressBusJsCss.jsp" />
+      </action>
+      <!--SCHEDULER MONITOR-->
+      <action path="/schedulerMonitorAction" type="com.neusoft.tdframework.quartz.action.SchedulerMonitorAction" parameter="method">
+         <forward name="init" path="/../tdframework/scheduler/index.jsp" />
+      </action>
+      
+      <!-- user login lock -->
+      <action path="/unlock" type="com.neusoft.om.action.unlock.UnlockAction" scope="request" parameter="method" >	
+		 <forward name="success" path="/../views/om/organ/unlock/unlock.jsp" redirect="false" />	
+ 	  </action>
+	  <action path="/loginFailLogQueryAction" type="com.neusoft.om.action.loginFail.LoginFailLogQueryAction" scope="request" parameter="method" >	
+		  <forward name="query" path="/../views/om/organ/loginFail/loginFailLogQueryBottom.jsp" redirect="false" />	
+ 	  </action>
+	</action-mappings>
+	
+
+	
+	<controller bufferSize="4096" debug="0" locale="false" nocache="false" inputForward="false"/>
+	<message-resources null="true" parameter="com.neusoft.struts.ApplicationResources"/>
+	<plug-in className="com.neusoft.unieap.config.plugin.EAPPlugin">
+		<set-property value="/WEB-INF/conf/home/home_Config.xml" property="config"/>
+	</plug-in>
+</struts-config>

@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\patch
+2
+6
+9:number.js|1|13b890eef8d|98c|133c1b5a|b06609a275c44f1b9a65fbe7824fa7e3|0
+d:dojo-patch.js|1|13b890eeb76|576|52cceb3c|a6ca9bc35c884ce196ad9b5ea5a7587f|0
+9:loader.js|1|13b890eed4b|17f9|1c2cf05f|31087650ba8245e0ace70d04b140aff5|0
+e:rpc32-patch.js|1|13b890ef068|4945|202268e0|17ac584c5dcd481ba01959604050a141|0
+b:boosters.js|1|13b890ee8e5|2f8b|1eb83b0e|4cf2f6627cbf4c1eab4d8347e3c79f27|0
+b:manatest.js|1|13b890eeee1|0|0|18f7e831669c46c49e857e12dbd7c61c|0

@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\empiplimit
+2
+4
+13:EmpIpLimitColl.java|1|13b8966d90f|151|f9327048|34961619fbc14105bad52209c0eb3de0|0
+16:EmpIpLimitDAOImpl.java|1|13b8966d98c|2661|ca41bf23|3955142d9eb2486596c7c06d321086bf|0
+11:EmpIpLimitVO.java|1|13b8966d9ca|172b|410e2c08|7f6d0774c1c1455e8b640f4e876fbdaa|0
+12:EmpIpLimitDAO.java|1|13b8966d92e|638|eccd124e|5a4e8d9577394418bf92a42ba66b6bdf|0

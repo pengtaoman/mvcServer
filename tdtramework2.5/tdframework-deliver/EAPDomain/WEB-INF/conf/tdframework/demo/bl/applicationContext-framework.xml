@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Crm applicationContext</description>
+	<bean id="demoAreaInnerTree" class="com.neusoft.tdframework.demo.bo.common.AreaInnerTreeImpl">
+	</bean>
+	<bean id="demoOptrMaintBo" class="com.neusoft.tdframework.demo.bo.staffer.OptrMaintBoImpl">
+		<property name="optrMaintDao">
+			<ref bean="optrMaintDao"/>
+		</property>
+	</bean>
+	<!--drivenTreeBO-->
+	<bean id="drivenTreeBo" class="com.neusoft.tdframework.demo.bo.common.DrivenTreeBoImpl">
+		<property name="drivenTreeDao">
+			<ref bean="drivenTreeDao"/>
+		</property>
+	</bean>
+	<!--roleListBO-->
+	<bean id="roleListBo" class="com.neusoft.tdframework.demo.bo.common.RoleListBoImpl">
+		<property name="roleListDao">
+			<ref bean="roleListDao"/>
+		</property>
+	</bean>
+	<!-- Ȩ��������� 
+	-->
+	<bean id="frameworkTransactionProxy" lazy-init="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="frameworkTransactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="do*">PROPAGATION_REQUIRED,-ServiceException</prop>
+				<prop key="get*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="frameworkTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref local="framework_dataSource"/>
+		</property>
+	</bean>
+	<!-- ������Դ 
+	-->
+	<bean id="framework_dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/crma</value>
+		</property>
+	</bean>
+	<bean id="om_dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/crma</value>
+		</property>
+	</bean>
+</beans>

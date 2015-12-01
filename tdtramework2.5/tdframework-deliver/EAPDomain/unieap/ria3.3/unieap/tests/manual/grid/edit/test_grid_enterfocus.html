@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>Grid行编辑，RadioButtonGroup、CheckBoxGroup聚焦</title>
+        <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>	
+        <script type="text/javascript">
+    		dojo.require("unieap.form.Button");
+			dojo.require("unieap.grid.Grid");
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.form.CheckBoxGroup");
+			dojo.require("unieap.form.RadioButtonGroup");
+			
+            var city = new unieap.ds.DataStore('store', [
+				{province: '辽宁',city: '大连',type:'0',product:'0'}, 
+				{province: '辽宁',city: '沈阳',type:'0',product:'0'},
+				{province: '辽宁',city: '瓦房店',type:'0',product:'0'}, 
+				{province: '辽宁',city: '鞍山',type:'0',product:'0'}
+			]);
+			dataCenter.addDataStore(city);
+			
+			var type = new unieap.ds.DataStore('type',[
+				{CODEVALUE:'0',CODENAME:'丘陵'},
+				{CODEVALUE:'1',CODENAME:'平原'},
+				{CODEVALUE:'2',CODENAME:'盆地'},
+				{CODEVALUE:'3',CODENAME:'高原'}
+			]);
+			dataCenter.addDataStore(type);
+			
+			var product = new unieap.ds.DataStore('product',[
+				{CODEVALUE:'0',CODENAME:'虾仁'},
+				{CODEVALUE:'1',CODENAME:'海苔'},
+				{CODEVALUE:'2',CODENAME:'鱿鱼丝'},
+				{CODEVALUE:'3',CODENAME:'烤鱼片'}
+			]);
+			dataCenter.addDataStore(product);
+		</script>
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试功能点：
+				<li>Grid行编辑，RadioButtonGroup、CheckBoxGroup回车聚焦</li>
+				<li>Grid行编辑，CheckBoxGroup,复选下拉框值转义</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height="250px">
+			<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="150px"  
+			    binding="{store:'store'}"
+				views="{rowBar:true,orderType:'none'}" 
+				selection="{selectType:'single'}"
+				edit="{editType:'rowEdit',singleClickEdit:false}">  
+			    <header>  
+			        <cell width="200px" label="省份" name="province" editor="{editorClass:'unieap.form.TextBox'}"></cell>  
+			        <cell width="200px" label="城市" name="city" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+					<cell width="300px" label="地形" name="type" editor="{editorClass:'unieap.form.RadioButtonGroup',editorProps:{dataProvider:{store:'type'}}}"></cell>
+					<cell width="300px" label="特产" name="product" editor="{editorClass:'unieap.form.CheckBoxGroup',editorProps:{dataProvider:{store:'product'}}}"></cell>
+			    </header>  
+			</div>
+			
+			<div id="grid1" jsId="grid1" dojoType="unieap.grid.Grid" width="100%" height="150px"  
+			    binding="{store:'store'}"
+				views="{rowBar:true,orderType:'none'}" 
+				selection="{selectType:'single'}"
+				edit="{editType:'rowEdit',singleClickEdit:false}">  
+			    <header>  
+			        <cell width="200px" label="省份" name="province" editor="{editorClass:'unieap.form.TextBox'}"></cell>  
+			        <cell width="200px" label="城市" name="city" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+					<cell width="300px" label="特产1" name="product" editor="{editorClass:'unieap.form.ComboBox',editorProps:{dataProvider:{store:'product'},popup:{displayStyle:'multi'}}}"></cell>
+					<cell width="300px" label="特产2" name="product" editor="{editorClass:'unieap.form.CheckBoxGroup',editorProps:{dataProvider:{store:'product'}}}"></cell>
+			    	<cell width="300px" label="地形" name="type" editor="{editorClass:'unieap.form.RadioButtonGroup',editorProps:{dataProvider:{store:'type'}}}"></cell>
+				</header>  
+			</div>
+        </div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height="250px">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">Grid行编辑，RadioButtonGroup、CheckBoxGroup回车聚焦</td>
+					<td style="vertical-align:top">上下两个Grid，分别进行行编辑，在编辑行点击回车进行焦点切换</td>
+					<td style="vertical-align:top">
+						1.上Grid，RadioButtonGroup、CheckBoxGroup可以进行正常进行回车聚焦，CheckBoxGroup能够回车换行聚焦<br>
+						2.下Grid，RadioButtonGroup、CheckBoxGroup可以进行正常进行回车聚焦，RadioButtonGroup能够回车换行聚焦
+					</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">Grid行编辑，CheckBoxGroup,复选下拉框值转义</td>
+					<td style="vertical-align:top">行编辑下Grid，对<特产1>列进行复选，对<特产2>列选中多个Checkbox</td>
+					<td style="vertical-align:top">离开焦点（取消编辑状态）后，复选的值经过转义用逗号分隔显示在单元格上</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

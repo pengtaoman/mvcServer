@@ -1,0 +1,419 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>页面标题</title>
+	<meta http-equiv="MSThemeCompatible" content="no" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+<link rel="stylesheet" href="../../tdframework/mainframe/css/td_style_top.css" type="text/css" />
+
+<!-- 自定页面级css样式  -->
+<style type="text/css">
+
+
+</style>
+
+
+
+<script language="javascript" src="../../tdframework/mainframe/js/cookeiutil.js" ></script>
+<script language="javascript" src="../../tdframework/mainframe/js/mainmenu.js" ></script>
+
+
+
+<!-- 页面级js  -->
+<script language="javascript">
+// <![CDATA[
+
+function $(id){
+	var obj=document.getElementById(id);
+	return obj;
+}
+
+
+function isValid(obj){
+	if (obj==null || typeof(obj)=="undefined" ){
+		return false;
+	}else{
+		return true;
+	}
+}
+
+
+	// 应用路径,如果使用jsp,则写成 var APP_PATH="＜％= request.getContextPath() ％＞";
+	var APP_PATH="../..";
+
+
+
+	function deal_click_link(){
+		
+		//document.forms[0].ok_pass.value='0'
+		 var obj=event.srcElement;
+		linkId = "frameLeft.do?method=init&systemId=" + obj.id;
+		top.currentSysNameValue=obj.title;
+		parent.mainleft.location.href = linkId;
+		top.main.location.href = APP_PATH+"/blank.html";
+
+	}
+
+
+
+
+		function updatePassword() {
+			parent.main.location = APP_PATH + "/om/passwordupdateaction.do?OperTye=init";
+		}
+		
+		//收藏夹管理
+		function favoriteAdmin(){	
+			var systemId = parent.mainleft.myform.systemId.value;
+			parent.main.location = APP_PATH + "/favoriteMenuAdmin.do?operType=query&systemId=" + systemId;
+		}
+		
+		function relogin(){
+			var ht=[];
+			var cfilter="progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+
+
+			ht[0] = top.top_page.document.getElementsByTagName("body");
+			ht[1] = top.mainleft.document.getElementsByTagName("body");
+			ht[2] = top.work_items.document.getElementsByTagName("body");
+			ht[3] = top.main.document.getElementsByTagName("body");
+
+
+			for (var i=0;i<ht.length ;i++ ){
+				if(isValid(ht[i][0]) ) {
+					ht[i][0].style.filter = cfilter;
+				}
+					
+			}
+
+			//ht[0].style.setAttribute("filter","Alpha(opacity=60)");
+			if(confirm("确认要重新登陆吗?"))
+			{
+				top.location = APP_PATH + "/";
+			}
+			else
+			{	
+
+			for (var i=0;i<ht.length ;i++ ){
+				if(isValid(ht[i][0]) ) {
+					ht[i][0].style.filter = "";
+				}
+					
+			}
+				
+			}
+			   
+		}
+		
+		function help(){
+			//alert("CRM客户管理系统! \n版本:1.0");
+			window.open(APP_PATH+"/handbook.jsp","handbook","top:70,left:50,width:200,height:200");
+		}
+
+
+	/*初始化函数*/
+	function init(){
+
+MenuBar.defaultMenuNum=7;
+
+
+		MenuBar.cookieId="U_SJZ_TEST";
+						
+
+				MenuBar.createTopMenu("System80","首页");
+			
+							MenuBar.createSubMenu("801","我的工作区","System80");
+
+			
+							MenuBar.createSubMenu("802","收藏夹","System80");
+
+			
+				MenuBar.createTopMenu("System81","市场营销");
+			
+							MenuBar.createSubMenu("811","市场计划","System81");
+
+			
+							MenuBar.createSubMenu("812","市场活动","System81");
+
+			
+				MenuBar.createTopMenu("System82","销售管理");
+			
+							MenuBar.createSubMenu("821","销售计划","System82");
+
+			
+							MenuBar.createSubMenu("822","销售活动","System82");
+
+			
+							MenuBar.createSubMenu("823","销售机会","System82");
+
+			
+							MenuBar.createSubMenu("824","销售文档","System82");
+
+			
+				MenuBar.createTopMenu("System83","渠道管理");
+			
+							MenuBar.createSubMenu("831","资料管理","System83");
+
+			
+							MenuBar.createSubMenu("832","资源管理","System83");
+
+			
+							MenuBar.createSubMenu("833","费用管理","System83");
+
+			
+							MenuBar.createSubMenu("834","佣金管理","System83");
+
+			
+							MenuBar.createSubMenu("835","人员管理","System83");
+
+			
+							MenuBar.createSubMenu("836","风险管理","System83");
+
+			
+							MenuBar.createSubMenu("837","评估管理","System83");
+
+
+if ( true){
+
+						
+	
+			
+
+			
+				MenuBar.createTopMenu("System84","订单处理");
+			
+							MenuBar.createSubMenu("841","订单受理","System84");
+
+			
+							MenuBar.createSubMenu("842","受理缴费","System84");
+
+			
+							MenuBar.createSubMenu("843","IVPN业务","System84");
+
+			
+							MenuBar.createSubMenu("844","统计查询","System84");
+
+			
+				MenuBar.createTopMenu("System85","客户管理");
+			
+							MenuBar.createSubMenu("851","客户基本资料管理","System85");
+
+			
+							MenuBar.createSubMenu("852","层级规则和关系维护","System85");
+
+			
+				MenuBar.createTopMenu("System86","话费管理");
+			
+							MenuBar.createSubMenu("861","费用管理","System86");
+
+			
+							MenuBar.createSubMenu("862","票据管理","System86");
+
+			
+							MenuBar.createSubMenu("863","异常处理","System86");
+
+			
+							MenuBar.createSubMenu("864","话费查询","System86");
+
+			
+							MenuBar.createSubMenu("865","如意133话费管理","System86");
+
+			
+							MenuBar.createSubMenu("866","PPS话费管理","System86");
+
+			
+				MenuBar.createTopMenu("System87","客户评价");
+			
+							MenuBar.createSubMenu("871","客户维系与挽留","System87");
+
+			
+							MenuBar.createSubMenu("872","俱乐部管理","System87");
+
+			
+							MenuBar.createSubMenu("873","积分管理","System87");
+
+			
+							MenuBar.createSubMenu("874","信用管理","System87");
+
+			
+							MenuBar.createSubMenu("875","客户分类","System87");
+
+			
+				MenuBar.createTopMenu("System88","客户问题");
+			
+							MenuBar.createSubMenu("881","问题单管理","System88");
+
+			
+							MenuBar.createSubMenu("882","维修单管理","System88");
+
+			
+				MenuBar.createTopMenu("System90","业务资源");
+			
+							MenuBar.createSubMenu("901","基础信息","System90");
+
+			
+							MenuBar.createSubMenu("902","卡管理","System90");
+
+			
+							MenuBar.createSubMenu("903","号码管理","System90");
+
+			
+							MenuBar.createSubMenu("904","终端管理","System90");
+
+			
+							MenuBar.createSubMenu("905","统计查询","System90");
+
+			
+							MenuBar.createSubMenu("906","其他资源","System90");
+
+			
+				MenuBar.createTopMenu("System91","集成定单");
+			
+							MenuBar.createSubMenu("911","流程管理","System91");
+
+			
+							MenuBar.createSubMenu("912","工单管理","System91");
+
+			
+				MenuBar.createTopMenu("System40","公共支撑");
+			
+							MenuBar.createSubMenu("41","权限管理","System40");
+
+			
+							MenuBar.createSubMenu("42","公告通知","System40");
+
+			
+							MenuBar.createSubMenu("43","在线帮助","System40");
+
+			
+
+
+
+
+}
+
+		MenuBar.loadFromCookie();
+		MenuBar.buildTopMenu();
+		MenuBar.buildSubMenu();
+
+		if (MenuBar.getTopMenuNum()<=MenuBar.defaultMenuNum){
+			$("menutools").style.display="none";
+		}
+
+
+		//MenuBar.activeTopMenuByIndex(0);
+	}
+
+
+function showLeftMenu(id){
+	//top.mainleft.showNode(id);
+top.DefaultHomePageId=id;
+
+}
+
+
+function customMenu(){
+
+		var prop = "dialogWidth:600px;dialogHeight:500px;center:yes;scroll:yes;status:yes;resizable:yes;help:no";
+		var url = "customtop.html";
+		var datePopWin=window.showModalDialog(url, window, prop);
+}
+
+
+
+
+
+function showRightMenu(obj){
+	obj.childNodes[0].style.display="inline";
+
+}
+
+
+function hideRightMenu(obj){
+	obj.childNodes[0].style.display="none";
+
+}
+
+
+function showAllMenu(){
+	if (MenuBar.zip){
+
+		MenuBar.zip=false;
+		MenuBar.buildTopMenu();
+		event.srcElement.innerHTML="全部显示";
+	}else{
+
+		MenuBar.zip=true;
+		MenuBar.buildTopMenu();
+		event.srcElement.innerHTML="还原显示";
+	}
+
+}
+
+
+// ]]>
+</script>
+
+</head>
+
+<body class="mainframeBody" onLoad="init();"
+		ondrag="return false;" ondragstart="return false;" onselectstart="return false;"
+		>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="220" style=" padding-left:5px;padding-top:3px;">
+		<img src="../../tdframework/mainframe/images/u_logo_cu.gif" 
+				ondrag="return false;" ondragstart="return false;"
+				/>
+    </td>
+    <td width="224" valign="top" style="padding-left:10px; padding-top:5px;">
+		<img src="../../tdframework/mainframe/images/u_logo_hebei.gif" width="224" height="16" ondrag="return false"/>
+    </td>
+    <td width="100%"></td>
+    <td align="left" valign="top" background="../../tdframework/mainframe/images/u_bg_line.gif"  >
+	<div id="rightMenu"  >
+	<div onmouseover="//showRightMenu2(this)" onmouseout="//hideRightMenu2(this)" style="border:0px;">
+			<span style="display:inline">&#160;
+			<a href="#" 
+			onclick="relogin();return false;">重新登录</a>|<a href="#" 
+			onclick="updatePassword();return false;">修改口令</a>|<a href="#" 
+			onclick="favoriteAdmin();return false;">收藏管理</a>|<a href="#"
+			onclick="help();return false;">帮助信息</a></span>
+	</div>
+	<div  onmouseover="showRightMenu(this)" onmouseout="hideRightMenu(this)">
+			<span style="display:none">&#160;&#160;&#160;&#160;&#160;&#160;
+			<a href="#" 
+			onclick="customMenu();">定制</a><span id="menutools">|<a href="#" 
+			onclick="showAllMenu();">全部显示</a>|<a href="#" 
+			onclick="scrollMenu(-1);">左动</a>|<a href="#" 
+			onclick="scrollMenu(1);">右动</a></span>
+			</span>
+	</div>
+	</div>
+			  <!--
+					<table width="100%"  height="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+						  <td width="25%" nowrap="true">&#160;|&#160;<a href="#" onclick="relogin('/business');return false;">重新登录</a>&#160;|&#160;</td>
+						  <td width="25%" nowrap="true"><a href="#" onclick="updatePassword('/business');return false;">修改口令</a>&#160;|&#160;</td>
+						  <td width="25%" nowrap="true"><a href="#" onclick="favoriteAdmin('/business');return false;">收藏管理</a>&#160;|&#160;</td>
+						  <td width="25%" nowrap="true"><a href="#" onclick="help('/business');return false;">帮助信息</a>&#160;|&#160;<a href="javascript:void(0);">定制</a></td>
+						</tr>
+					</table>
+				-->
+      </td>
+  </tr>
+</table>
+<!-- ==================================================================  -->
+<div id="topMenuDiv" style="border:0px solid #000000;width:100%;height:31px;overflow-x:hidden;overflow-y:hidden;"  onmousewheel="scrollMenuW();">
+<table id="topMenuBar" width="100%" class="topmenubox" border="0" cellpadding="0" cellspacing="1"  >
+<tr></tr>
+</table>
+</div>
+
+<div id="nav1" style="width:100%;overflow-x:hidden;overflow-y:hidden;" 
+onmousewheel="scrollSubMenuW();">
+
+</div>
+</body>
+</html>

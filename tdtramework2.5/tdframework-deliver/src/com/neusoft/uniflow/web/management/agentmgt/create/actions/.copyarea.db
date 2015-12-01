@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\management\agentmgt\create\actions
+2
+3
+16:ModifyAgentAction.java|1|13b896a67ea|190a|372646f1|34df443b70a147a7a8aaaf9b03f64d27|0
+18:AgentCategoryAction.java|1|13b896a65f6|fe7|c1842958|c87838e04896482b9d38ae60490062db|0
+16:CreateAgentAction.java|1|13b896a66d1|1b14|bf767770|fd20569a2b5f4ef990bb0fecd87c7549|0

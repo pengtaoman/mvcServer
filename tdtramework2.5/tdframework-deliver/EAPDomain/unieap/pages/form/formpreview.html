@@ -1,0 +1,122 @@
+﻿<html>
+<head>
+<title>表单打印</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style media="print" type="text/css">
+.noprint{display:none;}
+.PageNext{page-break-after: always;}
+</style>
+
+<style type="text/css">
+.p { page-break-inside: always;}
+</style>
+
+
+<link rel="stylesheet" type="text/css" href="data/css/form.css"></link>
+<script type="text/javascript"  src="data/js/hashtable.js"></script>
+<script type="text/javascript"  src="data/js/formutil.js"></script>
+<script type="text/javascript"  src="data/js/form_tree.js"></script>
+<script type="text/javascript"  src="data/js/form.js"></script>
+<script type="text/javascript"  src="data/js/appendtable.js"></script>
+<script type="text/javascript"  src="data/js/form_print.js"></script>
+<script type="text/javascript"  src="data/js/form_webtabs.js"></script>
+<script type="text/javascript"  src="data/js/seal.js"></script>
+
+<script type="text/javascript">
+<!--
+function createIFrame(){
+ try{
+  ifframe = document.createElement("iframe");
+  ifframe.id="innerF";
+  ifframe.className="noprint";
+  
+  if(opener.containPrint){
+  	ifframe.src = opener.getURL();
+  	ifframe.attachEvent("onload",function(){showPage()});
+  	ifframe.style.visibility = "hidden";
+    document.body.appendChild(ifframe);
+  }else{
+    ifframe.src ="";
+    document.getElementById("temp").innerHTML = opener.document.documentElement.innerHTML;
+    showPage();
+  }
+  }catch(e){
+    alert(e.description)
+    window.moveTo(0,0);
+  }
+}
+function showPage(){
+
+  factory.printing.header = "";
+  factory.printing.footer = ""; 
+  ifframe = document.getElementById("innerF");
+  var overprint = opener.document.forms(0).overprint;
+  var ids = opener.getPageIDs(); 
+  index = 0;
+  var top = factory.printing.topMargin*window.screen.deviceXDPI/25.4;
+  var left = factory.printing.leftMargin*window.screen.deviceXDPI/25.4;
+  while(index < ids.length){
+      var paramTable = new Parameters();
+      if(!ifframe){
+      	page = document.getElementById(ids[index]);
+      	paramTable.setParameter("modelof","form");
+      }
+      else{
+	    page = ifframe.contentWindow.document.getElementById(ids[index]);
+	    paramTable.setParameter("modelof","print");
+	  }
+	  
+      //paramTable.setParameter("pageIndex",index);
+      //paramTable.setParameter("subcmd","getpagesize");
+	  //rect = opener.getModelInfo(paramTable);  
+	  //r = rect.split(",");///
+	  div = document.createElement("div");
+	  div.style.position = "relative";
+	  div.style.left = -left;//1 - parseInt(r[0]);
+	  div.style.top = -top;// 1 - parseInt(r[1]);
+     
+	  div.innerHTML = page.innerHTML;
+	  document.body.appendChild(div);
+          procElements(div,ifframe,overprint);
+      
+	  if(index < (ids.length-1)){
+		   pageBreak = document.createElement("div");
+		   pageBreak.className = "PAGENEXT";
+		   document.body.appendChild(pageBreak);
+	  }
+	  index++;
+
+  }
+  if(overprint!="true"){
+  	 moveElements();
+  }
+  processGridAgain(ifframe);
+  processSeals();
+  processTextArea(ifframe);
+  var printObj  = document.all.WebBrowser;
+  //alert()
+  if(opener.prtOrPre=="prnt")
+  	printObj.ExecWB(6,1);
+  else
+    printObj.ExecWB(7,1);
+
+  window.close();
+
+  
+}
+
+  //-->
+</script> 
+</head>
+<body onload="createIFrame()">
+<object  id="WebBrowser"  classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"  height="0"  width="0">
+</object>
+<object id="factory" style="display: none" codebase="ScriptX.cab#Version=6,2,433,14" classid="clsid:1663ed61-23eb-11d2-b92f-008048fdd814">
+</object>
+
+<div id="temp" style="display: none">
+
+</div>
+
+</body>
+</html>

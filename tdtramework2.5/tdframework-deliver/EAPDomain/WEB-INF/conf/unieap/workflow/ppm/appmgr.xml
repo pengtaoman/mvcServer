@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appmgr messageType="appmanager" name="appmgr" enable="false" interval="1" 
+maxThreads="10" minThreads="5" reliable="true" pageSize="1000" jarScanInterval="10" isDebug="true" isLog="true">
+    <appAgentList>
+        <appAgent
+            class="com.neusoft.uniflow.appmgr.agent.NWServiceAgent" type="WebService"/>
+        <appAgent
+            class="com.neusoft.uniflow.appmgr.agent.NWJavaAppAgent" type="Java"/>
+        <appAgent class="com.neusoft.uniflow.appmgr.agent.NWEXEAppAgent" type="EXE"/>
+        <appAgent class="com.neusoft.uniflow.appmgr.agent.NWDllAppAgent" type="Dll"/>
+    </appAgentList>
+    
+    <notify name="notifyService" 
+	    class="com.neusoft.uniflow.email.EMailNotify"
+        mailServer="smtp.neusoft.com" from="zhangshb@neusoft.com" 
+ 		account="" password=""></notify>
+</appmgr>

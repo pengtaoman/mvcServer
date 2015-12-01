@@ -1,0 +1,14 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow\management\workdaymgt
+2
+a
+13:scheditmonthday.jsp|1|13b89606d2e|197d|1733dbc3|8979fa17e7af4cb4b7874f9c88c87b78|0
+12:scheditbetween.jsp|1|13b896069f2|1926|2f6d8b25|5e3a1ecb066a4b97aebfc66d42370600|0
+b:weekday.jsp|1|13b89606b5a|1e10|dd896bb7|29819f77500e454eb1d1c1a8051f86fb|0
+c:schedule.jsp|1|13b89606aec|2a95|1416ac57|a2a7c277c05f462c8b53c4bd04f711c1|0
+e:workdayorg.jsp|1|13b896068f8|6e2|7f4d6f03|09f3c6ae055449e49b9d6cd5739b2c5b|0
+c:monthday.jsp|1|13b89607349|1ebe|f9d3cfd7|7e28c3a846fe48b78b52ab814be0bd87|0
+12:scheditweekday.jsp|1|13b89606a60|1991|ac04b4ba|92910d8e421042bfb17549ae53f096ca|0
+e:betweenDay.jsp|1|13b8960725f|1acb|4e5774f|3f761f4a264e40dbb4a0160fb1d7ad4d|0
+17:workdaycategorytree.jsp|1|13b89606975|688|739a41be|6655278e58804ba887760cb3c5eb097a|0
+11:schedultIndex.jsp|1|13b896067df|94d|5b50205d|b994d041a1664efbaa067f8340d8fdbd|0

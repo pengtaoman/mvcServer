@@ -1,0 +1,17 @@
+.unieap .testTreeIconForMale{
+	background-image: url('../images/user.png');
+	width : 16px;
+}
+
+.unieap .testTreeIconForFemale{
+	background-image: url('../images/user_female.png');
+	width : 16px;
+}
+
+.unieap .testTreeLabelForLeaf{
+	background-color:red;
+}
+
+.unieap .testTreeLabel{
+	background-color:blue;
+}

@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\log
+2
+4
+a:LogVO.java|1|13b8966fe0c|357f|eec8ada3|cd508fcbf0c44b578f8476837b296f12|0
+b:LogDAO.java|1|13b8966fb8b|d78|8d688f96|62acee56df2344dc966e09c0481cb2bc|0
+c:LogColl.java|1|13b8966fb1e|1e8|21a39dbb|e8fd2e57623c4c9f816559d9c37afc66|0
+f:LogDAOImpl.java|1|13b8966fd8f|7187|662f2e84|7a387a8c96424f14841bbf0bd90a01a4|0

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Crm applicationContext</description>
+	<bean id="portalConfig" class="com.neusoft.tdframework.portal.config.PortalConfig">
+		<property name="faceConfig">
+			<ref local="face"/>
+		</property>
+		<!-- -->
+	</bean>
+	<bean id="face" class="com.neusoft.tdframework.portal.config.CommonFaceConfig">
+		<property name="name">
+			<value>success</value>
+		</property>
+		<property name="headerConfig">
+			<ref local="headerConfig"/>
+		</property>
+		<property name="leftConfig">
+			<ref local="leftConfig"/>
+		</property>
+		<!-- -->
+	</bean>
+	<bean id="headerConfig" class="com.neusoft.tdframework.portal.config.HeaderConfig">
+		<property name="headerName">
+			<value>common</value>
+		</property>
+		<property name="titleIcom">
+			<value></value>
+		</property>
+		<property name="instantSearch">
+			<value>false</value>
+		</property>
+		<property name="notifyStyle">
+			<value>popup</value>
+		</property>
+		<property name="systemOpenStyle">
+			<value>firstPage</value>
+		</property>
+		<!-- -->
+	</bean>
+	<bean id="leftConfig" class="com.neusoft.tdframework.portal.config.LeftConfig">
+		<property name="leftName">
+			<value>common</value>
+		</property>
+		<property name="recentFrame">
+			<value>yes</value>
+		</property>
+		<property name="favoriteStyle">
+			<value>firstPage</value>
+		</property>
+		<property name="systemOpenStyle">
+			<value>firstPage</value>
+		</property>
+		<!-- -->
+	</bean>
+	<bean id="interfaceConfig" class="com.neusoft.tdframework.portal.config.InterfaceConfig">
+		<property name="uniflowConfig">
+			<value>true</value>
+		</property>
+		<!-- 4 resprents internal operator, 5 represnets dealer-->
+		<property name="appId">
+			<value>4</value>
+		</property>
+		<property name="appKind">
+			<value>portal</value>
+		</property>
+		<property name="clusterFlag">
+			<value>true</value>
+		</property>
+		<property name="ssoConfig">
+			<ref local="ssoConfig"/>
+		</property>
+		<property name="basConfig">
+			<ref local="basConfig"/>
+		</property>
+	</bean>
+	<bean id="ssoConfig" class="com.neusoft.tdframework.portal.config.SSOConfig">
+		<property name="kind">
+			<value>cas</value>
+		</property>
+	</bean>
+	<bean id="basConfig" class="com.neusoft.tdframework.portal.config.BASConfig">
+		<property name="visitLog">
+			<value>false</value>
+		</property>
+		<property name="loginLog">
+			<value>false</value>
+		</property>
+	</bean>
+	<bean id="permittedSystemColl" class="com.neusoft.om.dao.system.SystemColl">
+		<property name="list">
+			<list>
+				<bean class="com.neusoft.om.dao.system.SystemVO">
+					<property name="systemId">
+						<value>13</value>
+					</property>
+				</bean>
+				<bean class="com.neusoft.om.dao.system.SystemVO">
+					<property name="systemId">
+						<value>46</value>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>单元格右键菜单</title>
+		<style type="text/css">
+			@import "../../../../../../unieap/themes/default/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.grid.Grid");
+			
+			var ds=new unieap.ds.DataStore("demo",[
+				{id:'12345',name:'一二三四五'},
+				{id:'67890',name:'六七八九零'}
+			]);
+			dataCenter.addDataStore(ds);
+			
+			var menu;
+			
+			function fn(cell,cellNode,index){
+				if(!menu){
+					dojo.require("unieap.menu.Menu");
+					menu=new unieap.menu.Menu({style:'display:none'});
+					menu.addChild(new unieap.menu.MenuItem({label:"你好"}));
+					menu.addChild(new unieap.menu.MenuItem({label:"基础软件"}));
+					menu.startup();
+				}
+				menu.bindDomNode(cellNode);
+			}
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试功能点：
+				<li>单元格上绑定右键菜单</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height="250px">
+			<div dojoType="unieap.grid.Grid" binding="{store:'demo'}" views="{onContextMenu:fn}">
+				<header>
+					<cell name="id" label="编号"></cell>
+					<cell name="name" label="姓名"></cell>
+				</header>
+			</div>
+        </div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height="250px">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">单元格支持右键菜单</td>
+					<td style="vertical-align:top">在单元格上点击右键</td>
+					<td style="vertical-align:top">会看到一个弹出菜单</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

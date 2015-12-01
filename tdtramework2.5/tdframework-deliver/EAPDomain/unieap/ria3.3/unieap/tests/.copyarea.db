@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests
+2
+8
+b:performance|2|0|0|0|5215c6c88377481db414968c9b81095c|0
+c:runTest.html|1|13b890f0634|aa|bd9137f4|145ae80fed5341719001c235062ea5fe|0
+6:manual|2|0|0|0|497b83866fa64aecb00c445bb651da70|0
+9:module.js|1|13b890f05b7|1dc|c223b1ca|5d7cfacdf9674937bdb43f93d880c422|0
+5:robot|2|0|0|0|08818b63096242d8b1a5eb2a6d9e5c21|0
+4:util|2|0|0|0|90b66bbd388d472fb1faa22596ecb8c0|0
+c:testAll.html|1|13b890f0876|10e|3a5079|6b01d859e0b24952b2cd6c970609628f|0
+7:configs|2|0|0|0|bb2ea37ce058466c887824a2c6c2930d|0

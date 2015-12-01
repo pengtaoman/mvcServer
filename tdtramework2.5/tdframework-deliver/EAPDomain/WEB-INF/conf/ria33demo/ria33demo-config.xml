@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" " http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<global-exceptions>
+		 <exception key="ria33.exception" handler="com.neusoft.unieap.ria.exception.AppExceptionHandler" scope = "request"
+			 type="java.lang.Throwable"
+			 path="/pages/samples/exception/error.jsp">
+			 </exception>
+		
+	</global-exceptions>
+	<action-mappings>
+		<action path="/controller"
+			forward="/pages/menu/MenuController.jsp" />
+		<action path="/rootmenu" forward="/pages/menu/RootMenu.jsp" />
+		<action path="/childmenu" forward="/pages/menu/ChildMenu.jsp" />
+		<action path="/viewpage" forward="/pages/menu/Page.jsp" />
+		<!--add by wangju for json test-->
+		<action type="com.neusoft.unieap.ria.RPCTest"
+			parameter="method" scope="request" path="/RPCTest">
+		</action>
+		<action type="com.neusoft.unieap.ria.ConvertUtilActionTest"
+			parameter="method" scope="request" path="/utilTest">
+		</action>
+		<action type = "com.neusoft.unieap.ria.DSWithData"
+			parameter="method" scope="request" path="/DSTest">
+		</action>
+		<action type = "com.neusoft.unieap.ria.DCTest"
+			parameter="method" scope="request" path="/DCTest">
+		</action>
+		<action type="com.neusoft.unieap.ria33demo.action.PojoAction"
+			parameter="method" scope="request" path="/RIATest">
+		</action>
+	
+		<action type="com.neusoft.unieap.ria33demo.action.server.drm.action.EmpAction"
+			parameter="method" scope="request" path="/drmTest">
+		</action>
+		<action type="com.neusoft.unieap.ria33demo.action.server.pojo.action.EmpAction"
+			parameter="method" scope="request" path="/pojoTest">
+		</action>
+		<action type="com.neusoft.unieap.ria33demo.action.server.pojo.action.WriteBackAction"
+			parameter="method" scope="request" path="/writeBackDemo">
+		</action>
+		<action type="com.neusoft.unieap.ria33demo.action.server.pojo.action.PractiseAction"
+			parameter="method" scope="request" path="/pojoCascadeTest">
+		</action>
+		<action forward="/pages/samples/server/drm/drmCommon.jsp"
+			path="/drmCommon"/>	
+		<action forward="/pages/samples/server/pojo/pojoCascade.jsp"
+			path="/pojoCascade"/> 
+		<!-- wangju added end-->
+		<!-- wangbw add begin-->
+		<action forward="/pages/samples/server/drm/drm.jsp"
+			path="/drm"/>	
+		<action forward="/pages/samples/server/pojo/pojo.jsp"
+			path="/pojo"/>
+		<action forward="/pages/samples/server/pojo/writeBack.jsp"
+			path="/writeBack"/>
+			<action forward="/pages/samples/server/pojo/empQuery.jsp"
+			path="/pojoQuery"/> 
+		<!-- wangbw add end-->
+	 <!--综合查询 begin -->
+        <action forward="/pages/samples/query/define/define.jsp"
+			path="/query_define"/>
+        <action forward="/pages/samples/query/dialogstyle/showdialog.jsp"
+			path="/query_dialogstyle"/>
+        <action forward="/pages/samples/query/formstyle/formstyle.jsp"
+			path="/query_formstyle"/>
+         <action forward="/pages/samples/query/connectstyle/connectstyle.jsp"
+			path="/query_connstyle"/>
+         <action forward="/pages/samples/query/allqueries/allqueries.jsp"
+			path="/query_allqueries"/>
+         <action forward="/pages/samples/query/multidialogstyle/multidialogstyle.jsp"
+			path="/query_multidialogstyle"/>
+		<action forward="/pages/samples/query/multijspstyle/multijspstyle.jsp"
+			path="/query_multijspstyle"/>
+        <action forward="/pages/samples/query/multitabs/multitabs.jsp"
+			path="/query_multitabs"/>
+		<action forward="/pages/samples/query/customlayout/customlayout.jsp"
+			path="/query_customlayout"/>
+        <!--综合查询 end -->
+	
+		<action type="com.neusoft.unieap.ria33demo.action.TestAction"
+			parameter="method" scope="request" validate="true"
+			path="/testrpc">
+			<forward name="begin" path="/pages/demo/test.jsp"></forward>
+		</action>
+		
+		<action type="com.neusoft.unieap.ria33demo.action.integration.encrypt.EncryptAction"
+			parameter="method" scope="request" path="/encrypt">
+		</action>
+		
+		<action
+			type="com.neusoft.unieap.ria33demo.action.RichEditorAction"
+			parameter="method" scope="request" validate="true"
+			path="/ria_richEditor">
+		</action>
+		
+		
+		
+		<!-- ria3.3 Demo form-->
+		<action forward="/pages/samples/form/combobox/comboBox_advanced.jsp" path="/form_combobox_advanced"></action>
+		<action forward="/pages/samples/form/combobox/comboboxTree_advance.jsp" path="/form_comboboxTree_advanced"></action>
+		<action forward="/pages/samples/form/buttonGroup/checkboxgroup_advance.jsp" path="/form_checkBoxGroup"></action>
+		<action forward="/pages/samples/form/textbox/inlineEditBox_advance.jsp" path="/form_InlineEditBox"></action>
+		<action forward="/pages/samples/form/form/form.jsp" path="/form_form"></action>
+		<action forward="/pages/samples/form/form/form_autocompleter.jsp" path="/form_autocompleter"></action>
+		<action forward="/pages/samples/form/textbox/inlineEditBox.jsp" path="/form_inlineEditBoxBasic"></action>
+		<action forward="/pages/samples/form/textbox/textBox.jsp" path="/form_textbox"></action>
+		<action forward="/pages/samples/form/textbox/numberTextBox.jsp" path="/form_numberTextBox"></action>
+		<action forward="/pages/samples/form/textbox/textBoxWithIcon.jsp" path="/form_textboxwithicon"></action>
+		<action forward="/pages/samples/form/textbox/textArea.jsp" path="/form_textarea"></action>
+		<action forward="/pages/samples/form/textbox/dateTextBox.jsp" path="/form_datetextbox"></action>
+		
+		<action forward="/pages/samples/form/combobox/comboBox_cascade.jsp" path="/form_combobox_cascade"></action>
+		<action forward="/pages/samples/form/combobox/comboBox.jsp" path="/form_combobox"></action>
+		<action forward="/pages/samples/form/combobox/comboBoxTree.jsp" path="/form_comboboxtree"></action>
+		<action forward="/pages/samples/form/button/button.jsp" path="/form_button"></action>
+		<action forward="/pages/samples/form/buttonGroup/checkboxGroup.jsp" path="/form_checkboxGroup"></action>
+		<action forward="/pages/samples/form/buttonGroup/radioGroup.jsp" path="/form_radioGroup"></action>
+		<action forward="/pages/samples/form/combobox/comboBox_autocompleter.jsp" path="/form_comboBox_autocompleter"></action>
+		<action forward="/pages/samples/form/fileInput/fileInput_db.jsp" path="/form_fileinput_db"></action>
+		<action forward="/pages/samples/form/fileInput/fileInput_server.jsp" path="/form_fileinput_server"></action>
+		<action forward="/pages/samples/form/fieldSet.jsp" path="/form_fieldSet"></action>
+		<action forward="/pages/samples/form/textbox/richTexstEditor.jsp" path="/form_richTexstEditor"></action>
+		<action type="com.neusoft.unieap.ria33demo.action.form.DCGet4comboBox"
+			scope="request" validate="true"
+		    path="/getComboboxData">
+		</action>
+		<action type="com.neusoft.unieap.ria33demo.action.form.DCGet4Form" parameter="method"
+			scope="request" validate="true"
+		    path="/getFormData">
+		</action>
+		<action type="com.neusoft.unieap.ria33demo.action.form.Upload_DownLoad_File"
+			parameter="method" path="/upload_downLoad_file">
+			<forward name="success" path="/pages/samples/form/fileInput/fileList.jsp"></forward>
+		</action>
+		
+		<!-- ria3.3Demo tree-->
+		<action forward="/pages/samples/tree/basicTree/basicTree.jsp" path="/tree_basictree"></action>
+		<action forward="/pages/samples/tree/basicTree/checkTree.jsp" path="/tree_checktree"></action>
+		<action forward="/pages/samples/tree/basicTree/customStyleTree.jsp" path="/tree_customstyletree"></action>
+		<action forward="/pages/samples/tree/operateTree/cascadeTree.jsp" path="/tree_cascadetree"></action>
+		<action forward="/pages/samples/tree/operateTree/dragBetweenTree.jsp" path="/tree_dragbetweentree"></action>
+		<action forward="/pages/samples/tree/operateTree/expandTree.jsp" path="/tree_expandtree"></action>
+		<action forward="/pages/samples/tree/lazyLoadTree.jsp" path="/tree_lazyloadtree"></action>
+		<action forward="/pages/samples/tree/persistTree.jsp" path="/tree_persisttree"></action>
+		<action forward="/pages/samples/tree/basicTree/showRootNode.jsp" path="/tree_rootnode"></action>
+		<action forward="/pages/samples/tree/basicTree/clickEvent.jsp" path="/test_clickevent"></action>
+		<action forward="/pages/samples/tree/basicTree/withmenuTree.jsp" path="/test_withmenu"></action>
+		<action forward="/pages/samples/tree/basicTree/basicTreeController.jsp" path="/tree_basicTreeController"></action>
+		<action forward="/pages/samples/tree/basicTree/editTree.jsp" path="/tree_editTree"></action>				
+		
+		<action forward="/pages/samples/tree/basicTree/expandAllNode.jsp" path="/test_expandAllNodes"></action>
+		<action forward="/pages/samples/tree/basicTree/expandEvent.jsp" path="/test_expandEvent"></action>
+		<action forward="/pages/samples/tree/operateTree/refreshNode.jsp" path="/test_refreshNode"></action>
+		<action forward="/pages/samples/tree/bindForm.jsp" path="/test_bindform"></action>
+		
+		<action type="com.neusoft.unieap.ria33demo.action.tree.DCGet4TreeLazyLoad"
+			parameter="method" scope="request" validate="true"
+		    path="/getLazyData">
+		</action>
+		
+		<!-- ria3.3Demo dialog-->
+		<action forward="/pages/samples/dialog/basicDialog.jsp" path="/dialog_basicdialog"></action>
+		<action forward="/pages/samples/dialog/interactiveDialog.jsp" path="/dialog_interactiveDialog"></action>
+		<action forward="/pages/samples/dialog/dialogSelect.jsp" path="/test_dialogSelect"></action>
+		<action forward="/pages/samples/dialog/dialogData.jsp" path="/test_dialogData"></action>
+		
+		<!-- RIA3.3 Demo Grid begin -->
+		<action forward="/pages/samples/grid/basic/grid_binding.jsp" path="/grid_binding"></action>
+		<action forward="/pages/samples/grid/basic/grid_style.jsp" path="/grid_style"></action>
+		<action forward="/pages/samples/grid/basic/grid_toolbar.jsp" path="/grid_toolbar"></action>
+		<action forward="/pages/samples/grid/edit/grid_edit.jsp" path="/grid_edit"></action>
+		<action forward="/pages/samples/grid/edit/grid_cascadeedit.jsp" path="/grid_cascadeedit"></action>
+		<action forward="/pages/samples/grid/selection/grid_selection.jsp" path="/grid_selection"></action>
+		<action forward="/pages/samples/grid/advanced/grid_complexcell.jsp" path="/grid_complexcell"></action>
+		<action forward="/pages/samples/grid/advanced/grid_filter.jsp" path="/grid_filter"></action>
+		<action forward="/pages/samples/grid/advanced/grid_individual.jsp" path="/grid_individual"></action>
+		<action forward="/pages/samples/grid/advanced/grid_lockrowfooter.jsp" path="/grid_lockrowfooter"></action>
+		<action forward="/pages/samples/grid/advanced/grid_printexport.jsp" path="/grid_printexport"></action>
+		<action forward="/pages/samples/grid/basic/grid_basicController.jsp" path="/grid_basicController"></action>
+		
+		
+		<action forward="/pages/samples/grid/advanced/grid_masterdetail.jsp" path="/grid_masterdetail"></action>
+		<action forward="/pages/samples/grid/advanced/grid_mergecells.jsp" path="/grid_mergecells"></action>
+		<action forward="/pages/samples/grid/advanced/grid_pagecache.jsp" path="/grid_pagecache"></action>	
+		<action forward="/pages/samples/grid/advanced/grid_columngroup.jsp" path="/grid_columngroup"></action>
+		
+		<action forward="/pages/samples/grid/app/grid_datamove.jsp" path="/grid_datamove"></action>
+		<action forward="/pages/samples/grid/app/grid_condition.jsp" path="/grid_condition"></action>
+		<!-- RIA3.3 Demo Grid end -->
+		<!-- RIA3.3 Demo Grid by zhaob begin -->
+		<action forward="/pages/samples/grid/basic/grid_getformatter.jsp" path="/grid_getformatter"></action>
+		<action forward="/pages/samples/grid/basic/grid_displayformatter.jsp" path="/grid_displayformatter"></action>
+		<action forward="/pages/samples/grid/basic/grid_hrefformatter.jsp" path="/grid_hrefformatter"></action>
+		<action forward="/pages/samples/grid/basic/grid_autoRender.jsp" path="/grid_autoRender"></action>
+		<action forward="/pages/samples/grid/basic/grid_new.jsp" path="/grid_new"></action>
+		<action forward="/pages/samples/grid/basic/grid_title.jsp" path="/grid_title"></action>
+		<action forward="/pages/samples/grid/basic/grid_isMulTitle.jsp" path="/grid_isMulTitle"></action>
+		<action forward="/pages/samples/grid/basic/grid_commonEvt.jsp" path="/grid_commonEvt"></action>
+		
+		<action forward="/pages/samples/grid/edit/grid_onBeforeEdit.jsp" path="/grid_onBeforeEdit"></action>
+		<action forward="/pages/samples/grid/advanced/grid_toolbar.jsp" path="/grid_toolbar"></action>
+		<action forward="/pages/samples/grid/advanced/grid_cells.jsp" path="/grid_cells"></action>
+		<action forward="/pages/samples/grid/app/grid_grid.jsp" path="/grid_grid"></action>
+		
+		<action forward="/pages/samples/grid/group/grid_group.jsp" path="/grid_group"></action>
+		<action forward="/pages/samples/grid/group/grid_groupInit.jsp" path="/grid_groupInit"></action>
+		<action forward="/pages/samples/grid/group/grid_nogroupbar.jsp" path="/grid_nogroupbar"></action>
+		<action forward="/pages/samples/grid/group/grid_setGroup.jsp" path="/grid_setGroup"></action>
+		<action forward="/pages/samples/grid/group/grid_group_autoApply.jsp" path="/grid_group_autoApply"></action>
+		<action forward="/pages/samples/grid/group/grid_group_formatter.jsp" path="/grid_group_formatter"></action>
+		<action forward="/pages/samples/grid/group/grid_group_statistic.jsp" path="/grid_group_statistic"></action>
+		<action forward="/pages/samples/grid/group/grid_group_expandAll.jsp" path="/grid_group_expandAll"></action>
+		<action forward="/pages/samples/grid/group/grid_group_onPaging.jsp" path="/grid_group_onPaging"></action>
+		<action forward="/pages/samples/grid/group/grid_group_select.jsp" path="/grid_group_select"></action>
+		<!-- RIA3.3 Demo Grid by zhaob end -->
+		<!-- RIA3.3 Demo Grid by wangbw begin -->
+		<action type="com.neusoft.unieap.ria33demo.action.excel.ImportAction"
+			parameter="method" scope="request" path="/importExcel">
+		</action>
+		<action forward="/pages/samples/grid/advanced/grid_excelimport.jsp" path="/excelImport"></action>
+		<!-- RIA3.3 Demo Grid by wangbw end -->
+		<!-- RIA3.3 Demo Grid by wang-ju begin -->
+		<action type="com.neusoft.unieap.ria33demo.action.export.ExportPojoAction"
+			parameter="method" scope="request" path="/pojoExport">
+		</action>
+		<action forward="/pages/samples/grid/advanced/grid_pojoExport.jsp" path="/grid_pojoExport"></action>
+		<!-- RIA3.3 Demo Grid by wang-ju end -->
+		<!-- RIA3.3 Demo layout begin -->
+		<action forward="/pages/samples/layout/tab/tab.jsp" path="/layout_tab"></action>
+		<action forward="/pages/samples/layout/titlepane/titlepane.jsp" path="/layout_titlepane"></action>
+		<action forward="/pages/samples/layout/adaptcontainer/adaptivecontainer_callback.jsp" path="/layout_callback"></action>
+		<action forward="/pages/samples/layout/adaptcontainer/adaptcontainer.jsp" path="/layout_selfadaptingContainer"></action>
+		<action forward="/pages/samples/layout/bordercontainer/bordercontainer.jsp" path="/layout_bordercontainer"></action>
+		<action forward="/pages/samples/layout/basecontainer/container.jsp" path="/layout_container"></action>
+		<action forward="/pages/samples/layout/titlepane/titlepaneHide.jsp" path="/layout_titlepaneHide"></action>
+		<!-- RIA3.3 Demo layout end -->
+		<!-- RIA3.3 Demo integration begin -->
+		<action forward="/pages/samples/integration/grid_form.jsp" path="/composite_grid_form"></action>
+		<action forward="/pages/samples/integration/grid_pojo.jsp" path="/composite_grid_pojo"></action>
+		<action forward="/pages/samples/integration/grid_statement.jsp" path="/composite_grid_statement"></action>
+		<action forward="/pages/samples/integration/grid_tree.jsp" path="/composite_grid_tree"></action>
+		<action forward="/pages/samples/integration/tab_grid_dialog.jsp" path="/composite_tab_grid_dialog"></action>
+		<action forward="/pages/samples/integration/pageauth.jsp" path="/composite_pageprivilege"></action>
+		<action forward="/pages/samples/integration/encrypt/encrypt.jsp" path="/composite_datatrans"></action>
+		<action forward="/pages/samples/integration/tooltip/tooltip.jsp" path="/composite_tooltip"></action>
+		<action forward="/pages/samples/menu/menu.jsp" path="/composite_menu"></action>
+		<action forward="/pages/samples/integration/multitable/multitable.jsp" path="/multitable"></action>
+		<action type="com.neusoft.unieap.ria33demo.action.integration.tree_form_grid.TestAction"
+			parameter="method" scope="request" validate="true"
+			path="/tree_form_grid">
+			<forward name="begin" path="/pages/samples/integration/tree_form_grid/tree_form_grid.jsp"></forward>
+		</action>
+		
+		<action forward="/pages/samples/integration/grid_unite_group.jsp" path="/composite_grid_unite_group">
+		</action>
+		<!-- RIA3.3 Demo integration end -->
+		
+		<!-- 业务模式样例 begin -->
+		<action type="com.neusoft.unieap.ria33demo.action.model.ModelPojoAction" parameter="method" scope="request" path="/modelpojo"/>
+		<action forward="/pages/samples/model/model1/model1.jsp" path="/model_model1"></action>
+		<action forward="/pages/samples/model/model2/model2.jsp" path="/model_model2"></action>
+		<action forward="/pages/samples/model/model3/model3.jsp" path="/model_model3"></action>
+		<action forward="/pages/samples/model/model4/model4.jsp" path="/model_model4"></action>
+		<action forward="/pages/samples/model/model5/model5.jsp" path="/model_model5"></action>
+		<action forward="/pages/samples/model/model6/model6.jsp" path="/model_model6"></action>
+		<action forward="/pages/samples/model/model7/model7.jsp" path="/model_model7"></action>
+		<action forward="/pages/samples/model/model8/model8.jsp" path="/model_model8"></action>
+		<!-- 业务模式样例 end -->
+		
+		<!-- 页面权限样例 begin -->
+		<action forward="/pages/samples/pageauth/basic/basic.jsp" path="/pageauth_basic"></action>
+		<action forward="/pages/samples/pageauth/circumstance/circumstance.jsp" path="/pageauth_circumstance"></action>
+		<!-- 页面权限样例 begin -->
+		
+		<!-- 新参保 -->
+		<action forward="/pages/samples/si/newUnit.jsp" path="/newUnit"></action>
+		
+		<!-- exception  start-->
+		<action type="com.neusoft.unieap.ria33demo.action.exception.ExceptionAction" parameter="method" scope="request" path="/exception">
+		</action>
+		<action forward="/pages/samples/exception/exception.jsp" path="/exceptionDemo"></action>
+		<!-- exception  end-->
+		
+		<!--==================================================================================================================================-->
+		
+		<!-- 菜单管理 begin -->
+		<action type="com.neusoft.unieap.ria_manager.menumanager.MenuMangerAction"
+			parameter="method" path="/ria_menumanager">
+			<forward name="success" path="/pages/manager_ria/menuManager/menuManager.jsp"></forward>
+			<forward name="menutree" path="/pages/manager_ria/menuManager/jsp/menutree.jsp"></forward>
+			<forward name="detail" path="/pages/manager_ria/menuManager/jsp/detail.jsp"></forward>
+		</action>
+		<!-- 菜单管理 end -->
+		
+		
+		<!--==========================================组织机构begin================================================-->
+		
+		<!-- 用户管理 -->
+		<action type="com.neusoft.unieap.ria_manager.orgnization.action.UserAction" parameter="method" path="/ria_org_user">
+			<!-- 用户信息 -->
+			<forward name="userInformation" path="/pages/manager_ria/orgnization/userManager/userInfomation/userInformation.jsp"></forward>
+			<!-- 修改密码 -->
+			<forward name="password" path="/pages/manager_ria/orgnization/userManager/modifyPassword/jsp/modifyPassword.jsp"></forward>
+			<!-- 安全管理员 -->
+			<forward name="securityManager" path="/pages/manager_ria/orgnization/userManager/adminManager/jsp/adminManager.jsp"></forward>			
+			<forward name="detail" path="/pages/manager_ria/orgnization/userManager/adminManager/jsp/adminDetails.jsp"></forward>
+			<!-- 业务用户 -->
+			<forward name="businessUser" path="/pages/manager_ria/orgnization/userManager/businessUserManager/jsp/businessUserManager.jsp"></forward>
+			
+			<!-- 错误页面 -->
+			<forward name="error" path="/pages/manager_ria/orgnization/error.jsp"></forward>
+		</action>
+		
+		<!-- 管理角色管理 -->
+		<action type="com.neusoft.unieap.ria_manager.orgnization.action.AdministrativeRoleAction" parameter="method" path="/ria_org_adminrole">
+			<forward name="adminRoleList" path="/pages/manager_ria/orgnization/roleManager/adminRoleManager/jsp/adminRoleManager.jsp"></forward>
+			<!-- 错误页面 -->
+			<forward name="error" path="/pages/manager_ria/orgnization/error.jsp"></forward>
+		</action>
+		
+		
+		<action type="com.neusoft.unieap.ria_manager.orgnization.extinfo.ComboBoxAction"
+			parameter="method" scope="request" validate="true"
+			path="/extinfo_combobox" />
+		
+		<action type="com.neusoft.unieap.ria_manager.orgnization.util.StatementAction"
+			parameter="method" scope="request" validate="true"
+			path="/statement" />
+		
+		
+		
+		<!--==========================================组织机构end================================================-->
+		
+<!--==================================================================================================================================-->
+		
+	</action-mappings>
+
+	<plug-in className="com.neusoft.unieap.config.plugin.EAPPlugin">
+		<set-property value="/WEB-INF/conf/ria33demo/ria33democonfig.xml"
+			property="config" />
+	</plug-in>
+</struts-config>

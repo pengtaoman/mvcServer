@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\action\employeeduty
+2
+4
+1c:AddEmployeeToDutyAction.java|1|13b89666f08|838|472cf071|2889e7c3295645e886851586629f264e|0
+1c:EmployeeListQueryByDuty.java|1|13b89666f56|ae7|48d0c041|1ce1a76b8d334a2e8f43669b544b8512|0
+1b:OrganDutyDisplayAction.java|1|13b89666f76|8a2|d1af4995|fa47750a9d734c98bcac81d6849c6c4c|0
+1e:DelEmployeeFromDutyAction.java|1|13b89666f18|7ff|6b50e051|cb5a17f4b0fe49d89a00d353f1d84ec5|0

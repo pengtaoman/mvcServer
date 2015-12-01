@@ -1,0 +1,81 @@
+﻿.tab_bg{
+	height:30px;
+	table-layout:fixed;
+}
+.tab_bg_tr{
+	background: #eee url(images/tab/tabbg.jpg) center center repeat-x;	
+}
+.btn_forward{
+	background: #eee url(images/tab/eap-tLeft.jpg) no-repeat;
+	width : 18px;
+	height : 23px;	
+	margin-top : 2px;
+	cursor : pointer; 
+	display:none;
+}
+.btn_back{
+	background: #eee url(images/tab/eap-tRight.jpg) no-repeat;
+	width : 18px;
+	height : 23px;		
+	margin-top : 2px;
+	cursor : pointer; 
+	display:none;
+}
+.Tab {
+	font-size: 9pt;
+	height: 25px;
+	padding-top: 2px;
+	overflow : hidden;
+}
+.Tab .Tab_off {
+	padding-right:3px;
+}
+ .Tab .Tab_off .table{	
+ 	color:#7d7d7d;
+	cursor:hand;
+	height: 25px;
+	background: url(images/tab/tab_right2.gif) no-repeat right top;	
+}
+.Tab .Tab_off .left {	
+	height: 24px;
+	width:5px;	
+	background: url(images/tab/tab_left2.gif) no-repeat left top;
+}
+.Tab .img {	
+	height: 24px;
+	width:24px;		
+	text-align:center;
+}
+.Tab .text {	
+	padding: 3px 2px 0px 2px;	
+	text-align:center;
+}
+ .Tab .Tab_off .right{
+	cursor:hand;
+	height:24px;			
+	padding-top: 1px;
+	width: 23px;
+	background: url(images/tab/close2.gif) no-repeat center center;
+}
+.Tab .Tab_on {
+	padding-right:3px;
+}
+ .Tab .Tab_on .table{	
+ 	color:#7d7d7d;
+	cursor:hand;
+	height: 25px;
+	background: url(images/tab/tab_right.gif) no-repeat right top;	
+}
+.Tab .Tab_on .left {	
+	height: 24px;
+	width:5px;	
+	background: url(images/tab/tab_left.gif) no-repeat left top;
+}
+
+ .Tab .Tab_on .right{
+	cursor:hand;
+	height:24px;			
+	padding-top: 1px;
+	padding-right: 23px;
+	background: url(images/tab/close1.gif) no-repeat center center;
+}

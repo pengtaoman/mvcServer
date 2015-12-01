@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\work
+2
+4
+b:WorkVO.java|1|13b89672645|f50|fca95bbf|f797293b6b3c41b8aa2653a3d60639ac|0
+10:WorkDAOImpl.java|1|13b89672616|f83|b5632747|1e8d514b03c7415cac3ce6fb16d4b56a|0
+c:WorkDAO.java|1|13b896725e7|3d9|54d0908a|d4e539679fa04909a49706ddc0cda2db|0
+d:WorkColl.java|1|13b896725b9|328|f34f0e07|a400fcad8daa4641b55aa732a0fe87a4|0

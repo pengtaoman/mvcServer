@@ -1,0 +1,42 @@
+dojo.addOnLoad(function(){
+dojo.parser.parse();
+	dp.SyntaxHighlighter.HighlightAll('code');
+});
+var inner = "对话框显示的内容是预先定义，该对话框可以最大化和拖拽改变位置。"
+		  
+function showInner() {
+	
+	//http://127.0.0.1:8080/eapdomain33/dialog_basicdialog.do
+	var dialog = new unieap.dialog.Dialog({url:unieap.appPath + "/dialog_interactiveDialog.do",
+	height:"800",
+	width:"800"
+    });
+	dialog.show(document.getElementById("btn2")); 
+}
+		    
+function showUrl() {
+	var dialog = new unieap.dialog.Dialog({url:unieap.appPath + "/grid_masterdetail.do",
+	height:"800",
+	width:"800",
+	dialogData : {                                    
+                        test : "test"
+                      
+                }
+	
+	
+	
+    });
+	dialog.show(document.getElementById("btn2")); 
+}
+		    
+function showDomNode(){
+	var node= document.createElement('p');ff
+	var browser = navigator.userAgent.toLowerCase();
+	if(browser.indexOf("firefox") != -1){
+		node.textContent="对话框显示的内容是一个domNode";
+	}else{
+		node.innerText="对话框显示的内容是一个domNode";
+	}
+	var dialog = new unieap.dialog.Dialog({inner:node});
+	dialog.show(document.getElementById("btn3"));
+}

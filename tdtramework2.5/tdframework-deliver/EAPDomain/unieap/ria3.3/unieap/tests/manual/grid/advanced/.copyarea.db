@@ -1,0 +1,22 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\grid\advanced
+2
+12
+17:test_grid_sortCell.html|1|13b890f715c|1366|6f596ca1|0e84fcb9668d48cb8a17be779ad1e730|0
+6:images|2|0|0|0|8231110e4b00435c8b0317cf41d93300|0
+1a:test_grid_paging_cache.jsp|1|13b890f7081|e7f|d01e0fc4|c0eff319630b4a0695cb6db21fe1b1e3|0
+15:test_grid_detail.html|1|13b890f6778|d80|68e562d8|8f418de111a3451383b3946eed531a17|0
+13:test_grid_menu.html|1|13b890f6f29|e23|c8ce6fc3|f81b4ff6731a42fa8b2175804521f964|0
+13:test_grid_foot.html|1|13b890f6a37|bd2|23c79a75|651a98d3b5244572a5b7fa0998d30ffe|0
+19:test_grid_individual.html|1|13b890f6aa4|14b1|c5fcc767|4d8aa8b8d0904c7e8fa0672b2b0538d6|0
+9:pageds.js|1|13b890f670a|1ca7|8ea6a259|6b5a215d4438488b8b4913f674b4177f|0
+17:test_grid_lockedit.html|1|13b890f6cd7|13d1|64515aa7|e35ff1c44a6c431196e89b0be4071937|0
+14:test_grid_paging.jsp|1|13b890f7004|131f|d5d668ea|6b4ec47b1f744c1487dc158a3edd5fbc|0
+11:test_grid_menu.js|1|13b890f6f96|391|57e71006|a73d12f6a4a1448bbe19f4edd0522cf8|0
+16:test_grid_lockrow.html|1|13b890f6e10|1129|5d259cd0|81a24f4324de4e498941e50378f33a99|0
+16:test_grid_dofilter.jsp|1|13b890f68df|109d|df52b66b|84f7e2ccb3b74850952f702312f1337b|0
+17:test_grid_individual.js|1|13b890f6c4a|113|3162596b|fdca5fa50373449997737837f976fcf8|0
+15:test_grid_sortCell.js|1|13b890f7265|5d0|cea4d66a|7327ef9376284de28895b09d5bc93889|0
+15:test_grid_toolbar.jsp|1|13b890f7331|6d8|46384445|d47e5a49e79f4f529cdca61be56e8b61|0
+16:test_grid_toolbar.html|1|13b890f72d3|829|f8db5a77|831ddff15ab94be8a9feef2fa7586566|0
+15:test_grid_filter.html|1|13b890f695c|15d5|2b3361a5|d92083fa54f841688fff195ee7b6b475|0

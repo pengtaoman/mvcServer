@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<dataSetConf xmlns="http://www.neusoft.com/schemas/unieap/dataset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neusoft.com/schemas/unieap/dataset
+C:\DOCUME~1\Administrator\桌面\DATASET\dataSet.xsd">
+	<dataSourceName/>
+		<pageSize>5</pageSize>
+	<auth>INSERT</auth>
+	<auth>UPDATE</auth>
+	<auth>DELETE</auth>
+	<tables>
+		<table tableName="DEPT" isPrimary="true">
+			<pk pkName="DEPTNO" dataType="4" isAutoIncrement="false"/>
+		</table>
+	</tables>
+	<attributes>
+		<attribute attrName="attr_deptno" isFakeColumn="false" dataType="4" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="4" columnName="deptno" isNullable="false" index="1" tableName="dept"/>
+		<attribute attrName="attr_dname" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="10" columnName="dname" isNullable="true" index="2" tableName="dept"/>
+		<attribute attrName="attr_loc" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="9" columnName="loc" isNullable="true" index="3" tableName="dept"/>
+	</attributes>
+	<fixedFilters>
+		<fixedFilter>[attr_deptno]&gt;0</fixedFilter>
+	</fixedFilters>
+</dataSetConf>

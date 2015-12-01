@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ include file="/unieap/ria3.3/pages/config.jsp"%>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		</meta>
+		<title>textbox</title>
+		<style type="text/css">
+			@import "<%=appPath%>/pages/samples/syntaxHighlighter/Styles/SyntaxHighlighter.css";
+		</style>
+		<script type="text/javascript"
+			src="<%=appPath%>/pages/samples/syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript"
+			src="<%=appPath%>/pages/samples/syntaxHighlighter/Scripts/shBrushXml.js"></script>
+		<script type="text/javascript"
+			src="<%=appPath%>/pages/samples/form/js/editClassDemo.js"></script>
+
+	
+	     <script>
+	     	dojo.addOnLoad(
+			
+			function(){
+				
+			var test1=unieap.byId('evtBox');
+			
+				dojo.style(test1.inputNode,{
+					"imeMode": "disabled"
+				});
+				
+			
+			}
+			
+			
+			);
+			
+	  
+		 
+		 </script>  
+	
+	</head>
+	
+	<body class="unieap">
+	
+	<div dojoType="unieap.form.TextBox"  id="evtBox" style="ime-mode:disabled">
+	</div>
+				
+	</body>
+</html>

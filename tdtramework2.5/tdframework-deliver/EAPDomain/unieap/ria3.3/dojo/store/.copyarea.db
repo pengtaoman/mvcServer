@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\store
+2
+8
+8:Cache.js|1|13b894c8c23|4bd|e1ea96c9|80fd407d180847e1bdc145a50e867506|0
+c:DataStore.js|1|13b894c8d8a|77f|76269168|e3aa0a04b9bb4712b38cb7dc133b0f7f|0
+3:api|2|0|0|0|7a542f925f624787aa9fc799cf814506|0
+6:README|1|13b894c9402|349|c0842ebe|f3c2801c711642a9944ac3764bbde786|0
+b:JsonRest.js|1|13b894c8ec3|7b0|1dab9b56|13c0d0ec8c1a4819b394599b2bf4e28a|0
+4:util|2|0|0|0|173572eb657e49cbb43ce6b62c3f7747|0
+d:Observable.js|1|13b894c924d|89f|37f9ba86|bbe288a4d21b4774ad1121987363b11e|0
+9:Memory.js|1|13b894c9088|62e|12e52814|456938ac4fa24d9da020711e32f2cb7a|0

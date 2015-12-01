@@ -1,0 +1,1054 @@
+.BODY {
+SCROLLBAR-FACE-COLOR: #eeeeee; 
+SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; 
+SCROLLBAR-SHADOW-COLOR: #eeeeee; 
+SCROLLBAR-3DLIGHT-COLOR: #666666; 
+SCROLLBAR-ARROW-COLOR:  #666666; 
+SCROLLBAR-TRACK-COLOR: #eeeeee; 
+SCROLLBAR-DARKSHADOW-COLOR: #666666; 
+font:9pt;
+MARGIN: 0px;COLOR: #000000; font-family: "Arial", "Helvetica", "sans-serif"; }
+
+
+ .h9 { 
+		 font-size: 9px; 
+		 font-family: "Arial", "Helvetica", "sans-serif"; 
+		 color:#ff9933; font-weight: bold 
+	 }
+ .h10 { 
+		 font-size: 14px; 
+		 font-family: "Arial", "Helvetica", "sans-serif"; 
+		 color:#10659c;
+		 padding-top: 3px;
+	 }	 
+	 
+
+.h14 {
+		font-size: 14px;
+		font-family: "Arial", "Helvetica","sans-serif";
+		font-weight: bold;
+		color: #000000;
+	}
+td {
+		 font-size: 12px; 
+		 font-family: "Arial", "Helvetica", "sans-serif";
+		 }
+
+A:link {COLOR: #000000;text-decoration:none}
+A:visited {text-decoration:none;color: #000000}
+A:active {COLOR: #456FD1;text-decoration:none}
+A:hover {COLOR: #456FD1}
+
+.leaf{display:block;margin-left:15px; COLOR: #0000ff; FONT-SIZE: 12px}
+a{text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+SPAN.clsMouseOver 
+				{ 
+				background-color:#EEF0F4; 
+				border:1px solid #999999;
+				cursor:pointer;
+				display:block;
+				COLOR: #000000;
+				FONT-SIZE: 12px;
+				display:block; 
+				} 
+
+SPAN.clsMouseDown 
+				{ 
+				background-color:#efefef; 
+				border:1px solid #efefef; 
+				COLOR: #000000;
+				display:block;
+				} 
+span.clsLabel 
+			{ 
+			display:block;
+			COLOR: #000000;
+			} 
+SPAN.clsCurrentHasFocus 
+			{ 
+			background-color:#FFFFFF; 
+			border:1px solid #999999; 
+			COLOR: #000000;
+			} 
+
+SPAN.branch
+			{ 
+			background-color:transparent;
+			display:block; 
+			cursor:hand;
+			COLOR: #000000;
+			width:400px;
+			} 
+
+.bgcss {
+		background-repeat: no-repeat;
+		background-position: right;
+	}
+	
+.bgcssL {
+		background-repeat: repeat-x;
+		background-position:left top ;
+	}
+	
+BODY TD {
+		FONT-FAMILY: tahoma, verdana, arial, sans-serif
+	}
+
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+	}
+.desktop {
+			BACKGROUND: url(../icons/desktop_bkg.gif) left top
+		 }
+
+
+
+.dropdownStyle{
+				FONT-SIZE: 12px;
+				font-family: "Arial", "Helvetica","sans-serif";
+				TEXT-DECORATION: none;
+				background-color: #ECF3FB;
+				vertical-align: text-bottom;
+				background-image: none;
+				border: 1px solid #c6cfde;	
+				width:90px;
+			  }
+
+ .textareaStyle{
+			    font-size:12px;BACKGROUND-COLOR: #ffffff; 
+			    border: 1px solid #C6CFDE;
+			    VERTICAL-ALIGN: text-bottom;
+			    }
+
+
+ .textareaStyle_sales{
+			    font-size:12px;
+			    BACKGROUND-COLOR: #ffffff; 
+			    border: 0px solid #ffffff;
+			    VERTICAL-ALIGN: text-bottom;
+			    padding-left: 2px;
+			    overflow: hidden;
+			    }
+
+ .tdbuttonStyle{
+                 BACKGROUND-COLOR:#ECF3FB;height:20px}			    
+
+
+.longtextStyle{
+				FONT-SIZE: 12px;
+			    width:400px;
+				font-family: "Arial", "Helvetica","sans-serif";
+				TEXT-DECORATION: none;
+				background-color: #ffffff;
+				vertical-align: text-bottom;
+				background-image: none;
+				border: 1px solid #7F9DB9;
+				text-indent: 0pt;
+			 }
+ 
+ .shorttextStyle{
+				FONT-SIZE: 12px;
+				font-family: "Arial", "Helvetica","sans-serif";
+				TEXT-DECORATION: none;
+				background-color: #FFFFFF;
+				vertical-align: text-bottom;
+				background-image: none;
+				border: 1px solid #7F9DB9;
+				text-indent: 3pt;
+			    width:90px;
+			 }
+ 
+ 
+ .textStyle{
+			FONT-SIZE: 12px;
+			font-family: "Arial", "Helvetica","sans-serif";
+			TEXT-DECORATION: none;
+			background-color: #ffffff;
+			vertical-align: text-bottom;
+			background-image: none;
+			border: 1px solid #7F9DB9;
+			text-indent: 0pt;
+		
+		 	}
+ 
+ 
+ .tdtextStyle{
+                height:20px;
+                align:left;
+                font-size:12px;
+                padding-top: 2px;
+			    padding-left: 2px;
+			    padding-right: 2px;
+			    padding-bottom: 2px;
+               }
+               
+
+               
+.tdlabelStyle{
+               font-size:12px;height:20px;
+               vertical-align:middle;
+               text-align:right;
+               padding-top: 2px;
+			   padding-left: 2px;
+               padding-right: 2px;
+               padding-bottom: 2px;
+               }         
+
+.tdlabelStyleC{
+                 BACKGROUND-COLOR:#FFFFFF;
+                 font-size:12px;
+                 height:20px;
+                 vertical-align:middle;
+                 text-align:center}
+              
+.tdlabelStyleL{
+                height:20px;
+                align:left;
+                font-size:12px
+               }              
+ 
+.tdlabelStyleW{
+                 BACKGROUND-COLOR:#FFFFFF;
+                 font-size:12px;height:20px;
+                 vertical-align:middle;
+                 text-align:center}
+                 
+
+.buttonStyle_C{
+    font-size:12px;
+	height:20px;
+	width:61px;
+	border-left:1px solid #7F9DB9;
+	border-top:1px solid #7F9DB9;
+	border-right:1px solid #7F9DB9;
+	border-bottom:1px solid #7F9DB9;
+	background:url(../../common/images/add.gif)
+} 
+
+ .longbuttonStyle {
+       		font-size:12px;
+       		height:20px;
+       		width:90px;
+			background-color: #FFFFFF;
+			background-image: url(../images/map_main_in.gif);
+       		BORDER-BOTTOM: 1px outset;
+       		BORDER-LEFT: 1px outset;
+       		BORDER-RIGHT: 1px outset;
+       		BORDER-TOP: 1px outset;
+       		border:1px #000000 solid;
+       		cursor: hand;
+       		vertical-align:text-bottom
+       		}
+       		               
+.tablebluemore {
+    width:97%;
+	background-color: #C6CFDE;
+}
+
+.tablebluemore1 {
+  	width:60%;
+	border: 1px solid #C6CFDE;
+	line-height: 20px;
+}
+
+.tablebluemore_sales {
+    width:97%;
+    height:25px;
+	border-left:1px solid #C6CFDE;
+	border-top:1px solid #C6CFDE;
+	border-right:1px solid #C6CFDE;
+	border-bottom:1px solid #C6CFDE;
+	background-color: #DCEAFD;
+}
+
+.tablebluemore_sales1 {
+    width:100%;
+	background-color: #E9F0F5;
+}
+
+
+.LeftNavOff {
+	 BORDER-RIGHT: #E4F2FE 0px solid;
+	 BORDER-BOTTOM: #E4F2FE 0px solid;
+	 BORDER-LEFT: #E4F2FE 0px solid; 
+	 BORDER-TOP: #E4F2FE 0px solid; 
+	 CURSOR: hand; 
+
+}
+.LeftNavUp {
+	BORDER-RIGHT: #333366 1px solid;
+	BORDER-BOTTOM: #333366 1px solid;  
+	BORDER-LEFT: white 1px solid;
+	BORDER-TOP: white 1px solid; 
+	CURSOR: hand; 
+}
+.LeftNavDown {
+	BORDER-RIGHT: white 1px solid; 
+	BORDER-BOTTOM: white 1px solid;
+	BORDER-TOP: #000066 1px solid; 
+	BORDER-LEFT: #000066 1px solid; 
+	CURSOR: hand; 
+}
+
+.info_on{
+	font-size:12px;
+	height:20px;
+	border-left:1px solid #7F9DB9;
+	border-top:1px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:0px solid #7F9DB9;
+	padding-top: 0px;
+	background-color: #efefef;
+	BACKGROUND: url(../../common/images/title_bg_on.jpg);
+
+}
+.info_off{
+	font-size:12px;
+	height:20px;
+	border-left:1px solid #7F9DB9;
+	border-top:1px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:1px solid #7F9DB9;
+	padding-top: 0px;
+	cursor:hand;
+	background-color: #EAF1FB;
+	BACKGROUND: url(../../common/images/title_bg_off.jpg);
+}
+.info_right{
+	font-size:12px;
+	height:20px;
+	border-left:0px solid #7F9DB9;
+	border-top:1px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:1px solid #7F9DB9;
+	padding-top: 0px;
+	cursor:hand;
+	background-color: #EAF1FB;
+	BACKGROUND: url(../../common/images/title_bg_off.jpg);
+}
+.info_line{
+	font-size:12px;
+	height:20px;
+	border-left:1px solid #7F9DB9;
+	border-top:0px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:1px solid #7F9DB9;
+	padding-top: 3px;
+}
+
+.info{
+	font-size:12px;
+	height:20px;
+	border-left:0px solid #7F9DB9;
+	border-top:0px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:0px solid #7F9DB9;
+	padding-top: 0px;
+	cursor:hand;
+	background-color: #EAF1FB;
+	BACKGROUND: url(../../common/images/title_bg_off.jpg);
+}
+.tab_info{
+	font-size:12px;
+	height:20px;
+	border-left:1px solid #7F9DB9;
+	border-top:0px solid #7F9DB9;
+	border-right:1px solid #7F9DB9;
+	border-bottom:1px solid #7F9DB9;
+	padding-top: 3px;
+}
+
+.tab_line{
+	width:97%;
+	border-bottom:1px solid #C6CFDE;	
+}
+
+
+.row_title {
+	background-image: url(../../common/images/title_bg_off.jpg);
+	border-left:0px solid #7F9DB9;
+	border-top:0px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:0px solid #7F9DB9;
+	padding-top: 0px;
+	height: 20px;
+}
+
+.table_r{
+	font-size:12px;
+	height:20px;
+	width:90%;
+	border-left:1px solid #7F9DB9;
+	border-top:1px solid #7F9DB9;
+	border-right:1px solid #7F9DB9;
+	border-bottom:1px solid #7F9DB9;
+	padding-top: 0px;
+	background-color: #ffffff;
+}
+
+.Add{
+	background-image: url(../../common/images/title_bg_on.jpg);
+	border-left:0px solid #7F9DB9;
+	border-top:0px solid #7F9DB9;
+	border-right:0px solid #7F9DB9;
+	border-bottom:0px solid #7F9DB9;
+	padding-top: 0px;
+	height: 20px;
+}
+
+.btn3_mouseout {
+		BORDER-RIGHT: #2C59AA 1px solid;
+		BORDER-TOP: #2C59AA 1px solid; 
+		PADDING-LEFT: 1px;
+		PADDING-RIGHT: 1px; 
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:70px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+
+.btn3_mouseover {
+		BORDER-RIGHT: #2C59AA 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px; 
+		PADDING-TOP: 2px;
+		BORDER-TOP: #2C59AA 1px solid; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:70px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#D7E7FA); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black;  
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+.btn3_mousedown
+		{
+		BORDER-RIGHT: #FFE400 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px; 
+		PADDING-TOP: 2px; 
+		BORDER-TOP: #FFE400 1px solid; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:70px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #FFE400 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #FFE400 1px solid
+		}
+
+.btn3_mouseup {
+		BORDER-RIGHT: #2C59AA 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		BORDER-TOP: #2C59AA 1px solid;  
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:70px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+		
+.btn1_mouseout {
+		BORDER-RIGHT: #2C59AA 1px solid;
+		BORDER-TOP: #2C59AA 1px solid; 
+		PADDING-LEFT: 1px;
+		PADDING-RIGHT: 1px; 
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:60px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+
+.btn1_mouseover {
+		BORDER-RIGHT: #2C59AA 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px; 
+		PADDING-TOP: 2px;
+		BORDER-TOP: #2C59AA 1px solid; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:60px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#D7E7FA); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black;  
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+.btn1_mousedown
+		{
+		BORDER-RIGHT: #FFE400 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px; 
+		PADDING-TOP: 2px; 
+		BORDER-TOP: #FFE400 1px solid; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:60px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #FFE400 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #FFE400 1px solid
+		}
+
+.btn1_mouseup {
+		BORDER-RIGHT: #2C59AA 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		BORDER-TOP: #2C59AA 1px solid;  
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:60px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+		
+.btn2_mouseout {
+		BORDER-RIGHT: #2C59AA 1px solid;
+		BORDER-TOP: #2C59AA 1px solid; 
+		PADDING-LEFT: 1px;
+		PADDING-RIGHT: 1px; 
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:40px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+
+.btn2_mouseover {
+		BORDER-RIGHT: #2C59AA 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px; 
+		PADDING-TOP: 2px;
+		BORDER-TOP: #2C59AA 1px solid; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:40px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#D7E7FA); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black;  
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+.btn2_mousedown
+		{
+		BORDER-RIGHT: #FFE400 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px; 
+		PADDING-TOP: 2px; 
+		BORDER-TOP: #FFE400 1px solid; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:40px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #FFE400 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #FFE400 1px solid
+		}
+
+.btn2_mouseup {
+		BORDER-RIGHT: #2C59AA 1px solid; 
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		BORDER-TOP: #2C59AA 1px solid;  
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:40px;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+		BORDER-LEFT: #2C59AA 1px solid; 
+		CURSOR: hand; COLOR: black; 
+		BORDER-BOTTOM: #2C59AA 1px solid
+		}
+				
+
+
+
+.thList
+		{
+		height:23px;
+		font-size:12px;
+		background-repeat: repeat-x;
+		background-image: url(../../common/images/title_bg_off.jpg);
+		}
+
+.trList_sales
+		{
+		height:23px;
+		font-size:12px;
+		background-repeat: repeat-x;
+		background-color: #EDF4FE;
+		text-align:left;
+		padding-left: 2px;
+		}
+
+.thList_sales
+		{
+		height:23px;
+		font-size:12px;
+		background-repeat: repeat-x;
+		background-color: #DCEAFD;
+		text-align:left;
+		padding-left: 2px;
+		}
+.trList{
+		background-color: #ffffff;
+		padding-top: 1px;
+		padding-left: 2px;
+		padding-bottom: 1px;
+		height:20px;
+		text-align:left;
+		}
+
+.trListDark{
+			background-color: #EEF0F4;
+			padding-top: 1px;
+			padding-left: 2px;
+			padding-bottom: 1px;
+			height:20px;
+			text-align:left;
+			}
+			
+.trmore {
+	background-color: #ffffe9;
+	padding-top: 1px;
+	padding-left: 2px;
+	padding-bottom: 1px;
+	height:20px;
+	text-align:left;
+	}			
+
+.trcolorT{
+	background-image: url(../../common/images/bg_content.gif);
+	background-color: #FFFFFF;padding-top: 3px;padding-left: 3px
+	height:20px;
+		}
+
+
+.tdbuttonStyle{
+			   background-color: #FFFFFF;
+               vertical-align:middle;
+               text-align:right;
+               padding-right: 8px; 
+                }
+ 
+.tdbuttonStyle1{
+               vertical-align:middle;
+               text-align:right;
+               padding-right: 8px;
+               background-color: #F2F9FF;
+
+
+                }
+ 
+ .tdbuttonStyle_sales{
+               vertical-align:middle;
+               text-align:right;
+               padding-right: 8px;
+
+                }
+ 
+ 
+ .tdbuttonStyle_salesC{
+               vertical-align:middle;
+               text-align:center;
+
+                }
+                              
+.tdfontstyle{
+	font-size:12px;
+    text-align:center;
+	white-space: nowrap; 
+	}
+	
+.tdfontstyle_sales{
+	font-size:12px;
+    text-align:left;
+	white-space: nowrap; 
+	}
+	
+.tab_button         
+	 
+	{
+    font-size: 12px;
+	border:#000000 outset;
+	border: 1px;
+	background-image: url(../images/tab_button.gif);
+	color: #000000;
+	cursor: hand;
+	height: 2em;
+	width: 10px;	
+	padding-bottom: 0px;
+	padding-top: 5px;
+	background-color: #FFFFFF;	
+	text-align: justify;
+	vertical-align: left;
+	margin-bottom: 0px;
+	text-indent: 0px;
+	font-family: sans-serif;
+	}
+
+.tab_img_style{
+	text-indent:0px;
+	margin-bottom: 0px;
+	vertical-align: bottom;
+	}
+
+
+.buttonStyle_n {
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/new.gif);
+	width: 50px;
+}
+
+.buttonStyle_a {
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/add.gif);
+	width: 50px;
+}
+
+.buttonStyle_sh {
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/shp.gif);
+	width: 50px;
+}
+
+.buttonStyle_del {
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/del.gif);
+	width: 50px;
+}
+
+.buttonStyle_detail{
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/detail.gif);
+	width: 70px;
+}	
+	
+.buttonStyle_assign{
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/assign.gif);
+	width: 50px;
+}	
+		
+.buttonStyle_t{
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/tz.gif);
+	width: 50px;
+}
+
+.buttonStyle_f{
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/fj.gif);
+	width: 50px;
+}
+
+.buttonStyle_search
+{
+	font-size: 12px;
+	border:0px #000000 solid;
+	color: #000000;
+	cursor: hand;
+	height: 20px;
+	vertical-align:text-bottom;
+	background: url(../../crmsystem/sales/common/images/search.gif);
+	width: 50px;
+}
+
+.btnAdd_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/add_01.gif);
+		CURSOR: hand;
+		}
+.btnAdd_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/add-gray.gif);
+		CURSOR: hand;
+		}
+
+.btntz_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/tz_01.gif);
+		CURSOR: hand;
+		}
+.btntz_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/tz-gray.gif);
+		CURSOR: hand;
+		}	
+
+
+.btnsave_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/save.gif);
+		CURSOR: hand;
+		}
+.btnsave_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/save-gray.gif);
+		CURSOR: hand;
+		}			
+				
+.btnDelete_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/del_01.gif);
+		CURSOR: hand;
+		}
+.btnDelete_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/del-gray.gif);
+		CURSOR: hand;
+		}	
+		
+.btnassign_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/assign_01.gif);
+		CURSOR: hand;
+		}
+.btnassign_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/assign-gray.gif);
+		CURSOR: hand;
+		}	
+
+.btnfj_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/fj.gif);
+		CURSOR: hand;
+		}
+.btnfj_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/fj-gray.gif);
+		CURSOR: hand;
+		}
+
+.btnsearch_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/search.gif);
+		CURSOR: hand;
+		}
+.btnsearch_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/search-gray.gif);
+		CURSOR: hand;
+		}			
+
+.btnchange_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/change.gif);
+		CURSOR: hand;
+		}
+.btnchange_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/change-gray.gif);
+		CURSOR: hand;
+		}	
+		
+.btnzd_out{
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/zd.gif);
+		CURSOR: hand;
+		}
+.btnzd_up {
+		border:0px #000000 solid;
+		PADDING-RIGHT: 1px; 
+		PADDING-LEFT: 1px;
+		PADDING-TOP: 2px; 
+		FONT-SIZE: 12px; 
+		height:20px;
+		width:50px;
+		background: url(../../crmsystem/sales/common/images/zd-gray.gif);
+		CURSOR: hand;
+		}				
+		
+.btnStyle_out {
+       		font-size:12px;
+       		height:20px;
+       		width:60px;
+			background-color: #FFFFFF;
+		
+       		BORDER-BOTTOM: 1px outset;
+       		BORDER-LEFT: 1px outset;
+       		BORDER-RIGHT: 1px outset;
+       		BORDER-TOP: 1px outset;
+       		border:0px #000000 solid;
+       		cursor: hand;
+       		vertical-align:text-bottom
+       		}
+
+.btnStyle_up {
+       		font-size:12px;
+       		height:20px;
+       		width:60px;
+			background-color: #FFFFFF;
+			background-image: url(../images/map_main_in.gif);
+       		BORDER-BOTTOM: 1px outset;
+       		BORDER-LEFT: 1px outset;
+       		BORDER-RIGHT: 1px outset;
+       		BORDER-TOP: 1px outset;
+       		BORDER-LEFT: #eeeeee 1px solid; 
+       		BORDER-top: #eeeeee 1px solid; 
+ 			BORDER-right: #2C59AA 1px solid; 
+ 			BORDER-bottom: #2C59AA 1px solid;      				
+       		cursor: hand;
+       		vertical-align:text-bottom
+       		}			

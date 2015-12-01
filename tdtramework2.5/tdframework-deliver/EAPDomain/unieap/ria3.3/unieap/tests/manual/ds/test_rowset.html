@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<style>
+			@import "../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../themes/default/css/unieap.css";
+		</style>
+		<script type="text/javascript" src="../../syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="../../syntaxHighlighter/Scripts/shBrushXml.js"></script>
+		<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: false"></script>
+		<script type="text/javascript" src="test_rowset.js"></script>
+		<script>
+			dojo.require("unieap.form.Button")
+			dojo.require("unieap.layout.TitlePane");
+		</script>
+	</head>
+	<body class="unieap">
+		<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试功能点：
+				<li>描述</li>
+				本样例测试了数据中心中RowSet的方法
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" >
+        	功能点1、2数据中心：
+			<div dojoType ="unieap.form.Button" label="原始数据" onClick="test"></div><br>
+			<br>功能点3数据中心：
+			<div dojoType ="unieap.form.Button" label="原始数据" onClick="treetest"></div>
+			<br><br>功能点1：
+			<div>
+				<label>
+					rowset.rowsCopy(0,1,unieap.ds.Buffer.PRIMARY,rowset,1,unieap.ds.Buffer.PRIMARY);<br>
+					unieap.debug(rowset);
+				</label>
+			</div>
+			<div dojoType ="unieap.form.Button" label="自身拷贝" onClick="test1"></div>
+			<div>
+			<br>功能点2：
+				<label >
+					var rowset2 = new unieap.ds.RowSet({'primary':[],'filter':[]});<br>
+					rowset.rowsCopy(1,2,unieap.ds.Buffer.PRIMARY,rowset2,0,unieap.ds.Buffer.FILTER);<br>
+					unieap.debug(rowset2);
+				</label>
+			</div>
+			<div dojoType ="unieap.form.Button" label="rowset之间拷贝" onClick="test2"></div>
+			<br><br>
+			功能点3：
+			<div dojoType="unieap.form.Button" label="generateTreeSet" onClick="generateTreeSet"></div>
+			<br><br>
+			功能点4：
+			<div dojoType="unieap.form.Button" label="getName" onClick="getRowSetName"></div>
+			</div>
+			
+        </div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">自身拷贝</td>
+					<td style="vertical-align:top">点击按钮<自身拷贝></td>
+					<td style="vertical-align:top">查看数据中心，将自身rowset第0行拷贝到第1行</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">rowset之间拷贝</td>
+					<td style="vertical-align:top">点击按钮<rowset之间拷贝></td>
+					<td style="vertical-align:top">查看数据中心，将rowset的第1行拷贝到rowset2的filter缓冲区第0行</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">生成树结构</td>
+					<td style="vertical-align:top">点击按钮<generateTreeSet></td>
+					<td style="vertical-align:top">查看是否生成树状结构</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">rowset的getName方法</td>
+					<td style="vertical-align:top">点击按钮<generateTreeSet></td>
+					<td style="vertical-align:top">查看获取的名称是否为空</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

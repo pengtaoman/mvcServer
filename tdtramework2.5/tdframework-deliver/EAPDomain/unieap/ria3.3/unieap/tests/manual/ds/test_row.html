@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>Row Test</title>
+        <style>
+            @import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/global.js">
+        </script>
+		<script type="text/javascript" src="../../configs/test_config.js"></script>
+		<link rel="stylesheet"type="text/css" href="../../configs/test_config.css"></link>
+		<script type="text/javascript" src="test_row.js"></script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.ds");
+			dojo.require("unieap.form.FieldSet");
+			dojo.require("unieap.grid.Grid");
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试修改行之后resetUpdate方法：
+				<li>使用RowSet的resetUpdate方法，传入rowIndex可以解决row的resetUpdate只更新数据 不更新状态的问题。</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height="250px">
+			<fieldset dojoType="unieap.form.FieldSet" title="编辑信息">
+			   		<form id='form' jsId="form" dojoType="unieap.form.Form" style="margin:0px;">		   			
+				   		<table style="table-layout:fixed;font-size:12px;height:68px;">
+				   			<tr>
+				   				<td width="50">编号：</td><td width="240"><div dojoType="unieap.form.NumberTextBox" binding="{name:'attr_empno'}" required = "true"></div></td>
+				   				<td width="50">姓名：</td><td width="240"><div dojoType="unieap.form.TextBox" binding="{name:'NAME'}"></div></td>
+				   			</tr>
+				   			<tr>
+				   				<td width="50">日期：</td><td width="240"><div dojoType="unieap.form.DateTextBox" binding="{name:'attr_hiredate'}" maxLength="30" displayFormatter="{dataFormat:'yyyy-MM-dd HH:mm:ss'}"></div></td>
+				   				<td width="50">部门：</td><td width="240"><div dojoType="unieap.form.ComboBox" dataProvider="{store:'DEPT'}" binding="{name:'attr_deptno'}"></div></td>
+				   			</tr>
+				   			<tr>
+				   				<td width="50">工资：</td><td width="240"><div dojoType="unieap.form.NumberTextBox" binding="{name:'attr_sal'}"></div></td>
+				   				<td width="50">职务：</td><td width="240"><div dojoType="unieap.form.TextBox" binding="{name:'attr_job'}"></div></td>
+				   			</tr>
+				   		</table>
+			   		</form>
+			   	</fieldset>
+				  <div id="grid" jsId="grid" dojoType="unieap.grid.Grid"  width="auto"  height="300px" 	binding="{store:'empDataStore'}"
+				  lockedRow="{statistics:[{attr_empno:'max'},{attr_empno:'min'}]}">
+		            <header>
+		                <row>
+		                	<cell label="员工编号" width="200" name="attr_empno"></cell>
+		                    <cell label="姓名" name="NAME" width="150" headerStyles="text-align: left;"></cell>
+		                    <cell label="日期" name="attr_hiredate" displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd HH:mm:ss'}"></cell>
+		                    <cell label="工资" width="150" name="attr_sal" styles="text-align:right;"></cell>
+		                    <cell label="部门" width="150" name="attr_deptno" decoder="{store:'DEPT'}"></cell>
+		                    <cell label="职务" width="30%" name="attr_job"></cell>
+		                </row>
+		            </header>
+		            <toolbar > </toolbar>
+		        </div>
+				
+        </div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height="250px">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">改变row中字段值，调用rs.resetUpdate(index)方法，看grid和form中是否为未修改状态</td>
+					<td style="vertical-align:top">
+						点击<div dojoType="unieap.form.Button" label="resetUpdate" onClick="resetUpdate"></div>
+						</td>
+					<td style="vertical-align:top">查看数据中心中row中无状态标志，grid和form中无修改状态标志</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

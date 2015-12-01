@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\AO
+2
+b
+e:AOManager.java|1|13b896a3282|1ec|99b4a3fb|18dc9a889f1e487bb67161f0c14811f6|0
+16:ActInstAO.java.bak0415|1|13b896a312a|b0ed|d48c58b2|9d24091032374fa5ab133fd619a276ed|0
+e:ActInstAO.java|1|13b896a2fe2|9d12|735bec95|77241869dc5c476fa92a1d8c28ac5616|0
+c:NWOrgAO.java|1|13b896a338c|507|3376e000|b71522c66c364ee4a95848b220587173|0
+c:AgentAO.java|1|13b896a3188|553|a881a776|c02bd932014641ef8949f0ca4b67c395|0
+f:ProcInstAO.java|1|13b896a35ae|56a4|92ff87d4|a772e07aadde4c3d8f9cb25db71d02ec|0
+f:WorkItemAO.java|1|13b896a36a8|7e60|bb23aff3|cf1a67288ae74a69a71684a3542d1709|0
+d:ActDefAO.java|1|13b896a2ec9|ca5|296667b8|cfbb894f6c074e6c90efeed712775ae0|0
+e:ProcDefAO.java|1|13b896a34c4|3dfc|ff2f8854|9dbd727693674a40ad684a3d25e46e35|0
+10:AOException.java|1|13b896a3224|7b3|ac1f6ecf|a8d3a830e0b8459b938eb3a71faf9a74|0
+4:i18n|2|0|0|0|343b3432e0b24a3bb0679bf4c7ce0d51|0

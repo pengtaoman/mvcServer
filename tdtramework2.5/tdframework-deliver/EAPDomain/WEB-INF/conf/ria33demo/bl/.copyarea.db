@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\ria33demo\bl
+2
+5
+1f:applicationContext-pracDemo.xml|1|13b89647a0e|4bd|c28483fc|5cccc5adc2b343c2b7bb58b0638fab70|0
+19:applicationContext-bl.xml|1|13b896479c0|652|ff3406ee|73b1e601d2a24f79bcebf275bae7e26c|0
+1b:apllicationContext-demo.xml|1|13b896479a1|698|b4fc22e9|05504e85b273489ead5c83fed1bda8a4|0
+24:applicationContext-domain.xml.hsqldb|1|13b89647ae9|a9b|2df46463|35bc3c4cc5674a9fb5454239587d2b98|0
+1d:applicationContext-domain.xml|1|13b896479df|a6d|4e5054f8|9f34cf418404485ca22bc96d37882e9b|0

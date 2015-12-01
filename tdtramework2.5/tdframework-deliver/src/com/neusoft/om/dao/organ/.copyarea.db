@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\organ
+2
+4
+c:OrganVO.java|1|13b89670deb|28d9|b86bbfa1|0dc1928c63f349deb643db9f7207d49c|0
+e:OrganColl.java|1|13b89670b1c|2fa|c0a4e971|910fd0bb58174e0ba6ce1776cacae80c|0
+d:OrganDAO.java|1|13b89670b2b|148b|f787a02b|519e0eb8af854d9c814110e1ed7fb847|0
+11:OrganDAOImpl.java|1|13b89670c54|9269|becb2a25|03f3f89fb6f6453d9e3def1258b19042|0

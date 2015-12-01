@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\lib
+2
+4
+9:kernel.js|1|13b894c3b15|119|d1095c74|490e62bac53641cc8961e5cbf87891fc|0
+d:backCompat.js|1|13b894c38f2|fcc|94d807ce|d4ec13522df94e3ea8d4a1e769aaca61|0
+7:plugins|2|0|0|0|3a983acdaeaa488c903653d1870737a6|0
+f:main-browser.js|1|13b894c3e9f|211|5daeb0c5|6edad514df8e4d8ba52e755758639d51|0

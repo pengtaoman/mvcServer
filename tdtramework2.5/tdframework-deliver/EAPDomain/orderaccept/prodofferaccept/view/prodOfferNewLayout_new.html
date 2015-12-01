@@ -1,0 +1,125 @@
+
+<div id='globalLayoutContainer'>
+	<!--主套餐选择 begin -->
+
+	<div id='mainProdOfferSelectPane'
+		dojoType='unieap.layout.BorderContainer'>
+		<div dojoType='unieap.layout.BorderPane' region='left' title='销售品目录树'
+			id='BorderPane' width='29%' height='auto'>
+			<div
+				dojoType='orderaccept.prodofferaccept.widget.commheader.CommHeaderWidget'></div>
+			<div id='TabContainer' dojoType='unieap.layout.TabContainer'>
+				<div dojoType='unieap.layout.ContentPane' id='quickAcceptPane'
+					title='便捷受理'>
+					<div id='AccordionContainer'
+						dojoType='unieap.layout.AccordionContainer' height='100%'>
+						<div dojoType='unieap.layout.AccordionPane'
+							id='personalCollectResult' title='个人收藏'></div>
+						<div dojoType='unieap.layout.AccordionPane'
+							id='hotProdOfferResult' title='热点销售品'></div>
+						<div dojoType='unieap.layout.AccordionPane'
+							id='peddleProdOfferResult' title='推荐销售品'></div>
+					</div>
+				</div>
+				<div dojoType='unieap.layout.ContentPane' id='mainProdOfferTreePane'
+					title='销售品目录树'></div>
+				<div dojoType='unieap.layout.ContentPane'
+					id='mainProdOfferSearchResult' title='搜索结果'></div>
+			</div>
+		</div>
+		<div dojoType='unieap.layout.BorderPane' region='center' title='销售品信息'
+			id='shoppingCartPane'>
+
+			<div class='buscard-content' id='shoppingCartInitPage'
+				style="padding: 0px; border-left: none; border-right: none; border-top: none; border-bottom: none;">
+				<table cellpadding='0' cellspacing='0'
+					style='border-collapse: collapse; width: 100%;'
+					class='grid-global member-product-table'>
+					<tr align="left" class="member-accept-header grid-th">
+						<th>
+							选择
+						</th>
+						<th>
+							产品
+						</th>
+						<th>
+							销售品
+						</th>
+						<th>
+							状态
+						</th>
+						<th>
+							功能
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+					<tr>
+						<td colspan="6" align="left">
+							<span id='shoppingCartInitPagePrompt'
+								class='shoppingcart-initpage-prompt'>未选择新装或变更的销售品,请在左边[销售品目录树]上进行选择</span>
+						</td>
+					</tr>
+				</table>
+				<div style="text-align: right; padding-top: 5px;">
+					<input type="button" class='formButton buscard_half_opacity'
+						value="下一步" />
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--主套餐选择 end  -->
+
+	<!-- 套餐受理 begin -->
+	<div id='prodOfferAcceptPane'>
+		<div style="text-align: right; padding-right: 10px;">
+			<input type='button' class='showAllButton'
+				style='cursor: pointer; color: red; margin-right: 3px;'
+				id='display-all-href' title="展开所有面板"/>
+			
+			<input type='button' class="hideAllButton" style='cursor: pointer; color: red'
+				id='hidden-all-href' title="隐藏所有面板"/>
+		</div>
+		<!--订单信息 -->
+		<div dojoType='unieap.layout.TitlePane' id='orderInfoPane'
+			title='订单信息' open='false'></div>
+		<!--基础包受理 -->
+		<div dojoType='unieap.layout.TitlePane' id='mainProdOfferPane'
+			title='基础包受理' open='false'></div>
+		<!-- 可选包受理-->
+		<div dojoType='unieap.layout.TitlePane' title='可选包受理' open='false'
+			style="overflow: auto" height="500px" id='subProdOfferPane'>
+		</div>
+		<!-- 促销政策受理 /begin-->
+		<div dojoType='unieap.layout.TitlePane' title='促销政策受理' open='false'
+			style="overflow: auto" height="500px" id='promotionPane'>
+			<!-- 
+			<div id='promotionTreeContainer'
+				dojoType='unieap.layout.BorderContainer'>
+				<div dojoType='unieap.layout.BorderPane' id='PromotionTreePane'
+					region='left' title='促销政策目录树' width='20%'></div>
+				<div dojoType='unieap.layout.BorderPane' id='PromotionCart'
+					region='center' title='促销政策购物车'></div>
+			</div>
+			 -->
+		</div>
+		<!-- 促销政策受理 /end-->
+		<!-- 选择支付关系-->
+		<div dojoType='unieap.layout.TitlePane' title='选择支付关系' open='false'
+			id='payRelationPane'>
+		</div>
+		<!-- 选择支付关系-->
+		<!-- 经办人信息 /begin-->
+		<div dojoType='unieap.layout.TitlePane' title='经办人信息' open='false'
+			style="overflow: auto" id='viaInfoPane'>
+		</div>
+		<!-- 经办人信息  /end-->
+
+	</div>
+	<!-- 套餐受理 end -->
+</div>
+
+<!--  整体border 布局结束 -->

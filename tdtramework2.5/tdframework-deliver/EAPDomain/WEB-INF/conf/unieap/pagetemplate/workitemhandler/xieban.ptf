@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkitemHandler xmlns="http://www.neusoft.com/unieap/workshop/template/workitemhandler" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Title name="国土资源"/>
+	<ResourceTree name="RcsTree" title="根目录">
+		<TreeNode name="node1" title="子目录1" type="Form" href="">
+			<TreeNode name="node2" title="子目录2" type="Form" href="http://www.5460.com"/>
+			<TreeNode name="node3" title="子目录3" type="GIS" href="http://www.5460.com"/>
+		</TreeNode>
+	</ResourceTree>
+	<Scenarios>
+		<Scenario id="test1" treenods_visibility="node1"/>
+	<Scenario treenods_visibility="node1,node2,node3" id="1be4663:fe520b8b04:-7ee5"/></Scenarios>
+</WorkitemHandler>

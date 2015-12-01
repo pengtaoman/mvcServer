@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\address
+2
+4
+e:AddressVO.java|1|13b8966a898|1738|a7e2ebe1|218d2019dfd4405e9d15d1cf6e610482|0
+10:AddressColl.java|1|13b8966a731|217|5dcfb505|cc00141041c7420c9fb5596e0a2617d8|0
+13:AddressDAOImpl.java|1|13b8966a78f|1e98|1227ae1c|32f56b78f304476c896db5bd619132a0|0
+f:AddressDAO.java|1|13b8966a760|731|5078ed5|1a489def771148df9b11f784654aface|0

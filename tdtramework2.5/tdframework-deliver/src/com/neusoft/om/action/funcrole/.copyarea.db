@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\action\funcrole
+2
+4
+19:FuncRoleDeleteAction.java|1|13b89666fb4|adf|63fabf8c|6fbb562571444e958a9440556938f1ca|0
+12:FuncRoleAdmin.java|1|13b89666f85|c23|5ddf3370|9657453ba2be4446afc3ec0d0e0be1ae|0
+14:RolePowerAction.java|1|13b896671e7|2479|a3e86cd1|0d9a0be3b5414390a3c028596db0ee0e|0
+15:RoleManageAction.java|1|13b89667199|9e6d|cf905025|ba06ee7ee6d84a68812bc9ad9181477f|0

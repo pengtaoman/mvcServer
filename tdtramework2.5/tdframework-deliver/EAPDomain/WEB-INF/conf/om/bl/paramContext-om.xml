@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Crm dataAccessContext</description>
+	<bean id="omDictionaryFacade" class="com.neusoft.om.bo.OMDictionaryBO">
+		<property name="dictionaryDAO">
+			<ref local="omDictionaryDAO"/>
+		</property>
+	</bean>
+	<bean id="omDictionaryDAO" class="com.neusoft.om.dao.dictionary.OMDictionaryDAOImpl">
+		<property name="dataSource">
+			<ref bean="om_dataSource"/>
+		</property>
+	</bean>
+</beans>

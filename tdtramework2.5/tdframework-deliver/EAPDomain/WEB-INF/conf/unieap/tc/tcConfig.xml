@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<tcConfig>
+	<tc name="Text" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="Number" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="Integer" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="PosInteger" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="Double" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+		<event name="onblur">eapObjsMgr.getEAPObj(this).dealInputOnblur()</event>
+	</tc>
+	<tc name="Money" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+		<event name="onblur">eapObjsMgr.getEAPObj(this).dealInputOnblur()</event>
+	</tc>
+	<tc name="Date" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="IDCard" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="Password" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="PasswordConfirm" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+	<tc name="Select" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+	</tc>
+	<tc name="TextArea" class="NEUHTCTextArea">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).doKeypress()</event>
+	</tc>
+	<tc name="ReadOnly" class="NEUHTCReadOnly">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyRead()</event>
+	</tc>
+	<tc name="QuickSelect" class="NEUHTCReadOnly">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab();eapObjsMgr.getEAPObj(this).dealInputBackSpace()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).dealKeypress()</event>
+		<event name="onblur">eapObjsMgr.getEAPObj(this).dealInputOnblur()</event>
+		<!-- commented by hugh 2004/01/04 -->
+		<!-- event name="onfocus">eapObjsMgr.getEAPObj(this).dealOnFocus()</event -->
+	</tc>
+    <tc name="Email" class="NEUHTCInput">
+		<event name="onkeydown">eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()</event>
+		<event name="onkeypress">eapObjsMgr.getEAPObj(this).OnlyNumber()</event>
+	</tc>
+</tcConfig>

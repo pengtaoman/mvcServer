@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\robot\logic\ds
+2
+5
+9:module.js|1|13b89107ae5|125|622169a8|e07434a295f0411b959b0d0328a084b3|0
+12:test_datacenter.js|1|13b89107b52|0|0|3b31167c866a461eb72c0062e295e5b0|0
+11:test_datastore.js|1|13b89107c3d|255|3bebcb1|79cf4996f1764048b5f803d4f3e90d14|0
+e:test_rowset.js|1|13b89107d94|131c|774ec923|aa93fb8c84e04a749c9baa4e26353733|0
+b:test_row.js|1|13b89107caa|caa|269fd1d2|ae02bc2d76a842f38784b161536cb9f0|0

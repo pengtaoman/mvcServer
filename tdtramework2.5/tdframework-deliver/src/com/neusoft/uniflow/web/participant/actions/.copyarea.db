@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\participant\actions
+2
+4
+19:ProcessSVGViewAction.java|1|13b896a3d5f|131e|8ae95eed|9d37694213724c1ea2e9fd4b8cc5621a|0
+1a:SetReadActPartiAction.java|1|13b896a3fb1|3341|5e551f9c|18968e21d6254f2fa091430e375e1db2|0
+16:SetActPartiAction.java|1|13b896a3ed6|348a|1d73ac2d|c0c1fc2c08624884a8c63577b631954f|0
+13:ProcListAction.java|1|13b896a3dcd|ed8|2f71e679|f58d961640d54b2b8ec828c56460c364|0

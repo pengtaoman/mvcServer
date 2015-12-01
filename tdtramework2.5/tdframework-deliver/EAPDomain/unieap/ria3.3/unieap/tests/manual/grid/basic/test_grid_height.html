@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>grid高度测试</title>
+        <style>
+            @import "../../../../../unieap/themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.ds");
+			dojo.require("unieap.form.Button");
+			var ds=new unieap.ds.DataStore("demo",[
+				{id:1,name:'one'},
+				{id:2,name:'two'},
+				{id:3,name:'three'},
+				{id:4,name:'four'},
+				{id:5,name:'five'}
+			]);
+			dataCenter.addDataStore(ds);
+			function fn(){
+
+				return "<button style='height:40px'>OK</button>"
+			}
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试功能点：
+				<li>当自定义控件的高度过高时，单元格不会窜位</li>
+	  	</div>
+		<div dojoType="unieap.layout.TitlePane" title="样例显示">
+			<div dojoType="unieap.grid.Grid" binding="{store:'demo'}" rows="{defaultRowHeight:25}"  >
+				<fixed>
+					<cell label="编号" name="id"></cell>
+				</fixed>
+				<header>
+					<cell get="fn" label="自定义控件"></cell>
+					<cell label="姓名" name="name" styles='color:red;'></cell>
+				</header>
+			</div>
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height="250px">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">当自定义控件的高度过高时，单元格不会窜位</td>
+					<td style="vertical-align:top"></td>
+					<td style="vertical-align:top">单元格不篡位</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

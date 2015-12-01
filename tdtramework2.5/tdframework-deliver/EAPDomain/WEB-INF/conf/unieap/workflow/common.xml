@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<common>
+
+	<!--配置工作流产品使用的数据源信息
+		dataSourceName：数据源名称，该名称定义在工作流配置文件connection-config.xml中	 -->
+		
+	<db dataSourceName="Oracle_example"/>
+	
+	<!--配置组织机构使用的数据源信息
+		orgClass：组织机构实现类信息	-->
+		
+	<org orgClass="com.neusoft.orgimpl.NWOrgImpl" connectString="Oracle_example"/>
+
+	<!-- 配置工作流应用程序管理器全局异常处理信息
+		 class：全局异常处理类信息
+		 maxDuration：应用程序处理时限，单位秒，即应用程序处理时间超过该值会触发全局异常处理	-->
+		 
+	<exceptionHandler
+		class="com.neusoft.uniflow.service.exception.appException.DefaultCustomizeHandler">
+		<monitor maxDuration="3" />
+	</exceptionHandler>
+
+	<locale country="CN" encoding="gb2312" language="zh" />
+
+	<resource categoryClass="com.neusoft.uniflow.category.demo.DemoCategoryEntry">
+	</resource>
+
+</common>

@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\core
+2
+5
+14:BaseServiceImpl.java|1|13b896950ac|58b|dc19dabf|e466ae4ef93047659e7c5e4cc813d9c2|0
+10:BaseService.java|1|13b89694fe0|257|fa8cecc|ced57be1ef424c5da5fb3f9f8b9c50f6|0
+c:Service.java|1|13b896951d4|11b|88565595|0ed5f7440bfd46f7a522f0c0ce19d225|0
+e:BaseExtBO.java|1|13b89694f06|92c|67ad92d|056b61fed2bd4f8b8a7f863f1e805213|0
+b:BaseBO.java|1|13b89694e0c|15b|bf4569e4|54658c79a2024b25905ec4dab2ff12a7|0

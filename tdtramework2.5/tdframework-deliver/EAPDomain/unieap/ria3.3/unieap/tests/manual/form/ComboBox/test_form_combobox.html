@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+        <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>
+        <script type="text/javascript">
+            dojo.require("unieap.form.Form");
+            dojo.require("unieap.form.Button");
+            dojo.require("unieap.form.ComboBox");
+            dojo.require("unieap.layout.TitlePane");
+			
+            var city = new unieap.ds.DataStore('city', [
+				{CODEVALUE: 1,CODENAME: '大连',provice:1}, 
+				{CODEVALUE: 2,CODENAME: '沈阳',provice:1},
+				{CODEVALUE: 3,CODENAME: '长春',provice:2},
+				{CODEVALUE: 4,CODENAME: '四平',provice:2}
+			]);
+			dataCenter.addDataStore(city);
+			
+			var province = new unieap.ds.DataStore('province', [
+				{CODEVALUE: 1,CODENAME: '辽宁'}, 
+				{CODEVALUE: 2,CODENAME: '吉林'}
+			]);
+            dataCenter.addDataStore(province);
+			
+            unieap.WEB_APP_NAME = "/EAPDomain";
+			
+			function getValue() {
+				alert(unieap.byId('p_combobox').getValue());
+			}
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="说明">
+	  		<li>省份手动输入文本（非下拉选择）时，焦点离开，ComboBox显示输入文本。如输入文本不能匹配codevalue，点击获取<getValue>按钮获得的值为NULL,匹配则获得实际的codevalue<br>
+			<li>下拉选择省份，级联ComboBox可以配置"是否默认选中"，当主ComboBox为空时，可配置"下拉出全部数据"或"下拉不出任何数据"（选择省份，对比城市1和城市2ComboBox变化）<br>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="ComboBox">
+        	<table>
+        		<tr>
+        			<td>
+	        			<label for='p_combobox'>省份：</label>
+	        		</td>
+					<td>
+						<div dojoType="unieap.form.ComboBox" id='p_combobox'  
+						     popup="{displayStyle:'table'}"  
+						     dataProvider="{store:'province'}"
+							>  
+						</div> 
+					</td>
+        		</tr>
+				<tr>
+        			<td>
+	        			<label for='c_combobox2'>城市1：</label>
+	        		</td>
+					<td>
+						<div cascade="{primary:'p_combobox',filterAttr:'provice'}"  
+						     dojoType="unieap.form.ComboBox" id='c_combobox1'  
+						     popup="{displayStyle:'table'}"  
+						     dataProvider="{store:'city'}">  
+						</div>   
+					</td>
+        		</tr>
+				<tr>
+        			<td>
+	        			<label for='c_combobox2'>城市2：</label>
+	        		</td>
+					<td>
+						<div cascade="{primary:'p_combobox',filterAttr:'provice',filterNull:'none',defaultSelect:false}"  
+						     dojoType="unieap.form.ComboBox" id='c_combobox2'  
+						     popup="{displayStyle:'table'}"  
+						     dataProvider="{store:'city'}">  
+						</div>   
+					</td>
+        		</tr>
+        	</table>
+			<div dojoType="unieap.form.Button" label="getValue" onClick="getValue"></div>
+        </div>
+    </body>
+</html>

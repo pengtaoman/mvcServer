@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuit>
+	<testcase filename="test_grid.html" folder="ui/grid/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+	</testcase>
+
+	
+	<testcase filename="test_grid_cell.html" folder="ui/grid/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		<method id="refreshCell" snapshot="true" depends="">
+			<event id="refreshCellButton"  name="onClick" value=""/>
+		</method>
+		<method id="getText" snapshot="true" depends="">
+			<event id="getTextButton"  name="onClick" value=""/>
+		</method>
+	</testcase>
+	<testcase filename="test_grid_isMulTitle.html" folder="ui/grid/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+	</testcase>
+</testsuit>

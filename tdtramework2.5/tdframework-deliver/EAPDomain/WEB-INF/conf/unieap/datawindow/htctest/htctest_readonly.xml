@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by hugh (neusoft) -->
+<dataWindow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.neusoft.com/unieap/datawindow/metadata/xml" height="300" title="轻型控件测试" type="READ_ONLY" width="600" autoRemove="true">
+	<dataStoreInfo dataStoreName="htctest"/>
+	<orderInfo attrIndex="1" dataType="STRING" order="descending"/>
+	<attributes>
+		<attribute index="1" dataType="STRING" title="编号测试" maxlength="20" type="input" width="50" isNullable="true" style="Text"/>
+		<attribute index="2" dataType="STRING" title="ReadOnly测试" maxlength="22" type="input" width="100" isNullable="false" style="ReadOnly"/>
+		<attribute index="3" dataType="DOUBLE" title="Doubl测试" maxlength="18" type="input" width="100" isNullable="false" style="Double"/>
+		<attribute index="4" dataType="STRING" title="身份证号测试" maxlength="4" type="input" width="100" isNullable="true" style="IDCard"/>
+		<attribute index="5" dataType="STRING" title="QuickSelect测试" maxlength="20" type="input" width="100" isNullable="false" style="Text"/>
+		<attribute index="6" dataType="STRING" title="TextArea测试" maxlength="12" type="textarea" width="100" isNullable="false" style="TextArea"/>
+		<attribute index="7" dataType="TIMESTAMP" title="Date测试" maxlength="12" type="input" width="100" isNullable="false" style="Date"/>
+		<attribute index="8" dataType="FLOAT" title="Money测试" maxlength="2" type="select" width="100" isNullable="false" style="Money"/>
+		<attribute index="9" dataType="STRING" title="Select数据" maxlength="2" type="input" width="100" isNullable="false" style="Text">
+			<option value="10">财政部</option>
+			<option value="20">人力资源部</option>
+			<option value="30">研发部</option>
+			<option value="40">技术支持部</option>
+		</attribute>
+	</attributes>
+	<editers isAutoDraw="true" colsInOneRow="2">
+		<editer attrIndex="1"/>
+		<editer attrIndex="2"/>
+		<editer attrIndex="3"/>
+		<editer attrIndex="4"/>
+		<editer attrIndex="5"/>
+		<editer attrIndex="6"/>
+		<editer attrIndex="7"/>
+		<editer attrIndex="8"/>
+		<editer attrIndex="9"/>
+	</editers>
+	<headers>
+		<header attrIndex="1"/>
+		<header attrIndex="2"/>
+		<header attrIndex="3"/>
+		<header attrIndex="4"/>
+		<header attrIndex="5"/>
+		<header attrIndex="6"/>
+		<header attrIndex="7"/>
+		<header attrIndex="8"/>
+	</headers>
+	<filters>
+		<filter index="1" title="部门" filterName="htctest.myselect" operator="=" dataType="4" style="Text" type="select">
+			<option value="10">财政部</option>
+			<option value="20">人力资源部</option>
+			<option value="30">研发部</option>
+			<option value="40">技术支持部</option>
+		</filter>
+	</filters>
+</dataWindow>

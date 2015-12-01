@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - 编辑模块</title>
+		<style type="text/css">
+			@import "../../../blackbird/blackbird.css";
+			@import "../../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+
+		<script type="text/javascript" src="../../../blackbird/blackbird.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shBrushXml.js"></script>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: true"></script>
+		<script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.form.TextBox");
+        </script>
+    </head>
+    <body class="unieap">
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - 编辑模块"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="200px"
+			binding="{store:'empDataStore'}"
+			rows="{defaultRowHeight:21}"
+			views="{rowNumber:true,rowBar:true,orderType:'none'}"
+			selection="{selectType:'m',onBeforeAllSelect:function(){ alert('before all select');return true;},onAfterAllSelect:function(){alert('after all select');}}" 
+			edit="{editType:'rowEdit',singleClickEdit:false}">
+			<fixed>
+				<cell label="员工编号" width="10%" editor="{editorClass:'unieap.form.TextBox',editorProps:{textAlign:'left'}}" name="attr_empno" headerStyles="text-align: left;"></cell>
+			</fixed>
+			<header>
+				<cell width="150px" label="职位" editor="{editorClass:'unieap.form.TextBox',editorProps:{textAlign:'left'}}" name="attr_job" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="姓名" name="NAME" editor="{editorClass:'unieap.form.TextBox',editorProps:{textAlign:'left'}}" headerStyles="text-align: left;">
+				</cell>
+				<cell width="50px" label="婚否" name="married" editor="{editorClass:'unieap.form.CheckBox',editorProps:{checkedValue:1,uncheckedValue:0}}"></cell>
+				<cell width="150px" label="部门" editor="{editorClass:'unieap.form.ComboBox',editorProps:{dataProvider:{store: 'DEPT'},decoder:{valueAttr:'CODEVALUE',displayAttr:'CODENAME'}}}" name="attr_deptno" ></cell>
+				<cell width="150px" label="入值日期" editor="{editorClass:'unieap.form.DateTextBox'}" name="attr_hiredate" displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}"></cell>
+				<cell width="150px" label="工资" name="attr_sal"></cell>
+			</header>
+		</div>
+		
+		
+    </body>
+</html>

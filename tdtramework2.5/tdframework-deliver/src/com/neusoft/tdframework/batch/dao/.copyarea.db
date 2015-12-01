@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\batch\dao
+2
+4
+11:BatchDAOImpl.java|1|13b8968cfa3|1c78|6878fd9a|d9939b59affe4f27953c733ce08b96a8|0
+e:BatchColl.java|1|13b8968cd80|54d|390cc9a9|dce5a8b7df5a4a41be92959e74de86c9|0
+c:BatchVO.java|1|13b8968d0cc|e12|a869985d|82ac668c1a3c433faa90541c43ab7317|0
+d:BatchDAO.java|1|13b8968ce7a|660|8c6c37a5|2e5424fdccf045f2aea92634b232eedf|0

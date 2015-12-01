@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - 分组模块</title>
+		<style type="text/css">
+			@import "../../../../../../unieap/themes/default/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../../dojo/dojo.js" djConfig="parseOnLoad:false,isDebug: false"></script>
+		<script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.grid.Grid");
+			dojo.require("testunit.TestUnit");
+        </script>
+		<script type="text/javascript" src="test_group_statistic.js"></script>
+    </head>
+    <body class="unieap">
+    	
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - 分组统计"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="200px"
+			binding="{store:'empDataStore'}"
+			rows="{defaultRowHeight:21}"
+			views="{rowNumber:true,rowBar:true,orderType:'client'}"
+			selection="{selectType:'m'}"
+			group="{name:['attr_deptno'],autoApply:true,groupBar:true,statistic:{attr_deptno:'avg',attr_sal:'avg',attr_empno:'min',attr_hiredate:'max'}}"
+			filter="{}">
+			<fixed>
+				<cell label="员工编号" width="10%" name="attr_empno" dataType="number" headerStyles="text-align: left;"></cell>
+			</fixed>
+			<header>
+				<cell width="150px" label="姓名" name="NAME" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="部门" name="attr_deptno" decoder="{store:'DEPT',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}"></cell>
+				<cell width="150px" label="职位" name="attr_job" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="入职日期" name="attr_hiredate" displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}"></cell>
+				<cell width="150px" label="工资" name="attr_sal" dataType="number"></cell>
+			</header>
+		</div>
+		
+    </body>
+</html>

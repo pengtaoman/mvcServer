@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuit>
+		
+	<testcase filename="test_grid_foot.html" folder="ui/grid/advanced/">
+		    <method id="testInit" snapshot="true" depends="">
+			</method>
+	</testcase>
+	
+	  	<testcase filename="test_grid_lockrow.html" folder="ui/grid/advanced/">
+		    <method id="testInit" snapshot="true" depends="">
+			</method>
+			 <method id="testSetLockedRow" snapshot="true" depends="">
+				<event id="setLockedRowDataButton"  name="onClick" value=""/>
+			</method>
+	</testcase>		
+
+	<testcase filename="test_grid_toolbar.html" folder="ui/grid/advanced/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+	</testcase>	
+
+	<testcase filename="test_grid_sortCell.html" folder="ui/grid/advanced/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		
+		<method id="testSort" snapshot="true" depends="">
+			<event id="sortButton"  name="onClick" value=""/>
+		</method>
+		<method id="testLock" snapshot="true" depends="">
+			<event id="lockButton"  name="onClick" value=""/>
+		</method> 
+		<method id="testUnLock" snapshot="true" depends="">
+			<event id="unlockButton"  name="onClick" value=""/>
+		</method>
+		<method id="testHide" snapshot="true" depends="">
+			<event id="hideButton"  name="onClick" value=""/>
+		</method>
+		<method id="testShow" snapshot="true" depends="">
+			<event id="showButton"  name="onClick" value=""/>
+		</method>
+	</testcase>	
+
+		
+	
+</testsuit>

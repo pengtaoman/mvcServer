@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\telcom\bl
+2
+7
+1e:applicationContext-ibatis2.xml|1|13b896482aa|af9|31179b3e|e8500eb03dc345c7a394e19721448cde|0
+10:provider_map.xml|1|13b89648346|29c|aa36df13|e66bc0b9cb83457c93d3cb5ba56bf4bf|0
+1a:dataAccessContext-jndi.xml|1|13b89648598|251|5ee8c142|f910ebf9cef94251b3691026ac4db2f1|0
+15:provider_javabean.xml|1|13b896482d9|3fd|4d0670d6|3ae3c88fb6284ba7b5b2897f1496964c|0
+11:SqlMapConfig0.xml|1|13b89648634|690|ed74357d|7658d995f8bb43d49b570c541bd43b3c|0
+19:applicationContext-bl.xml|1|13b896481cf|948|134c1126|81f287fdd3a2420cb83c2dd2063e0f05|0
+11:SqlMapConfig1.xml|1|13b896486f0|39d|13102a4d|276c62f865f147b7b91d996045cc2e6e|0

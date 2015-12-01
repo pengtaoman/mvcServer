@@ -1,0 +1,38 @@
+<div id='promotionChangeContainer' dojoType='unieap.layout.BorderContainer'>
+	<div dojoType='unieap.layout.BorderPane' region='center' title='促销政策变更' id='promotionChangePane'>
+		<!-- 促销政策详细信息-->
+		<div dojoType='unieap.layout.TitlePane' title='促销政策详细信息' open='true'
+			style="overflow: auto"  id ='promotionInfoPane'>
+		</div>
+		<!-- 促销政策详细信息-->
+		<!-- 营销资源信息-->
+		<div dojoType='unieap.layout.TitlePane' title='营销资源信息' open='true'
+			style="overflow: auto"  id ='promotionResRelaPane'>
+		</div>
+		<!-- 促销政策变更列表-->
+		<div dojoType='unieap.layout.TitlePane' id='newPromotionInfoPane' title='促销政策受理' open='true'
+			style="overflow: auto">
+			<!-- <div dojoType='orderaccept.prodofferaccept.widget.promotionchange.PromotionChangeWidget'></div> -->
+			&nbsp;&nbsp;<span>促销政策名称：</span><input type="text" name="promotionName" id="promotionName" style="width:200px" value="" readOnly="true"/>
+			<img src="" id="promotionSearch"/>
+		</div>
+		<div dojoType='unieap.layout.TitlePane' title='营销资源信息' open='true'
+			style="overflow: auto"  id ='newPromotionResRelaPane'>
+		</div>
+		<!-- 经办人信息-->
+		<div dojoType='unieap.layout.TitlePane' title='受理信息' open='true'
+			style="overflow: auto"  id ='promotionOperatorInfoPane'>
+		</div>
+		<!-- 经办人信息-->
+		<!-- 促销政策变更列表-->
+		<!-- 租机信息-->
+		<div id="order-show-root" style="display: none"></div>
+		<div align="center">
+			<input type='button' class="formButton" id='promotionChangeSubmitBtn' value='保存订单'/>
+			<input type='button' class="formButton" id='printBtn' value='免填单打印'/>
+			<input type='button' class='formButton' id='promotionChangeCompleteBtn' value='受理完成'/>
+			<input type='button' class='formButton' id='chargeBtn' value='缴费' disabled="true" style="display:none"/>
+		</div>
+	</div>
+</div>
+<!--  整体border 布局结束 -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<dataSetConf xmlns="http://www.neusoft.com/schemas/unieap/dataset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neusoft.com/schemas/unieap/dataset
+C:\DOCUME~1\Administrator\桌面\DATASET\dataSet.xsd">
+	<dataSourceName/>
+		<pageSize>5</pageSize>
+	<auth>INSERT</auth>
+	<auth>UPDATE</auth>
+	<auth>DELETE</auth>
+	<tables>
+		<table tableName="emp" isPrimary="true">
+			<pk pkName="empno" dataType="4" isAutoIncrement="false"/>
+		</table>
+	</tables>
+	<attributes>
+		<attribute attrName="attr_empno" isFakeColumn="false" dataType="4" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="4" columnName="empno" isNullable="false" index="1" tableName="emp"/>
+		<attribute attrName="attr_ename" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="10" columnName="ename" isNullable="true" index="2" tableName="emp"/>
+		<attribute attrName="attr_job" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="9" columnName="job" isNullable="true" index="3" tableName="emp"/>
+		<attribute attrName="attr_mgr" isFakeColumn="false" dataType="4" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="4" columnName="mgr" isNullable="true" index="4" tableName="emp"/>
+		<attribute attrName="attr_hiredate" isFakeColumn="false" dataType="93" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="4" columnName="hiredate" isNullable="true" index="5" tableName="emp"/>
+		<attribute attrName="attr_sal" isFakeColumn="false" dataType="8" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="12" columnName="sal" isNullable="true" index="6" tableName="emp"/>
+		<attribute attrName="attr_comm" isFakeColumn="false" dataType="8" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="12" columnName="comm" isNullable="true" index="7" tableName="emp"/>
+		<attribute attrName="attr_deptno" isFakeColumn="false" dataType="4" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="2" columnName="deptno" isNullable="true" index="8" tableName="emp"/>
+	</attributes>
+	
+	<fixedFilters>
+		<fixedFilter>[attr_empno]&gt;0</fixedFilter>
+	</fixedFilters>
+	<fixedOrdering>[attr_deptno],[attr_mgr]</fixedOrdering>
+</dataSetConf>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="pojoExport" class="com.neusoft.unieap.ria.export.impl.PojoExport">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="gridPojoExportMgr" class="com.neusoft.unieap.ria.export.impl.GridPojoExportMgr">
+		<property name="pojoExport">
+			<ref bean="pojoExport"/>
+		</property>
+	</bean>
+	<bean id="empPojoApplogic" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.unieap.ria33demo.action.server.pojo.applogic.EmpApplogic">
+				<property name="empPojoDao">
+					<ref bean="empPojoDao"/>
+				</property>
+				<property name="deptPojoDao">
+					<ref bean="deptPojoDao"/>
+				</property>
+				<property name="pojoMgr">
+					<ref bean="pojoMgr"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="empPojoInteraction" class="com.neusoft.unieap.ria33demo.action.server.pojo.interaction.EmpInteractionImpl">
+		<property name="empApplogic">
+			<ref bean="empPojoApplogic"/>
+		</property>
+	</bean>
+	<bean id="empInteraction" class="com.neusoft.unieap.ria33demo.action.server.drm.interaction.EmpInteractionImpl"></bean>
+	<bean id="empPojoDao" class="com.neusoft.unieap.ria33demo.action.server.pojo.dao.EmpPojoDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="deptPojoDao" class="com.neusoft.unieap.ria33demo.action.server.pojo.dao.DeptPojoDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+</beans>

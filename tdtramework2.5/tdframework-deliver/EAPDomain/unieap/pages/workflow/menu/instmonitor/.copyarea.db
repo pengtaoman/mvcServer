@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow\menu\instmonitor
+2
+6
+f:SVGAutoMenu.xml|1|13b89619477|190|6765a8df|8d065040743c40bfbc0e4277c212ab1c|0
+b:SVGMenu.xml|1|13b896196b9|1b3|cecfb596|4ac9047b5797478dac0d7c50dc6a0e31|0
+10:SVGEventMenu.xml|1|13b8961987e|171|f794938d|8a8ccf20ec644033941ccbd01cddac00|0
+11:SVGManualMenu.xml|1|13b8961916a|190|281ea7fc|137e7bfbe9694cfaa1336a8da69d0d8e|0
+12:SVGSubProcMenu.xml|1|13b89619562|f3|52a9629f|9456e58797cf49fcb1eaa28722b96785|0
+f:SVGCtrlMenu.xml|1|13b8961938d|1d2|8b5dc115|0b2b7410efc04f1d8c8ae703ae74243d|0

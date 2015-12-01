@@ -40,9 +40,10 @@ public class TDUserAuthenticationProvider extends AbstractUserDetailsAuthenticat
 	@Override
 	public Authentication authenticate(Authentication authentication)
 			throws AuthenticationException {
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		//UserDetails user = (UserDetails)authentication.getPrincipal();
 		if (authentication.getPrincipal().equals("ali")) {
-			
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!ALI ALI ali!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			GrantedAuthoritiesMapper authoritiesMapper = new NullAuthoritiesMapper();
 			
 			SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_tduser");

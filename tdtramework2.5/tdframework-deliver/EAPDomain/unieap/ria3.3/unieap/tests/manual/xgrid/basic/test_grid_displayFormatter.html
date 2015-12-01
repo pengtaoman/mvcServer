@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - displayFormatter</title>
+		<style type="text/css">
+			@import "../../../../themes/base/css/unieap.css";
+			@import "../../../../themes/blue/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:false,isDebug: true"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.xgrid.Grid");
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.menu.Menu");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.form.ComboBox")
+			dojo.require('unieap.tests.manual.grid.basic.demo.CustomDisplayFormatter')
+			dojo.addOnLoad(function(){
+				dojo.parser.parse();
+			});
+			function beforeEdit(inRowIndex) {
+				if (inRowIndex%2==1) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+			function fn(index){
+				//if(index == 3) return false;
+				return true;
+				//return false;
+			}
+			function moveRow(){
+	   			unieap.byId("grid").getManager("ViewManager").setAutoRender(true);
+	   		}
+			function move(){
+	   			unieap.byId("grid").getManager("ViewManager").setAutoRender(false);
+	   		}
+			function getHeaderName(){
+				var headerName = unieap.byId("grid").getViewManager().getHeaderName('attr_sal');
+				alert(headerName);
+			}
+			function setHeaderName(){
+				unieap.byId("grid").getViewManager().setHeaderName('attr_sal','最新工资');
+			}
+			function getItemText(){
+				var ItemText = unieap.byId("grid").getViewManager().getItemText(0,0)
+				alert(ItemText);
+			}
+			function setCellStyles(){
+				var headerName = unieap.byId("grid").getViewManager().setCellStyles(0,0,{"color":"red","text-align":"right"});
+			}
+			function setRowStyles(){
+				var headerName = unieap.byId("grid").getViewManager().setRowStyles(5,{"color":"blue","text-align":"right"});
+			}
+			
+			function contextMenu(cell,cellNode,inRowIndex){
+				var menu;
+				if(!menu){
+					menu=new unieap.menu.Menu({style:'display:none'});
+					menu.addChild(new unieap.menu.MenuItem({label:'你好'}));
+					menu.addChild(new unieap.menu.MenuItem({label:'基础软件'}));
+					menu.startup();
+					menu.popup();
+				}
+				menu.bindDomNode(cellNode);
+			}
+			function headerRender(){
+				//alert("after headerRender");
+			}
+			
+        </script>
+    </head>
+    <body class="unieap">
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.xGrid Unit Test - displayFormatter"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.xgrid.Grid" width="100%" height="500px"
+			binding="{store:'empDataStore'}"
+			individual={} menu={}
+			edit="{onBeforeEdit:fn}"
+			views="{rowNumber:true,orderType:'none',enableTooltip:true,autoRender:true,orderType:'client',onContextMenu:contextMenu,onHeaderRender:headerRender}"
+			selection="{selectType:'s'}"
+			>
+			<header>
+				<row>
+					<cell rowSpan="2" label="员工编号" styles="" width="150px" name="attr_empno" editor="{editorClass:'unieap.form.TextBox',editorProps:{textAlign:'left'}}"></cell>
+                    <cell colSpan="2" isMulTitle="true" label="多标题一" headerStyles="text-align: center;color: red;" styles="text-align: center;color: red;"></cell>
+		        	<cell colSpan="3" isMulTitle="true" label="多标题二" headerStyles="color: red;"></cell>
+		        </row>
+				<row>
+					<cell width="150px" label="姓名" name="NAME" headerStyles="text-align: left;" editor="{editorClass:'unieap.form.TextBox',editorProps:{textAlign:'left'}}"></cell>
+					<cell width="150px" label="部门" onBeforeEdit="beforeEdit" name="attr_deptno" decoder="{store:'DEPT',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}" editor="{editorClass:'unieap.form.ComboBox',editorProps:{dataProvider:{store: 'DEPT'},decoder:{valueAttr:'CODEVALUE',displayAttr:'CODENAME'}}}"></cell>
+					<cell width="200px" label="入职日期(格式化的列)" name="attr_hiredate" headerStyles="color:red;" displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}" editor="{editorClass:'unieap.form.DateTextBox',editorProps:{displayFormatter:{dataFormat:'yyyy-MM-dd'}}}"></cell>
+					<cell width="200px" label="工资" name="attr_sal" displayFormatter="{declaredClass:'unieap.tests.manual.xgrid.basic.demo.CustomDisplayFormatter'}" editor="{editorClass:'unieap.form.TextBox',editorProps:{textAlign:'left'}}"></cell>
+					<cell width="200px" label="职位" name="attr_job" headerStyles="text-align: left;" ></cell>
+				</row>
+			</header>
+				<toolbar></toolbar>
+		</div>
+	<div id="move" dojoType="unieap.form.Button" label="setAutoRender" onclick="moveRow()" style=""></div>
+	<div id="move11" dojoType="unieap.form.Button" label="恢复" onclick="move()" style=""></div>
+	<div  dojoType="unieap.form.Button" label="getHeaderName" onclick="getHeaderName()" style=""></div>
+	<div  dojoType="unieap.form.Button" label="setHeaderName" onclick="setHeaderName()" style=""></div>
+	<div  dojoType="unieap.form.Button" label="getItemText" onclick="getItemText()" style=""></div>
+	<div  dojoType="unieap.form.Button" label="setCellStyles" onclick="setCellStyles()" style=""></div>	
+	<div  dojoType="unieap.form.Button" label="setRowStyles" onclick="setRowStyles()" style=""></div>
+    </body>
+</html>

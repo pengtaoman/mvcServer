@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>模板_2</title>
+
+
+	<!-- 禁止 windows 主题风格 -->
+	<meta http-equiv="MSThemeCompatible" content="no" />
+
+	<!-- 禁止缓存 headers -->
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<!-- end 禁止缓存 headers -->
+
+
+<!-- 公共css  -->
+<link rel="stylesheet" href="../common/css/td_style.css" type="text/css"/>
+
+<!-- 公共js  -->
+<script language="javascript" src="../common/js/td_common.js" ></script>
+
+<!-- 等待条js-->
+<script language="javascript" src="../common/js/waitingbar.js" ></script>
+
+<!-- title条js -->
+<script language="javascript" src="../common/js/titlebar.js" ></script>
+
+
+<!-- 页面级css样式  -->
+<style type="text/css">
+
+
+</style>
+
+<!-- 页面级js  -->
+<script language="javascript">
+// <![CDATA[
+
+
+// 应用路径,如果使用jsp,则写成 var APP_PATH="＜％= request.getContextPath() ％＞";
+var APP_PATH="..";
+/*初始化函数*/
+function init(){
+
+
+}
+
+/*
+onmouseover="TableRow.lightMe(this);" onmouseout="TableRow.resetMe(this);" onclick="TableRow.selectMe(this)" 
+
+代码计划全部提出 用一条指令全部搞定
+
+另外考虑和 tdframework 2.0 的组件整合
+
+*/
+
+
+/* 在下面写入 自定页面级js代码 */
+
+
+// ]]>
+</script>
+
+</head>
+
+<body class="mainBody" onLoad="init();">
+<form name="myform" method="POST">
+<div id="listDiv">
+
+<div class="listTitleDIV">列表标题(列表标题可选,列表内的checkbox可选)</div>
+<div class="listTableBox">
+  <table id="mt1" border="0" align="center" cellpadding="0" cellspacing="1" class="listTable">
+
+    <tr class="listTableHead">
+	  <td ><input type="checkbox" class="checkbox" title="全选" name="" value=""/></td>
+      <td >列1</td>
+      <td >列2</td>
+      <td >列3</td>
+      <td >列4</td>
+      <td >列5</td>
+    </tr>
+<tbody>
+   <tr class="listTableRow" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+		<td ><input type="checkbox" class="checkbox" name="" value=""/></td>
+        <td >数据1</td>
+		<td width="150"><span class="ellipsis" style="width:150px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+		<td ></td>
+		<td >数据1</td>
+	</tr>
+	<tr class="listTableRowDark" style="cursor:hand;" 
+	onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td width="22"><input type="checkbox" class="checkbox" name="" value=""/></td>
+		<td >数据1</td>
+		<td width="150"><span class="ellipsis" style="width:150px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td ></td>
+		<td >数据1</td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRow" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td ><input type="checkbox" class="checkbox" name="" value=""/></td>
+		<td >数据1</td>
+		<td width="150"><span class="ellipsis" style="width:150px" title="数据1">数据1</span></td>
+		<td >数据1</td>
+		<td ></td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRowDark" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td ><input type="checkbox" class="checkbox" name="" value=""/></td>
+		<td >数据1</td>
+		<td width="150"><span class="ellipsis" style="width:150px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+		<td ></td>
+		<td >数据1</td>
+	</tr>
+	   <tr class="listTableRow" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td ><input type="checkbox" class="checkbox" name="" value=""/></td>
+		<td >数据1</td>
+		<td ><span class="ellipsis" style="width:80px" title="数据1">数据1</span></td>
+		<td >数据1</td>
+		<td ></td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRowDark" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td ><input type="checkbox" class="checkbox" name="" value=""/></td>
+		<td >数据1</td>
+		<td width="150"><span class="ellipsis" style="width:150px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+		<td ></td>
+		<td >数据1</td>
+	</tr>
+	<tr class="listTableRow">        
+		<td align="center" colspan="6" >
+			没有数据!                
+		</td>
+	</tr>
+	</tbody>
+  </table>
+</div>
+
+  <input type="hidden" name="errInfo" value=""/>
+
+
+
+
+	<table   cellspacing="0" class="pageNavTable" >
+	  <tr> 
+	<!--共?条 -->
+	  <td >共 5 条</td>
+   <!-- 首页 -->
+   <td >
+   <a href="#"
+   onclick="document.myform.intentPageT.value='1';return goIntentPage('{//path}','{//pageNum}','{//menuName}');return false;"
+   ><img src="../common/images/icon/top.gif" width="22" height="22" border="0" alt="首页" /></a></td>
+
+	<!-- 上页 -->
+   <td ><a href="#" name="lastPage" onClick="goLastPage('{//path}','{//menuName}');return false;"><img src="../common/images/icon/up.gif" width="22" height="22" border="0" alt="上页" /></a></td>
+
+   <!-- 下页 -->
+   <td ><a name="nextPage" href="#" onClick="goNextPage('{//path}','{//pageNum}','{//menuName}');return false;"><img src="../common/images/icon/down.gif" width="22" height="22" border="0" alt="下页" /></a></td>
+
+	<!-- 尾页 -->
+   <td ><a href="#" 
+   onclick="document.myform.intentPageT.value='{pageNum}';return goIntentPage('{//path}','{//pageNum}','{//menuName}');return false;" ><img src="../common/images/icon/bottom.gif" width="22" height="22" border="0" alt="尾页" /></a></td>
+
+   <!-- 输入页/共?页 -->
+	<td > 
+	  <input type="text" name="intentPageT"  class="autoWidth" size="4" value="1" class="textfield_number" onkeydown="nas_enter()" onkeypress="return nas_onkey(event,0,this,intentPage,'ck_number','只能输入数字',1)" />/1页</td>
+		 
+	 <!-- 跳转 -->
+	<td ><a href="#" id="intentPage" onClick="goIntentPage('{//path}','{//pageNum}','{//menuName}');return false;" ><img src="../common/images/icon/back3.gif" width="22" height="22" border="0" alt="跳转" /></a>
+	
+	<input type="hidden" name="page" value="1" />
+	</td>
+
+	  </tr>
+	</table>
+
+
+
+
+</div>
+
+</form>
+</body>
+</html>
+

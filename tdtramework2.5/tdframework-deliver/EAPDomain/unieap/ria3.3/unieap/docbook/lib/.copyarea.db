@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\docbook\lib
+2
+b
+13:xml-apis-1.3.02.jar|1|13b890e1c6b|2f69d|c5e31b9|b06d2abbd92f446b9f09df5279ff3bd9|0
+1c:avalon-framework-api-4.3.jar|1|13b890df75b|7d6e|2494e82e|9610a6214764410c8bafe03e035ae2cf|0
+7:fop.jar|1|13b890e0eae|227efa|448f66da|ebc4e2ecfc8b4a078cc4069f99705ac9|0
+19:commons-logging-1.0.4.jar|1|13b890e094f|947f|6ff5ca9|374c9f1b6bcb44dc9631780d56bf4282|0
+e:xercesImpl.jar|1|13b890e1a67|12acc5|41df109f|87670cbe851f434d85ff07f1177f8763|0
+1d:avalon-framework-impl-4.3.jar|1|13b890df884|e8fa|73e7df0d|e1eb6bce3bb84454b2331a46f416da8e|0
+1d:xmlgraphics-commons-1.3.1.jar|1|13b890e1e4f|7e3d1|a30e4c79|fe7c24ffc30a4994a5a3c8d6c75ae2f6|0
+e:serializer.jar|1|13b890e1110|43f0e|f8114f44|cee141a081924587b85899e71daba964|0
+12:commons-io-1.1.jar|1|13b890e0268|f07a|99352cb6|bdfbc44da18046baaf139bc5c9ac9de3|0
+16:batik-all-1.7beta1.jar|1|13b890e013f|303f86|19a7fb63|32effd9da651444a994bd12f1f3b5ec4|0
+9:xalan.jar|1|13b890e174a|2ef9c9|653ac9d3|bbe89bcc85a7411fa00f6e64f235aa33|0

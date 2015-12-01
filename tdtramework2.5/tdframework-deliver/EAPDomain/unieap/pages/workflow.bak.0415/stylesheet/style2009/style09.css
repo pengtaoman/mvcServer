@@ -1,0 +1,88 @@
+/* Workflow WEB Style 2009. Designer : xiaoqingfeng@yeah.net */
+html
+{
+	scrollbar-face-color: #D9EBF5;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-highlight-color: #D9EBF5;
+	scrollbar-3dlight-color: #9EBFE8;
+	scrollbar-darkshadow-color: #9EBFE8; 
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #FFFFFF;
+}
+body
+{
+	padding-left:0px;
+	padding-top:8px;
+	padding-right:0px;
+	padding-bottom:3px;
+	margin:0px;
+	background-color:#E4EFFC;
+}
+
+td.funInstruction{ font-family:"宋体";
+font-size:14px;
+color:#999999;
+}
+
+A:link{text-decoration:underline; color:#000000}
+A:visited{TEXT-DECORATION:underline;COLOR:#000000} 
+A:active{text-decoration:underline; color:#000000}
+A:hover{TEXT-DECORATION:underline; color:#000000}
+
+#menuTitleToInstructionSeprator{
+	height:20px;
+}
+
+#menuHeadToContentSeprator{
+	height:50px;
+}
+
+#menuItemContainer
+{
+	position:relative;
+}
+
+#menuItemSeprator{
+	height:25px;
+	overflow:hidden;
+}
+
+#menuItem
+{
+	height: 54px;
+	overflow:visible;
+}
+
+#menuItemContainer #menuItem #itemIcon {
+	text-align:center;
+	vertical-align:middle;
+	position: relative;
+	height: 54px;
+	width: 54px;
+	float:left;
+}
+#menuItemContainer #menuItem #itemText {
+	font-family:"宋体";
+	font-size:14px;
+	color:#000000;
+	padding-left:15px;
+	padding-top: 3px;
+	position: relative;
+	height: 27px;
+	width: auto;
+	left: 0px;
+	top: 0px;
+}
+#menuItemContainer #menuItem #itemRemark {
+	font-family:"宋体";
+	font-size:14px;
+	color:#999999;
+	padding-left:15px;
+	overflow: visible;
+	position: relative;
+	height: 27px;
+	width: auto;
+	left: 0px;
+	top: 0px;
+	word-wrap:break-word;
+}

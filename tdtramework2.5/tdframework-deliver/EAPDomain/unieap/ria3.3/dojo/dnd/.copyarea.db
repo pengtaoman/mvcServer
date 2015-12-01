@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\dnd
+2
+b
+9:Source.js|1|13b894c2b85|1e07|d8fe8c60|dfb6f8a95f884c4dbfbfc855acd2234d|0
+d:autoscroll.js|1|13b894c221e|7a6|dc009063|acf8b50fe0ee450c88342ff9ffa70bca|0
+9:common.js|1|13b894c2460|2f0|8a460038|19ef782370dc4ddd92816fa18b8a27c6|0
+a:Manager.js|1|13b894c25c8|da7|9c89c04d|63bf5532408d45f29945781a6b2d2f4b|0
+10:TimedMoveable.js|1|13b894c3161|416|c4ae6607|701ed7c7bac34c92bc40d55446d7d1ea|0
+7:move.js|1|13b894c2635|8ce|d43b0f19|e0a98411cab34c2bbcc1ebdf992dc756|0
+9:Avatar.js|1|13b894c229b|86a|6808dc3c|068a2044e59647109f422f8791f78852|0
+b:Moveable.js|1|13b894c274e|a14|c938883d|a3d2f1e31bce4cefb9ccb8227195afb3|0
+b:Selector.js|1|13b894c2991|14b9|3f4056bc|fe9f4a69907a4598acafd56cce20c1ef|0
+c:Container.js|1|13b894c253b|1536|da324a0a|10490bf9710d4255b846715a3eb68aef|0
+8:Mover.js|1|13b894c2877|88f|19b40061|c8fd01e234254c4c993e7a8f79cd75d3|0

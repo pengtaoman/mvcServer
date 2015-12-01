@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>grid</title>
+		<style type="text/css">
+			@import "../../unieap/themes/default/css/unieap.css";
+		</style>
+		<script type="text/javascript">
+        </script>
+        <script type="text/javascript" src="../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: true"></script>
+        <script type="text/javascript" src="../../unieap/rpc.js" ></script>
+        <script type="text/javascript" src="../../unieap/xgrid/core/cell.js" ></script>
+        <script type="text/javascript" src="../../unieap/xgrid/manager/LayoutManager.js" ></script>
+        <script type="text/javascript" src="../../unieap/xgrid/Grid.js" ></script>
+        <script type="text/javascript" src="../../unieap/form/Button.js" ></script>
+        <script type="text/javascript" src="data.js" ></script>
+        <script type="text/javascript">
+        	dojo.require("unieap.form.TextBox");
+			dojo.require("unieap.grid.Grid");
+			unieap.WEB_APP_NAME='/UniEAP3.3';
+        </script>
+    </head>
+    <body class="unieap">
+		<div id="grid" jsId="grid" dojoType="unieap.xgrid.Grid" width="800px" height="70%" style="margin:5px;"
+		binding="{store:'largeDataStore'}" views="{rowNumber:true, onRowMousedown:fn2}" selection="{selectType:'s'}">
+			<fixed>
+				<row>		
+						<cell width="100" label="编号" name="attr_empno" headerStyles="color:red;" styles="color:red;"></cell>
+						<cell width="100" label="姓名" name="NAME" headerStyles="color:blue;" styles="color:blue;"></cell>
+				</row>
+			</fixed>
+			<header>		
+					<row>		
+						<cell width="200" label="职位" name="attr_job" styles="text-align: center;" get="fn1"></cell>
+						<cell width="100" label="入职日期" name="attr_hiredate" 
+							displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}"></cell>
+
+						<cell width="100" label="入职日期" name="attr_hiredate" 
+							displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}"></cell>
+						<cell width="100" label="入职日期" name="attr_hiredate" 
+							displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}"></cell>
+					</row>
+			</header>
+			<toolbar  paging='{}' export="{url:'/rpc.do?method=doExport',options:['client','checked'],defaultType:'client'}" >
+			</toolbar>
+		</div>
+		<div id="test"  dojoType="unieap.form.Button" label="增加一行" ></div>&nbsp;&nbsp;
+		<div id="deleteRow"  dojoType="unieap.form.Button" label="删除第一行"></div>&nbsp;&nbsp;
+		<div id="clearDataStore" dojoType="unieap.form.Button" label="清空Store"></div>&nbsp;&nbsp;
+		<div id="deleteRows" dojoType="unieap.form.Button" label="删除前三行"></div>&nbsp;&nbsp;
+		<div id="changeStore" dojoType="unieap.form.Button" label="改变Store"></div>&nbsp;&nbsp;<br><br>
+		<div id="max" dojoType="unieap.form.Button" label="获得attr_sal列最大值"></div>&nbsp;&nbsp;
+		<div id="min" dojoType="unieap.form.Button" label="获得attr_sal列最小值"></div>&nbsp;&nbsp;
+		<div id="sum" dojoType="unieap.form.Button" label="获得attr_sal的总和"></div>&nbsp;&nbsp;
+		<div id="avg" dojoType="unieap.form.Button" label="获得attr_sal的平均值"></div>&nbsp;&nbsp;
+			
+		<table border="1" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<th >输入</th>
+				<th >操作</th>
+				<th >说明</th>
+			</tr>
+			<tr>
+				<td ><div id="selectType" dojoType="unieap.form.TextBox" class="formfield" width="100%" ></div></td>
+				<td ><div dojoType="unieap.form.Button" label="设置选择方式" width="100%"  class="formfield"  onclick="setSelectType()"></div></td>
+				<td >请输入"s"（单选），"m"（多选），或"none"（禁止选择）。</td>
+			</tr>
+			<tr>
+				<td ><div id="selectInput" dojoType="unieap.form.TextBox" class="formfield" width="100%" ></div></td>
+				<td ><div dojoType="unieap.form.Button" label="设置选择某行" width="100%"  class="formfield"  onclick="setSelect()"></div></td>
+				<td >请输入行号。</td>
+			</tr>
+			<tr>
+				<td ><div id="setcheckable" dojoType="unieap.form.TextBox" class="formfield" width="100%" ></div></td>
+				<td ><div dojoType="unieap.form.Button" label="设置允许选择" width="100%"  class="formfield"  onclick="setCheckedabled()"></div></td>
+				<td >请输入行号（从0开始），设置该行允许被选中。</td>
+			</tr>
+			<tr>
+				<td ><div id="setuncheckable" dojoType="unieap.form.TextBox" class="formfield" width="100%"></div></td>
+				<td ><div dojoType="unieap.form.Button" label="设置禁止选择" width="100%"  class="formfield" onclick="setUncheckedabled()"></div></td>
+				<td >请输入行号（从0开始），设置该行禁止被选中。</td>
+			</tr>
+		</table>
+	
+		<div dojoType="unieap.form.Button" label="获取选中行" onClick="getSelected"></div>
+			
+    </body>
+</html>

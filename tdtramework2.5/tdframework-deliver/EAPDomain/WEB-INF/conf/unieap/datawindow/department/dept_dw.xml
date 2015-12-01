@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by sgj (neusoft) -->
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<dataWindow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.neusoft.com/unieap/datawindow/metadata/xml" height="300" title="雇员信息列表" type="GRID_EDIT" width="600" isAutoRemove="false" isEmptyOnCreate="false">
+	<dataSetInfo>
+		<dataSet dataSetName="department.dept"/>
+		<pageSize>2</pageSize>
+	</dataSetInfo>
+	<orderInfo attrIndex="1" dataType="INTEGER" order="descending"/>
+	<attributes>
+		<attribute index="1" title="标识" maxlength="2" type="input" width="50" style="Double" class="Number" isNullable="false" dataType="INTEGER"/>
+		<attribute index="2" title="部门" maxlength="14" type="input" width="100" style="Text" class="Text" isNullable="false" dataType="STRING"/>
+		<attribute index="3" title="位置" maxlength="13" type="input" width="100" style="Text" class="Text" isNullable="false" dataType="STRING"/>
+	</attributes>
+	<editers colsInOneRow="2" isAutoDraw="true">
+		<editer attrIndex="1"/>
+		<editer attrIndex="2"/>
+		<editer attrIndex="3"/>
+	</editers>
+	<headers>
+		<header attrIndex="1"/>
+		<header attrIndex="2"/>
+		<header attrIndex="3"/>
+	</headers>
+	<filters/>
+</dataWindow>

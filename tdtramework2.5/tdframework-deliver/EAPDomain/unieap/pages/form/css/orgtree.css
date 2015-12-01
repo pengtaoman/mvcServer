@@ -1,0 +1,41 @@
+ 
+.branch{
+    
+    display:none;
+    margin-left: 16px;
+}
+
+.branch2{
+    
+    display:none;
+    margin-left: 10px;
+}
+
+.imgalign
+{
+ vertical-align: middle ;
+ text-align : center ;
+}
+.imgalign2
+{
+ vertical-align: middle ;
+ text-align : center ;
+ margin-left:-5;
+ margin-top:-5;
+}
+.leaf{
+	display:block;
+}
+a{
+    font: 12px Verdana,sans-serif;
+    color: navy;
+	text-decoration: none;
+	cursor: hand ;
+}
+label{
+    font: 12px Verdana,sans-serif;
+    color: navy;
+	text-decoration: none;
+	cursor: hand ;
+	margin-left: 0px;
+}

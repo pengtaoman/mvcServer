@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\unieap\workflow\ppm
+2
+4
+1c:workflow-bsdesign-config.xml|1|13b8964ee77|4d6a|f9073268|68ba3d2361c64e2b9cb155702e872b64|0
+a:appmgr.xml|1|13b8964ea7f|350|352f1238|6f13aaaaf8cb4897bfc357a48a765d61|0
+a:common.xml|1|13b8964ecf0|41e|f9b4ef0e|1c9b13afe571457eb81243108a4f3b8d|0
+1e:workflow-management-config.xml|1|13b8964f1d2|6f5a|37723e8c|1d26a8e49ede4d4e9cbb3e3986d42174|0

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" " http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<global-exceptions>
+		<exception key="unknownException"
+			path="/tdframework/common/jsp/ExceptionGuideJSP.jsp"
+			type="com.neusoft.tdframework.exception.ActionException" />
+
+		<exception key="unknownException"
+			path="/tdframework/common/jsp/ExceptionGuideJSP.jsp"
+			type="com.neusoft.tdframework.exception.SysException" />
+		<exception key="uploadException"
+			path="/tdframework/common/jsp/UploadExceptionGuideJSP.jsp"
+			type="com.neusoft.tdframework.web.struts.UploadException" />
+	</global-exceptions>
+
+
+
+	<global-forwards>
+		<forward name="Login" path="/tdframework/mainframe/login.jsp"
+			redirect="true" />
+		<forward name="blank" path="/tdframework/blank.html"
+			redirect="true" />
+		<forward name="sessionInvalid"
+			path="/tdframework/mainframe/session_invalid.jsp" redirect="true" />
+	</global-forwards>
+
+	<action-mappings>
+		<action
+			type="com.neusoft.tdframework.authorization.action.LoginAction"
+			parameter="method" scope="request" path="/login">
+			<!-- 
+				<forward name="begin" path="/unieap/pages/login/login.jsp" />
+			-->
+			<forward name="begin"
+				path="/tdframework/mainframe/login.jsp" />
+		    <!-- modified by pengtao 2011-5-24 For CRM6 BEGIN-->
+			<forward name="success"
+				path="/tdframework/mainframe/ctg_main.jsp"  redirect="true" />
+			<!-- modified by pengtao 2011-5-24 For CRM6 END-->
+			<forward name="pbx_success"
+				path="/tdframework/mainframe/jsp/cph/pbx/pbx_main.jsp" />
+			<forward name="error"
+				path="/tdframework/mainframe/error.jsp" />
+			<forward name="changePwd"
+				path="/views/om/organ/passwordupdate/PasswordUpdate.jsp" />
+			<!--
+				<forward name="error" path="/unieap/pages/login/error.jsp" />
+			-->
+			
+			<forward name="relogin" path="/unieap/pages/login/relogin.jsp" />
+		</action>
+		
+		<action
+			type="com.neusoft.tdframework.authorization.action.SSOAuthAction"
+			parameter="method" scope="request" path="/ssologin">
+			<!-- 
+				<forward name="begin" path="/unieap/pages/login/login.jsp" />
+			-->
+			<forward name="begin"
+				path="/tdframework/mainframe/login.jsp" />
+			<!-- modified by pengtao 2011-5-24 For CRM6 BEGIN-->
+			<forward name="success"
+				path="/tdframework/mainframe/ctg_main.jsp"  redirect="true" />
+			<!-- modified by pengtao 2011-5-24 For CRM6 END-->
+			<forward name="pbx_success"
+				path="/tdframework/mainframe/jsp/cph/pbx/pbx_main.jsp" />
+			<forward name="error"
+				path="/tdframework/mainframe/error.jsp" />
+			<forward name="changePwd"
+				path="/views/om/organ/passwordupdate/PasswordUpdate.jsp" />
+			<!--
+				<forward name="error" path="/unieap/pages/login/error.jsp" />
+			-->
+		</action>
+		
+		<action
+			type="com.neusoft.tdframework.web.struts.TDDispatchAction"
+			parameter="method" scope="request" path="/tdDispatchAction">
+			<forward name="noDefaultMethod"
+				path="/tdframework/mainframe/noDefaultMethod.jsp" />
+		</action>
+
+		<action type="com.neusoft.unieap.action.EAPMultiAppAction"
+			parameter="method" scope="request" path="/enterapp" />
+
+
+		<!--winclient add-->
+		<action path="/frameTop" parameter="method" scope="request"
+			type="com.neusoft.tdframework.authorization.action.TopAuthorizationAction">
+			<forward name="commonTop"
+				path="/tdframework/mainframe/top.jsp" redirect="false"
+				contextRelative="false" />
+			<forward name="pbxTop"
+				path="/tdframework/mainframe/jsp/cph/pbx/pbx_top.jsp"
+				redirect="false" contextRelative="false" />
+			<forward name="warnMsg"
+				path="/tdframework/mainframe/jsp/cph/pbx/warnmsg.jsp"
+				redirect="false" contextRelative="false" />
+			<forward name="notifyPage"
+				path="/tdframework/mainframe/jsp/cph/pbx/notify.jsp"
+				redirect="false" contextRelative="false" />
+			<forward name="userInfo"
+				path="/tdframework/mainframe/jsp/cph/pbx/user_info.jsp"
+				redirect="false" contextRelative="false" />
+			<forward name="statusInfo"
+				path="/tdframework/mainframe/jsp/cph/pbx/status_info.jsp"
+				redirect="false" contextRelative="false" />
+		</action>
+		<action path="/frameLeft"
+			type="com.neusoft.tdframework.authorization.action.LeftAuthorizationAction">
+			<forward name="frameLeft"
+				path="/tdframework/mainframe/left.jsp" redirect="false"
+				contextRelative="false" />
+		</action>
+		<action path="/navBar" parameter="method" scope="request"
+			type="com.neusoft.tdframework.authorization.action.NavBarAction">
+			<forward name="commonNav"
+				path="/tdframework/mainframe/nav_info.jsp" redirect="true"
+				contextRelative="false" />
+		</action>
+		<action path="/passwordCheck"
+			type="com.neusoft.tdframework.authorization.action.PasswordCheckAction">
+			<forward name="passwordModify"
+				path="/tdframework/mainframe/left.jsp" redirect="false"
+				contextRelative="false" />
+		</action>
+		<action path="/favoriteMenuAdmin"
+			type="com.neusoft.tdframework.support.favorite.action.FavoriteMenuAdminAction">
+			<forward name="add"
+				path="/tdframework/common/jsp/AlertPage.jsp" redirect="false"
+				contextRelative="false" />
+			<forward name="query"
+				path="/tdframework/favorite/favorite.jsp" redirect="false"
+				contextRelative="false" />
+		</action>
+		<action path="/chartdisplay"
+			type="com.neusoft.tdframework.chart.action.ChartDisplayAction"
+			unknown="false" validate="true">
+		</action>
+		<action path="/testDownload"
+			type="com.neusoft.tdframework.web.struts.MyTestDownLoadAction">
+		</action>
+
+		<action type="com.neusoft.unieap.action.TreeAction"
+			parameter="method" scope="request" path="/eaptree">
+		</action>
+		
+		<action type="com.neusoft.tdframework.bas.log.BASLogFilter"
+			parameter="method" scope="request" path="/basLog">
+		</action>
+
+		<action type="com.neusoft.tdframework.bas.subscription.action.SubscriptionPowerAction"
+			parameter="method" scope="request" path="/subPower">
+		</action>
+
+		<action type="com.neusoft.tdframework.authorization.action.RemoteAuthAction"
+			parameter="method" scope="request" path="/remote_security_check">
+			<forward name="reply"
+				path="/tdframework/mainframe/reply.jsp" redirect="true"
+				contextRelative="false" />
+		</action>
+		
+		<action path="/navBar" parameter="method" scope="request"
+			type="com.neusoft.tdframework.authorization.action.NavBarAction">
+			<forward name="commonNav"
+				path="/tdframework/mainframe/nav_info.jsp" redirect="true"
+				contextRelative="false" />
+		</action>
+
+	<action  type="com.neusoft.tdframework.admin.cache.CacheRefreshAction" parameter="method" scope="request"  path="/cacheManagerAction"> 
+       <forward name="showCatchObject" path="/tdframework/admin/cache/cacheList.jsp"/> 
+    </action>
+
+	<action  type="com.neusoft.tdframework.admin.asadmin.ServerControlAction" parameter="method" scope="request"  path="/serverControlAction"> 
+    </action>
+
+	<action  type="com.neusoft.tdframework.license.LicenseViewAction" parameter="method" scope="request"  path="/licenseViewAction"> 
+       <forward name="query" path="/tdframework/admin/license/licenseList.jsp"/> 
+       <forward name="detail" path="/tdframework/admin/license/licenseDetail.jsp"/> 
+    </action>
+
+	<action type="com.neusoft.tdframework.portal.bulletin.warnmsg.action.PartRefreshWarnMsgAction" scope="request" parameter="method"
+			path="/pRWarnMsgAction">
+	</action>
+	
+	<!-- added by pengtao 2011-5-24 For CRM6 BEGIN-->
+	<action type="com.neusoft.tdframework.authorization.action.MenuNaviAction"  scope="request" parameter="method" 
+	        path="/menuNavigation">
+	</action>
+	<action type="com.neusoft.tdframework.authorization.action.FavoriteHandlerAction"  scope="request" parameter="method" 
+	        path="/FavoriteHandler">
+	</action>
+	<!-- added by pengtao 2011-5-24 For CRM6 END-->
+	</action-mappings>
+	
+	<message-resources null="true" parameter="applicationResources" /> 
+	
+	<plug-in className="com.neusoft.unieap.config.plugin.EAPPlugin" />
+	
+	<!-- uniflow 2011-1-4 by liudong -->
+	<!-- 
+	<plug-in className="com.neusoft.uniflow.web.plugin.UniflowConfig">
+		<set-property property="commonfile"
+			value="/WEB-INF/conf/unieap/workflow/common.xml" />
+	</plug-in>
+	-->
+
+</struts-config>

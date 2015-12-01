@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- agent list -->
+		<form-bean name="agentListForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.agentlist.forms.AgentListForm" />
+		<!-- create agent -->
+		<form-bean name="createAgentForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.create.forms.CreateAgentForm" />
+		<form-bean name="modifyAgentForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.create.forms.ModifyAgentForm" />
+		<!--  engine cap -->
+		<form-bean name="engineStatForm"
+			type="com.neusoft.uniflow.web.management.enginecap.forms.EngineStatForm" />
+		<form-bean name="orgStatForm"
+			type="com.neusoft.uniflow.web.management.enginecap.forms.OrgStatForm" />
+		<!--  application management -->
+		<form-bean name="appMgrForm"
+			type="com.neusoft.uniflow.web.management.applicationmgt.forms.AppMgrForm" />
+		<form-bean name="detailForm"
+			type="com.neusoft.uniflow.web.management.applicationmgt.forms.DetailForm" />
+		<!--  statistics -->
+		<form-bean name="statisticsForm"
+			type="com.neusoft.uniflow.web.management.statmgt.forms.StatisticsForm" />
+		<!--  procdefList-->
+		<form-bean name="mgtprocdeflistForm"
+			type="com.neusoft.uniflow.web.management.procdefmgt.forms.ProcDefListForm" />
+		<!-- procdef monitor -->
+		<form-bean name="procmonitorlistForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.ProcDefListForm" />
+		<form-bean name="procInstListForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.ProcInstListForm" />
+		<form-bean name="workItemListForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.WorkItemListForm" />
+		<form-bean name="procInstDetailForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.ProcInstDetailForm" />
+		<form-bean name="curActDetailForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.CurActDetailForm" />
+		<form-bean name="applicationlistForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.ApplicationListForm" />
+		<form-bean name="applicationdetailForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.ApplicationDetailForm" />
+		<form-bean name="svgMonitorForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.forms.SVGMonitorForm" />
+
+		<!-- workday management -->
+		<form-bean name="scheduleForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.forms.ScheduleForm" />
+		<form-bean name="freedayForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.forms.FreedayForm" />
+		<form-bean name="workperiodForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.forms.WorkperiodForm" />
+		<form-bean name="worktimeForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.forms.WorktimeForm" />
+		<!--organization information-->
+		<form-bean name="personForm"
+			type="com.neusoft.uniflow.web.management.organization.forms.PersonForm" />
+		<form-bean name="roleTreeForm"
+			type="com.neusoft.uniflow.web.management.organization.forms.RoleTreeForm" />
+		<form-bean name="roleForm"
+			type="com.neusoft.uniflow.web.management.organization.forms.RoleForm" />
+		<form-bean name="unitForm"
+			type="com.neusoft.uniflow.web.management.organization.forms.OrgunitForm" />
+		<!--  purview -->
+		<form-bean name="purviewForm"
+			type="com.neusoft.uniflow.web.authorization.purview.forms.PurViewForm" />
+		<form-bean name="processSVGViewForm"
+			type="com.neusoft.uniflow.web.authorization.uniform.forms.ProcessSVGViewForm" />
+		<!--  audit -->
+		<form-bean name="auditForm"
+			type="com.neusoft.uniflow.web.management.engineaudit.forms.AuditForm" />
+
+		<!-- participants -->
+		<form-bean name="parProcessSVGViewForm"
+			type="com.neusoft.uniflow.web.participant.forms.ProcessSVGViewForm" />
+		<form-bean name="setActPartiForm"
+			type="com.neusoft.uniflow.web.participant.forms.SetActPartiForm" />
+		<form-bean name="procpartilistForm"
+			type="com.neusoft.uniflow.web.participant.forms.ProcDefListForm" />
+		<!-- agent category tree -->
+		<form-bean name="agentCategoryForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.create.forms.AgentCategoryForm" />
+		<form-bean name="categoryResourceForm"
+			type="com.neusoft.uniflow.web.management.procdefmgt.forms.CategoryResourceForm" />
+		<form-bean name="actTmpResourceForm"
+			type="com.neusoft.uniflow.web.management.procresourcemgt.forms.ActTmpResourceForm" />
+		<form-bean name="varTmpResourceForm"
+			type="com.neusoft.uniflow.web.management.procresourcemgt.forms.VarTmpResourceForm" />
+		<form-bean name="applicationResourceForm"
+			type="com.neusoft.uniflow.web.management.procresourcemgt.forms.ApplicationResourceForm" />
+		<!--add by hushiyuan 2008-06-05 -->
+		<form-bean name="authorityform"
+			type="com.neusoft.uniflow.web.management.procdefauthoriy.form.AuthorityForm" />
+		<!--end add by hushiyuan 2008-06-05  -->
+		<form-bean name="procVerManagementForm"
+			type="com.neusoft.uniflow.web.management.procdefmgt.forms.ProcVerManagementForm" />
+
+	</form-beans>
+	<action-mappings>
+		<!-- agent list -->
+		<action name="agentListForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.agentlist.actions.AgentListAction"
+			scope="request" path="/agentlist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/agentmgt/agentlist.jsp" />
+		</action>
+		<!-- agent create -->
+		<action name="createAgentForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.create.actions.CreateAgentAction"
+			scope="request" path="/agentcreate">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/agentmgt/createagent.jsp" />
+		</action>
+		<!-- agent modify -->
+		<action name="modifyAgentForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.create.actions.ModifyAgentAction"
+			scope="request" path="/agentmodify">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/agentmgt/modifyagent.jsp" />
+		</action>
+		<!-- engine cap -->
+		<action name="engineStatForm"
+			type="com.neusoft.uniflow.web.management.enginecap.actions.EngineStatAction"
+			scope="request" path="/enginestat">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/enginecap/enginestat.jsp" />
+		</action>
+		<action name="orgStatForm"
+			type="com.neusoft.uniflow.web.management.enginecap.actions.OrgStatAction"
+			scope="request" path="/orgstat">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/enginecap/orgstat.jsp" />
+		</action>
+		<!-- application management -->
+		<action name="appMgrForm"
+			type="com.neusoft.uniflow.web.management.applicationmgt.actions.AppMgrAction"
+			scope="request" path="/appmgr">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/applicationmgt/appmgr.jsp" />
+		</action>
+		<action name="detailForm"
+			type="com.neusoft.uniflow.web.management.applicationmgt.actions.DetailAction"
+			scope="request" path="/detail">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/applicationmgt/detail.jsp" />
+		</action>
+		<!-- statistics management -->
+		<action name="statisticsForm"
+			type="com.neusoft.uniflow.web.management.statmgt.actions.StatisticsAction"
+			scope="request" path="/statistics">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/statmgt/statbymember.jsp" />
+		</action>
+		<action name="statisticsForm"
+			type="com.neusoft.uniflow.web.management.statmgt.actions.StatbyprocAction"
+			scope="request" path="/statbyproc">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/statmgt/statbyproc.jsp" />
+		</action>
+		<!--procdef manager list -->
+		<action name="mgtprocdeflistForm"
+			type="com.neusoft.uniflow.web.management.procdefmgt.actions.ProcDefListAction"
+			scope="request" path="/mgtprocdeflist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/procdefmgt/procdeflist.jsp" />
+		</action>
+		<!-- procdef monitor list -->
+		<!--  
+			<action name="procmonitorlistForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.ProcDefListAction"
+			scope="request" path="/procmonitorlist">
+			<forward name="success"
+			path="/unieap/pages/workflow/management/defmonitor/procdeflist.jsp" />
+			</action>
+		-->
+		<action name="procInstListForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.ProcInstListAction"
+			scope="request" path="/monitorproc">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/monitorproc.jsp" />
+		</action>
+		<action name="workItemListForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.WorkItemListAction"
+			scope="request" path="/monitorworkitem">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/monitorworkitem.jsp" />
+		</action>
+		<action name="procInstDetailForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.ProcInstDetailAction"
+			scope="request" path="/procinstdetail">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/procinstdetail.jsp" />
+		</action>
+		<action name="curActDetailForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.CurActDetailAction"
+			scope="request" path="/curactdetail">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/curactdetail.jsp" />
+		</action>
+
+		<action name="applicationlistForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.ApplicationListAction"
+			scope="request" path="/applicationlist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/applicationlist.jsp" />
+		</action>
+		<action name="applicationdetailForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.ApplicationDetailAction"
+			scope="request" path="/applicationdetail">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/applicationdetail.jsp" />
+		</action>
+		<action name="svgMonitorForm"
+			type="com.neusoft.uniflow.web.management.defmonitor.actions.SVGMonitorAction"
+			scope="request" path="/svgmonitor">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/defmonitor/svgmonitor.jsp" />
+		</action>
+
+		<action
+			type="com.neusoft.uniflow.web.management.procdefmgt.actions.CategoryManagerAction"
+			scope="request" parameter="method" path="/m_category">
+			<forward name="categoryManager"
+				path="/unieap/pages/workflow/management/procresourcemgt/category.jsp" />
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.procresourcemgt.actions.ActTmpManagerAction"
+			scope="request" parameter="method" path="/act_templet">
+			<forward name="templetManager"
+				path="/unieap/pages/workflow/management/acttmpresourcemgt/actTemplet.jsp" />
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.procresourcemgt.actions.VarTmpManagerAction"
+			scope="request" parameter="method" path="/var_templet">
+			<forward name="variableManager"
+				path="/unieap/pages/workflow/management/vartmpresourcemgt/varTemplet.jsp" />
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.procresourcemgt.actions.ApplicationManagerAction"
+			scope="request" parameter="method" path="/application">
+			<forward name="applicationManager"
+				path="/unieap/pages/workflow/management/applicationresourcemgt/application.jsp" />
+		</action>
+
+
+		<!--  workday management -->
+		<action name="scheduleForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.actions.ScheduleAction"
+			scope="request" path="/schedule">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/workdaymgt/schedule.jsp" />
+		</action>
+		<action name="freedayForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.actions.BetweenDayAction"
+			scope="request" path="/between">
+			<forward name="between"
+				path="/unieap/pages/workflow/management/workdaymgt/betweenDay.jsp" />
+			<forward name="month"
+				path="/unieap/pages/workflow/management/workdaymgt/monthday.jsp" />
+			<forward name="week"
+				path="/unieap/pages/workflow/management/workdaymgt/weekday.jsp" />
+		</action>
+		<action name="freedayForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.actions.MonthDayAction"
+			scope="request" path="/monthDay">
+			<forward name="month"
+				path="/unieap/pages/workflow/management/workdaymgt/monthday.jsp" />
+			<forward name="week"
+				path="/unieap/pages/workflow/management/workdaymgt/weekday.jsp" />
+			<forward name="between"
+				path="/unieap/pages/workflow/management/workdaymgt/betweenDay.jsp" />
+		</action>
+		<action name="freedayForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.actions.WeekDayAction"
+			scope="request" path="/weekday">
+			<forward name="month"
+				path="/unieap/pages/workflow/management/workdaymgt/monthday.jsp" />
+			<forward name="week"
+				path="/unieap/pages/workflow/management/workdaymgt/weekday.jsp" />
+			<forward name="between"
+				path="/unieap/pages/workflow/management/workdaymgt/betweenDay.jsp" />
+		</action>
+		<action name="freedayForm"
+			type="com.neusoft.uniflow.web.management.workdaymgt.actions.EditScheduleAction"
+			scope="request" path="/editSchedule">
+			<forward name="month"
+				path="/unieap/pages/workflow/management/workdaymgt/scheditmonthday.jsp" />
+			<forward name="week"
+				path="/unieap/pages/workflow/management/workdaymgt/scheditweekday.jsp" />
+			<forward name="between"
+				path="/unieap/pages/workflow/management/workdaymgt/scheditbetween.jsp" />
+		</action>
+		<!--  worktime mgt-->
+		<action name="worktimeForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.WorktimeScheduleListAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/worktimeschedulelist.jsp"
+			scope="request" path="/worktimeschedulelist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/worktimeschedulelist.jsp" />
+		</action>
+
+		<!-- add by hushiyuan 2008.03.10 open default 作息时间列表 -->
+		<action name="worktimeForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.DefaultWorktimeListAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/defaultworktimelist.jsp"
+			scope="request" path="/defaultworktimelist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/defaultworktimelist.jsp" />
+		</action>
+		<action name="workperiodForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.AddDefaultWorkTimeAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/defaultworktimelist.jsp"
+			scope="request" path="/adddefaultworktime">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/adddefaultworktimeperiodlist.jsp" />
+			<forward name="editworkperiod"
+				path="/unieap/pages/workflow/management/worktimemgt/editperiodlist.jsp" />
+		</action>
+		<!-- end add hushiyuan 2008.03.10 -->
+		<action name="worktimeForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.WorktimePeriodListAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/worktimeperiodlist.jsp"
+			scope="request" path="/worktimeperiodlist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/worktimeperiodlist.jsp" />
+		</action>
+
+		<action name="workperiodForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.AddWorktimeScheduleAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/worktimeschedulelist.jsp"
+			scope="request" path="/addworktimeschedule">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/addschedulelist.jsp" />
+			<forward name="addplusdefault"
+				path="/unieap/pages/workflow/management/worktimemgt/addplusdefaultschedulelist.jsp" />
+			<forward name="default"
+				path="/unieap/pages/workflow/management/worktimemgt/addscheduledefaultlist.jsp" />
+			<forward name="custome"
+				path="/unieap/pages/workflow/management/worktimemgt/addplusdefaultschedulelist.jsp" />
+			<forward name="editworkschedule"
+				path="/unieap/pages/workflow/management/worktimemgt/editschedulelist.jsp" />
+		</action>
+
+		<action name="workperiodForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.EditWorktimeScheduleAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/worktimeschedulelist.jsp"
+			scope="request" path="/editworktimeschedule">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/editschedulelist.jsp" />
+		</action>
+
+		<action name="workperiodForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.AddWorktimePeriodAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/worktimeperiodlist.jsp"
+			scope="request" path="/addworktimeperiod">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/addworkperiodlist.jsp" />
+			<forward name="editworkperiod"
+				path="/unieap/pages/workflow/management/worktimemgt/editperiodlist.jsp" />
+
+		</action>
+		<action name="workperiodForm"
+			type="com.neusoft.uniflow.web.management.worktimemgt.actions.EditWorktimePeriodAction"
+			validate="true"
+			input="/unieap/pages/workflow/management/worktimemgt/editperiodlist.jsp"
+			scope="request" path="/editworktimeperiod">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/worktimemgt/editperiodlist.jsp" />
+		</action>
+
+		<!--organization management-->
+		<action name="personForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.UserlistAction"
+			scope="request" path="/userlist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/userlist.jsp" />
+		</action>
+		<action name="personForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.EdituserAction"
+			scope="request" path="/edituser">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/basattrib.jsp" />
+		</action>
+		<action name="personForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.UpdateuserAction"
+			scope="request" path="/updateuser">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/basattrib.jsp" />
+		</action>
+		<action name="personForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.SetuserAction"
+			scope="request" path="/setuser">
+			<forward name="basattrib"
+				path="/unieap/pages/workflow/management/organization/basattrib.jsp" />
+			<forward name="othattrib"
+				path="/unieap/pages/workflow/management/organization/othattrib.jsp" />
+			<forward name="resvattrib"
+				path="/unieap/pages/workflow/management/organization/resvattrib.jsp" />
+		</action>
+
+		<action name="roleTreeForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.RolelistAction"
+			scope="request" path="/rolelist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/rolelist.jsp" />
+		</action>
+		<action name="roleForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.EditroleAction"
+			scope="request" path="/editrole">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/role.jsp" />
+		</action>
+		<action name="roleForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.UpdateroleAction"
+			scope="request" path="/updaterole">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/role.jsp" />
+		</action>
+		<action name="unitForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.OrgunitlistAction"
+			scope="request" path="/orgunitlist">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/orgunitlist.jsp" />
+		</action>
+		<action name="unitForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.EditunitAction"
+			scope="request" path="/editunit">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/unit.jsp" />
+		</action>
+		<action name="unitForm"
+			type="com.neusoft.uniflow.web.management.organization.actions.UpdateunitAction"
+			scope="request" path="/updateunit">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/organization/unit.jsp" />
+		</action>
+		<!-- purview -->
+		<action name="purviewForm"
+			type="com.neusoft.uniflow.web.authorization.purview.actions.PurViewAction"
+			scope="request" path="/purview">
+			<forward name="success"
+				path="/unieap/pages/workflow/authorization/purview/purview.jsp" />
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.authorization.purview.actions.VersionTreeAction"
+			scope="request" path="/purviewtree">
+			<forward name="success"
+				path="/unieap/pages/workflow/authorization/purview/purviewtree.jsp" />
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.authorization.purview.actions.ActDefDetailAction"
+			scope="request" path="/viewdetail">
+			<forward name="success"
+				path="/unieap/pages/workflow/authorization/purview/actdefdetail.jsp" />
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.authorization.uniform.actions.ParticipantsAction"
+			scope="request" path="/participantstree">
+			<forward name="success"
+				path="/unieap/pages/workflow/authorization/uniform/partitree.jsp" />
+		</action>
+		<action name="processSVGViewForm"
+			type="com.neusoft.uniflow.web.authorization.uniform.actions.ProcessSVGViewAction"
+			scope="request" path="/processAuthor">
+			<forward name="newversion"
+				path="/unieap/pages/workflow/authorization/uniform/processview.jsp" />
+			<forward name="oldversion"
+				path="/unieap/pages/workflow/authorization/uniform/oldprocessview.jsp" />
+		</action>
+		<!-- audit -->
+		<action name="auditForm"
+			type="com.neusoft.uniflow.web.management.engineaudit.actions.AuditAction"
+			scope="request" path="/audit">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/engineaudit/audit.jsp" />
+		</action>
+		<action name="auditForm"
+			type="com.neusoft.uniflow.web.management.engineaudit.actions.DetailAction"
+			scope="request" path="/auditdetail">
+			<forward name="auditdetail"
+				path="/unieap/pages/workflow/management/engineaudit/auditdetail.jsp" />
+		</action>
+
+		<!-- participant -->
+		<action name="parProcessSVGViewForm"
+			type="com.neusoft.uniflow.web.participant.actions.ProcessSVGViewAction"
+			scope="request" path="/svgparti">
+			<forward name="newversion"
+				path="/unieap/pages/workflow/participant/processview.jsp" />
+			<forward name="oldversion"
+				path="/unieap/pages/workflow/participant/oldprocessview.jsp" />
+		</action>
+		<action name="setActPartiForm"
+			type="com.neusoft.uniflow.web.participant.actions.SetActPartiAction"
+			scope="request" path="/setActparti">
+			<forward name="success"
+				path="/unieap/pages/workflow/participant/actparti.jsp" />
+		</action>
+		<action name="setActPartiForm"
+			type="com.neusoft.uniflow.web.participant.actions.SetReadActPartiAction"
+			scope="request" path="/setcsActparti">
+			<forward name="success"
+				path="/unieap/pages/workflow/participant/csactparti.jsp" />
+		</action>
+		<action name="procpartilistForm"
+			type="com.neusoft.uniflow.web.participant.actions.ProcListAction"
+			scope="request" path="/procpartilist">
+			<forward name="success"
+				path="/unieap/pages/workflow/participant/procdeflist.jsp" />
+		</action>
+		<!-- agent category tree -->
+		<action name="agentCategoryForm"
+			type="com.neusoft.uniflow.web.management.agentmgt.create.actions.AgentCategoryAction"
+			scope="request" path="/agentcptree">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/agentmgt/categorytree.jsp" />
+		</action>
+		<action name="categoryResourceForm"
+			type="com.neusoft.uniflow.web.management.procdefmgt.actions.CategoryResourceAction"
+			scope="request" path="/categoryresource">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/procresourcemgt/resourceManager.jsp" />
+		</action>
+		<action name="actTmpResourceForm"
+			type="com.neusoft.uniflow.web.management.procresourcemgt.actions.ActTmpResourceAction"
+			scope="request" path="/acttmpresource">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/acttmpresourcemgt/resourceManager.jsp" />
+		</action>
+		<action name="varTmpResourceForm"
+			type="com.neusoft.uniflow.web.management.procresourcemgt.actions.VarTmpResourceAction"
+			scope="request" path="/vartmpresource">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/vartmpresourcemgt/resourceManager.jsp" />
+		</action>
+		<action name="applicationResourceForm"
+			type="com.neusoft.uniflow.web.management.procresourcemgt.actions.ApplicationResourceAction"
+			scope="request" path="/applicationresource">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/applicationresourcemgt/resourceManager.jsp" />
+		</action>
+		<!-- add by hushiyuan 2008-06-05 -->
+		<action name="authorityform"
+			type="com.neusoft.uniflow.web.management.procdefauthoriy.action.AuthorityAction"
+			scope="request" path="/authorityAction">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/procdefauthority/procdefauthority.jsp">
+			</forward>
+		</action>
+		<!-- end add by hushiyuan 2008-06-05 -->
+		<action name="procVerManagementForm"
+			type="com.neusoft.uniflow.web.management.procdefmgt.actions.ProcVerManagementAction"
+			scope="request" path="/procVerManagement">
+			<forward name="success"
+				path="/unieap/pages/workflow/management/procresourcemgt/procVerManagement.jsp" />
+		</action>
+
+		<!-- AppReset -->
+		<action
+			type="com.neusoft.uniflow.web.management.applicationmgt.actions.ErrorAppMgrAction"
+			parameter="method" scope="request" validate="true"
+			path="/errorAppProcess">
+			<forward name="errorApps"
+				path="/unieap/pages/workflow/management/applicationmgt/errorapps.jsp">
+			</forward>
+			<forward name="runningApps"
+				path="/unieap/pages/workflow/management/applicationmgt/runningapps.jsp">
+			</forward>
+		</action>
+		<action
+			forward="/unieap/pages/workflow/management/applicationmgt/errorappprocessdetail.jsp"
+			path="/errorAppProcessDetail">
+		</action>
+		<action
+			forward="/unieap/pages/workflow/management/applicationmgt/runningappprocessdetail.jsp"
+			path="/runningAppProcessDetail">
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.applicationmgt.actions.LoadProcess"
+			parameter="method" scope="request" validate="true"
+			path="/loadAppProcess">
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.applicationmgt.actions.LoadErrorApps"
+			parameter="method" scope="request" validate="true"
+			path="/LoadErrorApps">
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.applicationmgt.actions.ErrorAppMgrAction"
+			parameter="method" scope="request" validate="true"
+			path="/errorAppMgr">
+		</action>
+
+		<!-- TimerReset -->
+		<action
+			type="com.neusoft.uniflow.web.management.timermgt.actions.ErrorTimertaskMgrAction"
+			parameter="method" scope="request" validate="true"
+			path="/errorTimerTaskProcess">
+			<forward name="errorTimertasks"
+				path="/unieap/pages/workflow/management/timermgt/errorTimertasks.jsp">
+			</forward>
+			<forward name="runningTimertasks"
+				path="/unieap/pages/workflow/management/timermgt/runningTimertasks.jsp">
+			</forward>
+		</action>
+		<action
+			forward="/unieap/pages/workflow/management/timermgt/errortimertaskprocessdetail.jsp"
+			path="/errorTimerTaskProcessDetail">
+		</action>
+		<action
+			forward="/unieap/pages/workflow/management/timermgt/runningtimertaskprocessdetail.jsp"
+			path="/runningTimerTaskProcessDetail">
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.timermgt.actions.LoadProcess"
+			parameter="method" scope="request" validate="true"
+			path="/loadTimerProcess">
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.timermgt.actions.ErrorTimertaskMgrAction"
+			parameter="method" scope="request" validate="true"
+			path="/errorTimertaskMgr">
+		</action>
+		<action
+			type="com.neusoft.uniflow.web.management.timermgt.actions.LoadErrorTimertasks"
+			parameter="method" scope="request" validate="true"
+			path="/LoadErrorTimertasks">
+		</action>
+	</action-mappings>
+</struts-config>

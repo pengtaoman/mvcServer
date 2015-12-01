@@ -1,0 +1,17 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\tree\newTest
+2
+d
+17:test_tree_jsontree.html|1|13b89103f2e|124b|691634f5|7aeefad8132d44ca8cbeccd8f8a0dd71|0
+15:dataForInitChecked.js|1|13b89103692|3dc0|45a04908|990a0249069140e9b39deeb868ad5e32|0
+18:test_setHalfChecked.html|1|13b89103dc7|bb9|7c5f1b47|423cecc2bb8f484d8d993667b23bbf7e|0
+13:test_clicknode.html|1|13b8910375d|665|c09345b9|9cd1a994aeb94930807fe7462c1272fe|0
+15:test_tree_jsontree.js|1|13b89103f9b|2ea|90e5eaa2|a5f92414785d4dca9a7580a31b6366b5|0
+16:test_initDisabled.html|1|13b89103980|bc1|65f56514|2641618dc4a546fb866865d6da06cadd|0
+13:test_selectAll.html|1|13b89103d1b|623|ffebf64d|9dbc9f6853af41a290cbfda6cb52ce58|0
+9:data.json|1|13b89103605|120|56275b76|fe3890cebab74c1d94a37ae4b3b2167f|0
+15:test_initChecked.html|1|13b89103932|b91|68c746d6|ba7682683db54688b14bb958124a7826|0
+18:test_tree_newMethod.html|1|13b89104028|7af|ea9baa78|dd1c9693858b4a3fb5d0ed72a21065f6|0
+16:dataForInitDisabled.js|1|13b891036f0|3dd3|b6db505a|7a8bee7ef50241a59e843d64dc49ef4e|0
+18:test_getSelectedItem.jsp|1|13b891038a6|766|3c61ada5|69d11443d71b4175b0ac76dbb4a4791f|0
+11:test_navigate.jsp|1|13b891039ee|61b|a5eeb250|8491f5b59e59488998d8c2e5fe4fa80a|0

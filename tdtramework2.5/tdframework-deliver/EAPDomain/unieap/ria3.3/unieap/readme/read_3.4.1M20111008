@@ -1,0 +1,17 @@
+###新增特性
+xgrid beta2
+支持rowbar
+支持选择功能
+支持decoder
+支持多标题
+
+###变更特性
+Grid数字类型列内容居右对齐
+
+###defect
+U_EAP00020550	[component-ria]用户自定义翻页数combo样式修正
+U_EAP00020542	[component-ria]日期框动态设置日期格式后用户键盘输入错乱
+U_EAP00020575	[component-ria]TabContainer中setTabButtonState方法错误
+U_EAP00020637	[component-ria]下拉框setSelectedItems方法异常
+U_EAP00020654	[component-ria]Grid支持对未渲染行设置样式
+U_EAP00020692	[component-ria]数据表格toolbar去除对数据源itemchange的监听

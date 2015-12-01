@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\unieap\datawindow\htctest
+2
+7
+15:htctest_quickedit.xml|1|13b89649fe7|b41|b9b9d6ae|a840f4a1462f469eaedc3f395296b156|0
+17:htctest_multiselect.xml|1|13b89649f7a|b43|2e6ed756|e733c22481f948d49c6a5dd7769b0609|0
+14:htctest_gridedit.xml|1|13b89649f4b|b41|9a9dd677|39ff17d3d07b4908989f27cf76ebb4c4|0
+15:htctest_oneselect.xml|1|13b89649fa9|b44|bebbd724|6843357fd155482a90a0a1a86a67a13f|0
+13:htctest_popedit.xml|1|13b89649fc8|b3f|64dfd620|4537976662d44bc99a87b8bea83db82a|0
+14:htctest_readonly.xml|1|13b8964a016|b06|7027c382|3464d4b8ffd543119eb02689333b85b4|0
+14:htctest_freeedit.xml|1|13b89649f2b|c2d|8d461fdc|3f15a555dad2408583b043fa2cd27e61|0

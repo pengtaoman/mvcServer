@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+vobs02\TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\admin\login
+2
+3
+15:LoginUserDAOImpl.java|1|13c14060a37|17d6|ace9aa29|980d7bc2a83a4d68b1952cfbcb06dc53|0
+11:LoginUserDAO.java|1|13c14060a18|225|e8ebbc41|daa59e1cce304b2b9da667ec8f2118a3|0
+14:SessionListener.java|1|13c14060a56|f7a|7ba11682|d5c0e1b6a58344ed928f24d27e3791c0|0

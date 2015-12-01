@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\common
+2
+7
+a:custdetail|2|0|0|0|e4412501cc5546dfb2a13ec9f7697c1a|0
+15:GlobalParameters.java|1|13b89695f71|69c|cb280d05|1c507bef70f04a808bec040db160837f|0
+4:data|2|0|0|0|5e257ce70d6141338b93527e8cf36e1e|0
+11:IndexHashMap.java|1|13b896961a3|4d2|3af992e5|29289ec4fb014ccca528e1e32b1d440b|0
+4:util|2|0|0|0|a128aa6531fc4427b5a99dd4d873f814|0
+5:trans|2|0|0|0|8579b3a6b19d4856982029fdb10eed88|0
+18:TraceLogInterceptor.java|1|13b89696220|5ca|7965f4ac|b91de74579384a9a846e84555ec6d3b5|0

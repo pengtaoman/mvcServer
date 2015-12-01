@@ -1,0 +1,17 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow\standard\workitem\operation
+2
+d
+f:taskhandler.jsp|1|13b89616e04|4bb|6a1097ab|bb61bdfd378f468f9884f73070ec9bc2|0
+e:taskviewer.jsp|1|13b8961749b|49d|b038901d|7823a40d39334d5a92bba88e928284c8|0
+b:handler.jsp|1|13b89616fa9|d4d|7a2f7812|adff30f168d4494eb2343d83f5b60d23|0
+13:allapplications.jsp|1|13b896169ae|4db|5ee6a476|7cf08093d970464ebbc5a42e5983f79d|0
+a:sendto.jsp|1|13b89616d29|2237|ede74c0f|b2f53fcc061647518c6c5b0f4d9d544c|0
+c:reassign.jsp|1|13b896170e2|bd4|fddd1889|3a7c5851df0b4d1480a48a684b3fd05b|0
+d:nextactdo.jsp|1|13b89616af6|bb4|6b9cf3fb|70dbc3447c5242c1988c46ca69bdc6c3|0
+a:nextto.jsp|1|13b8961742e|955|28e631cb|31e1f226acb0407fa8b87d7a97234639|0
+c:rollback.jsp|1|13b89616c00|106b|7fa35459|cdf7cbfb658f45df97e9133df4eda524|0
+12:transationList.jsp|1|13b89617334|1868|74318c65|eb9da6982293484e977350f27daf9a97|0
+9:adhoc.jsp|1|13b8961721a|20bd|79f0c49b|ec6941f0312d4e02aa9c1d7edf5589ef|0
+8:view.jsp|1|13b89616c6d|352|5ca61718|f8672579db7c494f8f1ab6b42409c401|0
+f:updateparti.jsp|1|13b89616ccb|11bb|31a4df16|147ca1cbb384406b9e44be8259a11a68|0

@@ -1,0 +1,35 @@
+.ComboBoxDiv3{
+ position:  relative;
+ z-index: 100
+}
+input.ComboBoxInput3 {
+	/* font-size: 0.8em; */
+	border: 0px;
+	
+}
+span.spanMatchText3{
+   text-decoration: underline;
+   
+   font-weight: bold;
+  
+}
+table.ComboBox3 {
+	border: 1px solid #CCFF66;
+	background-color: white;
+}
+.ComboBoxListDiv3{
+        border: 1px solid #CCFF66;
+}
+.ComboBoxItem3 {
+	padding-left: 2px;
+	padding-top: 2px;
+	margin: 0px;
+}
+
+.ComboBoxItemEven3 {
+	background-color: #CCFF66;
+}
+
+.ComboBoxItemOdd3 {
+	background-color: white;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - 选择模块</title>
+		<style type="text/css">
+			@import "../../../blackbird/blackbird.css";
+			@import "../../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+
+		<script type="text/javascript" src="../../../blackbird/blackbird.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shBrushXml.js"></script>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:false,isDebug: true"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.grid.Grid");
+        </script>
+		<script type="text/javascript" src="test_grid_select_evt.js"></script>
+    </head>
+    <body class="unieap">
+    	
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - 选择模块"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="200px"
+			binding="{store:'largedata'}"
+			rows="{defaultRowHeight:21}"
+			views="{rowNumber:true,rowBar:true,orderType:'none'}"
+			>
+			<fixed>
+				<cell label="员工编号" width="10%" name="attr_empno" headerStyles="text-align: left;"></cell>
+			</fixed>
+			<header>
+				<cell width="150px" label="姓名" name="NAME" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="部门" name="attr_deptno" decoder="{store:'DEPT',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}"></cell>
+				<cell width="150px" label="职位" name="attr_job" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="入值日期" name="attr_hiredate" displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd'}"></cell>
+				<cell width="150px" label="工资" name="attr_sal"></cell>
+			</header>
+		</div>
+		<table>
+			<tr>
+				<th>输入</th>
+				<th>操作</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td><input id="selectInput"></input></td>
+				<td><button onclick="setSelect()">设置选择中</button></td>
+				<td>输入要选择的行号</td>
+			</tr>
+			<tr>
+				<td><input id="selectType"></input></td>
+				<td><button onclick="setSelectType()">setSelectType</button></td>
+				<td>输入"single","s","multiple","m"或"none"</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button onclick="getSelected()">getSelected</button></td>
+				<td>取得选中行</td>
+			</tr>
+			<tr>
+				<td><input id="setcheckable"></input></td>
+				<td><button onclick="setCheckedabled()">setcheckable</button></td>
+				<td>设置某行能被选中</td>
+			</tr>
+			<tr>
+				<td><input id="setuncheckable"></input></td>
+				<td><button onclick="setUncheckedabled()">setUncheckable</button></td>
+				<td>设置某行不能被鼠标点击选中</td>
+			</tr>
+			<tr>
+				<td colspan="3"><button onclick="funnelevt()">funnel event</button></td>
+			</tr>
+		</table>
+		
+    </body>
+</html>

@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\monitor\procinst\forms
+2
+6
+1a:OldParallelBranchForm.java|1|13b896a2ac2|514|a7e3a715|e55740b8b2c34cba895884ba32aff247|0
+11:RollBackForm.java|1|13b896a2dbf|44c|878c6a1c|2aec26f8c83141e5a254712ea69264bc|0
+f:DetailForm.java|1|13b896a2a54|286|8d25d4ec|4e334d0ec6f04129964843f3e396203a|0
+17:ParallelDetailForm.java|1|13b896a2b8d|412|75dc63bd|916ecd1eb4a14bf6817dbf6be684c4ed|0
+13:SVGMonitorForm.java|1|13b896a2e4c|33c|64741927|280f85a684b5482c8effd7c7d5b86d25|0
+17:ParallelBranchForm.java|1|13b896a2b1f|511|22a8a5f6|d27c25ac3ac3433e80281a02b743eeb0|0

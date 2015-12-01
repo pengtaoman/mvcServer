@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <!-- 业务DAO对象Bean -->
+    <bean id="ibatis3goodsDAO" class="com.neusoft.tdframework.ibaguice.pot.dao.Ibatis3GoodsDAOImpl" parent="abstractDAO" />
+    
+    <bean id="ibatis3ordersDAO" class="com.neusoft.tdframework.ibaguice.pot.dao.Ibatis3OrdersDAOImpl" parent="abstractDAO" />
+    
+    <bean id="ibatis3usersDAO" class="com.neusoft.tdframework.ibaguice.pot.dao.Ibatis3UsersDAOImpl" parent="abstractDAO" />
+    
+    <bean id="ordersrefgoodsDAO" class="com.neusoft.tdframework.ibaguice.pot.dao.OrdersRefGoodsDAOImpl" parent="abstractDAO" />
+    
+    
+    <bean id="OneDAO" class="com.neusoft.tdframework.ibaguice.pot.dao.OneDao" parent="abstractDAO" />
+    
+    <bean id="twoDAO" class="com.neusoft.tdframework.ibaguice.pot.dao.TwoDao" parent="abstractDAO" />
+
+
+
+	<!-- 业务BO配置 -->
+	<bean id="goodsBOTarget" class="com.neusoft.tdframework.ibaguice.pot.bo.GoodsBOImpl">
+	  <property name="goodsDAO" ref="ibatis3goodsDAO" />
+	  <property name="ordersrefgoodsDAO" ref="ordersrefgoodsDAO" />
+	</bean>
+	
+	<bean id="goodsBO" parent="commonTransactionProxy">
+	   <property name="target" ref="goodsBOTarget" />
+	</bean>
+	
+	<bean id="ordersBOTarget" class="com.neusoft.tdframework.ibaguice.pot.bo.OrdersBOImpl">
+	  <property name="ordersDAO" ref="ibatis3ordersDAO" />
+	  <property name="usersDAO" ref="ibatis3usersDAO" />
+	  <property name="goodsDAO" ref="ibatis3goodsDAO" />
+	  <property name="ordersrefgoodsDAO" ref="ordersrefgoodsDAO" />
+	</bean>
+	
+	<bean id="ordersBO" parent="commonTransactionProxy">
+	   <property name="target" ref="ordersBOTarget" />
+	</bean>
+	
+	<bean id="usersBOTarget" class="com.neusoft.tdframework.ibaguice.pot.bo.UsersBOImpl">
+	  <property name="usersDAO" ref="ibatis3usersDAO" />
+	</bean>
+	
+	<bean id="usersBO" parent="commonTransactionProxy">
+	   <property name="target" ref="usersBOTarget" />
+	</bean>
+
+</beans>

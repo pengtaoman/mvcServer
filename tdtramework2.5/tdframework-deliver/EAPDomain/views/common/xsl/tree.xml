@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="gb2312"?>
+<?xml-stylesheet type="text/xsl" href="tree.xsl"?>
+<root>
+<tree>
+	<item>
+		<id>1</id>
+		<name>chenzt</name>
+		<spaceWidth>0</spaceWidth>
+		<ifChild>1</ifChild>
+		<child>
+			<item>
+				<id>2</id>
+				<name>wangzt</name>
+				<spaceWidth>8</spaceWidth>
+				<ifChild>1</ifChild>
+				<child>
+					<item>
+					<id>3</id>
+					<name>wang--</name>
+					<spaceWidth>16</spaceWidth>
+					<ifChild>0</ifChild>
+					</item>
+					<item>
+					<id>10</id>
+					<name>wang--</name>
+					<spaceWidth>16</spaceWidth>
+					<ifChild>0</ifChild>
+					</item>
+					<item>
+					<id>11</id>
+					<name>wang--</name>
+					<spaceWidth>16</spaceWidth>
+					<ifChild>0</ifChild>
+					</item>
+				</child>
+			</item>
+		</child>
+	</item>
+	<item>
+		<id>4</id>
+		<name>chenzt</name>
+		<spaceWidth>0</spaceWidth>
+		<ifChild>1</ifChild>
+		<child>
+			<item>
+				<id>5</id>
+				<name>wangzt</name>
+				<spaceWidth>8</spaceWidth>
+				<ifChild>1</ifChild>
+				<child>
+					<item>
+					<id>6</id>
+					<name>wang--</name>
+					<spaceWidth>16</spaceWidth>
+					<ifChild>0</ifChild>
+					</item>
+				</child>
+			</item>
+		</child>
+	</item>
+</tree>
+</root>

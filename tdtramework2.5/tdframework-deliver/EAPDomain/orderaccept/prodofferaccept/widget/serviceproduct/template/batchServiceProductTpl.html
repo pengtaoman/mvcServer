@@ -1,0 +1,38 @@
+<div class="buscard-root">
+	<div class="buscard-content">
+		<div class="buscard-container">
+			<div class="buscard-subgroup" id="serviceProduct" subgroupname="功能类产品" subgroupid="功能类产品">	
+				<div class="buscard-row">			
+					<tp:for ds='viewInitData.prodOfferViewData.prodRowList'>
+							<div class="buscard-item-label" id="label_100402"
+								style="width:20px text-align:left;">
+								<span class="buscard-label">
+									<input type='checkBox' id='serviceProdCheck-${productInfoVO.productId}-${rowIndex}' name='serviceProdCheck' rowIndex='${rowIndex}'
+										dojoAttachEvent='onclick:elementclick' dojoAttachTopic='/serviceProdCheck' ${checkStr}
+										class='service-product-check' value='${productInfoVO.productId}' />
+									<span id='serviceProdName-${productInfoVO.productId}-${rowIndex}' >
+										${productInfoVO.productName}
+									</span>
+								</span>
+								<!-- 判断是否展现产品属性 -->
+								<tp:if $$.ifShowAttr==1>
+										<a href='javascript:void(0);' style="vertical-align: middle;color:green;cursor:pointer"
+											id='serviceProdOfferAttr-${productInfoVO.productId}-${rowIndex}'
+											name='productList' class='main-prodoffer-detail'
+											value='${productInfoVO.productId}' rowIndex='${rowIndex}'
+											dojoAttachEvent='onclick:elementclick'
+											dojoAttachTopic='/batchServiceProdOfferAttr'>
+											【产品属性】
+										</a>
+								</tp:if>	
+							</div>			
+							<tp:if $$.ifNextRow==true>
+								</div>
+								<div class="buscard-row">			
+							</tp:if>									
+					</tp:for>
+				</div>		
+			</div>
+		</div>
+	</div>
+</div>

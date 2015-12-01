@@ -1,0 +1,23 @@
+新增组件:
+xgrid beta1，包括基本显示、值格式化、翻页等功能
+
+新增组件:
+progressbar
+
+新增方法：
+Menu.show
+Menu.setObject
+Menu.getObject
+MenuItem.setDisabled
+
+新增方法：
+TextBoxWithIcon.changeIconState
+
+新增方法：
+DataStore.clone
+新增方法：
+RowSet.clone
+
+新增特性：
+HTML5的本地缓存
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+	<link href="../../../../themes/default/css/unieap.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true"></script>
+	<script type="text/javascript" src="button_align.js"></script>
+	<script>
+		dojo.require("unieap.layout.TitlePane");
+		dojo.require("unieap.form.Button")
+	</script>
+	<style>
+		.icon-red{
+			DISPLAY: inline-block;
+			width:16px;
+			height:16px;
+			background-color:red;
+		}
+		.icon-blue{
+			DISPLAY: inline-block;
+			width:16px;
+			height:16px;
+			background-color:blue;
+		}
+	</style>
+</head>
+<body class="unieap">
+	<div dojoType="unieap.layout.TitlePane" height="400px" width="100%">
+		<div dojoType="unieap.form.Button" height="100px" width="100%" label="宽度100%，测试label对齐" onClick="test_align1"></div>
+	</div>
+</body>
+</html>

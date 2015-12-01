@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by sgj (neusoft) -->
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by hugh (neusoft) -->
+<dataWindow xmlns="http://www.neusoft.com/unieap/datawindow/metadata/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ height="200" title="雇员信息列表" type="GRID_EDIT" width="600" isAutoRemove="true" isEmptyOnCreate="false" popWinWidth="600" popWinHeight="300" queryWinWidth="600" queryWinHeight="300">
+	<dataStoreInfo dataStoreName="alternate"/>
+	<orderInfo attrIndex="1" dataType="STRING" order="ascending"/>
+	<attributes>
+		<attribute index="1" dataType="STRING" title="姓名" maxlength="20" type="input" width="50" rows="3" cols="4" style="Text" isNullable="false" />
+		<attribute index="2" dataType="INTEGER" title="年龄" maxlength="2" type="input" width="100" style="Integer" isNullable="true"/>
+		<attribute index="3" dataType="STRING" title="单位" maxlength="20" type="input" width="100" style="Text" isNullable="true"/>
+		<attribute index="4" dataType="INTEGER" title="省份" maxlength="2" type="input" width="100" style="Number" isNullable="true"/>
+		<attribute index="5" dataType="STRING" title="市县" maxlength="20" type="input" width="100" style="Text" isNullable="true" />
+		<attribute index="6" dataType="INTEGER" title="区号" maxlength="10" type="input" width="100" style="Number" isNullable="true" />
+		</attributes>
+	<editers isAutoDraw="true" colsInOneRow="3">
+		<editer attrIndex="1" prompt="sdf"/>		
+		<editer attrIndex="2"/>
+		<editer attrIndex="3"/>
+		<editer attrIndex="4"/>
+		<editer attrIndex="5"/>
+		<editer attrIndex="6"/>
+		
+	</editers>
+	<headers>
+		<header attrIndex="1" isFixed="true"/>
+		<header attrIndex="2"/>
+		<header attrIndex="3"/>
+		<header attrIndex="4"/>
+		<header attrIndex="5"/>	
+		<header attrIndex="6"/>		
+	</headers>	
+	<buttons>
+		<!--插入按钮-->
+		<button type="insert"/>
+		<!--删除按钮-->
+		<button type="delete"/>
+		<!--修改按钮，目前只在pop_edit类型中用-->
+		<button type="update"/>
+		<!--查询按钮-->
+		<button type="query" value="查询"/>
+		<!--提交按钮-->
+		<button type="submit"/>
+		<!--页面浏览操作按钮，上下页，刷新等-->
+		<button type="pagebutton" isPartlyRefresh="true"/>
+	</buttons>
+</dataWindow>

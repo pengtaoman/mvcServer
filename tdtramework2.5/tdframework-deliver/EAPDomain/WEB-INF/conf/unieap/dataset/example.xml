@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<dataSetConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\schema\dataset\dataSet.xsd">
+	<dataSourceName/>
+	<pageSize>2</pageSize>
+	<auth>INSERT</auth>
+	<auth>UPDATE</auth>
+	<auth>DELETE</auth>
+	<tables>
+		<table tableName="EXAMPLE" isPrimary="true">
+			<pk pkName="myindex" dataType="8" isAutoIncrement="false"/>
+		</table>
+	</tables>
+	<attributes>
+		<attribute attrName="ID" isFakeColumn="false" dataType="8" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="5" columnName="MYINDEX" isNullable="false" index="1" tableName="EXAMPLE"/>
+		<attribute attrName="NAME" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="10" columnName="MYVALUE" isNullable="false" index="2" tableName="EXAMPLE"/>
+	    <attribute attrName="dataStatus" index="3" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="3" columnName="DATASTATUS" isNullable="true" tableName="EXAMPLE"/>
+        <attribute attrName="currentOpSeqNum" index="4" isFakeColumn="false" dataType="8" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="18" columnName="OPERATE_ID" isNullable="true" tableName="EXAMPLE"/>
+        <attribute attrName="lastOpSeqNum" index="5" isFakeColumn="false" dataType="8" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="5" columnName="OPERATE_PREID" isNullable="true" tableName="EXAMPLE"/>
+        <attribute attrName="opDate" index="6" isFakeColumn="false" dataType="93" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="5" columnName="OPDATE" isNullable="true" tableName="EXAMPLE"/>
+	    <attribute attrName="operator" index="7" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="10" columnName="OPERATOR" isNullable="true" tableName="EXAMPLE"/>
+	</attributes>
+	<fixedFilters/>
+</dataSetConf>

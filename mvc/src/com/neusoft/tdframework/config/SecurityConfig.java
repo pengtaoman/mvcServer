@@ -215,7 +215,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Bean
 	public TDUserAuthenticationProvider tdUserAuthenticationProvider() throws Exception {
-
+         System.out.println("<<<<  TDUserAuthenticationProvider  TDUserAuthenticationProvider ");
 		 return new TDUserAuthenticationProvider();
 		 
 	}

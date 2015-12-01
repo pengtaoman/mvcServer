@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="MSThemeCompatible" content="no" />
+<title>TD-JSKit</title>
+<style type="text/css">
+body { font-size:12px; }
+td { font-size:12px; }
+
+#t_table {
+border:1px solid #cccccc;
+width:100%;
+border-collapse:collapse;
+}
+
+#t_table td {
+	border:1px solid #dddddd;
+	padding:2px;
+}
+</style>
+
+
+<script language="JavaScript" src="./jsk.js" id="JSKitBag" ></script>
+<script language="JavaScript">
+JSKit.include('jsk.util.form');
+JSKit.include('jsk.widget.date');
+JSKit.include('jsk.mini.validmini');
+</script>
+<script language="JavaScript">
+<!--
+
+//-->
+</script>
+<script language="JavaScript">
+<!--
+
+function init(){
+
+/*  表单验证组件  <<< weizj@neusoft.com >>> */
+
+
+
+
+
+/* 
+简要说明:
+*/
+
+
+/* 附加功能 ： 日历组件*/
+
+/* 加入日期组件 
+
+为了解决跨frame等问题，日历没有采用好看的 浮动层，而是使用了弹出窗口.
+日历组件的核心使用的是 开源组件( The DHTML Calendar, version 1.0)，略微包装而成
+
+
+参数1  日期输入框的name/id  ,参数2 弹出日历窗口的按钮
+
+先介绍附加功能，是因为该功能要在 JSKit.form.initAllForms(); 前定义。
+*/
+JSKit.date.addDateArea("testDate","calendarBt0");
+
+
+/* 第一步 : 初始化表单 */
+JSKit.form.initAllForms();
+
+
+/*
+
+可以代码注册欲验证区域, 
+arg: 验证区域name/id  验证类型  验证区域的名字 验证时机
+JSkit.form.validField('bd_field','R|date|EQ(t_text)','出生日期,'blur');
+
+
+也可以在页面HTML代码内加入自定义属性
+	<input type="text" name="bd_field"  
+validtype="R|date|EQ(t_text)"  validlabel="出生日期" validtime="blur">
+
+
+ validtype="required"			R
+ validtype="date(格式)"			D	
+ validtype="time(格式)"			T
+ validtype="datetime(格式)"		DT
+ validtype="email"				E
+ validtype="url"				U
+ validtype="number"				N
+ validtype="integer"			I
+ validtype="float"				F
+ validtype="idcard"				ID
+ validtype="range"				RG
+ validtype="equals(另一区域的name)"		EQ
+ validtype="lessthen(另一区域的name)"	LT
+ （后面为缩写）
+
+ D T DT 的 “格式”参数可选
+ 默认为  YYYY-MM-DD , HH:mm , YYYY-MM-DD HH:mm
+
+多个验证类型之间用 | 相隔 
+
+
+在IE 6 下 validlabel（验证区域的名字） 为可选项。
+不指定validlabel时，系统会自动去找 "该表单域.parent.previous.text"
+
+
+validtime（验证时机）可选，默认为提交时验证
+validtime="blur" 表示控件失去焦点时验证
+validtime="keydown" 表示按下按键时验证 (不是所有验证类型都支持该方式)
+
+
+<<< weizj@neusoft.com >>>
+
+*/
+
+
+
+
+}
+
+
+function testb(){
+
+	/* 验证指定form的指定表单 */
+	//JSkit.form.checkFormField("test_field",'mainform');
+	/* 验证指定form的所有表单域 */
+	JSKit.form.checkAllField('mainform');
+
+	//alert(JSKit.element.getSelectedValues("t_check"));
+
+}
+
+
+
+//-->
+</script>
+
+</head>
+
+<body onload="init();">
+
+<form name="mainform" method=post action="">
+
+
+<input type="hidden" name="t_hidden" value="我是隐藏的哦!">
+<table id="t_table">
+<tr>
+	<td>姓名 * </td>
+	<td><input type="text" name="test_field"  validtype="R"  onkeypress="JSKit.validmini.checkMeR(this,'integer')">
+	</td>
+	<td>email </td>
+	<td><input type="text" name="email_field"  validtype="email" validtime="blur"  >
+	</td>
+</tr>
+<tr>
+	<td>密码 * </td>
+	<td><input type="password" name="t_password" validtype="R|EQ(t_passwordb)"></td>
+	<td>密码确认 * </td>
+	<td><input type="password" name="t_passwordb"></td>
+</tr>
+<tr>
+	<td>年龄 </td>
+	<td><input type="text" name="age_field"  >
+	</td>
+	<td>工资 </td>
+	<td><input type="text" name="icom_field"  validtype="float" validtime="keydown"  >
+	</td>
+</tr>
+<tr>
+	<td>复选区 * </td>
+	<td><input type="checkbox" name="t_check" value="cd_1"  validtype="R" >选项m1&#160;
+		<input type="checkbox" name="t_check" value="cd_2">选项m2&#160;
+		<input type="checkbox" name="t_check" value="cd_3">选项m3</td>
+	<td>单选区</td>
+	<td><input type="radio" name="t_radio" value="rd_1" >选项1&#160;
+		<input type="radio" name="t_radio" value="rd_2">选项2&#160;
+		<input type="radio" name="t_radio" value="rd_3">选项3</td>
+</tr>
+<tr>
+	<td>下拉列表</td>
+	<td><select name="t_select_one">
+		<option value="slo_1">条目1</option>
+		<option value="slo_2">条目2</option>
+		<option value="slo_3">条目3</option>
+		<option value="slo_4">条目4</option>
+	</select></td>
+	<td>多选列表 * </td>
+	<td><select name="t_select_mutili" multiple="multiple" size="3" validtype="R">
+		<option value="slm_1">条目m1</option>
+		<option value="slm_2">条目m2</option>
+		<option value="slm_3">条目m3</option>
+	</select></td>
+</tr>
+<tr>
+	<td>文本区</td>
+	<td ><textarea name="t_textarea"  rows="3" cols="20" ></textarea></td>
+	<td>文本组</td>
+	<td><input type="text" name="t_textg"><br/>
+	<input type="text" name="t_textg"><br/>
+	<input type="text" name="t_textg"><br/></td>
+</tr>
+<tr>
+		<td class="formLabel">出生日期 * </td>
+		<td class="formField" colspan="3"> 
+			<input type="text" maxlength="16" name="testDate" value="" validtype="R"/>
+			<button  id="calendarBt0" >日历</button> 
+		</td>
+		<td></td>
+		<td></td>
+</tr>
+</table>
+<div style="text-align:center">
+<button type="button" onclick="testb();">提 交</button>&#160;
+&#160;<button type="reset">重 置</button>
+</div>
+</form>
+</body>
+</html>

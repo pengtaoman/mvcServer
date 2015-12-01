@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>grid</title>
+		<style type="text/css">
+			@import "../../../../../../unieap/themes/default/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        </script>
+		<style>
+    		.locktest{
+				background-color:red;
+    		}
+			.locktest2{
+				background-color:green;
+			}    
+    </style>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+            dojo.require("unieap.form.Button");
+            dojo.require("unieap.grid.Grid");
+            var getLockedRow = function(){
+                return [{
+                    NAME: 'fzh',
+                    attr_empno: 250,
+                    attr_job: '正无极',
+                    attr_sal: {value:'25555',cls:'locktest2'}
+                }, {
+                    NAME: 'yangzz',
+                    attr_empno: 250,
+                    attr_job: '负无极',
+                    attr_sal: {value:'25555',cls:'locktest'}
+                }];
+            }
+			dojo.require("testunit.TestUnit");
+			dojo.addOnLoad(function() {
+				testUtil.markNode(unieap.byId("lockrow").domNode);
+			});
+        </script>
+    </head>
+    <body class="unieap">
+        <div dojoType="unieap.layout.TitlePane" title="锁定行" open="true">
+            <div dojoType="unieap.grid.Grid" jsId="lockrow"  id="lockrow" width="800px" height="350px" binding="{store:'empLockDataStore'}" 
+			lockedRow="{getLockedRow:getLockedRow,statistics:[{attr_sal:'max'},{attr_sal:'min'}]}" views="{rowBar:true,rowNumber:true}">
+                <header>
+                    <row>
+                        <cell label="姓名" name="NAME">
+                        </cell>
+                        <cell label="部门" name="attr_empno">
+                        </cell>
+                        <cell label="职位" name="attr_job">
+                        </cell>
+                        <cell label="工资" name="attr_sal">
+                        </cell>
+                    </row>
+                </header>
+            </div>
+        </div>
+		<script>
+			function setLockedRowData(){
+				lockrow.getBinding().setLockedRowData([{NAME:'杨作仲',attr_empno:'不知哪来的',attr_job:'PhotoShop的',attr_sal:'挺多'}]);
+				testUtil.markNode(unieap.byId("lockrow").domNode);
+			}
+		</script>
+		<button onclick="setLockedRowData()" id="setLockedRowDataButton">setLockedRowData</button>
+        <div dojoType="unieap.layout.TitlePane" open="open" title="说明">
+            <span style="font-size:14px;color:red;">测试点一：</span>
+            <span style="font-size:14px;color:blue;">1.拖动上下滚动条,最后四行锁定不滚动 2.拖动上下滚动条至最后,能够观察到第十五条数据,未被锁定行遮挡</span>
+            <br>
+            <span style="font-size:14px;color:red;">测试点二：</span>
+            <span style="font-size:14px;color:blue;">拖动左右滚动条,最后四行与普通行一致左右滚动</span>
+            <br>
+            <span style="font-size:14px;color:red;">测试点三：</span>
+            <span style="font-size:14px;color:blue;">拖动表头该表列宽,最后四行与普通行保持一致列宽</span>
+            <br>
+			<span style="font-size:14px;color:red;">测试点四：</span>
+            <span style="font-size:14px;color:blue;">锁定列自定义数据支持自定义样式，锁定行两个单元格背景色为自定义红色和绿色</span>
+            <br>
+        </div>
+    </body>
+</html>

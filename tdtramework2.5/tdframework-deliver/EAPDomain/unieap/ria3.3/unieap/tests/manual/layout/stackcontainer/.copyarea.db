@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\layout\stackcontainer
+2
+7
+16:test_stackcontainer.js|1|13b890fee09|73b|5c6d6c02|18b45a83c2a5416f933450bda18905e4|0
+8:test.jsp|1|13b890fedab|26a|7240c58c|05b3a63f89a44e1f89de8a52d4f6f4a1|0
+12:stackcontainer.jsp|1|13b890fec53|e4b|bb83798b|bbb877c58a164f6aaa891957f0987f3f|0
+9:hello.jsp|1|13b890fea8e|785|caa16270|fcb107674a814f1b8b72a3210320ebc6|0
+8:demo.jsp|1|13b890fe8b9|51e|935fa7c8|a3771661100f470caa7232960c42c95a|0
+17:test_stackcontainer.jsp|1|13b890fef03|13a3|63b114f1|f176b3b9501b49629189e2392fa5238a|0
+7:test.js|1|13b890fecb1|3b|60f013ac|f57d41315eed4f1a884c28f662166c83|0

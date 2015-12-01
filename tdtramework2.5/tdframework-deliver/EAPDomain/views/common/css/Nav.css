@@ -1,0 +1,168 @@
+BODY {
+	MARGIN: 0px; BACKGROUND-COLOR: #889699
+}
+BODY TD {
+	FONT-FAMILY: tahoma, verdana, arial, sans-serif
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.desktop {
+	BACKGROUND: url(../nav.files/desktop_bkg.gif) left top
+}
+#navMenu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#navMenuCell {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../nav.files/navbar_bkg.gif) #244490 repeat-x; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#navMenuCap {
+	FONT-SIZE: 1px; BACKGROUND: url(../nav.files/navbar_menu_cap.gif) #595959 no-repeat left top; WIDTH: 9px
+}
+#navBar {
+	BACKGROUND: url(../nav.files/navbar_bkg.gif) #244490 repeat-x
+}
+#navBar TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#navBar A {
+	PADDING-RIGHT: 2px; DISPLAY: block; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 0px 4px 0px 0px; COLOR: white; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#navBar A:hover {
+	COLOR: #ffffff; BACKGROUND-COLOR: #162a58
+}
+#navBarMenuCap {
+	FONT-SIZE: 1px; BACKGROUND: url(../nav.files/navbar_menu_cap.gif) #595959 no-repeat right top; WIDTH: 9px
+}
+#navBarDropDown {
+	BACKGROUND: url(../nav.files/navbar_bkg.gif) #244490 repeat-x
+}
+#navBarDropDown TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#navBarDropDown A {
+	PADDING-RIGHT: 2px; DISPLAY: block; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 0px 4px 0px 0px; COLOR: white; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#navBarDropDown A:hover {
+	COLOR: #ffffff; BACKGROUND-COLOR: #162a58
+}
+#navBarDropDownMenuCap {
+	FONT-SIZE: 1px; BACKGROUND: url(../nav.files/navbar_menu_cap_ext.gif) #595959 no-repeat left top; WIDTH: 9px
+}
+#navIconBar {
+	BACKGROUND-COLOR: transparent
+}
+#navIconBar A {
+	CURSOR: pointer
+}
+#navIconBar IMG {
+	MARGIN-RIGHT: 2px
+}
+#navIconBarContainer {
+	BACKGROUND: url(../nav.files/naviconbar_bkg.gif) #889699 repeat-x
+}
+#navBarBase {
+	BACKGROUND-COLOR: transparent
+}
+#mainLogo {
+	BACKGROUND-COLOR: transparent
+}
+#statusBarTopCap {
+	BACKGROUND: url(../nav.files/status_bkg.gif) repeat-y; WIDTH: 36px; HEIGHT: 11px
+}
+#statusBarTop {
+	BACKGROUND: url(../nav.files/status_bkg.gif) repeat-y; WIDTH: 36px
+}
+#statusBarTop DIV {
+	MARGIN-BOTTOM: 1px
+}
+#versionLabel {
+	COLOR: white
+}
+BUTTON {
+	FONT-SIZE: 10px; COLOR: #ffffff; BACKGROUND-COLOR: #616161
+}
+.row0 {
+	BACKGROUND-COLOR: #ffffff
+}
+.row1 {
+	BACKGROUND-COLOR: #ededed
+}
+INPUT {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+TEXTAREA {
+	BORDER-RIGHT: #838383 1px solid; BORDER-TOP: #838383 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 11px; BORDER-LEFT: #838383 1px solid; BORDER-BOTTOM: #838383 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+SELECT {
+	BORDER-RIGHT: #838383 1px solid; BORDER-TOP: #838383 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 11px; BORDER-LEFT: #838383 1px solid; BORDER-BOTTOM: #838383 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.input_extras {
+	BORDER-RIGHT: #838383 1px solid; BORDER-TOP: #838383 1px solid; BORDER-LEFT: #838383 1px solid; BORDER-BOTTOM: #838383 1px solid
+}
+.menu_links {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; VERTICAL-ALIGN: middle; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A {
+	COLOR: #0066cc; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #0066ff
+}
+A.hilite {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+A.hilite:hover {
+	COLOR: #ffffff; BACKGROUND-COLOR: #666633
+}
+.main_body {
+	BACKGROUND-COLOR: #889699
+}
+.inline_body {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #f2f2f2; TEXT-DECORATION: none
+}
+.main_window {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 5px; PADDING-TOP: 5px
+}
+.content_layer {
+	BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; BORDER-LEFT: #aaaaaa 1px solid; BORDER-BOTTOM: #aaaaaa 1px solid; BACKGROUND-COLOR: #f2f2f2
+}
+HR {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; COLOR: #aaaaaa; BORDER-BOTTOM: 0px; HEIGHT: 1px; BACKGROUND-COLOR: #aaaaaa
+}
+.titletext {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003399; LINE-HEIGHT: 25px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+TH {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 6px; VERTICAL-ALIGN: top; COLOR: #ffffff; PADDING-TOP: 6px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #162a58; TEXT-ALIGN: left
+}
+TH A {
+	COLOR: white; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+TH A:hover {
+	TEXT-DECORATION: underline
+}
+TD {
+	FONT-SIZE: 11px; VERTICAL-ALIGN: top; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+DIV {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+P {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+LI {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.alert {
+	COLOR: #996600
+}
+.explanation {
+	BACKGROUND-COLOR: #ffffee; TEXT-ALIGN: left
+}
+.generic_box {
+	BORDER-RIGHT: #838383 1px solid; BORDER-TOP: #838383 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 11px; BORDER-LEFT: #838383 1px solid; BORDER-BOTTOM: #838383 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}

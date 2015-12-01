@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eapConfig>
+	<component name="quartz" isEnabled="true" handler="com.neusoft.unieap.config.handler.BLConfigHandler" description="">
+		<InteractionObjectFactoryImpl>com.neusoft.unieap.bl.interaction.SpringInteractionObjectFactory</InteractionObjectFactoryImpl>
+		<componentlist>
+			<CONFIG_PATH>/WEB-INF/conf/quartz-tddemo/bl</CONFIG_PATH>
+			<CONFIG_FILE>applicationContext-quartz-pool.xml prodinstoverdate/applicationContext-quartz-prodinstoverdate.xml reserveoperate/applicationContext-quartz-reserveoperate.xml promotionoverdate/applicationContext-quartz-promotionoverdate.xml preacceptorderupdate/applicationContext-quartz-book.xml forcequit/applicationContext-quartz-forcequit.xml firstcall/applicationContext-quartz-firstCall.xml custtypecountupdate/applicationContext-quartz-cust.xml custorderreserve/applicationContext-quartz-custorderreserve.xml batch/applicationContext-quartz-batch.xml</CONFIG_FILE>
+        </componentlist>
+	</component>
+</eapConfig>

@@ -1,0 +1,20 @@
+/* Workflow WEB Style 2009. Designer : xiaoqingfeng@yeah.net */
+html
+{
+	scrollbar-face-color: #D9EBF5;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-highlight-color: #D9EBF5;
+	scrollbar-3dlight-color: #9EBFE8;
+	scrollbar-darkshadow-color: #9EBFE8; 
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #FFFFFF;
+}
+body
+{
+	padding-left:5px;
+	padding-top:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	margin:0px;
+	background-color:#E4EFFC;
+}

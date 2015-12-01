@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\ria33demo\pages\samples\tree\operateTree
+2
+8
+12:dragBetweenTree.js|1|13b89093c8a|85e|614a5bbb|6ad02556c9f34b7d82523911473793e2|0
+f:refreshNode.jsp|1|13b89093f59|a7f|469db004|902394208a8d4d01aeb8af46e6fff625|0
+13:dragBetweenTree.jsp|1|13b89093d07|d39|f71d5c72|948ef608f3b541abbca93f8b3ae9fb3a|0
+f:cascadeTree.jsp|1|13b89093c4b|194c|b9374692|dc62d1edbd574b5b8f055dbeea230fbd|0
+e:refreshNode.js|1|13b89093f2a|281|909c591|59a65c41d9314aa1baaa15991db877ba|0
+e:expandTree.jsp|1|13b89093da3|d98|775e23b|9df5fafa82004a3bb3e4c34c12bb78a4|0
+d:expandTree.js|1|13b89093d36|1e2|46eb9859|28596bc938de43d1a4eb08cafbe19cbc|0
+e:cascadeTree.js|1|13b89093c1c|66a|dd3b09f1|8275ca3a56fb413d92e24e43a7e0d9a2|0

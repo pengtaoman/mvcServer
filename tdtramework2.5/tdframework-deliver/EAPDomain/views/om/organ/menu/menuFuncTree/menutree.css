@@ -1,0 +1,127 @@
+A.link_song12_bk:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link_song12_bk:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link_song12_bk:active {
+	TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link_song12_bk:hover {
+	COLOR: #000000; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:active {
+	COLOR: #000000; TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+.T_v12_bk {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #999999}
+.T_v10_bk {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 10px; color: #000000}
+.bg1 {  background-image: url(../images/bg_1.gif); background-repeat: no-repeat}
+.T_song12_bk1 {  font-family: "宋体"; font-size: 12px; color: #000000}
+.T_song12 {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none; clip:   rect(   ); font-weight: normal}
+.T_song12_bt {  font-family: "宋体"; font-size: 12px; color: #000000;bgcolor: #CCCCCC; font-weight: bold}
+.T_song18_bk {  font-family: "宋体"; font-size: 18px; font-weight: bold; color: #000000}
+.T_song14_bk {  font-family: "宋体"; font-size: 14px; font-weight: bold; color: #000000}
+.T_song12_wt {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; text-decoration: none}
+.th_bg {  background-image: url(../images/biaoqian/b1.gif); background-repeat: no-repeat; font-family: "宋体"; font-size: 12px; color: #FFFFFF; background-color: #FFFFFF}
+.td {  font-family: "宋体"; color: #000000; background-color: #eeeeee; font-size: 12px; height: 25px}
+.th {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #CCCCCC; height: 25px; vertical-align: bottom}
+.Menu100 {  width: 100px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu120 {  width: 120px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu150 {  width: 150px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu170 {  width: 170px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu200 {  width: 200px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu300 {  width: 390px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu50 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 50px}
+.Menu80 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 80px}
+.T_v12_bk2 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #000000}
+.Menu390 {  width: 386px; font-family: "宋体"; font-size: 12px; color: #000000}
+.bg_login {  background-image: url(../images/logoin3.gif); background-repeat: no-repeat; background-color: #eeeeee}
+BODY {SCROLLBAR-FACE-COLOR: #eeeeee; SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; SCROLLBAR-SHADOW-COLOR: #eeeeee; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR:  #666666; SCROLLBAR-TRACK-COLOR: #eeeeee; SCROLLBAR-DARKSHADOW-COLOR: #666666; }.line_input {  border-left:0px;border-right:0px;border-top:0px;border-bottom:1px groove #000000;font-size:12px}
+.noline_input { border-left:0px;border-right:0px;border-top:0px;border-bottom:0px;font-size:12px;background-color: #ffffff;}
+.noline_input_bk { border-left:0px;border-right:0px;border-top:0px;border-bottom:0px;font-size:12px;background-color: #eeeeee;}
+.noline_textarea {  border-left:0px;border-right:0px;border-top:0px;border-bottom:0px;font-size:12px;SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR:  #ffffff; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; }
+.th_bg2 {  font-family: "宋体"; font-size: 12px; color: #000000; background-image: url(../images/biaoqian/c2.gif); background-repeat: no-repeat; text-decoration: underline}
+.T_song12_bk_L {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: underline}
+.T_song12_G {  font-family: "宋体"; font-size: 12px; color: #808080}
+.T_song12_GL {  font-family: "宋体"; font-size: 12px; color: #808080; text-decoration: underline}
+.th_T5_B {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; background-image: url(../images/biaoqian/T5_b.gif)}
+.th_T5_C {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: underline; background-image: url(../images/biaoqian/T5_c.gif)}
+.th_T6_B {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; background-image: url(../images/biaoqian/T6_b.gif)}
+.th_T6_C {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: underline; background-image: url(../images/biaoqian/T6_c.gif)}
+.T_song12_wt2 {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; text-decoration: underline}
+.table1 {  font-family: "宋体"; font-size: 12px; color: #000000; height: 28px; width: 580px; }
+.table2 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 580px; }
+.table3 {  font-family: "宋体"; font-size: 12px; color: #000000; height: 37px; width: 580px}
+.table_list1 {  font-family: "宋体"; font-size: 12px; color: #000000;  border="1" cellspacing="0" cellpadding="2"}
+.table_TF {  font-family: "宋体"; font-size: 12px; width: 580px; color: #000000;}
+.td_R {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #E8F7FF}
+.table_tab {  width: 580px  border="0" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF"}
+.table_wenshu1 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 580px }
+body { background-color: #ffffff;}
+.iframe1 { height: 335px; width: 100%}
+.iframe2 { height: 253px; width: 100%}
+.iframe3 { height: 195px; width: 100%}
+.iframe4 { height: 230px; width: 100%}
+.iframe5 { height: 261px; width: 100%}
+.iframe6 { height: 243px; width: 100%}
+.iframe7 { height: 265px; width: 100%}
+.iframe8 { height: 274px; width: 100%}
+.iframe9 { height: 250px; width: 100%}
+.iframe10 { height: 282px; width: 100%}
+.iframe11 { height: 311px; width: 100%}
+.iframe12 { height: 100px; width: 100%}
+.iframe13 { height: 0px; width: 0px}
+.iframe14 { height: 366px; width: 100%}
+.iframe15 { height: 224px; width: 100%}
+.iframe16 { height: 204px; width: 100%}
+.iframe17 { height: 270px; width: 100%}
+.head_bg1 {  background-image: url(../images/images_g/head_bg1.gif); background-repeat: no-repeat}
+.bg_na {  background-image: url(../images/bg_na.gif); background-repeat: repeat}
+.head_bg2 {  background-image: url(../images/head_bg2.gif); background-repeat: no-repeat}
+.bg_na2 {  background-image: url(../images/bg_na2.gif); background-repeat: no-repeat; border: black; clip:   rect(   )}
+.tab_bg1 {  background-image: url(../images/tab/tab_bg1.gif); background-repeat: repeat}
+.tab1 {  background-image: url(../images/tab/tab1.gif); background-repeat: no-repeat}
+.button1 {  background-image: url(../images/tab/button1.gif); background-repeat: no-repeat}
+.tab2 {  background-image: url(../images/tab/tab2.gif); background-repeat: no-repeat}
+.bg_na3 {  background-image: url(../images/images_g/bg_na3.gif); background-repeat: no-repeat}
+.S_1 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #FF0000}
+.menu_G150 {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #eeeeee; width: 150px}
+.button2 {  background-image: url(../../images/unieap/menuright/icon/button2.gif); background-repeat: no-repeat}
+.line1 {  background-image: url(../images/line1.gif); background-repeat: no-repeat}
+.button3 {  background-image: url(../images/tab/button3.gif); background-repeat: no-repeat}
+.T_V10bk {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 10px; color: #000000}
+.T_e1 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 11px; color: #000000}
+.icon_head {  background-image: url(../images/images_g/icon_head.gif); background-repeat: no-repeat; width: 20px}
+.icon2 {  background-image: url(../images/images_g/icon_2.gif); background-repeat: no-repeat; width: 20px}
+.icon1 {  background-image: url(../images/images_g/icon_1.gif); background-repeat: no-repeat; width: 20px}
+.button4 {  background-image: url(../images/images_g/button4.gif); background-repeat: no-repeat}
+.menu_G1 {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #999999}
+.menu_G {  background-color: #eeeeee; font-family: "宋体"; font-size: 12px; color: #000000}
+.menu_G100 {  font-family: "宋体"; font-size: 12px; color: #eeeeee}
+.na_bg {  background-color: #008400; font-size: 12px; color: #FFFFFF}
+.na_bg2 {  background-color: #ffffff; font-size: 12px; color: #000000}
+.login_bg {  background-image: url(../images/login_bg.gif); background-repeat: no-repeat}
+.login_bg_line {  background-image: url(../images/login_bg_line.gif); background-repeat: repeat}
+.button5 {  background-image: url(../images/tab/button5.gif); background-repeat: no-repeat}
+.buton6 {  background-image: url(../images/images_g/button6.gif); background-repeat: no-repeat}
+.button6 {  background-image: url(../images/images_g/button6.gif); background-repeat: no-repeat}
+.menu_150R {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #eeeeee; width: 150px}
+.button7 {  background-image: url(../images/tab/button7.gif); background-repeat: no-repeat}
+.button8 {  background-image: url(../images/images_g/button8.gif); background-repeat: no-repeat}
+.waiting_bg {  background-image: url(../images/images_g/waiting.gif); background-repeat: no-repeat}
+.waiting_bg2 {  background-image: url(../images/images_g/m1.gif); background-repeat: no-repeat}
+.cursor1 {  cursor:hand}
+.cursor2 {  cursor:none}
+.login_bg_s {  background-image: url(../images/login_bg_s.gif); background-repeat: no-repeat}
+.login_bg_s2 {  background-image: url(../images/login_bg_s2.gif); background-repeat: no-repeat}
+.logo_3d {  background-image: url(../images/logo_3d.gif); background-repeat: no-repeat}
+.bg_input { background-image: url(../images/menutree/inputback.gif); background-repeat: no-repeat; height: 22px; border-style: none}

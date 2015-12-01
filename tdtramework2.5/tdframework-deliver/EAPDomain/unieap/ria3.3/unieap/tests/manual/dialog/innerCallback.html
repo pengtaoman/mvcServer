@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>创建dialog但不显示导致其他控件无法点击问题</title>
+        <style>
+            @import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/global.js">
+        </script>
+        <script type="text/javascript">
+		    dojo.require("unieap.layout.TitlePane");
+		    dojo.require("unieap.dialog.MessageBox");
+			dojo.require("unieap.form.Button");
+			   function click_del(){
+				   MessageBox.confirm({message:"回调事件为生成新messagebox的messagebox",onComplete:finish});
+				}
+				
+				
+				function finish(value){
+					if(value){
+						MessageBox.alert({type:'info',title:'新messagebox',message:'蒙层可正常消失的messagebox'});			
+					}
+				}
+        </script>		
+    </head>
+<body class="unieap" style="height:100%;width:100%;">
+			<table style="height:98%;width:100%;table-layout:fixed;">
+				<tr>
+					<td style="width:30%;height:100%;">
+						<div style="height:100%;">
+							
+						</div>
+					</td>
+					<td style="width:70%;height:100%;">
+						<div style="height:100%;">
+						
+								
+						 <table style="height:100%;width:100%;table-layout:fixed;">
+									   <tr><td>
+											   <input id="form_del" dojoType="unieap.form.Button" label="点击生成新的messagebox" class="formfield" onclick="click_del()"/>
+
+									   </td></tr>
+									  </table>
+			           </div>
+					</div>
+					</td>
+				</tr>
+			</table>
+		</body>
+</html>

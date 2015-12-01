@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Crm applicationContext</description>
+	<bean id="omAuthorizeFacade" class="com.neusoft.om.interfase.authorize.AuthorizeBOImpl">
+		<property name="areaDAO">
+			<ref bean="areaDAO"/>
+		</property>
+		<property name="pwdValidDAO">
+			<ref bean="pwdValidDAO"/>
+		</property>
+		<property name="dutyDAO">
+			<ref bean="dutyDAO"/>
+		</property>
+		<property name="employeeDAO">
+			<ref bean="employeeDAO"/>
+		</property>
+		<property name="menuDAO">
+			<ref bean="menuDAO"/>
+		</property>
+		<property name="omSwitchDAO">
+			<ref bean="omSwitchDAO"/>
+		</property>
+		<property name="organDAO">
+			<ref bean="organDAO"/>
+		</property>
+		<property name="systemDAO">
+			<ref bean="systemDAO"/>
+		</property>
+		<property name="omUtilDAO">
+			<ref bean="omUtilDAO"/>
+		</property>
+		<property name="workDAO">
+			<ref bean="workDAO"/>
+		</property>
+		<property name="paramroleDAO">
+			<ref bean="paramroleDAO"/>
+		</property>	
+		<property name="appDAO">
+			<ref bean="appDAO"/>
+		</property>				
+		<property name="roleDAO">
+			<ref bean="roleDAO"/>
+		</property>		
+		<property name="switchDAO">
+			<ref bean="switchDAO"/>
+		</property>	
+		<property name="omQueryDAOInterface">
+			<ref bean="omQueryDAOInterface"/>
+		</property>			
+	</bean>
+	<bean id="omCommonBO" class="com.neusoft.om.common.commonBO.OmCommon">
+		<property name="omCommonSelect">
+			<ref bean="omCommonSelect"/>
+		</property>
+		
+		<property name="omCommonInfo">
+			<ref bean="omCommonInfo"/>
+		</property>
+	</bean>
+	<bean id="authBOExt" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.interfase.authorize.AuthBOExtImpl">
+				<property name="cityDAO">
+					<ref bean="cityDAO"/>
+				</property>		
+				<property name="operatorDAO">
+					<ref bean="operatorDAO"/>
+				</property>	
+				<property name="departmentDAO">
+					<ref bean="departmentDAO"/>
+				</property>	
+				<property name="omQueryDAOInterface">
+					<ref bean="omQueryDAOInterface"/>
+				</property>	
+			</bean>
+		</property>
+	</bean>
+	<bean id="omDictionaryFacade" class="com.neusoft.om.bo.OMDictionaryBO">
+		<property name="dictionaryDAO">
+			<ref bean="omDictionaryDAO"/>
+		</property>
+	</bean>
+	<bean id="areaFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.AreaBOImpl">
+				<property name="areaDAO">
+					<ref bean="areaDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="employeeManagementFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.EmployeeManagementBOImpl">
+				<property name="employeeDAO">
+					<ref bean="employeeDAO"/>
+				</property>
+				<property name="employeeDutyRelationDAO">
+					<ref bean="employeeDutyRelationDAO"/>
+				</property>
+				<property name="omSwitchDAO">
+					<ref bean="omSwitchDAO"/>
+				</property>
+				<property name="omUtilDAO">
+					<ref bean="omUtilDAO"/>
+				</property>
+				<property name="dutyDAO">
+					<ref bean="dutyDAO"/>
+				</property>
+				<property name="roleDAO">
+					<ref bean="roleDAO"/>
+				</property>
+				<property name="employeeRoleRelationDAO">
+					<ref bean="employeeRoleRelationDAO"/>
+				</property>
+				<property name="powerAdjustDAO">
+					<ref bean="powerAdjustDAO"/>
+				</property>
+				<property name="sequenceDAO">
+					<ref bean="sequenceDAO"/>
+				</property>
+				<property name="logDAO">
+					<ref bean="logDAO"/>
+				</property>
+				<property name="systemDAO">
+					<ref bean="systemDAO"/>
+				</property>
+				<property name="menuDAO">
+					<ref bean="menuDAO"/>
+				</property>
+				<property name="dictionaryDAO">
+					<ref bean="omDictionaryDAO"/>
+				</property>	
+				<property name="organDAO">
+					<ref bean="organDAO"/>
+				</property>		
+				<property name="switchDAO">
+					<ref bean="switchDAO"/>
+				</property>	
+				<property name="funcRoleDAO">
+					<ref bean="funcRoleDAO"/>
+				</property>
+				<property name="paramRoleDAO">
+					<ref bean="paramroleDAO"/>
+				</property>
+				<property name="employeeParamRoleRelationDAO">
+					<ref bean="employeeParamRoleRelationDAO"/>
+				</property>	
+				<property name="intEmployeeDAO">
+					<ref bean="intEmployeeDAO"/>
+				</property>		
+				<property name="omQueryDAOInterface">
+					<ref bean="omQueryDAOInterface"/>
+				</property>		
+										
+			</bean>
+		</property>
+	</bean>
+	<bean id="organManagementFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.OrganManagementBOImpl">
+				<property name="organDisplayDAO">
+					<ref bean="organDisplayDAO"/>
+				</property>
+				<property name="organDAO">
+					<ref bean="organDAO"/>
+				</property>
+				<property name="addressDAO">
+					<ref bean="addressDAO"/>
+				</property>
+				<property name="organDutyRelationDAO">
+					<ref bean="organDutyRelationDAO"/>
+				</property>
+				<property name="employeeDutyRelationDAO">
+					<ref bean="employeeDutyRelationDAO"/>
+				</property>
+				<property name="employeeDAO">
+					<ref bean="employeeDAO"/>
+				</property>
+				<property name="sequenceDAO">
+					<ref bean="sequenceDAO"/>
+				</property>
+				<property name="organUtilDAO">
+					<ref bean="organUtilDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="warnMsgBO" class="com.neusoft.tdframework.portal.bulletin.warnmsg.bo.WarnMsgBOImpl">
+		<property name="warnMsgDAO">
+			<ref bean="warnMsgDAO" />
+		</property>
+	</bean>
+	<!--
+	<bean id="dutySystemFacade" class="com.neusoft.om.bo.DutySystemBOImpl">
+	    <property name="dutyDAO">
+	    	<ref bean="dutyDAO"/>
+	    </property>
+	    <property name="organDutyRelationDAO">
+	    	<ref bean="organDutyRelationDAO"/>
+	    </property>
+	    <property name="organDAO">
+	    	<ref bean="organDAO"/>
+	    </property>
+	    <property name="organKindDAO">
+	    	<ref bean="organKindDAO"/>
+	    </property>
+	    <property name="employeeDAO">
+	    	<ref bean="employeeDAO"/>
+	    </property>
+	    <property name="dutyRoleRelationDAO">
+	    	<ref bean="dutyRoleRelationDAO"/>
+	    </property>
+	</bean>-->
+	<bean id="dutyFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.DutyBOImpl">
+				<property name="dutyDAO">
+					<ref bean="dutyDAO"/>
+				</property>
+				<property name="menuDAO">
+					<ref bean="menuDAO"/>
+				</property>
+				<property name="dutyPowerDAO">
+					<ref bean="dutyPowerDAO"/>
+				</property>
+				<property name="funcRoleDAO">
+					<ref bean="funcRoleDAO"/>
+				</property>
+				<property name="organDAO">
+					<ref bean="organDAO"/>
+				</property>
+				<property name="organKindDAO">
+					<ref bean="organKindDAO"/>
+				</property>
+				<property name="employeeDAO">
+					<ref bean="employeeDAO"/>
+				</property>
+				<property name="dutyRoleRelationDAO">
+					<ref bean="dutyRoleRelationDAO"/>
+				</property>
+				<property name="systemDAO">
+					<ref bean="systemDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="funcRoleFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.FuncRoleBOImpl">
+				<property name="roleDAO">
+					<ref bean="roleDAO"/>
+				</property>
+				<property name="sequenceDAO">
+					<ref bean="sequenceDAO"/>
+				</property>
+				<property name="funcRoleDAO">
+					<ref bean="funcRoleDAO"/>
+				</property>
+				<property name="employeeDAO">
+					<ref bean="employeeDAO"/>
+				</property>
+				<property name="systemDAO">
+					<ref bean="systemDAO"/>
+				</property>
+				<property name="menuDAO">
+					<ref bean="menuDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="paramRoleFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.ParamRoleBOImpl">
+				<property name="paramroleDAO">
+					<ref bean="paramroleDAO"/>
+				</property>
+				<property name="sequenceDAO">
+					<ref bean="sequenceDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="menuFuncManagementFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.MenuFuncManagementBOImpl">
+				<property name="menuDAO">
+					<ref bean="menuDAO"/>
+				</property>
+				<property name="systemDAO">
+					<ref bean="systemDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="dynamicListFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.DynamicListBOImpl">
+				<property name="dutyDAO">
+					<ref bean="dutyDAO"/>
+				</property>
+				<property name="organDAO">
+					<ref bean="organDAO"/>
+				</property>
+				<property name="areaDAO">
+					<ref bean="areaDAO"/>
+				</property>
+				<property name="organKindDAO">
+					<ref bean="organKindDAO"/>
+				</property>
+				<property name="roleDAO">
+					<ref bean="roleDAO"/>
+				</property>
+				<property name="systemDAO">
+					<ref bean="systemDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="dutyEmployeeRelationManagementFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.DutyEmployeeRelationMaintanceBOImpl">
+				<property name="employeeDAO">
+					<ref bean="employeeDAO"/>
+				</property>
+				<property name="employeeDutyRelationDAO">
+					<ref bean="employeeDutyRelationDAO"/>
+				</property>
+				<property name="employeeRoleRelationDAO">
+					<ref bean="employeeRoleRelationDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="menuOperateFacade"  parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.MenuOperateBOImpl">
+			     <property name="menuOperateDAO">
+			    	<ref bean="menuOperateDAO"/>
+			    </property>
+			     <property name="systemOperateDAO">
+			    	<ref bean="systemOperateDAO"/>
+			    </property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="omFavoriteMenuBO" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.FavoriteMenuBOImpl">
+				<property name="favoriteDAO">
+					<ref bean="favoriteDAO"/>
+				</property>
+				<property name="favoriteBillDAO">
+					<ref bean="favoriteBillDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="logFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.LogBOImpl">
+				<property name="logDAO">
+					<ref bean="logDAO"/>
+				</property>
+				<property name="areaDAO">
+					<ref bean="areaDAO"/>
+				</property>		
+				<property name="switchDAO">
+					<ref bean="switchDAO"/>
+				</property>	
+				<property name="omSwitchDAO">
+					<ref bean="omSwitchDAO"/>
+				</property>							
+			</bean>
+		</property>
+	</bean>
+	<bean id="workFacade" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.WorkBOImpl">
+				<property name="workDAO">
+					<ref bean="workDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<!--suncg 20070717 om_employee_check_t -->
+	<bean id="checkPersonBO" class="com.neusoft.om.bo.CheckPersonBOImpl">
+			<property name="checkPersonDao">
+				<ref bean="checkPersonDao"/>
+			</property>
+	</bean>
+	
+	<bean id="organTreeBO" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.omutil.OrganTreeBOImpl">
+				<property name="organDAO">
+					<ref bean="organDAO"/>
+				</property>
+				<property name="areaDAO">
+					<ref bean="areaDAO"/>
+				</property>		
+				<property name="employeeDAO">
+					<ref bean="employeeDAO"/>
+				</property>							
+			</bean>
+		</property>
+	</bean>
+	<bean id="omTransactionProxy" lazy-init="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="omTransactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="do*">PROPAGATION_REQUIRED,-ServiceException</prop>
+				<prop key="get*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="omTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref local="om_dataSource"/>
+		</property>
+	</bean>
+	<!-- sunchonggui 20070601 begin-->
+	<bean id="dataSourceInfoBO" class="com.neusoft.om.bo.dataParamRole.dataSourceInfo.DataSourceInfoBOImpl">
+			<property name="dataSourceInfoDAO">
+				<ref bean="dataSourceInfoDAO"/>
+			</property>
+	</bean>
+	<bean id="dataFilterInfoBO" class="com.neusoft.om.bo.dataParamRole.dataFilterInfo.DataFilterInfoBOImpl">
+			<property name="dataFilterInfoDAO">
+				<ref  bean="dataFilterInfoDAO"/>
+			</property>
+	</bean>
+	<bean id="dataParamManageBO" class="com.neusoft.om.bo.dataParamRole.dataParamManage.DataParamManageBOImpl">
+			<property name="dataParamManageDAO">
+				<ref  bean="dataParamManageDAO"/>
+			</property>
+	</bean>
+	<bean id="filterRelationBO" class="com.neusoft.om.bo.dataParamRole.filterRelation.FilterRelationBOImpl">
+			<property name="filterRelationDAO">
+				<ref  bean="filterRelationDAO"/>
+			</property>
+	</bean>
+		<bean id="omOrganUtilBO" class="com.neusoft.om.omutil.OmOrganUtilBOImpl">
+			<property name="organUtilDAO">
+				<ref  bean="organUtilDAO"/>
+			</property>
+			<property name="employeeDAO">
+				<ref  bean="employeeDAO"/>
+			</property>
+			<property name="organDAO">
+				<ref  bean="organDAO"/>
+			</property>
+			<property name="areaDAO">
+				<ref  bean="areaDAO"/>
+			</property>
+	</bean>
+	<bean id="dataParamBO" class="com.neusoft.om.omutil.DataParamBOImpl">
+			<property name="dataParamManageDAO">
+				<ref  bean="dataParamManageDAO"/>
+			</property>
+	</bean>
+	<bean id="loginUserListBO" class="com.neusoft.om.bo.LoginUserListBOImpl">
+	   <property name="loginUserListDao">
+	       <ref bean="loginUserListDao"/>
+	   </property>
+	   <property name="employeeDAO">
+	       <ref bean="employeeDAO"/>
+	   </property>
+	</bean>
+	
+	<bean id="om_dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/crm</value>
+		</property>
+	</bean>
+	
+
+    <!-- for cache manager added by pengtao 2011-01-28  BEGIN-->
+    <bean id="memCacheManagerImpl"
+	    class="com.neusoft.tdframework.memcache.MemCacheManager" destroy-method="close">
+	</bean>
+	
+	<bean id="preLoadCache"  class="com.neusoft.tdframework.memcache.CacheObjectPreHandler">
+		<property name="memCacheManagerImpl">
+			<ref bean="memCacheManagerImpl"/>
+		</property>
+	</bean>
+    <!-- END-->
+    	<bean id="commonRegionBO" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.om.bo.CommonRegionBOImpl">
+				<property name="commonRegionDAO">
+	     			<ref bean="commonRegionDAO"/>
+	   			</property>
+				<property name="areaCodeDAO">
+	       			<ref bean="areaCodeDAO"/>
+	   			</property>
+	    		<property name="politicalLocationDAO">
+	       			<ref bean="politicalLocationDAO"/>
+	  			</property>
+			</bean>
+		</property>
+	</bean>
+		 <bean id="omQueryBOInterface" parent="omTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.crm.channel.outInterface.om.bo.OmQueryBOImpl" >
+				<property name="omQueryDAO">
+					<ref bean="omQueryDAOInterface" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!--added by pengtao for get ServiceKind 2011-06-21 BEGIN-->
+	<bean id="serviceKindBO" class="com.neusoft.om.bo.ServiceKindBOImpl">
+	   <property name="serviceKindDAO">
+	       <ref bean="serviceKindDAO"/>
+	   </property>
+	</bean>
+	<!--added by pengtao for get ServiceKind 2011-06-21 END-->
+	
+	<bean id="powerBO" class="com.neusoft.om.omutil.PowerBOImpl">
+	   <property name="pageDAO">
+	       <ref bean="pageDAO"/>
+	   </property>
+	   <property name="menuDAO">
+	       <ref bean="menuDAO"/>
+	   </property>
+	</bean>
+	<bean id="moreCityBO" class="com.neusoft.om.interfase.authorize.MoreCityBOImpl">
+	   <property name="employeeDAO">
+	       <ref bean="employeeDAO"/>
+	   </property>
+	   <property name="areaDAO">
+	       <ref bean="areaDAO"/>
+	   </property>
+	</bean>
+	<bean id="channel_dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/crm</value>
+		</property>
+	</bean>
+	<!--added by pengtao for get ServiceKind 2011-06-21 BEGIN-->
+	<bean id="servicekind_dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/crm</value>
+		</property>
+	</bean>
+	<!--added by pengtao for get ServiceKind 2011-06-21 END-->
+</beans>

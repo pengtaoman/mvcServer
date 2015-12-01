@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<card id="budget" cardType="1" name="缴费表格展示"
+	xmlns="http://www.crm1.com/buscard">
+	<metaData>
+		<attrList>
+			<attr id="serviceId" label="服务号码" />
+			<attr id="orderItemId" label="订单项" />
+			<attr id="serviceOfferName" label="服务提供" />
+			<attr id="feeName" label="账目类型" />
+			<attr id="feeValue" label="应缴费用(元)" />
+			<attr id="relaFeeInfo" label="关联费用(元)" />
+			<attr id="havePayValue" label="已缴费用(元)" />
+			<attr id="shouldPayValue" label="实际费用(元)" />
+		</attrList>
+	</metaData>
+	<resource>
+		<import type="1"
+			uri="/buscardapp/protocol/js/card_pi_preInvoice.js" />
+	</resource>
+</card>

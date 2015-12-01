@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataWindow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.neusoft.com/unieap/datawindow/metadata/xml" height="200" title="雇员信息列表" type="ONE_SELECT" width="600" isAutoRemove="true" isEmptyOnCreate="false" popWinWidth="600" popWinHeight="300" queryWinWidth="600" queryWinHeight="300" >
+	<dataStoreInfo dataStoreName="emp-link"/>
+	
+	<orderInfo attrIndex="1" dataType="INTEGER" order="ascending"/>
+	<attributes>
+	  <attribute index="1" dataType="INTEGER" title="标识" maxlength="4" type="input" width="50" rows="3" cols="4" style="Number" isNullable="false" class="HTCNumber"/>
+	  <attribute index="2" dataType="STRING" title="姓名" maxlength="10" type="input" width="100" style="Text" isNullable="true"/>
+	  <attribute index="3" dataType="STRING" title="工作" maxlength="9" type="input" width="100" style="Text" isNullable="true"/>
+	  <attribute index="4" dataType="INTEGER" title="领导" maxlength="4" type="input" width="100" style="Integer" isNullable="true"/>
+	  <attribute index="5" dataType="TIMESTAMP" title="入司日期" maxlength="20" type="input" width="100" style="Date" isNullable="true" dateformat="YYYY-MM-DD"/>
+	  <attribute index="6" dataType="FLOAT" title="工资" maxlength="12" type="input" width="100" style="Double" isNullable="true" precision="2"/>
+	  <attribute index="7" dataType="STRING" title="部门介绍" maxlength="12" type="input" width="100" style="Text" isNullable="true"/>
+	  <attribute index="8" type="input" isLink="true" target="pagearea" href="dwlink.do?method=deal" dataType="INTEGER" title="部门" maxlength="2" width="100" style="Integer" isNullable="true"/>
+	 </attributes>
+
+    <filters pattern="$1$ and $2$" logicalmean="l">
+   <!--  1、 缺省的filter之间的关系为"and"，可以采用类似下面的“pattern”属性描述"filter"之间的关系,支持“and”和“or”关系运算.
+   2、 可以在filters中加入logicalMean属性来作为查询弹出窗口的标题，如logicalMean＝"以下查询为：部门或者姓名"，
+如未加如下条件则按pattern翻译生成此标题-->
+
+     <filter index="1" title="部门" filterName="[attr_deptno]"  modeInQueryWin="hidden"  operator="&lt;=" dataType="4" style="Number" type="input" value="12"/>
+     <filter index="2" title="客户名称" filterName="[attr_ename]" operator="like" dataType="12" style="Text" type="input" value="12"/>
+
+    <!--
+    <filter index="4" title="客户名称" filterName="[attr_ename]" operator="like" dataType="12" style="Text" type="input" value=""/>
+      <filter index="5" title="部门" filterName="[attr_deptno]" operator="&lt;=" dataType="4" style="Number" type="input" value=""/>
+     <filter index="6" title="客户名称" filterName="[attr_ename]" operator="like" dataType="12" style="Text" type="input" value=""/>
+
+  <filter index="1" title="姓名" filterName="[attr_ename]" operator="like" dataType="12" style="Text" type="input" value=""/>
+     <filter index="2" title="部门" filterName="[attr_deptno]" operator="&lt;=" dataType="4" style="Number" type="input" value=""/>
+  以下为可供参考的过滤条件的配置
+    operator 支持:对于数字类型和日期类型支持“&lt;”、“&lt;＝”、“&gt;”、“&gt;＝”、“=”；字符串类型的字段支持“like”、”right_like“、”left_like“
+     <filter index="1" title="雇佣日期" filterName="attr_hiredate" operator="&lt;" dataType="93" style="Date" type="input" value="1999-12-01"/>
+ -->
+  </filters>
+	
+	<editers isAutoDraw="true" colsInOneRow="3">
+		<editer attrIndex="1" prompt="新标识sdf"/>
+		<editer attrIndex="2"/>
+		<editer attrIndex="5"/>
+		<editer attrIndex="4"/>
+		<editer attrIndex="8"/>
+	</editers>
+	<headers>
+		<header attrIndex="1" isFixed="true"/>
+		<header attrIndex="8"/>
+		<header attrIndex="2"/>
+		<header attrIndex="5"/>
+		<header attrIndex="4"/>
+		<header attrIndex="3"/>
+		<header attrIndex="6"/>
+		<header attrIndex="7" isHidden="true"/>
+	</headers>
+	<filters>
+		<!--operator 支持“&lt;”、“&lt;＝”、“&gt;”、“&gt;＝”、“=”；此外字符串类型的字段还支持“like”、”right_like“、”left_like“
+请注意转码-->
+		<filter index="1" title="号码" isNullable="true"  width="10" filterName="attr_empno" operator="&gt;" dataType="4" style="Number" type="input" value=""/>
+	</filters>
+	<buttons>
+		<!--插入按钮-->
+		<button type="insert"/>
+		<!--删除按钮-->
+		<button type="delete"/>
+		<!--修改按钮，目前只在pop_edit类型中用-->
+		<button type="update"/>
+		
+		<!--查询按钮-->
+		<button type="query" value="查询"/>
+		<!-- 以下两按钮为上下页按钮，free_edit 类型独有，其他类型不必-->
+		
+		<!--提交按钮-->
+		<button type="submit"/>
+		<!--页面浏览操作按钮，上下页，刷新等-->
+		<button type="pagebutton" isPartlyRefresh="true"/>
+	</buttons>
+	
+</dataWindow>

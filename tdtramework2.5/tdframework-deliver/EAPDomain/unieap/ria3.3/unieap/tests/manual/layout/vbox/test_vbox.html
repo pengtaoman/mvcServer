@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>VBox控件测试</title>
+        <style>
+            @import "../../../../../unieap/themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>
+        <script type="text/javascript" src="../../grid/group/data.js" ></script>
+        <script type="text/javascript" src="../treeData.js"></script>
+        <script type="text/javascript">
+        	dojo.require("unieap.layout.TitlePane");
+            dojo.require("unieap.layout.VBoxContainer");
+            dojo.require("unieap.layout.HBoxContainer");
+			dojo.require("unieap.form.TextBox");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.form.FieldSet");
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.tree.Tree");
+        </script>
+
+    </head>
+    <body class="unieap">
+
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+	  		功能说明:
+			<ul>
+				<li>支持嵌套的控件居左、居中、居右显示</li>
+				<li>支持嵌套的控件居上、居中、居下显示</li>
+			</ul>
+
+	  	</div>
+		<div dojoType="unieap.layout.HBoxContainer" height="600px" width="auto" align="top">
+			<div  dojoType="unieap.layout.TitlePane" title="align属性（居左）" width="20%" height="500px" open="false">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5"  height="90%" align="left">
+					<div dojoType="unieap.form.Button" label="test1" ></div>
+				 	<div dojoType="unieap.form.TextBox" label="test3"></div>
+				 	<div dojoType="unieap.tree.Tree" label="UniEAP"
+						binding = "{leaf:'leaf',store:'testTreeDataStore',parent:'parentID',query:{name:'parentID',relation:'=',value:'1212403325756'} }">
+					</div>
+				 </div>
+			</div>
+			<div dojoType="unieap.layout.TitlePane" title="align属性（居中）" width="20%" height="500px"  open="true">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5"  height="90%" align="middle" pack="end">
+					<div dojoType="unieap.form.Button" label="test1" ></div>
+				 	<div dojoType="unieap.form.TextBox" label="test3"></div>
+				 </div>
+	        </div>
+	        <div dojoType="unieap.layout.TitlePane" title="align属性（居右）" width="20%" height="500px" open="true">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5" height="90%" align="right">
+					<div dojoType="unieap.form.Button" label="test1"></div>
+				 	<div dojoType="unieap.form.TextBox" label="test3"></div>
+				 </div>
+	        </div>
+	        <div dojoType="unieap.layout.TitlePane" title="嵌套Grid" width="30%" height="500px" open="true">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5" height="90%" align="right" pack="end" >
+					<div dojoType="unieap.grid.Grid" width="90%" height="200px" 
+						views="{rowNumber:true,enableTooltip:true}"
+						binding="{store:'empDataStore'}"
+						selection="{selectType:'m'}">
+						<header>
+							<cell label="员工编号" width="150px" name="attr_empno"></cell>
+							<cell width="100px" label="姓名" name="NAME"></cell>
+							<cell width="150px" label="职位" name="attr_job" headerStyles="text-align: left;"></cell>
+							<cell width="100px" label="部门" name="attr_deptno" 
+								decoder="{store:'DEPT',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}"
+								headerStyles="text-align: left;">
+							</cell>
+							<cell width="100px" label="工资" name="attr_sal" headerStyles="text-align: left;"></cell>
+						</header>
+					</div>
+				 </div>
+	        </div>
+	    </div>
+	    <div dojoType="unieap.layout.HBoxContainer" height="400px" width="auto" align="top">
+			<div  dojoType="unieap.layout.TitlePane" title="pack属性（居上）" width="23%" open="false">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5"  height="300px" pack="start">
+					<div dojoType="unieap.form.Button" label="test1" ></div>
+				 	<div dojoType="unieap.form.TextBox" label="test3"></div>
+				 </div>
+			</div>
+			<div dojoType="unieap.layout.TitlePane" title="pack属性（居中）" width="23%" open="true">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5"  height="300px" align="right" pack="center">
+					<div dojoType="unieap.form.Button" width="90%" label="test1" ></div>
+				 	<div dojoType="unieap.form.TextBox" width="auto" label="test3"></div>
+				 </div>
+	        </div>
+	        <div dojoType="unieap.layout.TitlePane" title="pack属性（居下）" width="23%" open="false">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5"  height="300px" pack="end">
+					<div dojoType="unieap.form.Button" label="test1"></div>
+				 	<div dojoType="unieap.form.TextBox" label="test3"></div>
+				 </div>
+	        </div>
+	        <div dojoType="unieap.layout.TitlePane" title="默认选项" width="23%" open="false">
+				 <div dojoType="unieap.layout.VBoxContainer"  style='border:1px solid #ccc'  
+				 	margins="5 5 5 5" width="90%" paddings="5"  height="300px">
+					<div dojoType="unieap.form.Button" label="test1"></div>
+				 	<div dojoType="unieap.form.TextBox" label="test3"></div>
+				 </div>
+	        </div>
+		</div>
+    </body>
+</html>

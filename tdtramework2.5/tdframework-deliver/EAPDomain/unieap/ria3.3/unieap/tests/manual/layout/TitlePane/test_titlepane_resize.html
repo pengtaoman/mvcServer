@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>Titlepane编程式创建时高度参数无效问题</title>
+        <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+		<style>
+        #widgetBox .u-titlepane-content-inner {
+            background-color: #f3f98a;
+        } 
+    </style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.form.Button");
+        </script>
+		<script>
+			function createWidget(object){
+				destroy();
+    			var t = new unieap.layout.TitlePane({
+       		 			id: 'titlepane',
+						title: '编程式创建',
+        				style: {
+            			height: '100px'
+        				}
+   					});
+    			dojo.place(t.domNode, 'widgetBox', 'first');
+				unieap.byId('titlepane').startup();	
+				return t;
+			}
+			function createInnerWidget(object){
+					destroy();
+					var inner="<div dojoType='unieap.layout.TitlePane' id='titlepane' style='height:200px' title='html编程式创建'></div>";
+					var div=dojo.create('div',{innerHTML:inner});
+   				 	dojo.place(div, 'widgetBox', 'first');
+					dojo.parser.parse(div);
+					unieap.byId('titlepane').startup();
+			}
+			function destroy(){
+    			var t = dijit.byId('titlepane');
+   			 	t && t.destroy();
+			}
+		</script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试功能点：
+				<li>描述</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="声明式创建" height="100px">
+			声明式创建Titlepane，可正常展开
+        </div>
+		<div height = '200px'>
+			<div id="widgetBox">			
+			</div>
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height="100%">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">声明式创建titlepane</td>
+					<td style="vertical-align:top">观察页面名称为"声明式创建"的titlepane</td>
+					<td style="vertical-align:top">titlepane可以正常展开</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">编程式创建titlepane</td>
+					<td style="vertical-align:top"><div dojoType="unieap.form.Button" label="编程式创建" width="100px" onClick="createWidget()"></div></td>
+					<td style="vertical-align:top">titlepane可以正常展开</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">用html代码段创建titlepane</td>
+					<td style="vertical-align:top"><div dojoType="unieap.form.Button" label="html创建" width="100px" onClick="createInnerWidget()"></div></td>
+					<td style="vertical-align:top">titlepane可以正常展开</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

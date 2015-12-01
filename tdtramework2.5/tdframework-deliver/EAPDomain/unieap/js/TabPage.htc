@@ -1,0 +1,414 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ 
++ 脚本描述： TabPage HTC
++            支持任意多个page页
++ 创    建： 胡光华 hugh@neusoft.com
++ 修改履历：
++ 修改  人：
++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+<PROPERTY NAME="selectedIndex"/>
+
+<ATTACH   EVENT="ondocumentready" HANDLER="DoInit"        />
+<PUBLIC:METHOD NAME="selectTabByIndex"/> 
+<PUBLIC:METHOD NAME="selectTabByText"/> 
+<PUBLIC:METHOD NAME="selectTabById"/> 
+
+<SCRIPT LANGUAGE="jscript">
+/**
+*@description: 核心方法,完成TabPage的构画
+*/
+function DoInit()
+{	
+	if(tagName=="TabPage")
+	{	  		
+		//把本身置为不可见：这个很重要
+		style.display = "none"; 	   		
+		cumulativeTabWidth = -1;		
+		readyInfo();
+		createTab();	
+		attachEvent("onpropertychange", DoPropChange);					
+	}	
+	if(tagName=="Page")
+	{			
+		//获取已经显示的Page个数
+		var strPages = getVar(parentElement,"page");		
+		var iPage = strPages == null ? 0 : parseInt(strPages,10);
+		iPage ++;
+		//修改已经显示的Page个数
+		setVar(parentElement,"page",iPage);
+		MakeContent(iPage);	
+			
+		if(iPage < parseInt(getVar(parentElement,"pagesNum"),10))	return;									
+				
+		//选择指定tab
+		
+		chooseTab(parentElement,true);				
+		
+	}
+	
+}
+/**
+*@description: 核心方法,响应tab的选择、按钮的点击
+*/
+function DoPropChange(){	
+	if(window.event.srcElement.tagName != "TabPage")	return;
+	var propertyName = window.event.propertyName;
+	detachEvent("onpropertychange", DoPropChange);	
+	switch(propertyName){
+		case "selectedIndex":			
+			if(selectedIndex == "BACK" || selectedIndex == "FRONT"){					
+				adjustTab(window.event.srcElement,selectedIndex);						
+			}	
+			else{ 	
+				setVar(window.event.srcElement,"currentPage",selectedIndex);		
+			}
+			chooseTab(window.event.srcElement);
+			break;
+		default:
+			break;
+	}	
+	attachEvent("onpropertychange", DoPropChange);	
+}
+/**
+*@description: 按钮点击后，协助DoPropChange()完成工作
+*@param:   container  TabPage标签对象
+*@param:   aspect tab移动的方向( "BACK"、"FRONT")
+*/
+function adjustTab(container,aspect){	
+	var iMapBeginPage = parseInt(getVar(container,"mapBeginPage"),10);
+	var iMapEndPage =  parseInt(getVar(container,"mapEndPage"),10);
+	var iPagesNum = parseInt(getVar(container,"pagesNum"),10);
+	if(aspect == "BACK"){	   
+	   if(iMapBeginPage > 1){	
+	   		iMapBeginPage --;
+	   		iMapEndPage --;
+	   }	   		      
+	}
+	else if(aspect == "FRONT"){
+	   if(iMapEndPage < iPagesNum){	
+	   		iMapBeginPage ++;
+	   		iMapEndPage ++;
+	   }	
+	}
+	else	return;
+	
+	setVar(container,"mapBeginPage",iMapBeginPage);
+	setVar(container,"mapEndPage",iMapEndPage);	
+	iMapBeginPage = parseInt(getVar(container,"mapBeginPage"),10);		
+	
+}
+/**
+*@description: 核心方法，完成tab的选中工作，并决定对应pageDiv的显示或隐藏
+*@param:   container  TabPage标签对象
+*@param:   isInit 是否初始化的时候调用(是：false/空;否：true)
+*/
+function chooseTab(container,isInit){	  
+       
+	   var iMapBeginPage = parseInt(getVar(container,"mapBeginPage"),10);	   
+	   var iMapEndPage =  parseInt(getVar(container,"mapEndPage"),10);
+	   var iCurrentPage = parseInt(getVar(container,"currentPage"),10);
+	   var iMaxShowPage = parseInt(getVar(container,"maxShowPage"),10);
+	   var iPagesNum = parseInt(getVar(container,"pagesNum"),10);	
+	 
+	   // iCurrentPage is between 1 and iPagesNum	   
+	   iCurrentPage =  iCurrentPage < 1 ? 1 : ( iCurrentPage > iPagesNum ? iPagesNum : iCurrentPage);	
+	   //在第一次显示时,把默认选中的tab放在可视范围内
+	   if(isInit != null && isInit){	   	
+	   		if(iCurrentPage > iMapEndPage){
+	   			iMapBeginPage +=  iCurrentPage - iMapEndPage;
+	   			iMapEndPage = iCurrentPage;	   			
+	   		}
+	   		else if( iCurrentPage < iMapBeginPage){
+	   			iMapEndPage -= iMapBeginPage - iCurrentPage;
+	   			iMapBeginPage = iCurrentPage;
+	   			
+	   		}
+	   		setVar(container,"mapBeginPage",iMapBeginPage);
+	   		setVar(container,"mapEndPage",iMapEndPage);
+	   		setVar(container,"currentPage",iCurrentPage);					   	
+	   }	   	 
+	   var tabTbl = window.document.all("UnieapTP_tab_tbl");  
+	   var infoTbl = window.document.all("UnieapTP_pageInfo_tbl");	   
+	   var iCount = -1,iActPage; 	
+	   var beforeLoad,afterLoad;	  
+	   //轮寻tab信息表，决定tab所在TD的显示
+	   for(var i=0; i < tabTbl.rows(0).cells.length; i++){
+			if(tabTbl.rows(0).cells(i).isTab == "true"){				
+				iCount ++;
+				iActPage = iCount + iMapBeginPage;																
+				tabTbl.rows(0).cells(i).actPage = "" + iActPage;								
+				tabTbl.rows(0).cells(i).tabTitle = infoTbl.rows(0).cells(iActPage - 1).tabTitle;
+				tabTbl.rows(0).cells(i).tabText = infoTbl.rows(0).cells(iActPage - 1).tabText;								
+				//事件定义
+				beforeLoad = infoTbl.rows(0).cells(iActPage - 1).beforeLoad;				
+				afterLoad = infoTbl.rows(0).cells(iActPage - 1).afterLoad;				
+				if(iActPage == iCurrentPage){	
+					//显示前
+					if(beforeLoad != null && beforeLoad != "" && beforeLoad != "undefined")
+						eval(beforeLoad);					
+					selectOneTab(tabTbl.rows(0).cells(i));								
+					//显示后
+					if(afterLoad != null && afterLoad != "" && afterLoad != "undefined")
+						eval(afterLoad);
+				}
+				else
+					deSelectOneTab(tabTbl.rows(0).cells(i));				
+			}
+		}	
+		//轮寻page页信息表，把以前选中的pageDiv全部隐藏掉
+		var page;
+		for(var i=0; i < infoTbl.rows(0).cells.length; i++){
+			page = i + 1;
+			if(page != iCurrentPage)
+				window.document.all("UnieapTP_pageDiv_"+page).style.display = "none";
+			else
+				window.document.all("UnieapTP_pageDiv_"+page).style.display = "";	
+		}			  
+}
+/**
+*@description: 取消一个tab的选择
+*@param:   tdObj tab所属的TD
+*/
+function deSelectOneTab(tdObj){				
+		var tbl = tdObj.children(0);
+		tbl.rows(0).cells(0).className = "NEUTabPageDeselectTabLeftTD";
+		tbl.rows(0).cells(1).className = "NEUTabPageDeselectTabMiddleTD";
+		tbl.rows(0).cells(2).className = "NEUTabPageDeselectTabRightTD";
+		tbl.rows(0).cells(0).innerText = "  ";
+		tbl.rows(0).cells(1).innerText = tdObj.tabText;
+		tbl.rows(0).cells(2).innerText = "  ";
+}
+
+/**
+*@description: 通过指定一个index选择一个tab
+*@param:   index tab的索引值
+*/
+function selectTabByIndex(index){
+  if(isNaN(index))
+    return ;
+  setVar(this,"currentPage",index);
+  chooseTab(this,false);
+}
+/**
+*@description: 通过指定tab的title选择一个tab
+*@param:   text tab的标题
+*/
+function selectTabByText(text){
+  var index=getIndexByText(text);
+  if(index==-1)return ;
+  selectTabByIndex(index+1);
+}
+/**
+*@description: 通过指定tab的id 选择一个tab
+*@param:   id tab的id
+*/
+function selectTabById(id){
+   var index=getIndexById(id);
+  if(index==-1)return ;
+  selectTabByIndex(index+1);
+}
+function getIndexByText(text){	
+  	for(var i=0; i < children.length ; i++){
+  	if(children(i).tagName.toUpperCase() == "PAGE" ){			
+		  if(children(i).tabText==text||children(i).tabTitle==text) return i;
+		}
+	}	
+   return -1;	
+}
+function getIndexById(id){
+  	for(var i=0; i < children.length ; i++){
+  	if(children(i).tagName.toUpperCase() == "PAGE" ){			
+		  if(children(i).id==id) return i;
+		}
+	}	
+	return -1;
+}
+/**
+*@description: 选择一个tab
+*@param:   tdObj tab所属的TD
+*/
+function selectOneTab(tdObj){				
+		var tbl = tdObj.children(0);
+		tbl.rows(0).cells(0).className = "NEUTabPageSelectTabLeftTD";
+		tbl.rows(0).cells(1).className = "NEUTabPageSelectTabMiddleTD";
+		tbl.rows(0).cells(2).className = "NEUTabPageSelectTabRightTD";
+		tbl.rows(0).cells(0).innerText = "  ";
+		tbl.rows(0).cells(1).innerText = tdObj.tabText;					
+		tbl.rows(0).cells(2).innerText = "  ";
+}
+/**
+*@description: 构造指定page的内容DIV
+*@param:   iPage page的号
+*/
+function MakeContent(iPage)
+{	    			
+	var sHTML = '<DIV id="UnieapTP_pageDiv_' + iPage + '" style="display:none;overflow:auto;width:'+parentElement.style.width+';height:'+parentElement.style.height+'"; >';	
+	sHTML += '<DIV class="NEUTabPageFrontContentDIV" >';
+	sHTML += innerHTML + '</DIV></DIV>';
+	innerHTML =  "";
+	createTopDivInnerHTML(parentElement.id,sHTML);	
+//	insertAdjacentHTML('BeforeEnd', sHTML);
+}
+/**
+*@description: 准备信息,供以后的每个tab使用
+*/
+function readyInfo(){
+    //建立一个顶层，用来包容所有的信息
+    var sHTML = '<DIV id="tabpageTopDIV_'+element.id+'"></DIV>';    
+    insertAdjacentHTML('BeforeBegin', sHTML);	   
+    window.document.all("tabpageTopDIV_"+element.id).style.display = "";
+	//获取所有页的个数,并记录到变量容器中
+	//建立一个隐藏层,用来记录实际的page页信息
+	sHTML = '<DIV style="display:none"><TABLE id="UnieapTP_pageInfo_tbl"><TR>';
+	var iPagesNum = 0;
+	for(var i=0; i<children.length; i++){					
+		if(children(i).tagName.toUpperCase() == "PAGE"){
+			sHTML += '<TD tabTitle="' + children(i).tabTitle + '"';
+			sHTML += ' tabText="'+ children(i).tabText +'"';
+			sHTML += ' beforeLoad="'+ children(i).beforeLoad +'"';
+			sHTML += ' afterLoad="'+ children(i).afterLoad +'"';
+			sHTML += ' ></TD>';
+			iPagesNum ++;
+		}			
+	}	
+	sHTML += "</TR></TABLE></DIV>";	
+	createTopDivInnerHTML(element.id,sHTML);
+//	insertAdjacentHTML('BeforeEnd', sHTML);				
+	
+	var iMaxShowPage = 4;
+	if(element.maxShowPageNum != null && element.maxShowPageNum != "undefined" && element.maxShowPageNum != ""){
+		try{
+			iMaxShowPage = parseInt(element.maxShowPageNum,10);
+		}catch(e){iMaxShowPage = 4;}		
+	}
+	
+	var iMapBeginPage = 1;
+	var iMapEndPage = iPagesNum > iMaxShowPage ? iMaxShowPage : iPagesNum;		
+	setVar(element,"pagesNum",iPagesNum);
+	setVar(element,"mapBeginPage",iMapBeginPage);
+	setVar(element,"mapEndPage",iMapEndPage);
+	setVar(element,"currentPage",element.selectedIndex);
+	setVar(element,"maxShowPage",iMaxShowPage);	
+	//计算每个tab的宽度
+	setVar(element,"tabWidth",calTabWidth());	
+}
+/**
+*@description: 创建一个tab
+*/
+function createTab(){
+	var iMaxShowPage = parseInt(getVar(element,"maxShowPage"),10);		
+	var iCurrentNum = 0;
+	var tabWidth = getVar(element,"tabWidth");	
+	tabWidth = 899;
+	var sHTML = '<DIV><TABLE id="UnieapTP_tab_tbl" cellpadding=0 cellspacing=0 width="'+style.width+'" height:22px><TR height=100%>';	
+	for(var i=0; i < children.length ; i++){
+		if(children(i).tagName.toUpperCase() == "PAGE" ){			
+			if( ++iCurrentNum > iMaxShowPage) break;
+			sHTML += '<TD isTab="true" actPage="" onClick="'+id+'.selectedIndex = actPage;" tabText="" tabTitle="" width = "'+tabWidth+'">'+createOneTabHTML()+'</TD>';
+		}
+	}		
+	//占位
+	sHTML += "<TD width	='"+tabWidth+ "'></TD>";
+	
+	//增加按钮
+	if(iCurrentNum > iMaxShowPage){		
+		sHTML += "<TD align='right'><TABLE cellpadding=0 cellspacing=0><TR>";
+		sHTML += "<TD align='right'><input type='button' id='UnieapTP_back_button' class=NEUTabPageBackBtnINPUT onClick='window.document.all(\""+id+"\").selectedIndex = \"BACK\";'></TD>";
+		sHTML += "<TD align='left'><input  type='button' id='UnieapTP_front_button'class=NEUTabPageFrontBtnINPUT onClick='window.document.all(\""+id+"\").selectedIndex = \"FRONT\";'></TD>";
+		sHTML += "</TR></TABLE></TD>";
+	}	
+    sHTML += "</TR></TABLE></DIV>";          
+	createTopDivInnerHTML(element.id,sHTML);    
+//    insertAdjacentHTML('afterBegin', sHTML);	    
+}
+function createOneTabHTML(){
+	return "<TABLE style='border:0px;width:100%;height:100%' cellpadding=0 cellspacing=0><TR><TD></TD><TD></TD><TD></TD></TR></TABLE>";
+}
+function createTopDivInnerHTML(tabPageId,sHTML){	
+	var topDiv = window.document.all("tabpageTopDIV_"+tabPageId);										
+	topDiv.innerHTML = topDiv.innerHTML + sHTML;
+}
+function calTabWidth(){	
+	var maxShowNum = parseInt(getVar(element,"maxShowPage"),10);
+	var width = element.style.width;
+	//去px
+	width = width.substring(0,width.length - 2);
+	width = parseInt(width,10);
+	return Math.round(width/(maxShowNum+1),0);	
+}
+/********* 以下方法用于构建一个页面变量容器 ***************************/
+/*
+*页面变量容器的设计思路：HTC本身有一个很重要的缺点（无法申明内部全局变量），
+*                        把所有的变量都按照约定放到TabPage的varibles中。
+*/
+//变量赋值
+function setVar(container,name,value){ 			
+ 	var arr = cvtStrToArr(container.varibles,"|",":");	
+ 	if(arr == null) arr = new Array();
+ 	var flag = false; 	 	
+ 	for(var i=0; i < arr.length; i++){			
+		if(arr[i][0] == name){
+			arr[i][1] = ""+value;
+			flag = true;
+		}		
+	}
+	if(!flag){
+		var varArr = new Array();
+		varArr[0] = name;
+		varArr[1] = ""+value;
+		arr[arr.length] = varArr;
+	}					
+	container.varibles = cvrArrToStr(arr,"|",":");	
+}
+//变量取值
+function getVar(container,name){		
+	var arr = cvtStrToArr(container.varibles,"|",":");	
+	if(arr == null)	return null;	
+	for(var i=0; i < arr.length; i++)			
+		if(arr[i][0] == name)
+			return arr[i][1];
+	return null;
+		
+}
+//辅助方法1
+function cvtStrToArr(str,varSplit,inVarSplit){
+	if(str == null) return null;    
+	var pos = str.indexOf(varSplit);			
+	var arr = new Array();
+	var tempVar = null;
+	var varArr = null;
+	while(pos >= 0){	
+		tempVar = str.substring(0,pos - varSplit.length + 1);			
+		varArr = new Array();
+		varArr[0] = tempVar.substring(0,tempVar.indexOf(inVarSplit) -  inVarSplit.length + 1);  //变量名字
+		varArr[1] = tempVar.substring(tempVar.indexOf(inVarSplit) + inVarSplit.length);         //变量值		
+		arr[arr.length] = varArr;	
+		str = str.substring(pos + varSplit.length);		
+		pos = str.indexOf(varSplit);
+	}
+	if(str != ""){
+		varArr = new Array();
+		varArr[0] = str.substring(0,str.indexOf(inVarSplit) -  inVarSplit.length + 1);      //变量名字
+		varArr[1] = str.substring(str.indexOf(inVarSplit) + inVarSplit.length);             //变量值
+		arr[arr.length] = varArr;		
+	}	
+	return arr;
+}
+//辅助方法2
+function cvrArrToStr(arr,varSplit,inVarSplit){
+	if(arr == null)	return "";
+	var str = "";	
+	
+	for(var i=0; i < arr.length; i++){		
+		if( i == arr.length - 1)
+			str = str + arr[i][0] + inVarSplit + arr[i][1];
+		else
+			str = str + arr[i][0] + inVarSplit + arr[i][1] + varSplit;		
+	}
+	return str;		
+}
+/********* 以上方法用于构建一个页面变量容器 ***************************/
+</SCRIPT>
+	

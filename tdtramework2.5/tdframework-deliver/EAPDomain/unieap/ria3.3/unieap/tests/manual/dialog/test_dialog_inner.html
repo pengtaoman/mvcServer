@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>unieap.dialog.Dialog Unit Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+			@import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true"></script>
+        <script>
+        	dojo.require("unieap.dialog.Dialog");
+           dojo.require("unieap.dialog.DialogUtil");
+		   var inner = "对话框显示的内容预先定义，可以为字符串或Dom对象"
+		   function testInner() {
+		   	   var dialog = new unieap.dialog.Dialog({inner:inner});
+			   dialog.show(document.getElementById("test1")); 
+		   }
+		   function testUrl() {
+		   	   var dialog = new unieap.dialog.Dialog({url:"inner.html"});
+			   dialog.show(document.getElementById("test2")); 
+		   }
+        </script>
+    </head>
+    <body class="unieap">
+    	事先写好内容的对话框
+    	<input type="button" value="弹出对话框" onclick="testInner()" id="test1">
+		<!--<div dojoType="unieap.dialog.Dialog" inner="tt">-->
+		<br>
+		对话框的内容指向一个连接
+    	<input type="button" value="弹出对话框" onclick="testUrl()" id="test2">
+    </body>
+</html>
+

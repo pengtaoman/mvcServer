@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+<repository debug="true" message="true" exception="false">
+	<locators>
+	    <locator name="comp_datastore" provider="javabean"></locator>
+	    
+         <!--  WinClient wanted -->
+	    <locator name="CreateDataStoreInteraction" provider="javabean"></locator>
+	    <locator name="DBSysdateInteraction" provider="javabean"></locator>
+	    <locator name="SqlQueryInteraction" provider="javabean"></locator>
+	</locators>
+	<providers>
+		<provider name="javabean" classname="com.neusoft.unieap.bl.provider.javabean.JavaBeanProvider" configpath="" configfile="provider_javabean.xml"></provider>
+	</providers>
+</repository>

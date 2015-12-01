@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaseConfig>
+	<JSRoot>/$WEB_APP_NAME/unieap/js/</JSRoot>
+	<link rel="stylesheet" href="" type="text/css" />
+	<JS>
+		<JSName>Globals.js</JSName>
+		<JSName>Common.js</JSName>
+		<JSName>Tree.js</JSName>
+		<JSName>BaseObj.js</JSName>
+		<JSName>EAPObjsMgr.js</JSName>
+		<JSName>NumberObj.js</JSName>
+		<JSName>DateObj.js</JSName>
+		<JSName>DoubleObj.js</JSName>
+		<JSName>IDCardObj.js</JSName>
+		<JSName>IntegerObj.js</JSName>
+		<JSName>MoneyObj.js</JSName>
+		<JSName>PasswordConfirmObj.js</JSName>
+		<JSName>PasswordObj.js</JSName>
+		<JSName>PosIntegerObj.js</JSName>
+		<JSName>ReadOnlyFieldObj.js</JSName>
+		<JSName>ReadOnlyObj.js</JSName>
+		<JSName>TextObj.js</JSName>
+		<JSName>TextAreaObj.js</JSName>
+		<JSName>SelectObj.js</JSName>
+		<JSName>QuickSelectObj.js</JSName>
+		<JSName>FormatNumber.js</JSName>
+		<JSName>CursorDispose.js</JSName>	
+		<JSName>EmailObj.js</JSName>
+	</JS>
+</BaseConfig>

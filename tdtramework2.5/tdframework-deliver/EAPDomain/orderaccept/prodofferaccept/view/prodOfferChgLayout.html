@@ -1,0 +1,58 @@
+<div id='orderDetailContainer' dojoType='unieap.layout.BorderContainer'>
+	<!--
+		<div dojoType='unieap.layout.BorderPane' region='bottom' title='支付关系' height='30%'></div>
+	 -->
+	<div dojoType='unieap.layout.BorderPane' region='center' title='销售品受理' id='prodOfferAcceptPane'>
+		<!--订单信息 -->
+		<div dojoType='unieap.layout.TitlePane' id='orderInfoPane'
+			title='订单信息' open='false'></div>
+		<!--基础包受理 -->
+		<div dojoType='unieap.layout.TitlePane' id='mainProdOfferPane'
+			title='基础包受理' open='false'></div>
+		<!-- 可选包受理-->
+		<div dojoType='unieap.layout.TitlePane' title='可选包受理' open='false' id="subProdOfferPane"
+			height='40%'>
+			<div id='subProdOfferTreeContainer'
+				dojoType='unieap.layout.BorderContainer'>
+				<div dojoType='unieap.layout.BorderPane' id='subProdOfferBorderPan'
+					region='left' title='可选包目录树' width='20%'>
+				<div id='subProdOfferTab' dojoType='unieap.layout.TabContainer' height='100%'>
+					<div dojoType='unieap.layout.ContentPane' id='subProdOfferquickAcceptPane' title='便捷受理'>
+						<div id='subProdOfferAccordionContainer' dojoType='unieap.layout.AccordionContainer' height='100%'>
+							<div dojoType='unieap.layout.AccordionPane' id='subProdOfferPersonalCollectResult' title='个人收藏'></div>
+						</div>
+					</div>
+					<div dojoType='unieap.layout.ContentPane' id='subProdOfferTreePane' title='可选包目录树'></div>
+				</div>	
+				</div>
+				
+				<div dojoType='unieap.layout.BorderPane' id='subProdOfferCart'
+					region='center' title='可选包购物车'></div>
+			</div>
+		</div>
+		<!-- 促销政策受理-->
+		<div dojoType='unieap.layout.TitlePane' title='促销政策受理' open='false' id ="promotionPane"
+			style="overflow: auto" height='40%'>
+			<div id='promotionTreeContainer'
+				dojoType='unieap.layout.BorderContainer'>
+				<div dojoType='unieap.layout.BorderPane' id='PromotionTreePane'
+					region='left' title='促销政策目录树' width='20%'></div>
+				<div dojoType='unieap.layout.BorderPane' id='PromotionCart'
+					region='center' title='促销政策购物车'></div>
+			</div>
+		</div>
+		<!-- 促销政策受理结束-->
+		<!-- 选择支付关系-->
+		<div dojoType='unieap.layout.TitlePane' title='选择支付关系' open='false'
+			style="overflow: auto"  id ='payRelationPane'>
+		</div>
+		<!-- 选择支付关系-->
+		<!-- 经办人信息-->
+		<div dojoType='unieap.layout.TitlePane' title='经办人信息' open='false'
+			style="overflow: auto"  id ='viaInfoPane'>
+		</div>
+		<!-- 经办人信息-->
+	</div>
+	<!-- 销售品受理结束 -->
+</div>
+<!--  整体border 布局结束 -->

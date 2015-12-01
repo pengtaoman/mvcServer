@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--a  edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User)  a-->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>quartz applicationContext pool</description>	
+						
+	<bean id="CrmOrderJob1"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.demojob.CrmOrderJob" />
+		<property name="group" value="ThreadPool1" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger1"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob1" />
+		<property name="group" value="ThreadPool1" />
+		<property name="name" value="Trigger1" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	
+	<bean id="stdScheduler1"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="autoStartup" value="false" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz-tddemo.properties" />
+		<property name="startupDelay" value="5"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger1" />
+			</list>
+		</property>
+		<property name="schedulerName" value="stdScheduler1"/>
+	</bean>
+	
+	<bean id="CrmOrderJob2"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.demojob.CrmOrderJob" />
+		<property name="group" value="ThreadPool2" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger2"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob2" />
+		<property name="group" value="ThreadPool2" />
+		<property name="name" value="Trigger2" />
+		<property name="cronExpression" value="1/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler2"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+
+		<property name="autoStartup" value="false" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz-tddemo.properties" />
+		<property name="startupDelay" value="6"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger2" />
+			</list>
+		</property>
+		<property name="schedulerName" value="stdScheduler2"/>
+	</bean>	
+	
+	<bean id="CrmOrderJob3"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.demojob.CrmOrderJob" />
+		<property name="group" value="ThreadPool3" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger3"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob3" />
+		<property name="group" value="ThreadPool3" />
+		<property name="name" value="Trigger3" />
+		<property name="cronExpression" value="2/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler3"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="autoStartup" value="false" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz-tddemo.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger3" />
+			</list>
+		</property>
+		<property name="schedulerName" value="stdScheduler3"/>
+	</bean>	
+	
+	<bean id="CrmOrderJob4"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.demojob.CrmOrderJob" />
+		<property name="group" value="ThreadPool4" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger4"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob4" />
+		<property name="group" value="ThreadPool4" />
+		<property name="name" value="Trigger4" />
+		<property name="cronExpression" value="3/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler4"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="autoStartup" value="false" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz-tddemo.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger4" />
+			</list>
+		</property>
+		<property name="schedulerName" value="stdScheduler4"/>
+	</bean>	
+	
+	<!-- 
+	<bean id="CrmOrderJob5"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool5" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger5"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob5" />
+		<property name="group" value="ThreadPool5" />
+		<property name="name" value="Trigger5" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler5"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_5.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger5" />
+			</list>
+		</property>
+	</bean>	
+	
+	<bean id="CrmOrderJob6"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool6" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger6"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob6" />
+		<property name="group" value="ThreadPool6" />
+		<property name="name" value="Trigger6" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler6"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_6.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger6" />
+			</list>
+		</property>
+	</bean>	
+	
+	<bean id="CrmOrderJob7"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool7" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger7"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob7" />
+		<property name="group" value="ThreadPool7" />
+		<property name="name" value="Trigger7" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler7"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_7.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger7" />
+			</list>
+		</property>
+	</bean>	
+	
+	<bean id="CrmOrderJob8"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool8" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger8"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob8" />
+		<property name="group" value="ThreadPool8" />
+		<property name="name" value="Trigger8" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler8"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_8.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger8" />
+			</list>
+		</property>
+	</bean>	
+	
+	<bean id="CrmOrderJob9"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool9" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger9"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob9" />
+		<property name="group" value="ThreadPool9" />
+		<property name="name" value="Trigger9" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler9"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_9.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger9" />
+			</list>
+		</property>
+	</bean>	
+	
+	<bean id="CrmOrderJob10"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool10" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger10"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob10" />
+		<property name="group" value="ThreadPool10" />
+		<property name="name" value="Trigger10" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler10"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_10.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger10" />
+			</list>
+		</property>
+	</bean>	
+	
+	<bean id="CrmOrderJob11"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.job.CrmOrderJob" />
+		<property name="group" value="ThreadPool11" />
+		<property name="durability" value="true"/>
+	</bean>	
+	<bean id="CronTrigger11"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CrmOrderJob11" />
+		<property name="group" value="ThreadPool11" />
+		<property name="name" value="Trigger11" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>	
+	<bean id="stdScheduler11"
+		class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">       
+			<ref bean="crmB_dataSource"/>
+		</property>
+		<property name="schedulerListeners">
+			<list>
+				<ref bean="notifySchedulerListener"/>
+			</list>
+		</property>
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="notifyJobListener"/>
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="notifyTriggerListener"/>
+			</list>
+		</property>
+		<property name="autoStartup" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz_config/quartz_config_11.properties" />
+		<property name="startupDelay" value="7"/>
+		<property name="overwriteExistingJobs" value="false"/>
+		<property name="triggers">
+			<list>
+				<ref bean="CronTrigger11" />
+			</list>
+		</property>
+	</bean>	 -->
+</beans>

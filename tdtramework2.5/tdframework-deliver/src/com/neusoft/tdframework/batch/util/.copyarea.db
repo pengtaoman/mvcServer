@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\batch\util
+2
+3
+16:BatchFileImporter.java|1|13b8968d149|ccd|a484674a|40e3a208d4f742b6ba9758fafc3b5a22|0
+10:IFileParser.java|1|13b8968d214|95|6d3d326d|45b3530831ad413aa4bfd8d13890cea7|0
+12:BatchFileUtil.java|1|13b8968d1a7|76f|6ea5536d|9e89c032155f436f9bd6b24008958fce|0

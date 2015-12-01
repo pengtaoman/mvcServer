@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--a  edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User)  a-->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Ordermgr applicationContext</description>
+
+	<bean id="prodInstFacadeBO"
+		class="com.neusoft.crm.ordermgr.common.outerinterface.productinst.bo.ProdInstFacadeBOImpl">
+		<property name="prodInstDAO">
+			<ref bean="prodInstDAO" />
+		</property>
+		<property name="serviceRelationDAO">
+			<ref bean="serviceRelationDAO" />
+		</property>
+		<property name="prodInstRelaDAO">
+			<ref bean="prodInstRelaDAO" />
+		</property>
+		<property name="offerProdInstRelaDAO">
+			<ref bean="offerProdInstRelaDAO" />
+		</property>
+		<property name="customerParamBO">
+			<ref bean="customerParamBO" />
+		</property>
+		<property name="offerInstDAO">
+			<ref bean="offerInstDAO" />
+		</property>
+	</bean>
+</beans>

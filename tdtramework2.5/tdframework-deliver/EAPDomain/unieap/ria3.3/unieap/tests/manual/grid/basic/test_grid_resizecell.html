@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - 拖动改变列宽</title>
+		<style type="text/css">
+			@import "../../../blackbird/blackbird.css";
+			@import "../../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+
+		<script type="text/javascript" src="../../../blackbird/blackbird.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shBrushXml.js"></script>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:false,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.grid.Grid");
+			dojo.addOnLoad(function(){
+				logger.profile("grid");
+				dojo.parser.parse();
+				logger.profile("grid");
+				dp.SyntaxHighlighter.HighlightAll('code');
+			});
+        </script>
+		<script type="text/javascript" src="test_grid_binding.js"></script>
+    </head>
+    <body class="unieap">
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - 拖动改变列宽"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="500px" height="300px"
+			binding="{store:'empDataStore'}"
+			views="{rowNumber:true,orderType:'client'}">
+			<fixed>
+				<cell label="员工编号" width="150" name="attr_empno"></cell>
+			</fixed>
+			<header>
+				<cell width="100px" label="姓名" name="NAME"></cell>
+				<cell width="150px" label="职位" name="attr_job"></cell>
+				<cell width="150px" label="工资" name="attr_sal" dataType="number"></cell>
+			</header>
+		</div>
+		<div dojoType="unieap.layout.TitlePane" open="open" title="说明">
+			<span style="font-size:14px;">1，鼠标停在表头两列分界处，查看鼠标是否变化为准备拖动样式；</span>
+			<br>
+			<span style="font-size:14px;">2，按下鼠标，查看拖动辅助线是否出现在鼠标处；</span>
+			<br>
+			<span style="font-size:14px;">3，移动鼠标，查看辅助线是否跟随鼠标在水平方向移动，并终止于表格内或列宽度为0前；</span>
+			<br>
+			<span style="font-size:14px;">4，松开鼠标，查看表格列宽是否正确更新，同时横向滚动条应该不会自动回到左侧初始位置。</span>
+		</div>
+		
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuit>
+
+		
+	<testcase filename="test_grid_deleteAndAdd.html" folder="ui/grid/edit/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		
+		<method id="testDelete" snapshot="true" depends="">
+			<event id="deleteAll"  name="onClick" value=""/>
+		</method>
+		
+		<method id="testAdd" snapshot="true" depends="">
+			<event id="addRows"  name="onClick" value=""/>
+		</method>
+	</testcase>	
+	
+
+	<testcase filename="test_grid_edit.html" folder="ui/grid/edit/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		
+		<method id="testEdit" snapshot="true" depends="">
+			<event id="editButton"  name="onClick" value=""/>
+		</method>
+		
+	</testcase>	
+
+	
+	<testcase filename="test_grid_editWithCheckBoxRadio.html" folder="ui/grid/edit/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+	</testcase>	
+		
+	<testcase filename="test_grid_insertRow.html" folder="ui/grid/edit/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		
+		<method id="testInsert" snapshot="true" depends="">
+			<event id="insertRowButton"  name="onClick" value=""/>
+		</method>
+		
+		<method id="testInsert" snapshot="true" depends="">
+			<event id="insertRowButton"  name="onClick" value=""/>
+		</method>
+		
+		<method id="testDelete" snapshot="true" depends="">
+			<event id="deleteRowButton"  name="onClick" value=""/>
+		</method>
+		
+		<method id="testGetSelected" snapshot="true" depends="">
+			<event id="getSelectedButton"  name="onClick" value=""/>
+		</method>
+		
+		<method id="testDeleteSeleted" snapshot="true" depends="">
+			<event id="deleteSelectedButton"  name="onClick" value=""/>
+		</method>
+		
+	</testcase>	
+			
+
+	
+	<testcase filename="test_grid_scorll.html" folder="ui/grid/edit/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		<method id="testInsert" snapshot="true" depends="">
+			<event id="insertRowButton"  name="onClick" value=""/>
+		</method>
+	</testcase>	
+	
+	<testcase filename="test_grid_trigger.html" folder="ui/grid/edit/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		<method id="testChange" snapshot="true" depends="">
+			<event id="changeBuntton"  name="onClick" value=""/>
+		</method>
+	</testcase>	
+</testsuit>

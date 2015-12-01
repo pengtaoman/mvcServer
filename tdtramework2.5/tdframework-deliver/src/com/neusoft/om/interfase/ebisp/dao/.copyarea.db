@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\interfase\ebisp\dao
+2
+4
+10:UserDAOImpl.java|1|13b8967694a|99a1|c5308530|3fb1b350499d450593e95894c994ed69|0
+c:UserDAO.java|1|13b896768cd|12b7|8696b0c6|f103bbd73c174dd08867a98ce78b4c20|0
+18:DataTransferDAOImpl.java|1|13b89676850|4a22|ceac7f38|378d5529ad25496886bf86720542f9f5|0
+14:DataTransferDAO.java|1|13b89676811|1cc|dafba0f7|25400918502842f4af58a32dd9cf0b45|0

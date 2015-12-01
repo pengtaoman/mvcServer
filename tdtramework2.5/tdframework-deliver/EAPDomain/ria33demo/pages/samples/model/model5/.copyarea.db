@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\ria33demo\pages\samples\model\model5
+2
+6
+17:model5_query_dialog.jsp|1|13b89091b4d|839|a895a159|2403e059ab4a4b35b9c4d90d7a19d39b|0
+16:model5_edit_dialog.jsp|1|13b89091ad0|881|136872e7|0ea792c5ec5c4b1886917847ebfeca65|0
+16:model5_query_dialog.js|1|13b89091b0f|845|55ddb92e|3453f4342d2f4e46bb4b2e5cd1f670f2|0
+9:model5.js|1|13b89091a34|d88|473e8b15|252bb53c8ff54e11ad5a11afa2d7efd0|0
+15:model5_edit_dialog.js|1|13b89091a92|3f7|987a4e97|67c3116f63754687b9d4288a843903fc|0
+a:model5.jsp|1|13b89091a63|ddb|3b407c0f|653a5fab826d42fa9561f38b57ee9b08|0

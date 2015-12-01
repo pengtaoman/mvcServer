@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>修改成有意义的Title</title>
+        <link href="../../../../themes/default/css/unieap.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'"></script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../../../../../unieap/rpc.js"></script>
+        <script type="text/javascript" src="../../../../../unieap/global.js"></script>
+        <script type="text/javascript" src="data.js" ></script>
+		
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.form.TextBox");
+			dojo.require("unieap.form.NumberTextBox");
+			dojo.require("unieap.form.DateTextBox");
+			dojo.require("unieap.form.CheckBoxGroup");
+			dojo.require("unieap.form.RadioButtonGroup");
+			dojo.require("unieap.form.Form");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.dialog.MessageBox");
+			dojo.require("unieap.grid.Grid");
+			
+			var ds=new unieap.ds.DataStore("demo",[
+				{empno:'1001',ename:'基础软件',birth:'2000-01-01'},
+				{empno:'1002',ename:'电力',birth:'1995-02-01'},
+				{empno:'1003',ename:'电信',birth:'199601-01'}
+			]);
+			
+			ds.addMetaData("empno",{nullable:false,precision:5,dataType:4});
+			
+			dataCenter.addDataStore(ds);
+			
+			dojo.addOnLoad(function(){
+				unieap.byId("form").getBinding().setDataStore(ds,0);
+				unieap.byId("grid").getBinding().setDataStore(ds)
+			})
+			
+			function validate(){
+				unieap.byId("form").validate();
+			}
+			
+			function getWidget(){
+				unieap.byId("form").validate(false);
+				var widget=unieap.byId("form").getInvalidWidget();
+				if(!widget){alert("恭喜您，校验通过!");return}
+				alert("不合法控件的类型为:"+widget.declaredClass+",id为"+widget.id);
+			}
+			
+			function validateGrid(){
+				unieap.byId("grid").validate();
+			}
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+				测试功能点：
+				<li>Form主动校验自动提示错误信息</li>
+				<li>校验不通过时，获得第一个校验不通过的控件</li>
+				<li>Grid数据校验</li>
+				<li>CheckGroup的必填项校验</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height=500px style="float:left;width:35%" >
+			<form dojoType="unieap.form.Form" id="form">
+				<label>编号</label>:<div dojoType="unieap.form.NumberTextBox"  binding="{name:'empno'}"  id="empNumber"></div><p></p>
+				<label style="margin-top:5px" >姓名</label>:<div dojoType="unieap.form.TextBox" id="empName" validator="{regExp:/^[a-zA-Z]+$/,errorMsg:'姓名只能为字母'}" style='margin-top:5px'  binding="{name:'ename'}"></div><p></p>
+				<label style="margin-top:5px" >日期</label>:<div dojoType="unieap.form.DateTextBox" valueFormatter="{dataFormat:'yyyy-MM-dd'}"  style='margin-top:5px' binding="{name:'birth'}"></div><p></p>
+				<label style="margin-top:5px" >位置</label>:<div dojoType="unieap.form.CheckBoxGroup" required="true" width="220"  binding="{name:'city',bindIndex:0}" dataProvider="{store:test}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div><p></p>
+				<label style="margin-top:5px" >位置</label>:<div dojoType="unieap.form.RadioButtonGroup" required="true" width="220"  binding="{name:'city',bindIndex:0}" dataProvider="{store:test}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div><p></p>
+			</form>
+			
+			<div style='padding:5px 0 5px 0'></div>
+			<div dojoType="unieap.form.Button" style='margin-right:5px' label="主动校验" onClick="validate"></div>
+			<div dojoType="unieap.form.Button" label="获得输入不合法的控件" onClick="getWidget"></div>
+			
+			<p style="padding:10px 0 10px 0"></p>
+			
+			<div dojoType="unieap.grid.Grid" id="grid" edit="{editType:'cellEdit'}" height="150px" >
+				<header>
+					<cell name="empno" label="编号" editor="{editorClass:'unieap.form.NumberTextBox'}"></cell>
+					<cell name="ename" label="姓名" editor="{editorClass:'unieap.form.TextBox',editorProps:{validator:{regExp:/^[a-zA-Z]+$/,errorMsg:'姓名只能为字母'}}}"></cell>
+				</header>
+			</div>
+			<div dojoType="unieap.form.Button" style="margin-top:10px" label="校验grid" onClick="validateGrid"></div>
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height=500px style="float:right;width:65%">
+			<table border="1" bordercolor="#99BBE8">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:middle">Form主动校验</td>
+					<td style="vertical-align:middle">点击<b>主动校验</b>按钮</td>
+					<td style="vertical-align:middle">如果global.js中的errorPrompt为true则提示错误信息,否则不提示</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:middle">获得校验不通过的控件</td>
+					<td style="vertical-align:middle">点击<b>获得输入不合法的控件</b>按钮</td>
+					<td style="vertical-align:middle">弹出输入不合法控件的类型、id</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:middle">Grid数据校验</td>
+					<td style="vertical-align:middle">点击<b>校验grid按钮</b>按钮</td>
+					<td style="vertical-align:middle">如果global.js中的errorPrompt为true则提示错误信息,否则不提示</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

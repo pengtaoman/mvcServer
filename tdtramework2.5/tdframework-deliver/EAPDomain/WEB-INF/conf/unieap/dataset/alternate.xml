@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<dataSetConf xmlns="http://www.neusoft.com/schemas/unieap/dataset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neusoft.com/schemas/unieap/dataset
+C:\DOCUME~1\Administrator\桌面\DATASET\dataSet.xsd">
+	<dataSourceName/>
+		<pageSize>5</pageSize>
+	<auth>INSERT</auth>
+	<auth>UPDATE</auth>
+	<auth>DELETE</auth>
+	<tables>
+		<table tableName="alternate_test" isPrimary="true">
+			<pk pkName="name" dataType="12" isAutoIncrement="false"/>
+			<pk pkName="age" dataType="4" isAutoIncrement="false"/>
+			<pk pkName="province" dataType="12" isAutoIncrement="false"/>
+			<pk pkName="city" dataType="12" isAutoIncrement="false"/>
+			<pk pkName="postno" dataType="4" isAutoIncrement="false"/>
+		</table>
+	</tables>
+	<attributes>
+		<attribute attrName="attr_name" isFakeColumn="false" dataType="12" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="20" columnName="name" isNullable="false" index="1" tableName="alternate_test"/>
+		<attribute attrName="attr_age" isFakeColumn="false" dataType="4" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="2" columnName="age" isNullable="false" index="2" tableName="alternate_test"/>
+		<attribute attrName="attr_dept" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="20" columnName="dept" isNullable="true" index="3" tableName="alternate_test"/>
+		<attribute attrName="attr_province" isFakeColumn="false" dataType="12" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="4" columnName="province" isNullable="false" index="4" tableName="alternate_test"/>
+		<attribute attrName="attr_city" isFakeColumn="false" dataType="12" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="20" columnName="city" isNullable="false" index="5" tableName="alternate_test"/>
+		<attribute attrName="attr_postno" isFakeColumn="false" dataType="4" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="5" columnName="postno" isNullable="false" index="6" tableName="alternate_test"/>
+	</attributes>
+	
+	<fixedFilters>
+		<!--注意在xml配置中的特殊字符要进行转换-->
+		<fixedFilter>alternate_test.name like '%'</fixedFilter>
+	</fixedFilters>
+	<fixedOrdering> alternate_test.name</fixedOrdering>
+</dataSetConf>

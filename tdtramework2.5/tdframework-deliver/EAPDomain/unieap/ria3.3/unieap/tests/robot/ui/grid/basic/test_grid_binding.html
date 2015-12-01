@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - binding模块</title>
+		<style type="text/css">
+			@import "../../../../../../unieap/themes/default/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../../dojo/dojo.js" djConfig="parseOnLoad:false,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+			dojo.require("testunit.TestUnit");
+			dojo.require("unieap.grid.Grid");
+        </script>
+		<script type="text/javascript" src="test_grid_binding.js"></script>
+    </head>
+    <body class="unieap">
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - binding模块"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="500px" height="300px"
+			binding="{store:'empDataStore'}"
+			views="{rowNumber:true,orderType:'client'}">
+			<fixed>
+				<cell label="员工编号" width="150" name="attr_empno"></cell>
+			</fixed>
+			<header>
+				<cell width="100px" label="姓名" name="NAME"></cell>
+				<cell width="150px" label="职位" name="attr_job"></cell>
+				<cell width="150px" label="工资" name="attr_sal" dataType="number"></cell>
+			</header>
+		</div>
+		<table border="1">
+			<tr>
+				<th>测试</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td><button onclick="setDataStore()" style="text-align: left;" id="setDataStoreButton">binding.setDataStore(anotherStore)</button></td>
+				<td>重新设置Grid的数据源（DataStore）</td>
+			</tr>
+			<tr>
+				<td><button onclick="getRowCount()" style="text-align: left;" id="getRowCountButton">binding.getRowCount()</button></td>
+				<td>取得表格数据行数</td>
+			</tr>
+		</table>
+		
+    </body>
+</html>

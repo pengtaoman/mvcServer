@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	</form-beans>
+	<action-mappings>
+    <action path="/resourceCategoryTree" type="com.neusoft.uniflow.web.extension.report.web.action.ResourceCategoryTree" />
+    <action path="/orgTree" type="com.neusoft.uniflow.web.extension.report.web.action.OrgTree" />
+    <action path="/ShowWFStat" type="com.neusoft.uniflow.web.extension.report.web.action.ShowWFStat">
+    	<forward name="error" path="/unieap/pages/workflow/extension/report/ReportDefineNotFound.jsp" />
+    	<forward name="succ" path="/Report-ResultAction.do" />
+    </action>
+	</action-mappings>
+</struts-config>

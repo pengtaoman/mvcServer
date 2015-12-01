@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<pdDatas><numOfRows>5</numOfRows><numOfCols>10</numOfCols><externalParas/><pdData><name>sql</name><xStart>0</xStart><yStart>1</yStart><xEnd>0</xEnd><yEnd>3</yEnd><data>select 100,200,300 from dual</data><type>1</type></pdData></pdDatas>

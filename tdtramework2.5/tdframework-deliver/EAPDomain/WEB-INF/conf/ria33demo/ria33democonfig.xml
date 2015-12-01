@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eapConfig>
+   <component name="bl" isEnabled="false" handler="com.neusoft.unieap.config.handler.BLConfigHandler" description="">
+      <CONFIG_PATH>/WEB-INF/conf/ria33demo/bl</CONFIG_PATH>
+      <CONFIG_FILE>applicationContext-bl.xml apllicationContext-demo.xml applicationContext-domain.xml applicationContext-pracDemo.xml</CONFIG_FILE>
+   </component>
+   <component name="menu" isEnabled="false" handler="com.neusoft.unieap.config.handler.MenuConfigHandler" description="">
+      <MENU_ACCESS>com.neusoft.unieap.comp.menu.access.DatabaseMenu</MENU_ACCESS>
+	  <MENU_PERMISSION>com.neusoft.unieap.service.orgnization.security.resource.menu.RolesPermissionsAdapter</MENU_PERMISSION>
+      <MENU_PROPERTY name="table" value="up_ria33_menu" />
+   </component>
+</eapConfig>

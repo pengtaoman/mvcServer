@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RIA3.3</title>
+<style>
+	@import "../blackbird.css";
+</style>
+<script type="text/javascript" src="../blackbird.js"></script>
+<script type="text/javascript">
+	logger.profile("form");
+</script>
+<style>
+	@import "../../../themes/default/css/unieap-all.css";
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug:false,parseOnLoad: false" ></script>
+<script type="text/javascript" src="../../../../dijit/dijit.js"></script>
+<script type="text/javascript" src="../../../../unieap/unieap-all.js"></script>
+
+<script type="text/javascript" src="../data.js"></script>
+<script type="text/javascript" src="test_form.js"></script>
+<script type="text/javascript">
+ 
+	 var  dataCenter= new unieap.ds.DataCenter();
+	var store = new unieap.ds.DataStore("emp",[{comboboxtree:"changestore",radiogroup:"16",checkbox:"是",number:1,radio:"1",btn:"动态按钮",order:"123",shipments:"1999-01-01",arrival:"2009-07-06",customer:"456",owner:"14",freightBusiness:"王五",charges:3000,city:"15,16"}]);
+	dataCenter.addDataStore(store);
+	function fn(){
+		dijit.byId('zl').setChecked(false);
+	
+	}
+</script>
+</head>
+<body class="unieap">
+	<b>表单所有组件用例</b>
+	<form dojoType="unieap.form.Form" binding="{store:'emp'}">
+	<table style="table-layout:fixed;border:1px solid #000;font-size:12px;width:1200px;">
+		<tr>
+			<td width="100">输入域：</td><td><div required="true" dojoType="unieap.form.NumberTextBox" binding="{name:'order',bindIndex:0}" ></div></td>
+			<td width="100">日期：</td><td><div dojoType="unieap.form.DateTextBox" binding="{name:'shipments',bindIndex:0}" displayFormatter="{dataFormat:'yyyy-MM-dd'}" valueFormatter="{dataFormat:'yyyy-MM-dd'}" ></div></td>
+			<td width="100">密码：</td><td><div dojoType="unieap.form.TextBox" password="true"  binding="{name:'arrival',bindIndex:0}"></div></td>
+		</tr>
+		<tr>
+			<td>文件上传：</td><td ><div dojoType="unieap.form.FileInput" ></div></td>
+			<td>带图片输入域：</td><td><div dojoType="unieap.form.TextBoxWithIcon" binding="{name:'owner',bindIndex:0}"></div></td>
+			<td>下拉列表：</td><td><div dojoType="unieap.form.ComboBox" binding="{name:'owner',bindIndex:0}" dataProvider="{'store':test}"></div></td>
+		</tr>
+		<tr>
+			<td>文本域：</td><td><div dojoType="unieap.form.Textarea" binding="{name:'freightBusiness',bindIndex:0}" validator="{errorMsg:'只能输入汉字',instanceCheck:true,regExp:/^[\u4E00-\u9FA5]+$/}"></div></td>
+			<td>只读域：</td><td><div dojoType="unieap.form.InlineEditBox" binding="{name:'charges',bindIndex:0}" editor="{editorClass:'unieap.form.NumberTextBox',editorProps:{displayFormatter:{dataFormat:'$#,###.00'}}}"></div></td>
+			<td>复选按钮组：</td><td><div dojoType="unieap.form.CheckBoxGroup"  binding="{name:'city',bindIndex:0}" dataProvider="{store:test}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div></td>
+		</tr>	
+		<tr>
+			<td>下拉树：</td><td><div dojoType="unieap.form.ComboBoxTree" binding="{name:'comboboxtree',bindIndex:0}" popup="{width:'250px',height:'350px'}"  treeJson="{label:'Unieap',binding: {store: 'menuTree',leaf: 'leaf',parent:'parentID',query: {name: 'parentID',relation: '=',value: '1212403325756'}}}" required="true"></div></td>
+			<td>单选按钮组：</td><td><div dojoType="unieap.form.RadioButtonGroup" binding="{name:'radiogroup',bindIndex:0}" dataProvider="{store:c}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div></td>
+			<td>复选按钮：</td><td><div dojoType="unieap.form.CheckBox"  binding="{name:'checkbox',bindIndex:0}" checkedValue="是"  uncheckedValue="否"></div></td>
+		</tr>	
+		<tr>
+			<td>单选按钮：</td><td><div dojoType="unieap.form.RadioButton" binding="{name:'radio',bindIndex:0}" ></div></td>
+			<td>数字文本：</td><td><div dojoType="unieap.form.NumberTextBox" binding="{name:'number',bindIndex:0}" ></div></td>
+			<td>绑定按钮：</td><td><div dojoType="unieap.form.Button"  binding="{name:'btn',bindIndex:0}" ></div></td>
+		</tr>	
+	</table>
+		<table style="table-layout:fixed;border:1px solid #000;font-size:12px;width:1200px;">
+		<tr>
+			<td width="100">输入域：</td><td><div required="true" dojoType="unieap.form.NumberTextBox" binding="{name:'order',bindIndex:0}" ></div></td>
+			<td width="100">日期：</td><td><div dojoType="unieap.form.DateTextBox" binding="{name:'shipments',bindIndex:0}" displayFormatter="{dataFormat:'yyyy-MM-dd'}" valueFormatter="{dataFormat:'yyyy-MM-dd'}" ></div></td>
+			<td width="100">密码：</td><td><div dojoType="unieap.form.TextBox" password="true"  binding="{name:'arrival',bindIndex:0}"></div></td>
+		</tr>
+		<tr>
+			<td>文件上传：</td><td ><div dojoType="unieap.form.FileInput" ></div></td>
+			<td>带图片输入域：</td><td><div dojoType="unieap.form.TextBoxWithIcon" binding="{name:'owner',bindIndex:0}"></div></td>
+			<td>下拉列表：</td><td><div dojoType="unieap.form.ComboBox" binding="{name:'owner',bindIndex:0}" dataProvider="{'store':test}"></div></td>
+		</tr>
+		<tr>
+			<td>文本域：</td><td><div dojoType="unieap.form.Textarea" binding="{name:'freightBusiness',bindIndex:0}" validator="{errorMsg:'只能输入汉字',instanceCheck:true,regExp:/^[\u4E00-\u9FA5]+$/}"></div></td>
+			<td>只读域：</td><td><div dojoType="unieap.form.InlineEditBox" binding="{name:'charges',bindIndex:0}" editor="{editorClass:'unieap.form.NumberTextBox',editorProps:{displayFormatter:{dataFormat:'$#,###.00'}}}"></div></td>
+			<td>复选按钮组：</td><td><div dojoType="unieap.form.CheckBoxGroup"  binding="{name:'city',bindIndex:0}" dataProvider="{store:test}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div></td>
+		</tr>	
+		<tr>
+			<td>下拉树：</td><td><div dojoType="unieap.form.ComboBoxTree" binding="{name:'comboboxtree',bindIndex:0}" popup="{width:'250px',height:'350px'}"  treeJson="{label:'Unieap',binding: {store: 'menuTree',leaf: 'leaf',parent:'parentID',query: {name: 'parentID',relation: '=',value: '1212403325756'}}}" required="true"></div></td>
+			<td>单选按钮组：</td><td><div dojoType="unieap.form.RadioButtonGroup" binding="{name:'radiogroup',bindIndex:0}" dataProvider="{store:c}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div></td>
+			<td>复选按钮：</td><td><div dojoType="unieap.form.CheckBox"  binding="{name:'checkbox',bindIndex:0}" checkedValue="是"  uncheckedValue="否"></div></td>
+		</tr>	
+		<tr>
+			<td>单选按钮：</td><td><div dojoType="unieap.form.RadioButton"  binding="{name:'radio',bindIndex:0}" ></div></td>
+			<td>数字文本：</td><td><div dojoType="unieap.form.NumberTextBox" binding="{name:'number',bindIndex:0}" ></div></td>
+			<td>绑定按钮：</td><td><div dojoType="unieap.form.Button"  binding="{name:'btn',bindIndex:0}" ></div></td>
+		</tr>	
+	</table>
+	<table style="table-layout:fixed;border:1px solid #000;font-size:12px;width:1200px;">
+		<tr>
+			<td width="100">输入域：</td><td><div required="true" dojoType="unieap.form.NumberTextBox" binding="{name:'order',bindIndex:0}" ></div></td>
+			<td width="100">日期：</td><td><div dojoType="unieap.form.DateTextBox" binding="{name:'shipments',bindIndex:0}" displayFormatter="{dataFormat:'yyyy-MM-dd'}" valueFormatter="{dataFormat:'yyyy-MM-dd'}" ></div></td>
+			<td width="100">密码：</td><td><div dojoType="unieap.form.TextBox" password="true"  binding="{name:'arrival',bindIndex:0}"></div></td>
+		</tr>
+		<tr>
+			<td>文件上传：</td><td ><div dojoType="unieap.form.FileInput" ></div></td>
+			<td>带图片输入域：</td><td><div dojoType="unieap.form.TextBoxWithIcon" binding="{name:'owner',bindIndex:0}"></div></td>
+			<td>下拉列表：</td><td><div dojoType="unieap.form.ComboBox" binding="{name:'owner',bindIndex:0}" dataProvider="{'store':test}"></div></td>
+		</tr>
+		<tr>
+			<td>文本域：</td><td><div dojoType="unieap.form.Textarea" binding="{name:'freightBusiness',bindIndex:0}" validator="{errorMsg:'只能输入汉字',instanceCheck:true,regExp:/^[\u4E00-\u9FA5]+$/}"></div></td>
+			<td>只读域：</td><td><div dojoType="unieap.form.InlineEditBox" binding="{name:'charges',bindIndex:0}" editor="{editorClass:'unieap.form.NumberTextBox',editorProps:{displayFormatter:{dataFormat:'$#,###.00'}}}"></div></td>
+			<td>复选按钮组：</td><td><div dojoType="unieap.form.CheckBoxGroup"  binding="{name:'city',bindIndex:0}" dataProvider="{store:test}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div></td>
+		</tr>	
+		<tr>
+			<td>下拉树：</td><td><div dojoType="unieap.form.ComboBoxTree" binding="{name:'comboboxtree',bindIndex:0}" popup="{width:'250px',height:'350px'}"  treeJson="{label:'Unieap',binding: {store: 'menuTree',leaf: 'leaf',parent:'parentID',query: {name: 'parentID',relation: '=',value: '1212403325756'}}}" required="true"></div></td>
+			<td>单选按钮组：</td><td><div dojoType="unieap.form.RadioButtonGroup" binding="{name:'radiogroup',bindIndex:0}" dataProvider="{store:c}"  decoder="{displayAttr:'CODENAME',valueAttr:'CODEVALUE'}"></div></td>
+			<td>复选按钮：</td><td><div dojoType="unieap.form.CheckBox"  binding="{name:'checkbox',bindIndex:0}" checkedValue="是"  uncheckedValue="否"></div></td>
+		</tr>	
+		<tr>
+			<td>单选按钮：</td><td><div dojoType="unieap.form.RadioButton" binding="{name:'radio',bindIndex:0}" ></div></td>
+			<td>数字文本：</td><td><div dojoType="unieap.form.NumberTextBox" binding="{name:'number',bindIndex:0}" ></div></td>
+			<td>绑定按钮：</td><td><div dojoType="unieap.form.Button"  binding="{name:'btn',bindIndex:0}" ></div></td>
+		</tr>	
+	</table>
+	</form>
+
+</body>
+</html>

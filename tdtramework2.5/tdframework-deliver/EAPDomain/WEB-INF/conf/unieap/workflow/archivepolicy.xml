@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archiver firstTime="2004-10-21 00:00:00" occasion="20" targetDir="h:\backup">
+	<procLogBak count="20" enable="true" interval="4323232">
+		<procLogIndex fileSize="40"/>
+	</procLogBak>
+	<!--the maximum size is 1000-->
+	<engineMsgBak count="1000" enable="true" interval="25"/>
+</archiver>

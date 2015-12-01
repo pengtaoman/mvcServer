@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eapConfig>
+   <component name="bl" isEnabled="true" handler="com.neusoft.unieap.config.handler.BLConfigHandler" description="">
+      <CONFIG_PATH>/WEB-INF/conf/telcom/bl</CONFIG_PATH>
+	  <CONFIG_FILE>dataAccessContext-jndi.xml applicationContext-ibatis2.xml applicationContext-bl.xml</CONFIG_FILE>
+   </component>
+   <component name="menu" isEnabled="false" handler="com.neusoft.unieap.config.handler.MenuConfigHandler" description="">
+      <MENU_ACCESS>com.neusoft.unieap.comp.menu.access.DatabaseMenu</MENU_ACCESS>
+      <MENU_PERMISSION>com.neusoft.unieap.service.orgnization.security.resource.menu.RolesPermissionsAdapter</MENU_PERMISSION>
+      <MENU_PROPERTY name="table" value="eap_menu" />
+      <!-- 
+      <MENU_PROPERTY name="tablemap" value="eap_menu_role_map" />
+      -->
+   </component>
+</eapConfig>

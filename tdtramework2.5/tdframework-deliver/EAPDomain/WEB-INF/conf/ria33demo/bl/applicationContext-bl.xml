@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="BusinessMgrPoJo" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.unieap.ria.bo.pojo.DataCenterPOJOImpl">
+				<property name="pojoMgr">
+					<ref bean="pojoMgr"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="pojoMgr"  
+	class="com.neusoft.unieap.ria.pojo.impl.HibernatePojoMgr">
+		 <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    <bean id="richEditorConfig" class="com.neusoft.unieap.ria.richeditor.impl.RichEditorConfig">
+	   	<property name="baseDir">
+		   <value>/UserFiles/</value>
+		 </property>
+		<property name="allowedExtensionsFile">
+		 <value></value>
+		</property>
+		<property name="deniedExtensionsFile">
+		  <value>php|php3|php5|phtml|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|dll|reg|cgi</value>
+		</property>
+		<property name="allowedExtensionsImage">
+		   <value>jpg|gif|jpeg|png|bmp</value>
+		 </property>
+		<property name="deniedExtensionsImage">
+		  <value></value>
+		</property>
+		<property name="allowedExtensionsFlash">
+		   <value>swf|fla</value>
+		</property>
+		<property name="deniedExtensionsFlash">
+		   <value></value>
+		</property>
+	   <property name="otherProp">
+			<map>
+			</map>
+		</property>
+	</bean>
+	
+	 <bean id="RichEditorUpload" class="com.neusoft.unieap.ria.richeditor.impl.RichEditorUpload" init-method="init">
+        <property name="config" ref="richEditorConfig" />   		
+	</bean>
+</beans>

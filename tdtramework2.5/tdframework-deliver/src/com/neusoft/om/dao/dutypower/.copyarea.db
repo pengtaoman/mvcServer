@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\dutypower
+2
+4
+11:DutyPowerDAO.java|1|13b8966d6ae|3e8|fe245d73|cb847417d78e47a8bfaac1cef272c737|0
+12:DutyPowerColl.java|1|13b8966d66f|2ae|6384eea8|9835b31e18404a6c9e1a08ff32c622c4|0
+15:DutyPowerDAOImpl.java|1|13b8966d6dc|afc|1b1e8dcf|f70da079047e46adae65b8c0f05b9601|0
+10:DutyPowerVO.java|1|13b8966d70b|1057|31978a13|09f5fbc82e164f17a400fe3b444f44e2|0

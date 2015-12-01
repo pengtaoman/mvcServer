@@ -1,0 +1,25 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow.bak.0415\webdesign\attribute
+2
+15
+f:manualNodePages|2|0|0|0|8c1f343491f144afa6c840541f77f609|0
+e:startNodePages|2|0|0|0|93897e9af02a41779b8a5c92b8d67956|0
+b:defhelp.jsp|1|13b8958587b|640|33b0b6a8|9822eadc826349288fd22403b5e7612c|0
+b:forward.jsp|1|13b89585d6d|5bd|6494dc6e|7ac07f6cc0f04d7594c606139168243e|0
+b:inshelp.jsp|1|13b895860a9|4f7|97b5b2e9|ec3e531e40634f55bd715419c577a682|0
+c:processPages|2|0|0|0|e61bf2e790bf48a8a6f0aece032d442a|0
+c:endNodePages|2|0|0|0|0dc074e2274842918570776408717164|0
+12:branchEndNodePages|2|0|0|0|5d9023afe9f4405e90c4fcfe559b78ee|0
+f:fileUpLoadPages|2|0|0|0|1d66f0a93b794b68a491aaa7b13d01e5|0
+11:parallelNodePages|2|0|0|0|df767029603b4135a581f39905e5faa4|0
+d:autoNodePages|2|0|0|0|3db931d877cc4c8baad512d03d27a228|0
+f:branchNodePages|2|0|0|0|766395db050d4ad9aa5a656ed2d639a0|0
+14:branchBeginNodePages|2|0|0|0|968af98e81834c8683b3e25f6f113357|0
+9:appnewmgt|2|0|0|0|df49d0eac5f74524abec671701673be9|0
+10:workflowResPages|2|0|0|0|364d9783dc9048398fd7e2d96a647188|0
+9:error.jsp|1|13b89585a9e|169|beaf7b0c|6403b7e80ed444c8bda6d115d99705ae|0
+10:subprocNodePages|2|0|0|0|a20816ba692c4f9ba72fda4432dcef94|0
+f:newProcessPages|2|0|0|0|523cb5293a644cfeaac2bbe0508a0ffc|0
+f:transitionPages|2|0|0|0|5b398e1ade404af290bbbe7ebdab36c8|0
+f:choiceNodePages|2|0|0|0|c137c51a2ff04b43810b325a0cdcf331|0
+10:applicationPages|2|0|0|0|9e2df6287ea54eda97463902f97921aa|0

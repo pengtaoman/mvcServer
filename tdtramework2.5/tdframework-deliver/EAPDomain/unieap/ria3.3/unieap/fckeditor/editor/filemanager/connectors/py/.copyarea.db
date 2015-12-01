@@ -1,0 +1,14 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\fckeditor\editor\filemanager\connectors\py
+2
+a
+f:fckconnector.py|1|13b8913f480|a7e|9faf4ce4|279bf0c879c84e81b7842fbb223e88fb|0
+a:fckutil.py|1|13b8913edaa|118a|c997aba6|98070b915b184138886d23f76fcd7b4f|0
+c:fckoutput.py|1|13b8913f01b|fca|b1c1de96|0251b1bc1c0b4fbd83395f4a25f65372|0
+9:upload.py|1|13b8913ec23|c00|783ae2f4|77f136abb54741289fc68b46e1c18935|0
+7:zope.py|1|13b8913e9f1|1635|33451999|a8cf6ce13cb34399b6495fc913f1bb91|0
+e:fckcommands.py|1|13b8913f58a|1989|5acbc4ec|5527aa1cc4cc47f0b416d7136114dc3b|0
+7:wsgi.py|1|13b8913eb48|65d|26070623|9f45deae895343e1ba888a2b9b515c0f|0
+c:htaccess.txt|1|13b8913eca0|2c3|11d8f696|b5fdff7c0e7847399444f85f17488aa7|0
+c:connector.py|1|13b8913f607|108f|3f0456e7|a05c4ce3195c49aeaef361604af30656|0
+9:config.py|1|13b8913f684|1bb7|3731149e|0c4cb8016a104239aeaaea0d3f2140fe|0

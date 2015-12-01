@@ -1,0 +1,13 @@
+.unieap .adaptivecontainer{
+	overflow:hidden;
+}
+
+.unieap .adaptivepane{
+	overflow:hidden;
+	background-color:#FFFFFF;
+	zoom:100%;
+}
+
+.unieap .adaptivepane-inner{
+	position:relative;
+}

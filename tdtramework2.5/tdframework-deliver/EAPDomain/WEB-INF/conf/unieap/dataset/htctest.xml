@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by hugh (neusoft) -->
+<dataSetConf xmlns="http://www.neusoft.com/schemas/unieap/dataset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neusoft.com/schemas/unieap/dataset
+C:\DOCUME~1\Administrator\桌面\DATASET\dataSet.xsd">
+	<dataSourceName/>
+		<pageSize>5</pageSize>
+	<auth>INSERT</auth>
+	<auth>UPDATE</auth>
+	<auth>DELETE</auth>
+	<tables>
+		<table tableName="htctest" isPrimary="true">
+			<pk pkName="empno" dataType="4" isAutoIncrement="false"/>
+		</table>
+	</tables>
+	<attributes>
+		<attribute attrName="no" isFakeColumn="false" dataType="4" isPrimaryKey="true" isAutoIncrement="false" isReadOnly="false" maxlength="20" columnName="no" isNullable="false" index="1" tableName="htctest"/>
+		<attribute attrName="myreadonly" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="20" columnName="myreadonly" isNullable="true" index="2" tableName="htctest"/>
+		<attribute attrName="mydouble" isFakeColumn="false" dataType="12" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="22" columnName="mydouble" isNullable="true" index="3" tableName="htctest"/>
+		<attribute attrName="myidcard" isFakeColumn="false" dataType="4" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="18" columnName="myidcard" isNullable="true" index="4" tableName="htctest"/>
+		<attribute attrName="myquickselect" isFakeColumn="false" dataType="93" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="5" columnName="myquickselect" isNullable="true" index="5" tableName="htctest"/>
+		<attribute attrName="mytextarea" isFakeColumn="false" dataType="8" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="200" columnName="mytextarea" isNullable="true" index="6" tableName="htctest"/>
+		<attribute attrName="mydate" isFakeColumn="false" dataType="8" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="20" columnName="mydate" isNullable="true" index="7" tableName="htctest"/>
+		<attribute attrName="mymoney" isFakeColumn="false" dataType="4" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="12" columnName="mymoney" isNullable="true" index="8" tableName="htctest"/>
+		<attribute attrName="myselect" isFakeColumn="true" dataType="4" isPrimaryKey="false" isAutoIncrement="false" isReadOnly="false" maxlength="3" columnName="myselect" isNullable="true" index="9" tableName="htctest"/>
+	</attributes>
+	<fixedFilters/>
+</dataSetConf>

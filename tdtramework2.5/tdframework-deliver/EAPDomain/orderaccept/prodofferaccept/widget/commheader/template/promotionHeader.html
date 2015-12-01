@@ -1,0 +1,16 @@
+<div style="margin-bottom: 10px; margin-top: 10px;">
+	<div>
+		<div
+			style="text-align: right; width: 30%; display: inline-block; * display: inline; zoom: 1;">
+			<label for='prodOfferSearch'>
+				促销搜索:
+			</label>
+		</div>
+		<div 
+			style="text-align: left; width: 60%; display: inline-block; * display: inline; zoom: 1;">
+			<input id='subProdOfferSearch${uniqueId}' class='prodoffer-search' style="width:100%;color: #cccccc" 
+				value="输入名称，点击【回车】键可模糊查询"  valueCache ="" tips='输入名称，点击【回车】键可模糊查询'  
+				dojoAttachEvent="onkeyup:elementkeyup,onblur:elementblur,onfocus:elementfocus" dojoAttachTopic="/promotionSearch" onkeypress = "var evt = (arguments[0]||window.event);if(evt.keyCode==13){evt.returnValue=false;}" />
+		</div>
+	</div>
+</div>

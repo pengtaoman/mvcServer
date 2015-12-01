@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>cust</shortname>
+
+	<tag>
+		<name>CommonList</name>
+		<tagclass>com.neusoft.common.taglibs.ParamObjectList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>IdentityList</info>
+
+		<attribute>
+			<name>paramId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ifAll</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+        
+        <attribute>
+			<name>paramObjectCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+        <attribute>
+			<name>tagName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>tabs</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>CommonLists</name>
+		<tagclass>com.neusoft.common.taglibs.ParamObjectLists</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>IdentityList</info>
+
+		<attribute>
+			<name>paramId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ifAll</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+        
+        <attribute>
+			<name>paramObjectCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+        <attribute>
+			<name>tagName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>tabs</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>DepartmentList</name>
+		<tagclass>com.neusoft.popedom.taglibs.DepartmentList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>departmentColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>ParamRoleList</name>
+		<tagclass>com.neusoft.popedom.taglibs.ParamRoleList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>paramRoleCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>code</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>DealerList</name>
+		<tagclass>com.neusoft.popedom.taglibs.DealerList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>dealerColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>CityList</name>
+		<tagclass>com.neusoft.popedom.taglibs.CityList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>selfhood</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>cityCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>DepartmentKindList</name>
+		<tagclass>com.neusoft.popedom.taglibs.DepartmentKindList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>departmentKindCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>RoleList</name>
+		<tagclass>com.neusoft.popedom.taglibs.RoleList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>roleColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>SexList</name>
+		<tagclass>com.neusoft.popedom.taglibs.SexList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sexCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>PersonLevelList</name>
+		<tagclass>com.neusoft.popedom.taglibs.PersonLevelList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personLevelCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>OperatorList</name>
+		<tagclass>com.neusoft.popedom.taglibs.OperatorList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>operatorCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>SystemRoleList</name>
+		<tagclass>com.neusoft.popedom.taglibs.SystemRoleList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>systemRoleCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>MainMenuList</name>
+		<tagclass>com.neusoft.popedom.taglibs.MainMenuList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Marital status listbox</info>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>mainMenuCollection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>FunctionTag</name>
+		<tagclass>com.neusoft.popedom.taglibs.FunctionTag</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>FunctionTag</info>
+
+		<attribute>
+			<name>funColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>SessionChecking</name>
+		<tagclass>com.neusoft.popedom.taglibs.SessionChecking</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>SessionChecking</info>
+
+		<attribute>
+			<name>function_string</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>session</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+	</tag>
+	<tag>
+		<name>DepartmentTree</name>
+		<tagclass>com.neusoft.popedom.taglibs.DepartmentTree</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>department info tree</info>
+
+		<attribute>
+			<name>departmentColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+	<tag>
+		<name>RegionTree</name>
+		<tagclass>com.neusoft.popedom.taglibs.RegionTree</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>department info tree</info>
+
+		<attribute>
+			<name>departmentColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>cityColl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+	<!-- ÉèÖÃ°´Å¥ÖÃ»Ò -->
+	<tag>
+		<name>DisabledButtonList</name>
+		<tagclass>com.neusoft.common.taglibs.DisabledButtonList</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>°´Å¥ÖÃ»Ò</info>
+		
+		<attribute>
+			<name>session</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>system_id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>function_string</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+				
+	</tag>
+	
+	<!--
+
+	< tag>
+		<name>NestTreeList</name>
+		<tagclass>com.neusoft.popedom.taglibs.NestTreeTag</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>tree info</info>
+
+		<attribute>
+			<name>openGif</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>closeGif</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rightGif</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>nestNode</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	-->
+	
+</taglib>

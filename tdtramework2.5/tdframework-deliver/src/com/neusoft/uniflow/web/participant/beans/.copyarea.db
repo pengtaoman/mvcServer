@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\participant\beans
+2
+5
+15:SVGCreateFactory.java|1|13b896a3a52|d08f|582d7934|ac728ee94b4947cb8522645792c5c92a|0
+11:VarPartiBean.java|1|13b896a3c94|1d1|566a959d|57302909b11a4b808684fb7eb48e4bf5|0
+f:ActDefbean.java|1|13b896a3810|14d|bdcf6ad1|f0c8b31b4d364847aae400b0cc726ac4|0
+11:SVGTranstion.java|1|13b896a3b4c|542a|91c8106f|5c1e11feef874c37ac7ea807fb26bb2a|0
+18:OldSVGCreateFactory.java|1|13b896a3939|68fd|f10a0fed|ce48a2ec40dc4597b527baf4d2a256a6|0

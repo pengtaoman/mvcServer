@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\unieap\sl
+2
+3
+1f:applicationContext-business.xml|1|13b8964ad45|f3|58d24b9b|c78f184e384b4c098144adfdf2fcc86f|0
+f:serviceType.xml|1|13b8964ad93|177|44b180c0|fc7b8a4de3ab455b97aa1614138774ce|0
+e:EAPService.xml|1|13b8964ad74|272|3557c35a|f6433062facf49409eba24194d37017f|0

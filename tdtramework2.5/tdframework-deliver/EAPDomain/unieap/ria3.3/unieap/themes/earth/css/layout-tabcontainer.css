@@ -1,0 +1,426 @@
+/* Tabs, shared classes */
+.unieap .dijitTabPaneWrapper {
+	background:#fff;
+	border:1px solid #ccc;
+	margin: 0;
+	padding: 0;
+	z-index:2;
+}
+
+.unieap .dijitTabPaneWrapper .dijitTabPane{
+	padding:5px;
+}
+
+
+.unieap .dijitLayoutContainer{
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.unieap .tab-scrolling-container{
+	position:absolute;
+	overflow:hidden;
+	z-index:3;
+}
+.unieap .tab-scrolling{
+	position:absolute;
+}
+.unieap .dijitTab {
+	border:1px solid #ccc;
+	line-height:normal;
+	margin-right:4px;	/* space between one tab and the next in top/bottom mode */
+	padding:0px;
+	cursor:pointer;
+	z-index:3;
+	white-space:nowrap;
+}
+
+.unieap .dijitTabChecked {
+	background-color:#fff;
+	border-color: #ccc;
+	background-image:none;
+}
+
+.unieap .dijitTabCheckedHover {
+	color: inherit;
+	border:1px solid #ccc;
+	background:#fff;
+}
+
+.unieap .dijitTabHover{
+	color: #243C5F;
+	border-color:#92a0b3;
+}
+.unieap .tab-scrolling-container .tabward{
+	position: absolute;
+	z-index:100;
+	cursor:pointer;
+}
+.unieap .tab-scrolling-container .eapMenu{
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:white;
+	/*TODO*/
+}
+.unieap .dijitTab .dijitClosable .closeImage {
+	display: inline-block;
+	background: url("../images/layout/tab-close.gif") no-repeat;
+	width: 12px;
+	height: 12px;
+}
+
+
+/************************ top*/
+.unieap .dijitTabContainerTop .tab-scrolling-container {
+	margin-bottom: -1px;
+	height:23px;
+}
+.unieap .dijitTabContainerTop .dijitTabSpacer,
+.unieap .dijitTabContainerBottom .dijitTabSpacer,{
+	height:0px;
+}
+.dj_iequirks .unieap .dijitTabContainerTop .dijitTabSpacer,
+.dj_iequirks .unieap .dijitTabContainerBottom .dijitTabSpacer,{
+	height:1px;
+}
+.unieap .dijitTabContainerTop .eapLeft{
+	top:0px;
+	left:0px;
+	width:18px;
+	height:23px;
+	background:#e2e2e2 url("../images/layout/eap-tLeft.jpg") no-repeat;
+}
+.unieap .dijitTabContainerTop .eapRight {
+	top:0px;
+	right:18px;
+	width:18px;
+	height:23px;			
+	background:#e2e2e2 url("../images/layout/eap-tRight.jpg") no-repeat;
+}
+.unieap .dijitTabContainerTop .eapMenu{
+	top:0px;
+	right:0px;
+	width:18px;
+	height:23px;
+	background-image:url("../images/layout/eap-tMore.jpg");
+}
+
+.unieap .dijitTabContainerTop-tabs .dijitTab,
+.unieap .dijitTabContainerBottom-tabs .dijitTab {
+	/* Inline-block */
+	display:-moz-inline-box;		/* FF2 */
+	display:block;			/* webkit and FF3 */
+	float:left;
+	#zoom: 1; /* set hasLayout:true to mimic inline-block */
+	#display:inline; /* don't use .dj_ie since that increases the priority */
+}
+.unieap .dijitTabContainerTop-tabs .dijitTab{
+	height:21px;
+	background:#e2e2e2 url("../images/layout/enabled-top.jpg") repeat-x;
+}
+
+.unieap .dijitTabContainerTop-tabs .dijitTabChecked {
+	border-bottom-color:white;
+	background:#fff url("../images/layout/selected-top.jpg") repeat-x ;
+}
+.unieap .dijitTabContainerTop-tabs .dijitTab .dijitClosable .closeImage,
+.unieap .dijitTabContainerBottom-tabs .dijitTab .dijitClosable .closeImage{
+	margin-left:5px;
+}
+
+.unieap .dijitTabContainerTop-tabs .dijitTabHover {
+	background:#e2e2e2 url("../images/layout/hover-top.jpg") repeat-x;
+}
+
+
+.unieap .dijitTabContainerBottom-tabs .dijitTabInnerDiv,
+.unieap .dijitTabContainerTop-tabs .dijitTabInnerDiv {
+	font-family:tahoma,arial,verdana,sans-serif;
+	font-size:12px;
+	line-height:20px;
+	padding: 0px 5px 0px 5px ;
+}
+
+/************************ bottom*/
+
+.unieap .dijitTabContainerBottom .tab-scrolling-container {
+	margin-top: -1px;
+	height:23px;
+}
+
+.unieap .dijitTabContainerBottom-tabs .dijitTab{
+	height:21px;
+	background:#e2e2e2 url("../images/layout/enabled-btm.jpg") repeat-x;
+}
+
+.unieap .dijitTabContainerBottom-tabs .dijitTabChecked {
+	border-top-color:white;
+	background:#fff url("../images/layout/selected-btm.jpg") repeat-x ;
+}
+
+.unieap .dijitTabContainerBottom .eapLeft{
+	bottom:0px;
+	left:0px;
+	width:18px;
+	height:23px;
+	background:#e2e2e2 url("../images/layout/eap-bLeft.jpg") no-repeat;
+}
+
+.unieap .dijitTabContainerBottom .eapRight {
+	background:#e2e2e2 url("../images/layout/eap-bRight.jpg") no-repeat;
+	bottom:0px;
+	right:18px;
+	width:18px;
+	height:23px;			
+}
+.unieap .dijitTabContainerBottom .eapMenu{
+	bottom:0px;
+	right:0px;
+	width:18px;
+	height:23px;
+	background-image:url("../images/layout/eap-bMore.jpg");
+}
+
+.unieap .dijitTabContainerBottom-tabs .dijitTabHover {
+	background:#e2e2e2 url("../images/layout/hover-btm.jpg") repeat-x;
+}
+
+/************************ left*/
+
+.unieap .dijitTabContainerLeft .tab-scrolling-container {
+	margin-right: -1px;
+	width:23px;
+}
+
+.unieap .dijitTabContainerLeft .dijitTabSpacer,
+.unieap .dijitTabContainerRight .dijitTabSpacer,{
+	height:1px;
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTab{
+	width:21px;
+	background:#e2e2e2 url("../images/layout/enabled-left.jpg") repeat-y;
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTab,
+.unieap .dijitTabContainerRight-tabs .dijitTab {
+	margin-right:0px;
+	margin-bottom:4px;
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTabChecked {
+	border-right-color:white;
+	background:#fff url("../images/layout/selected-left.jpg") repeat-y ;
+}
+.unieap .dijitTabContainerLeft  .eapUp{
+	top:0px;
+	left:0px;
+	background:url("../images/layout/eap-lTop.jpg") no-repeat;
+	width:23px;
+	height:18px;
+	background-position:top;
+}
+.unieap .dijitTabContainerLeft .eapDown{
+	bottom:18px;
+	left:0px;
+	background:url("../images/layout/eap-lBottom.jpg") no-repeat;
+	width:23px;
+	height:18px;
+	background-position:bottom;
+}
+.unieap .dijitTabContainerLeft .eapMenu{
+	left:0px;
+	bottom:0px;
+	width:23px;
+	height:18px;
+	background-image:url("../images/layout/eap-lMore.jpg");
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTabHover {
+	background:#e2e2e2 url("../images/layout/hover-left.jpg") repeat-y;
+}
+
+/*
+.unieap .dijitTabContainerLeft-tabs .dijitTab span,
+.unieap .dijitTabContainerRight-tabs .dijitTab span  {
+	width:21px;
+	display:block;
+}
+
+.unieap .dijitTabContainerLeft-tabs .dijitTab span div,
+.unieap .dijitTabContainerRight-tabs .dijitTab span div  {
+	width:12px;
+}*/
+.unieap .dijitTabContainerLeft-tabs .dijitTabInnerDiv,
+.unieap .dijitTabContainerRight-tabs .dijitTabInnerDiv {
+	padding:  5px 0px 5px 0px;
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTabInnerDiv .tabLabel,
+.unieap .dijitTabContainerRight-tabs .dijitTabInnerDiv .tabLabel{
+	text-align:center;
+	font-family:tahoma,arial,verdana,sans-serif;
+	font-size:12px;
+	writing-mode:tb-rl;
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTab .dijitClosable .closeImage,
+.unieap .dijitTabContainerRight-tabs .dijitTab .dijitClosable .closeImage {
+	display:block;
+	margin-left:2px;
+}
+/************************right*/
+
+.unieap .dijitTabContainerRight .tab-scrolling-container {
+	margin-left: -1px;
+	width:23px;
+}
+
+.unieap .dijitTabContainerRight-tabs .dijitTab{
+	width:21px;
+	background:#e2e2e2 url("../images/layout/enabled-right.jpg") repeat-y;
+}
+.unieap .dijitTabContainerRight-tabs .dijitTabChecked {
+	border-left-color:white;
+	background:#fff url("../images/layout/selected-right.jpg") repeat-y ;
+}
+
+.unieap .dijitTabContainerRight  .eapUp{
+	top:0px;
+	background:url("../images/layout/eap-rTop.jpg") no-repeat;
+	width:23px;
+	height:18px;
+	left:0px;
+	background-position:top;
+}
+.unieap .dijitTabContainerRight .eapDown{
+	bottom:18px;
+	left:0px;
+	background:url("../images/layout/eap-rBottom.jpg") no-repeat;
+	width:23px;
+	height:18px;
+	background-position:bottom;
+}
+.unieap .dijitTabContainerRight .eapMenu{
+	right:0px;
+	bottom:0px;
+	width:23px;
+	height:18px;
+	background-image:url("../images/layout/eap-rMore.jpg");
+}
+.unieap .dijitTabContainerLeft-tabs .dijitTabHover {
+	background:#e2e2e2 url("../images/layout/hover-right.jpg") repeat-y;
+}
+
+.unieap .dijitAlignTop,
+.unieap .dijitAlignBottom,
+.unieap .dijitAlignLeft,
+.unieap .dijitAlignRight {
+	position: absolute;
+	overflow: hidden;
+}
+.unieap .dijitAlignClient { 
+	position: absolute; 
+}
+
+.unieap .dijitTab .closeButton-hover .closeImage {
+	background-image : url("../images/layout/tabCloseHover.gif");
+}
+
+
+/* Nested Tabs 
+.unieap .dijitTabContainerTabListNested .dijitTab {
+	background: none;
+	border: none;
+	top: 0px;		
+}
+
+.unieap .dijitTabContainerTabListNested .dijitTab .dijitTabContent {
+	
+}
+.unieap .dijitTabContainerTabListNested .dijitTabHover .dijitTabContent .tabLabel {
+	text-decoration: underline;
+}
+.unieap .dijitTabContainerTabListNested .dijitTabChecked .dijitTabContent .tabLabel {
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+.unieap .dijitTabContainer .dijitTabPaneWrapperNested {
+	border: none;	
+	
+}*/
+
+
+
+/* ================================ */
+
+/* this resets the tabcontainer stripe when within a contentpane */
+.unieap .dijitTabContainerTop-dijitContentPane .dijitTabContainerTop-tabs {
+	border-left: 0px solid #ccc;
+	border-top: 0px solid #ccc;
+	border-right: 0px solid #ccc;
+	padding-top: 0px;
+	padding-left: 0px;	
+}
+
+.dijitTabContainerBottom-tabs,
+.dijitTabContainerTop-tabs,
+.dijitTabContainerLeft-tabs,
+.dijitTabContainerRight-tabs {
+	z-index:10;
+	overflow: visible !important;  
+}
+
+
+
+.dijitTabInnerDiv {
+	position:relative;
+}
+
+/* images off, high-contrast mode styles */
+.dijitTab .closeText {
+	display:none;
+}
+
+.dijit_a11y .closeText {
+	display:inline;
+	margin: 0px 6px;
+}
+
+.dijit_a11y .dijitTab .closeImage {
+	display:none;
+}
+
+.dijit_a11y .closeButton-hover .closeText {
+	border:thin solid;
+}
+.dijit_a11y .dijitTabChecked {
+	border-style:dashed !important;
+}
+
+.dijit_a11y .dijitTabInnerDiv {
+	border-left:none !important;
+ }
+
+.dijitTabPane,
+.dijitStackContainer-child,
+.dijitAccordionContainer-child {
+	overflow:auto;
+    border: none !important;
+}
+.dijitInline {
+	display:-moz-inline-box;		
+	display:inline-block;			
+	#zoom: 1; 
+	#display:inline; 
+	border:0;
+	padding:0;
+	vertical-align:middle;
+	#vertical-align: auto;	
+}
+
+.dijitHidden {
+	display: none !important;
+}
+
+.dijitVisible {
+	display: block !important;	
+	position: relative;			
+}
+

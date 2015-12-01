@@ -1,0 +1,139 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "宋体", Arial;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+A:visited {
+	TEXT-DECORATION: none;color:#666666 ;vertical-align: middle; text-align: center;  font-family:  "宋体" , "Arial" ;  font-size: 12px;}
+A:active {
+	TEXT-DECORATION: none;color:#666666  ;vertical-align: middle; text-align: center;  background-color: #E6E6E6; font-family: "宋体" , "Arial" ;  font-size: 12px;}
+A:hover {
+	TEXT-DECORATION: none; color:#666666 ;vertical-align: middle; text-align: center;  background-color: #E6E6E6; font-family: "宋体" , "Arial" ;  font-size: 12px;}
+A:link {
+	TEXT-DECORATION: none;color:#666666 ;vertical-align: middle; text-align: center;  font-family: "宋体" , "Arial" ;  font-size: 12px;}
+	
+BODY {SCROLLBAR-FACE-COLOR: #eeeeee; SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; SCROLLBAR-SHADOW-COLOR: #eeeeee; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR:  #666666; SCROLLBAR-TRACK-COLOR: #eeeeee; SCROLLBAR-DARKSHADOW-COLOR: #666666; }
+
+.buttonTypePrint
+ {font-size:12px;width:70px;height:20px}
+.tableType1
+ {border-collapse:collapse;border-spacing:0;empty-cells:hide;width:100%} 
+.trType
+ {font-size:14px;height:20px;
+ 	font-family: "宋体", Arial;}
+.tdType
+ {background-color:#EAEAEA;width:19%;color:#000000}
+.tdType1
+ {background-color:#F7F7F7;width:81%;color:#000000}	
+.tdType2
+ {background-color:#F7F7F7;width:31%;color:#000000}	
+.tdType3
+ {background-color:#F7F7F7;color:#000000}	 	  
+.tdType4
+ {background-color:#EAEAEA;color:#000000}
+.buttonType
+ {font-size:12px;width:50px;height:20px}
+.button1Type
+ {font-size:12px;width:80px;height:20px}
+.textType
+	{font-size:14px;width:136px;height:20px}
+.textType1
+	{font-size:14px;width:180px;height:20px;}
+.textType2
+	{font-size:14px;width:356px;height:20px;}
+.textType3
+	{font-size:14px;width:210px;height:20px}
+.textType_count
+	{font-size:14px;width:450px;height:20px;}		
+.querytrType
+	{font-size:14px;height:20px}
+.querytextType
+	{font-size:14px;width:140px;height:20px}
+.drawdownType
+	{font-size:14px;width:180px;height:20px}
+.drawdown1Type
+	{font-size:14px;width:135px;height:20px}
+.checkType
+	{font-size:14px;height:20px}
+.drawdownType_favor {font-size:14px;width:445px;height:20px}
+.drawdownType_big {font-size:14px;width:325px;height:20px}
+.button1		 
+	{
+	font-size: 12px;
+	background-image: url( ../images/button1.jpg);
+	color: #000000;
+	cursor: hand;
+	padding-bottom: 0px;
+	padding-top: 5px;
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0px;
+	text-indent: 0px;
+	font-family: "宋体", Arial;
+	width: 40px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	}
+.button2		 
+{
+	font-size: 12px;
+	background-image: url( ../images/button1.jpg);
+	color: #000000;
+	cursor: hand;
+	padding-bottom: 0px;
+	padding-top: 5px;
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0px;
+	text-indent: 0px;
+	font-family: "宋体", Arial;
+	width: 70px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+
+.topButton		 
+{
+	font-size: 12px;
+	background-image: url( ../images/button1.jpg);
+	color: #000000;
+	cursor: hand;
+	padding-bottom: 0px;
+	padding-top: 5px;
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0px;
+	text-indent: 0px;
+	font-family: "宋体", Arial;
+	width: 70px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+
+.topLeft		 
+{	background-attachment: fixed;
+	background-image: url( ../images/point1.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #eaeaea; 
+}
+ 
+
+.shadow1 {
+	FONT-SIZE: 12px; FILTER: DropShadow(color=black,offX=1, offY=1, Positive=3); WIDTH: 100%; COLOR: #D71920; POSITION: relative; TEXT-DECORATION: none
+}
+

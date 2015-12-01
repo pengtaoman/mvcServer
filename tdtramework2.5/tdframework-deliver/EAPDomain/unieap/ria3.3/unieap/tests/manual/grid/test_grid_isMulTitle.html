@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>grid</title>
+
+		<style type="text/css">
+			@import "../../blackbird/blackbird.css";
+			@import "../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../themes/default/css/unieap.css";
+		</style>
+		<script type="text/javascript" src="../../blackbird/blackbird.js"></script>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="parseOnLoad:false"></script>
+		<script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript">
+			
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.grid.Grid");
+        </script>
+        <script type="text/javascript">
+        	dojo.addOnLoad(function(){
+	//			dp.SyntaxHighlighter.HighlightAll('code');
+				logger.profile("grid");
+				dojo.parser.parse();
+				logger.profile("grid");
+			})
+        </script>
+        <script type="text/javascript">
+        	function test() {
+        	}
+        	
+        	dojo.addOnLoad(function() {
+        		
+        	});
+        </script>
+    </head>
+    <body class="unieap tundra">
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="300px"
+			binding="{store:'empDataStore'}"
+			rows="{defaultRowHeight:21}"
+			views="{rowBar:true}">
+			<fixed>
+				<cell label="锁定列0" width="100" name="NAME">
+					<div dojoType2="unieap.form.TextBox"></div>
+				</cell>
+			</fixed>
+			<header>
+				<row>
+					<cell rowSpan="3" label="1 rowSpan=3" name="NAME" headerStyles="text-align: left;">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+					<cell colSpan="3" isMulTitle="true" label="多标题列" name="NAME" headerStyles="text-align: left;">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+					<cell rowSpan="3" width="300" label="姓名" name="NAME">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+				</row>
+				<row>
+					<cell rowSpan="2" width="250" label="姓名" name="NAME">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+					<cell colSpan="2" label="复杂表头:colSpan=2" width="70" name="attr_job">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+				</row>
+				<row>
+					<cell label="工资" name="attr_sal">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+					<cell label="职务" name="attr_job">
+						<div dojoType2="unieap.form.TextBox"></div>
+					</cell>
+				</row>
+			</header>
+			
+		</div>
+		
+    </body>
+</html>

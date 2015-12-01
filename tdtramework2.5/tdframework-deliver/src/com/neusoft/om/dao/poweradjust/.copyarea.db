@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\poweradjust
+2
+4
+17:PowerAdjustDAOImpl.java|1|13b89671a2f|22a0|324d5018|2f57212ff8e441f79d6c5a6b1945273f|0
+13:PowerAdjustDAO.java|1|13b89671a20|75b|98f4ac8d|9e54108d422e4d13914071fa34b08929|0
+12:PowerAdjustVO.java|1|13b89671a6e|1281|200b5948|691e4c0d84d444c09e697cbc35f3481e|0
+14:PowerAdjustColl.java|1|13b896719f1|394|b6cc39fb|9f4569cc97d24f0ea8d8ea39f55bb6cd|0

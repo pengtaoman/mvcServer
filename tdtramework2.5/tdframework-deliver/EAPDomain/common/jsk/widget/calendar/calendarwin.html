@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>日历</title>
+
+	<!-- 禁止 windows 主题风格 -->
+	<meta http-equiv="MSThemeCompatible" content="no" />
+
+	<!-- 日历组件 css js -->
+	<link rel="stylesheet" type="text/css" href="calendar-td.css" title="neusoft-td" />
+	<script type="text/javascript" src="calendar_all.js"></script>
+	<!-- end 日历组件 css js -->
+
+
+<script language="javascript">
+
+var callBackObj=null;
+var typeStr=null;
+
+/*初始化函数*/
+function init(){
+
+	 callBackObj = dialogArguments;
+	  Calendar.setup({
+        firstDay        :	1,
+		showsTime		:   true,
+		ifFormat		:   callBackObj.getAttribute("ifFormat"),
+		date			:	Date.parseDate(callBackObj.value , callBackObj.getAttribute("ifFormat")),
+        flat            :	"calendarDiv",
+        flatCallback    :	flatCalendarCallback
+      });
+
+}
+
+      
+function flatCalendarCallback(cal) {
+        if (cal.dateClicked) {
+        	 var date = cal.date.print(callBackObj.getAttribute("ifFormat"));
+        	 callBackObj.value = date;
+       	   	 window.close();
+        }
+}
+
+</script>
+
+</head>
+
+<body  onload="init();">
+<div style="width:100%" id="calendarDiv">
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\robot\ui\grid\group
+2
+7
+14:test_grid_group.html|1|13b8910cbfa|9a4|2acd2cfb|1249ce5ceadf4c6384f55afb1f8bb302|0
+7:data.js|1|13b8910cb9c|ad3c|c8895e07|dd6b8ad1185e4e24a0890fb9d644ba9b|0
+17:test_group_statistic.js|1|13b8910d021|699|79a2d97|20f4f1ae2a864f57b12c6baa0b2ddd9e|0
+19:test_group_statistic.html|1|13b8910ce6b|8ab|dcfcd412|705d72d53caf4ebeb31dcc28f587256c|0
+17:test_group_dsTrigger.js|1|13b8910cdfe|389|8fde2708|b011e692654f4db98cf4b5e1cbbe22fc|0
+12:test_grid_group.js|1|13b8910cce4|26e|5f03c54e|918ef49191d444d29f965473722c0075|0
+19:test_group_dsTrigger.html|1|13b8910cd90|9fa|df99474e|b2dfa78e5ecb4348bd54b2797762c9d9|0

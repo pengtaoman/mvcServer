@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\monitor\procdef\forms
+2
+8
+14:ProcDefListForm.java|1|13b896a197b|28e|632fdda2|00c811ad027c4192b7697401f936cf78|0
+1a:ApplicationDetailForm.java|1|13b896a167e|e4|94b04e63|db0fb022e90844db8288d9afb381419d|0
+18:ApplicationListForm.java|1|13b896a18c0|2f3|5a98f8e6|2d2ec1311eb04e439d507f5948143295|0
+15:WorkItemListForm.java|1|13b896a1af3|42f|fccb4ecd|d79cae8958174d11bee00aaee19637f8|0
+15:ProcInstListForm.java|1|13b896a1a27|4ba|84ce8074|318ba78dd86b47328ebe77591c1b4ad2|0
+15:CurActDetailForm.java|1|13b896a191e|266|7a4bd064|b2a97ac5c5f14a8d85ea9fdd9cc9c5ef|0
+13:SVGMonitorForm.java|1|13b896a1aa4|319|d1e90e0a|c3be928dd58545edb50dd61a64e9886b|0
+17:ProcInstDetailForm.java|1|13b896a19ca|e1|8f024d25|0286f0d7ce874c559e7e9878198082da|0

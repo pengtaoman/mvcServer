@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\loginuserlist
+2
+3
+15:LoginUserListDAO.java|1|13b8966fe6a|7a9|55e39315|3efe050b14ca444aa280cefaaa107dd6|0
+14:LoginUserListVO.java|1|13b8966ff44|c06|88d20616|00cc8294fa9d4b428c7b8635ce27c763|0
+19:LoginUserListDaoImpl.java|1|13b8966fed7|42ef|7dab8214|908b09feb7da460baf36485f5a7717e7|0

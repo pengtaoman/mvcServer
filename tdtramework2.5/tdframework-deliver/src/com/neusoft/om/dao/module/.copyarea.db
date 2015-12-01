@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\module
+2
+4
+f:ModuleColl.java|1|13b89670763|20c|cb71a894|d6c59d03de244ccba2b865cc118b7271|0
+e:ModuleDAO.java|1|13b89670782|695|21a73b27|f2eb6e4b526c49f5b4d5b1cb1ea866e7|0
+12:ModuleDAOImpl.java|1|13b89670a12|199d|8c461fe3|c77c0e7970ad4737ac6dc79006121f37|0
+d:ModuleVO.java|1|13b89670a41|1136|308bef78|2a7e317225d041a6b87161907e7e917d|0

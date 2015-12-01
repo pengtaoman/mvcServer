@@ -1,0 +1,182 @@
+A.link1_song12_bk:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link1_song12_bk:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link1_song12_bk:active {
+	TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link1_song12_bk:hover {
+	COLOR: #000000; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:link {
+	COLOR: #000000; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:visited {
+	COLOR: #000000; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:active {
+	TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link2_song12_bk:hover {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link3_song12:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link3_song12:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family:"宋体"; font-size: 12px;
+}
+A.link3_song12:active {
+	COLOR: #000000; TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link3_song12:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link4_song12:link {
+	COLOR: #000000; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link4_song12:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family:"宋体"; font-size: 12px;
+}
+A.link4_song12:active {
+	COLOR: #000000; font-family: "宋体"; font-size: 12px;
+}
+A.link4_song12:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link5_song12_g:link {
+	COLOR: #7f7f7f; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link5_song12_g:visited {
+	COLOR: #7f7f7f; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link5_song12_g:active {
+	TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link5_song12_g:hover {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link2_v9_bk:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link2_v9_bk:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family:"宋体"; font-size: 12px;
+}
+A.link2_v9_bk:active {
+	COLOR: #000000; TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link2_v9_bk:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+.bg1 {  background-image: url(images/bg.gif); background-repeat: no-repeat}
+.T_song14_bk {  font-family: "宋体"; font-size: 14px; font-weight: bold; color: #000000}
+.T_song12_wt {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; text-decoration: none}
+.td {  font-family: "宋体"; color: #000000; font-size: 12px; height: 25px; background-color: #485997}
+.th {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; vertical-align: bottom; height: 25px; background-repeat: repeat-x; background-image: url(images/titlebar_bg.gif); clip:  rect(   ); font-weight: bold; text-align: center}
+.Menu100 {  width: 100px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu120 {  width: 120px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu150 {  width: 150px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu170 {  width: 170px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu200 {  width: 200px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu300 {  width: 390px; font-family: "宋体"; font-size: 12px; color: #000000}             
+.bg_login {  background-image: url(images/login.gif); background-repeat: no-repeat}
+BODY {SCROLLBAR-FACE-COLOR: #eeeeee; SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; SCROLLBAR-SHADOW-COLOR: #eeeeee; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR:  #666666; SCROLLBAR-TRACK-COLOR: #eeeeee; SCROLLBAR-DARKSHADOW-COLOR: #666666; }.line_input {  border-left:0px;border-right:0px;border-top:0px;border-bottom:1px groove #000000;font-size:12px}
+.head_bg1 {  background-image: url(images/head_bg1.gif); background-repeat: repeat}
+.bg_na {  background-image: url(images/bg_na.gif); background-repeat: repeat}
+.head_bg2 {  background-image: url(images/head_bg2.gif); background-repeat: no-repeat}
+.bg_na2 {  background-image: url(images/bg_na2.gif); background-repeat: no-repeat; border: black; clip:   rect(   )}
+.tab_bg1 {  background-image: url(images/tab/tab_bg1.gif); background-repeat: repeat}
+.tab1 {  background-image: url(images/tab/tab1.gif); background-repeat: no-repeat}
+.button1 {  background-image: url(images/button/button5.gif); background-repeat: no-repeat}
+.tab2 {  background-image: url(images/tab/tab2.gif); background-repeat: no-repeat}
+.menu_G150 {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #eeeeee; width: 150px}
+.button2 {  background-image: url(images/button/button2.gif); background-repeat: no-repeat}
+.icon_head {  background-image: url(images/icon/icon1.gif); background-repeat: no-repeat; width: 20px}
+.icon2 {  background-image: url(images/icon/icon3.gif); background-repeat: no-repeat; width: 20px}
+.icon1 {  background-image: url(images/icon/icon2.gif); background-repeat: no-repeat; width: 20px}
+.icon3 {  background-image: url(images/icon/icon1.gif); background-repeat: no-repeat; width: 20px}
+.na_bg {  background-image: url(images/na_bg1.gif); background-repeat: no-repeat}
+.na_bg2 {  background-color: #ffffff; font-size: 12px; color: #000000; background-image: url(images/na_bg2.gif); background-repeat: repeat-y}
+.login_bg {  background-image: url(images/login_bg.gif); background-repeat: no-repeat}}
+
+.etax_login {  background-image: url(images/Etax_login.gif); background-repeat: no-repeat}
+.etax_login2 {  background-image: url(images/Etax_login2.gif); background-repeat: no-repeat}
+.head_logo {  background-image: url(images/head_logo.gif); background-repeat: no-repeat}
+.na1 {  background-image: url(images/na1.gif); background-repeat: no-repeat}
+.na2 {  background-image: url(images/na2.gif); background-repeat: repeat-x}
+.T_song12B {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: underline}
+.T_song12_G {  font-family: "宋体"; font-size: 12px; color: #999999}
+.T_v12_G {  font-family: "宋体"; font-size: 12px; color: #999999}
+.T_song12_red {  font-family: "宋体"; font-size: 12px; color: #FF0000}
+.head_j1 {  background-image: url(images/head_bg4_2.gif); background-repeat: no-repeat}
+.head_j2 {  background-image: url(images/head_bg_na2.gif); background-repeat: no-repeat}
+.menu120G {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #CCCCCC; width: 120px}
+.menuG {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #CCCCCC}
+.T_song12bk2 {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none}
+.button3 {  background-image: url(images/button/button3.gif); background-repeat: no-repeat}
+.button4 {  background-image: url(images/button/button4.gif); background-repeat: no-repeat}
+.T_r {  font-family: "宋体"; font-size: 12px; color: #FF0000}
+.T_song14_wt {  font-family: "宋体"; font-size: 14px; color: #FFFFFF; font-weight: bold}
+.T_song12bk1 {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none}
+.bg_l1 {  background-image: url(images/bg_l1.gif); background-repeat: repeat-y}
+.bg_l2 {  background-color: #999999}
+.bg_l3 {  background-image: url(images/bg_l3.gif); background-repeat: repeat-y}
+.bg_l4 {  background-image: url(images/bg_l4.gif); background-repeat: no-repeat}
+.bg_l5 {  background-image: url(images/bg_l5.gif); background-repeat: no-repeat}
+.bg_l6 {  background-image: url(images/bg_l6.gif); background-repeat: no-repeat}
+.T_song12wt2 {  font-family: "宋体"; color: #FFFFFF; text-decoration: underline}
+.td2 {  font-family: "宋体"; color: #000000; background-color: #FFFFFF; height: 25px}
+.th2 {  height: 19px; color: #FFFFFF; background-color: #485997}
+.v11_bk {  font-family: "宋体"; font-size: 12px; color: #000000}
+.button5 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 78px; background-image: url(images/button/button5.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button6 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 56px; background-image: url(images/button/button6.gif); background-repeat: no-repeat; height: 22px; border-style: none}
+.T_song14bk2 {  font-family: "宋体"; font-size: 14px; color: #000000}
+.T_song14bk2 {  }
+.td3 {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #85a5f4; height: 25px}
+.td4 {  background-color: #f4f4f4; height: 25px}
+.td5 {  background-color: #E8EFF5; height: 25px}
+.td_30px {  height: 30px; font-family: "宋体"; font-size: 14px; color: #000000}
+.V11_BK1 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 11px; color: #000000}
+.T_song14_bk3 {  font-family: "宋体"; font-size: 14px; font-weight: normal; color: #000000; text-decoration: underline}
+.button_accredit {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/accredit.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_accredit_disabled{  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/accredit__disabled.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_add {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/add.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_all_c {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/all_c.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_all_p {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/all_p.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_back {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/back.gif); background-repeat: no-repeat; height: 24px; border-style: none}.button_accredit {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/accredit.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_cancel {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/cancel.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_cy {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/cy.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_date {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/date.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_del {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/del.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_del2 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/del2.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_del2_g {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/del2_g.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_filtrate {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/filtrate.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_gua {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/gua.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_list {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/list.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_list_g {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/list_g.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_new {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/new.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_ok {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/ok.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_ok2 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/ok2.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_pause {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/pause.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_rejigger {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/rejigger.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_rejigger_g {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/rejigger_g.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_renovate {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/renovate.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_renovate2 {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/renovatebak.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_reset {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/reset.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_restart {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/restart.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_resume {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/resume.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_save {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/save.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_startup {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/startup.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_stop {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/stop.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_search {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/search.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_go {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/go.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_set {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/set.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_addto {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/addto.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_delfrom {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/delfrom.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_nodemove {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/nodemove.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_noderename {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/noderename.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.button_nodedel {  font-family: "宋体"; font-size: 12px; color: #000000; width: 94px; background-image: url(images/buttonall/nodedel.gif); background-repeat: no-repeat; height: 24px; border-style: none}
+.T_song12g {  font-family: "宋体"; font-size: 12px; font-weight: bold; color: #CCFF33}
+.menudefaulecolor {  background-color: #003571; height: 25px}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="myCtrlMenu">
+	<item onactivate="rollback()">节点回退</item>
+	<separator />
+	<item onactivate="viewActDefDetail()">查看节点定义信息</item>
+	<separator />
+	<item onactivate="viewActInstDetail()">查看节点实例信息</item>
+	<item onactivate="viewRelDateDetail()">查看节点实例相关数据</item>
+	<separator />
+	<item onactivate="viewWorkItemList()">查看工作项列表</item>
+</menu>

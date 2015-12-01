@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<dataSetConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\javacode\UniFDP\4-系统编码\Project\example\WEB-INF\schema\dataSet.xsd">
+	<dataSourceName/>
+	<auth>INSERT</auth>
+	<auth>UPDATE</auth>
+	<auth>DELETE</auth>
+	<tables>
+		<table tableName="dept" isPrimary="true">
+			<pk pkName="deptno" dataType="4" isAutoIncrement="false"/>
+		</table>
+	</tables>
+	<attributes>
+		<attribute attrName="attr_deptno" dataType="4" isPrimaryKey="true" isFakeColumn="false" isAutoIncrement="false" isReadOnly="false" maxlength="2" columnName="deptno" isNullable="false" index="1" tableName="dept"/>
+		<attribute attrName="attr_dname" dataType="12" isPrimaryKey="false" isFakeColumn="false" isAutoIncrement="false" isReadOnly="false" maxlength="14" columnName="dname" isNullable="true" index="2" tableName="dept"/>
+		<attribute attrName="attr_loc" dataType="12" isPrimaryKey="false" isFakeColumn="false" isAutoIncrement="false" isReadOnly="false" maxlength="13" columnName="loc" isNullable="true" index="3" tableName="dept"/>
+	</attributes>
+	<fixedFilters/>
+	<fixedOrdering>dept.deptno</fixedOrdering>
+</dataSetConf>

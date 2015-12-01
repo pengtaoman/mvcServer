@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="mySubProcMenu">
+	<item onactivate="viewActDefDetail()">查看定义信息</item>
+	<separator />
+	<item onactivate="viewRelDateDetail()">查看相关数据</item>
+</menu>

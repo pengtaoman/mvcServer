@@ -1,0 +1,19 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\common\trees\beans
+2
+f
+13:ValueLabelPair.java|1|13b8969f6e0|1fd|e63a9cea|2fe39f597a594cdca57523c11f22bdd5|0
+1b:MulApplicationListTree.java|1|13b8969ec12|cad|92e9069c|4162dfa584424fdfa1a48e9f5da0ca61|0
+f:NWListLeaf.java|1|13b8969ed4b|205|f701a154|c50521a00f494ccc87f6080544d63ca4|0
+f:NWListTree.java|1|13b8969eea2|5eb|5a46fb04|90dbc62d813b471f8f5f8ecf8176cfae|0
+18:ApplicationListTree.java|1|13b8969e972|11f2|b27e91ee|56073a18bbf745c996d7fda686d37e57|0
+c:OrgTree.java|1|13b8969f1bf|1ec0|6b3b1ece|33498f03a4bd4393851d39bd1b0648f6|0
+13:NWMenuTreeNode.java|1|13b8969ef10|80a|66337315|8b35bb2b3051451a83479bf78fed4aa5|0
+c:Element.java|1|13b8969eb18|21c|4517ad75|788b5713eccf422daece41026459d838|0
+10:TreePrinter.java|1|13b8969f5a7|1184|59e23048|0088be1dee324ca09c28551c9814bc4d|0
+13:NodeComparator.java|1|13b8969ecfd|23f|dbe8b210|0a328f94e77b403398e28b37af2f2cbb|0
+13:RoleSelPrinter.java|1|13b8969f4ad|18eb|b5cd6fe8|1700de871796444d85867a9313aea8fa|0
+12:AutorityPrint.java|1|13b8969ea6c|1ad9|3d2cf4bd|43e4dffc98b84da689f69cd9db992cb6|0
+10:PageControl.java|1|13b8969f421|3ee|9d983e14|933a1661153f4acbb314dc27f0087a3b|0
+c:OrgNode.java|1|13b8969f048|13ec|9f07d6d|f54961b03f8b469ab7080a2db26eb766|0
+14:DropListElement.java|1|13b8969eaba|1f5|403f9a80|73a6c95fd7d04ec281d622a4063f2b15|0

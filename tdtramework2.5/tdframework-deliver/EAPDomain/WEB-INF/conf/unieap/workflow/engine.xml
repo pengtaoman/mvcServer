@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine name="workflow" newTaskNotify="false" parseOrg="true" statistic="false"
+	isGetDefinePartiWhenRollBack="false" isCreateNewSubProcWhenRollBack="true" clusterEnable="false" parseRoleToPerson="false">
+	<properties preManualActName="true" preManualActPart="true"/>
+	<variabilities>
+		<!-- 配置流程流转发生业务异常时的处理逻辑。
+			id：业务异常标识，不可更改。
+			name:业务异常名称。
+			prevActCompletion：当发生业务异常时，已办理的环节是否完成。
+			pluginInvocation：是否执行业务异常通知处理类
+			 -->
+		<variability id="801" name="节点参与人不存在">
+			<prevActCompletion enable="false"/>
+			<pluginInvocation enable="false"/>
+		</variability>
+		<variability id="802" name="节点前置条件不满足">
+			<prevActCompletion enable="true"/>
+			<pluginInvocation enable="false"/>
+		</variability>
+		<variability id="803" name="节点子流程定义不存在">
+			<prevActCompletion enable="false"/>
+			<pluginInvocation enable="false"/>
+		</variability>
+	</variabilities>
+	<plugins>
+		<!-- 配置业务异常通知类。
+			id：异常通知类标识，不可更改。
+			name:异常通知类名称。
+			class：通知类全路径。
+			 -->
+		<plugin id="bizExceptionReceiver" name="业务异常通知处理类" class="com.neusoft.uniflow.appmgr.work.DefaultEventListener"/>
+	</plugins>
+	
+	<!-- 
+		isUseAgent:是否启用代理,默认为true
+	-->
+	<options>
+		<option name="isUseAgent" value="true"/>
+	</options>
+	
+</engine>

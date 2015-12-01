@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RIA3.3</title>
+<style>
+	@import "../blackbird.css";
+</style>
+<script type="text/javascript" src="../blackbird.js"></script>
+<script type="text/javascript">
+	logger.profile("grid");
+</script>
+<style>
+	@import "../../../themes/default/css/unieap-all.css";
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug:false,parseOnLoad: false" ></script>
+<script type="text/javascript" src="../../../../dijit/dijit.js"></script>
+<script type="text/javascript" src="../../../../unieap/unieap-all.js"></script>
+<script type="text/javascript" src="../data.js"></script>
+<script type="text/javascript" src="test_grid.js"></script>
+	</head>
+	<body class="unieap">
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="300px"
+			binding="{store:'menuTree'}"
+			>
+			<header>
+				<cell label="id" width="150" name="id"></cell>
+				<cell label="标签" name="label"></cell>
+				<cell label="类型" name="type"></cell>
+				<cell label="索引号" name="index" dataType="number"></cell>
+				<cell label="父节点" name="parentID"></cell>
+				<cell label="是否叶子" name="leaf"></cell>
+				<cell label="chief" name="chief"></cell>
+			</header>
+		</div>
+		<div id="grid1" jsId="grid1" dojoType="unieap.grid.Grid" width="100%" height="300px"
+			binding="{store:'menuTree'}"
+			>
+			<header>
+				<cell label="id" width="150" name="id"></cell>
+				<cell label="标签" name="label"></cell>
+				<cell label="类型" name="type"></cell>
+				<cell label="索引号" name="index" dataType="number"></cell>
+				<cell label="父节点" name="parentID"></cell>
+				<cell label="是否叶子" name="leaf"></cell>
+				<cell label="chief" name="chief"></cell>
+			</header>
+		</div>
+		<div id="grid2" jsId="grid2" dojoType="unieap.grid.Grid" width="100%" height="300px"
+			binding="{store:'menuTree'}"
+			>
+			<header>
+				<cell label="id" width="150" name="id"></cell>
+				<cell label="标签" name="label"></cell>
+				<cell label="类型" name="type"></cell>
+				<cell label="索引号" name="index" dataType="number"></cell>
+				<cell label="父节点" name="parentID"></cell>
+				<cell label="是否叶子" name="leaf"></cell>
+				<cell label="chief" name="chief"></cell>
+			</header>
+		</div>
+		
+	</body>
+</html>

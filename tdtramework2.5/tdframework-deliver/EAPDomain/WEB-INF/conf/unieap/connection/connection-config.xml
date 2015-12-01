@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connection-config xmlns="http://www.neusoft.com/unieap/connection"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.neusoft.com/unieap/connection/ConnectionConfig.xsd ">
+
+	<jndi-connection name="Oracle_example">
+		<webContainer-Name>WebSphere</webContainer-Name>
+		<jndi-name>java:comp/env/jdbc/uniflow</jndi-name>
+	</jndi-connection>
+</connection-config>

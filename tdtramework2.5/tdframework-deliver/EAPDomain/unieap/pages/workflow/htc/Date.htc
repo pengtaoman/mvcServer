@@ -1,0 +1,621 @@
+/**
+ * Date校验组件
+ * htc组件：Date.htc
+ * 应用例子：Date.html
+ * 属性：isNullable：是否为空。 当为false时不可以为空，需要非空校验；当为true时可以为空，不需要非空校验。
+         dateformat：日期格式。
+         age: 指定输入年龄元素id。
+         preDate:指定当前日期联动的日期。与之比较的前一个日期。
+
+ * 说明：
+ *     1、在这里，约定Date输入域所在的form名“EAPForm”,应用到的javascript脚本DatePicker.js必须写到
+ *        html文件中，如：<script Language="JavaScript" src="./js/DatePicker.js"></script>。
+ *     2、约定日期格式为“yyyy-MM-dd HH-mm-ss”“yyyy-MM-dd HH-mm”“yyyy-MM-dd”“yyyy-MM”“yyyy”
+ *     3、将Enter 键转换为 Tab 键。
+ * @author	lixiangyu,2003.04
+ * MODIFY
+*  huangzg,2003-07-31 按照dateformat定义的格式对日期进行格式化
+ */
+
+<PUBLIC:COMPONENT>
+
+<PUBLIC:ATTACH EVENT="onkeypress" ONEVENT="OnlyNumber()" />
+//<!-- 2003-05-27注释(hugh)
+//<PUBLIC:ATTACH EVENT="onkeydown" ONEVENT="contrlInput()" />
+//<PUBLIC:ATTACH EVENT="onpropertychange" ONEVENT="onPropertyChange()" />
+//<public:ATTACH EVENT="onblur" ONEVENT="clearCtr()" />
+//-->
+<PUBLIC:ATTACH EVENT="ondocumentready" HANDLER="onDocumentReady" />   //想在这里处理网界面上增加一个图片控件
+<PUBLIC:METHOD NAME="onvalidate" />
+<PUBLIC:METHOD NAME="disableImg" />
+<PUBLIC:METHOD NAME="enableImg" />
+<PUBLIC:METHOD NAME="checkDate" />
+<PUBLIC:METHOD NAME="checkSymbol" />
+<PUBLIC:METHOD NAME="IsDigits" />
+<PUBLIC:METHOD NAME="IsTabBTab" />
+<PUBLIC:METHOD NAME="IsDestruct" />
+
+<PUBLIC:METHOD NAME="checkLaterDate" />
+
+<SCRIPT LANGUAGE="JScript">
+    var Ctr=0;
+    var inputName = element.name;
+    var inputStr;
+    var inputID=element.id;
+
+    function onvalidate(){
+      if(!checkDate(element.value,"","yyyy-MM-dd")) return false;
+      return true;
+
+    }
+function changeImg(myStatus){
+//	alert(myStatus);
+	//不可用
+	if(!myStatus){
+		element.parentElement.children(1).disabled = true;
+	    element.parentElement.children(1).style.cursor = "";
+	    element.parentElement.children(1).alt = "";
+	}else{
+		element.parentElement.children(1).disabled = false;
+	    element.parentElement.children(1).style.cursor = "hand";
+	    element.parentElement.children(1).alt = "弹出日历下拉菜单";
+	}
+}
+function disableImg(){
+	changeImg(false);
+}
+function enableImg(){
+	changeImg(true);
+}
+/**
+*@description: 核心方法,响应tab的选择、按钮的点击
+*/
+function DoPropChange(){
+	var propertyName = window.event.propertyName;
+
+	if( propertyName.toLowerCase() == "disabled" ||
+	    propertyName.toLowerCase() == "readonly"){
+	}
+}
+/**
+ *名称：checkSymbol()
+ *功能：检查符号“.”和“－”输入的合法性
+ */
+   function checkSymbol(){
+     var checkStr = element.value;
+     var j=0;
+     var flag=0;
+     //第一位不允许输入“-”“：”
+     if(checkStr == null || checkStr=="" ){
+        if(window.event.keyCode == 45 || window.event.keyCode == 58 )
+            window.event.keyCode = 0 ;
+
+     }
+
+    for (var i = 0; i < checkStr.length; i++) {
+           var oneChar = checkStr.charAt(i)
+           if (oneChar < "0" || oneChar > "9") {
+             if(oneChar != "-" && oneChar != ":" && oneChar != " " )
+                return false;
+           }
+       }
+
+        return true;
+   }
+    function OnlyNumber()
+    {
+      var key = window.event.keyCode ;
+      //有效数字: 0至9,-,:,空格 ,
+      if( (key <= 57 && key >= 48) || key == 45 || key == 58 || key == 32)  return true;
+      window.event.keyCode = 0;
+      return false;
+    }
+
+
+    //文档对象准备完成后的一些处理
+    function onDocumentReady() {
+//    	var id = element.id;
+//    	if(id != null && ""+id != "undefined" && ""+id == "")	id = element.name;
+    	var format = element.getAttribute("dateformat");
+	    if(format == null || format == "" || format == "undenfied"){
+	    	format="yyyy-MM-dd";
+	    	element.dateformat = format;
+	    }
+	    element.maxLength = format.length;
+	    //element.value = getDateMask(format);
+
+    	//利用notShowImg属性来控制是否显示图片
+    	if(element.notShowImg == null){
+    		//在输入框之后增加一个图片按钮
+    		element.width = element.offsetWidth - 20;
+	    //	var oImg = document.createElement("<img id='dateimg' name='dateimg' alt='弹出日历下拉菜单' align='middle' style='cursor:hand;'>");
+	    //	oImg.src = "pages/uniflow/stylesheet/images/calender/calendar.gif"; //modify by hugh 2003/05/12
+	    //	oImg.onclick = function() {
+	   // 		show_calendar(element,'','',element.dateformat);
+	   // 	}
+	    //	element.parentElement.insertBefore(oImg, element.nextSibling);
+	    	if(element.disabled || element.readOnly){
+	    		changeImg(false);
+	    	}
+
+    	}
+    	if(element.age!=null && element.age !=""){
+    	   element.document.all[element.age].value=0;
+    	}
+    	//把默认格式转化成指定格式
+    	//var defualtFormat = "2003-05-13 00:00:00.0";
+    	if(element.value !=""&&element.value.length==21){
+    	    element.value = element.value.substring(0,20);
+    		switch (format) {
+				case "yyyy":
+					element.value = element.value.substring(0,4);
+					break;
+				case "yyyyMM":
+				    element.value = element.value.substring(0,4) + element.value.substring(5,7);
+				    break;
+				case "yyyyMMdd":
+				    element.value = element.value.substring(0,4) + element.value.substring(4,6) + element.value.substring(6,8);
+                    break;
+				case "yyyyMMdd HH:mm:ss":
+				   element.value = element.value.substring(0,4) + element.value.substring(4,6) + element.value.substring(6,8)+element.value.substring(8);
+				    break;
+				case "yyyy-MM":
+				    element.value = element.value.substring(0,7);
+				    break;
+				case "yyyy-MM-dd":
+				    element.value = element.value.substring(0,10);
+				    break;
+				case "yyyy-MM-dd HH:mm:ss":
+				    break;
+				default:
+				    alert(element.prompt+"中定义的时间格式还不能处理。");
+				    return false;
+		    	}
+		}
+  }
+
+
+    //控制自动输入准确日期格式
+    function contrlInput() {
+     var ctr;
+		 ctr = checkNum();
+		 switch (ctr) {
+			   case 4:
+			        if(element.value.length==4){
+			            if(element.dateformat !="yyyy")
+			               event.srcElement.value+="-";
+			        }
+			        break;
+			   case 6:
+			        if(element.value.length==7){
+			          if(element.dateformat !="yyyy" && element.dateformat !="yyyy-MM")
+			            event.srcElement.value+="-";
+			        }
+			        break;
+			   case 8:
+			   		if(element.value.length==10){
+			   		   if(element.dateformat =="yyyy-MM-dd HH:mm:ss" || element.dateformat =="yyyy-MM-dd HH:mm"  )
+					      event.srcElement.value+=" ";
+					}
+			        break;
+			   case 10:
+			   		if(element.value.length==13){
+			   		  if(element.dateformat =="yyyy-MM-dd HH:mm:ss" || element.dateformat =="yyyy-MM-dd HH:mm"  )
+					    event.srcElement.value+=":";
+					}
+
+			        break;
+			   case 12:
+			       if(element.value.length==16){
+			          if(element.dateformat =="yyyy-MM-dd HH:mm:ss")
+					     event.srcElement.value+=":";
+					}
+			        break;
+			   case 14:
+			        ctr=0;
+			        break;
+			   default: break;
+			  }
+		  return true;
+    }
+
+
+
+// 光标离开处理事件
+ function clearCtr() { /*Ctr=0; */}
+
+ //是否是数字输入
+ function IsDigits(theKey) {
+  return ((theKey > 47) && (theKey < 58))
+ }
+
+ //是否为tab键
+ function IsTabBTab(theKey) {
+  return theKey == 9;
+ }
+ //
+ function IsDestruct(theKey) {
+  if (theKey==37||theKey==8){
+   event.keyCode=(0x08);
+   return true;
+  }
+ }
+
+  /**
+ *名称：checkNum()
+ *功能：检查数字个数
+ */
+   function checkNum(){
+     var checkStr = element.value;
+     var num=0;
+     for (var i = 0; i < checkStr.length; i++) {
+           var oneChar = checkStr.charAt(i)
+           if (oneChar >= "0" && oneChar <= "9") {
+             num=num+1;
+           }
+       }
+       return num;
+   }
+
+ function onPropertyChange(){
+       var age;
+     if(element.age != null && element.age != ""){
+	      var birthday = element.value;
+	      var year=parseInt(birthday.substring(0,4));
+	      var date=new Date();
+	      var currentYear=date.getYear(); //取得当前年份命令
+	   //   alert("当前年"+currentYear);
+	      age=currentYear-year;
+	    //  alert("年龄"+age);
+	    //  alert( element.age);
+		  element.document.all[element.age].value=age;
+     }
+     return age;
+}
+
+ //检查日期大小是否满足先后顺序
+   function checkLaterDate(){
+      var date1 = element.document.all[preDate].value;
+      var date2 = element.value;
+   //   alert("date1="+date1+" "+"date2="+date2);
+      if(element.dateformat=="yyyy-MM"){
+       	var year1=parseInt(date1.substring(0,4));
+		var year2=parseInt(date2.substring(0,4));
+
+		var month1=parseInt(date1.substring(5,7));
+		var month2=parseInt(date2.substring(5,7));
+
+        if(year1=year2){
+           if(month2<month1){
+              return false;
+           }else{
+              return true;
+           }
+	    }else if (year2<year1){
+	           return false;
+
+	    }else{
+	           return true;
+	     }
+
+      }else if(element.dateformat=="yyyy"){
+         var d1= parseInt(date1);
+         var d2= parseInt(date2);
+      //   alert("d1="+d1+" "+"d2="+d2);
+
+         if(d2<d1){
+	           return false;
+
+	      } else{
+	           return true;
+	      }
+
+      }else{
+
+	      var re = /-/g;
+	      date1=date1.replace(re,"/");
+	      date2=date2.replace(re,"/");
+	      var d1 = new Date(date1);
+	      var d2 = new Date(date2);
+
+	  //    alert("d1="+d1+" "+"d2="+d2);
+
+	      if(d2<d1){
+	           return false;
+
+	      } else{
+	           return true;
+	      }
+
+
+      }
+
+   }
+/**
+*@description 把指定格式的时间字符串装配成一个Date对象
+*@param     dateStr
+*@param     objName
+*@param     format
+*               能处理的格式:
+*                          yyyy,
+*					       yyyyMM,yyyyMMdd,yyyyMMdd HH:mm:ss,
+*                          yyyy-MM,yyyy-MM-dd,yyyy-MM-dd HH:mm:ss,
+*@return    boolean
+*/
+function checkDate(dateStr,objName,format){
+    if(dateStr == null || dateStr == "" ) return true;
+    if(dateStr.length != format.length){
+    	alert(objName+"长度和格式("+format+")要求的不一致,请重新输入");
+    	return false;
+    }
+	var year,month,day,hour,minute,second,separator1,separator2;
+	switch (format) {
+		case "yyyy":
+			year = dateStr;
+			break;
+		case "yyyyMM":
+		    year = dateStr.substring(0,4);
+		    month = dateStr.substring(4,6);
+		    break;
+		case "yyyyMMdd":
+		    year = dateStr.substring(0,4);
+		    month = dateStr.substring(4,6);
+		    day = dateStr.substring(6,8);
+		    break;
+		case "yyyyMMdd HH:mm:ss":
+		    separator2=dateStr.substring(11,12);
+            if(separator2!=":"){
+                alert(objName+"格式不正确（yyyyMMdd HH:mm:ss）");
+                return false;
+            }
+            separator2=dateStr.substring(14,15);
+            if(separator2!=":"){
+                alert(objName+"格式不正确（yyyyMMdd HH:mm:ss）");
+                return false;
+            }
+            year = dateStr.substring(0,4);
+		    month = dateStr.substring(4,6);
+		    day = dateStr.substring(6,8);
+		    hour = dateStr.substring(9,11);
+		    minute = dateStr.substring(12,14);
+		    second = dateStr.substring(15,17);
+		    break;
+		case "yyyy-MM":
+            separator1=dateStr.substring(4,5);
+            if(separator1!="-"){
+                alert(objName+"格式不正确（yyyy-MM）");
+                return false;
+            }
+		    year = dateStr.substring(0,4);
+		    month = dateStr.substring(5,7);
+		    break;
+		case "yyyy-MM-dd":
+            separator1=dateStr.substring(4,5);
+            if(separator1!="-"){
+                alert(objName+"格式不正确（yyyy-MM-dd）");
+                return false;
+            }
+            separator1=dateStr.substring(7,8);
+            if(separator1!="-"){
+                alert(objName+"格式不正确（yyyy-MM-dd）");
+                return false;
+            }
+		    year = dateStr.substring(0,4);
+		    month = dateStr.substring(5,7);
+		    day = dateStr.substring(8,10);
+		    break;
+		case "yyyy-MM-dd HH:mm:ss":
+            separator1=dateStr.substring(4,5);
+            if(separator1!="-"){
+                alert(objName+"格式不正确（yyyy-MM-dd HH:mm:ss）");
+                return false;
+            }
+            separator1=dateStr.substring(7,8);
+            if(separator1!="-"){
+                alert(objName+"格式不正确（yyyy-MM-dd HH:mm:ss）");
+                return false;
+            }
+            separator2=dateStr.substring(13,14);
+            if(separator2!=":"){
+                alert(objName+"格式不正确（yyyy-MM-dd HH:mm:ss）");
+                return false;
+            }
+            separator2=dateStr.substring(16,17);
+            if(separator2!=":"){
+                alert(objName+"格式不正确（yyyy-MM-dd HH:mm:ss）");
+                return false;
+            }
+		    year = dateStr.substring(0,4);
+		    month = dateStr.substring(5,7);
+		    day = dateStr.substring(8,10);
+		    hour = dateStr.substring(11,13);
+		    minute = dateStr.substring(14,16);
+		    second = dateStr.substring(17,19);
+		    break;
+		default:
+		    alert(objName+"中定义的时间格式还不能处理。");
+		    return false;
+	}
+	//check year
+	if(year != null){
+		year = parseInt(year,10);
+	    if(isNaN(year)){
+	    	alert(objName+" 年度 有非法字符,请处理输入。");
+			return false;
+	    }
+        if(year<1900 || year>2200){
+                alert(objName+" 年份 应介于1900与2200之间，请重新输入！");
+                return false;
+        }
+
+	}
+	//check month
+	if(month != null){
+		month = parseInt(month,10);
+	    if(isNaN(month)){
+	    	alert(objName+" 月份 有非法字符,请处理输入。");
+			return false;
+		}
+        if(month<1 || month >12){
+                alert(objName+" 月份 应介于1与12之间，请重新输入！");
+                return false;
+        }
+	}
+	//check day
+	if(day != null){
+		day = parseInt(day,10);
+	    if(isNaN(day)){
+	    	alert(objName+" 日 有非法字符,请处理输入。");
+			return false;
+		}
+        if((day==0)||(day>31)){
+                alert(objName+" 日 必须介于1与31之间！");
+                return false;
+         }
+         else if(day>28 && day<31){
+                if(month==2){
+                                if(day!=29){
+                                        alert(objName+year+"年"+month+"月无"+day+"日。");
+                                        return false;
+                                }
+                                else {
+                                        if((year%4)!=0){
+                                                alert(objName+year+"年"+month+"月无"+day+"日。");
+                                                return false;
+                                         }
+                                         else {
+                                                if((year%100==0)&&(year%400!=0)){
+                                                       alert(objName+year+"年"+month+"月无"+day+"日。");
+                                                       return false;
+                                                }
+                                         }
+                                }
+                        }
+                }
+
+                else if(day==31){
+                        if((month==2)||(month==4)||(month==6)||(month==9)||(month==11)){
+                                alert(objName+month+"月无"+day+"日");
+                                return false;
+                        }
+                }
+	}
+	//check hour
+	if(hour != null){
+		hour = parseInt(hour,10);
+	    if(isNaN(hour)){
+	    	alert(objName+"小时有非法字符,请处理输入。");
+			return false;
+		}
+        if(hour<0 || hour >23){
+                alert(objName+"小时应介于0与23之间，请重新输入！");
+                return false;
+        }
+	}
+	//check minute
+	if(minute != null){
+		minute = parseInt(minute,10);
+	    if(isNaN(minute)){
+	    	alert(objName+"分钟有非法字符,请处理输入。");
+			return false;
+		}
+        if(minute<0 || minute >59){
+                alert(objName+"小时应介于0与59之间，请重新输入！");
+                return false;
+        }
+	}
+	//check second
+	if(second != null){
+		second = parseInt(second,10);
+	    if(isNaN(second)){
+	    	alert(objName+"秒有非法字符,请处理输入。");
+			return false;
+		}
+        if(second<0 || second >59){
+                alert(objName+"秒应介于0与59之间，请重新输入！");
+                return false;
+        }
+	}
+	return true;
+}
+/**
+*@description 获取时间掩码
+*@param format
+*        能处理的格式:
+*        yyyy,
+*		 yyyyMM,yyyyMMdd,yyyyMMdd HH:mm:ss,
+*        yyyy-MM,yyyy-MM-dd,yyyy-MM-dd HH:mm:ss,
+*@return String
+*/
+function getDateMask(format){
+        var mask;
+     switch (format) {
+		case "yyyy":
+			mask = "    ";
+			break;
+		case "yyyyMM":
+		    mask = "      ";
+		    break;
+		case "yyyyMMdd":
+		    mask = "        ";
+		    break;
+		case "yyyyMMdd HH:mm:ss":
+		    mask = "           :  :  ";
+		    break;
+		case "yyyy-MM":
+		     mask = "    -  ";
+		    break;
+		case "yyyy-MM-dd":
+		     mask = "    -  -  ";
+		    break;
+		case "yyyy-MM-dd HH:mm:ss":
+		     mask = "    -  -     :  :  ";
+		    break;
+		default:
+			 mask = "    -  -  ";
+	}
+	return mask;
+}
+function checkDate(dateStr,objName,format){
+    if(dateStr == null || dateStr == "" ) return true;
+    if(dateStr.length != format.length){
+    	alert("日期长度和格式不合法,日期格式为yyyy-MM-dd(1900-01-01)。");
+    	return false;
+    }
+	switch (format) {
+		case "yyyy":
+		case "yyyyMM":
+        case "yyyy-MM":
+		case "yyyyMMdd":
+		case "yyyy-MM-dd":
+		case "yyyyMMdd HH:mm:ss":
+		case "yyyy-MM-dd HH:mm:ss":
+                        var pattern,year;
+                        //year:用于判断闰年
+                        //pattern：用于形成正则表达式
+                        year = parseInt(dateStr.substring(0,4),10);
+                        //判断闰年
+//                        dateStr="2002-12-23 15:02:03";
+                        if(((year%4==0)&&(year%100!=0))||( year%400==0)){
+                              pattern=/^(19\d\d|2[01]\d\d)[-]?((02[-]?(0[1-9]|2\d)?)?|((0[469]|11)[-]?(0[1-9]|[12]\d|30)?)?|((0[13578]|10|12)[-]?(0[1-9]|[12]\d|3[01])?)?)(\s([01]\d|2[0123])\:[0-5]\d\:[0-5]\d)?$/;
+                            if(!(pattern.test(dateStr))){
+                                 alert("日期（"+dateStr+"）输入不合法,日期格式为yyyy-MM-dd(1900-01-01)。");
+                                 return;
+                            }
+                        }else{
+                            pattern=/^(19\d\d|2[01]\d\d)[-]?((02[-]?(0[1-9]|2[0-8])?)?|((0[469]|11)[-]?(0[1-9]|[12]\d|30)?)?|((0[13578]|10|12)[-]?(0[1-9]|[12]\d|3[01])?)?)(\s([01]\d|2[0123])\:[0-5]\d\:[0-5]\d)?$/;
+                            if(!(pattern.test(dateStr))){
+                                 alert("日期（"+dateStr+"）输入不合法,日期格式为yyyy-MM-dd(1900-01-01)。");
+                                 return;
+                            }
+                        }
+                        break;
+		default:
+		    alert("定义的时间格式不能处理。");
+		    return false;
+	}
+	return true;
+}
+
+</SCRIPT>
+</PUBLIC:COMPONENT>

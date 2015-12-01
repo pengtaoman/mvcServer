@@ -1,0 +1,13 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\standard\workitemmgt\operation\forms
+2
+9
+1a:UpdatePartiActionForm.java|1|13b896ac56d|544|cb4bbd89|fe5fe2224ac946058da3795e5502456f|0
+f:SendtoForm.java|1|13b896ac473|5b3|df11e12d|af60f97836de409a8a401d473ccec782|0
+f:NexttoForm.java|1|13b896ac09a|487|7c0577ee|874d3d69cbdf43d080a1b60396a5ff3e|0
+11:RollBackForm.java|1|13b896ac369|5c1|186ae434|31f40cdc958d496088b65c2a30971b91|0
+11:ReassignForm.java|1|13b896ac28e|5aa|d3dddf46|ea5883d4c22d4d19a1a14cd179d34b0f|0
+15:OpenWorkitemForm.java|1|13b896ac0f8|41c|73ec5837|b354789fec44431c9c2e01b59f83aac7|0
+13:TransitionForm.java|1|13b896ac4f0|4aa|8f7e8ae7|d2a5046a258d41d2ab2e8f3895be2462|0
+10:NextActForm.java|1|13b896ac03c|51a|7400a286|40d9863a3d1b40ee801e8ec4f6364847|0
+e:AdhocForm.java|1|13b896abfee|5f3|a25ff143|bc067784bf76421c8380bba68f12b616|0

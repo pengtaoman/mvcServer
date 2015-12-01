@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\pwd
+2
+7
+10:PwdValidDAO.java|1|13b89671c23|34a|70ee25d8|b8e2a74e96f745b096a12925113d8217|0
+14:PwdValidDAOImpl.java|1|13b89671c71|ecd|38b7cf5f|7458720425cc400d820230b7c867d8ce|0
+14:PwdComplexityVO.java|1|13b89671c04|bd2|830bd7fe|5715fb21350e4d57b82872f9dca93add|0
+f:PwdValidVO.java|1|13b89671ca0|eef|9f40206|760f8eed5acc462494c848a624fe5ec9|0
+19:PwdComplexityDAOImpl.java|1|13b89671bc6|171d|8bde69e1|717abfec6f7242b69a981a316a3a3c1a|0
+15:PwdComplexityDAO.java|1|13b89671b77|2c3|5122fe64|122fa4f739d8437fb039d4ca9a13092c|0
+16:PwdComplexityColl.java|1|13b89671b58|176|27082e8|be54af3aa9cd452a8af731e5a3c7a2bb|0

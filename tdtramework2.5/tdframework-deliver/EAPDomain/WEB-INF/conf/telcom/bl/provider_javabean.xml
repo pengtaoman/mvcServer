@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?>
+<provider cachesize="0">
+    <!--  component wanted -->
+  <interaction name="comp_datastore" classname="com.neusoft.unieap.util.datastore.interaction.DataStoreMgrInteractionObjectImpl" interfacename="com.neusoft.unieap.util.datastore.interaction.DataStoreMgrInteractionObject" /> 
+    <!--  WinClient wanted -->
+  <interaction name="CreateDataStoreInteraction" classname="com.neusoft.unieap.bl.interaction.impl.winclient.CreateDataStoreInteraction" interfacename="com.neusoft.unieap.bl.interaction.winclient.ICreateDataStoreInteraction" /> 
+  <interaction name="DBSysdateInteraction" classname="com.neusoft.unieap.bl.interaction.impl.winclient.DBSysdateInteraction" interfacename="com.neusoft.unieap.bl.interaction.winclient.IDBSysdateInteraction" /> 
+  <interaction name="SqlQueryInteraction" classname="com.neusoft.unieap.bl.interaction.impl.winclient.SqlQueryInteraction" interfacename="com.neusoft.unieap.bl.interaction.winclient.ISqlQueryInteraction" /> 
+
+</provider>

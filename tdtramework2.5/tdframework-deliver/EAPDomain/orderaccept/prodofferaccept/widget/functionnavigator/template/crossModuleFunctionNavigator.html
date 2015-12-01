@@ -1,0 +1,62 @@
+<div>
+	<div id="floatRightButton"
+		style="cursor: pointer; position: fixed; bottom: 524px; right: 10px; z-index: 5000000"
+		dojoAttachEvent='onclick:toggle'></div>
+	<div class="bubbleRight_div"
+		style="width: 180px; position: fixed; bottom: 423px; right: 35px; z-index: 5000000">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td class="br_tl"></td>
+					<td class="br_t"></td>
+					<td class="br_tr"></td>
+				</tr>
+				<tr>
+					<td class="br_l_t"></td>
+					<td rowspan="2" class="br_c">
+						<p>
+							客户名称：
+							<span dojoAttachPoint='custNameNode'></span>
+						</p>
+						<p>
+							套餐销售品：
+							<span dojoAttachPoint='prodOfferNameNode'></span>
+						</p>
+						<p>
+							订单编号：
+							<span dojoAttachPoint='custOrderIdNode'></span>
+						</p>
+						<br>
+						<a href="#" id='orderAcceptHref'
+							dojoAttachEvent='onclick:onClickOrderAcceptHandle'><img
+								src="common/images/bg/bubble/zhddsl.png" width="110" height="22">
+						</a>
+						<br>
+						<a href="#" id='chargeHref' dojoAttachEvent='onclick:onClickChargeHandle'><img
+								src="common/images/bg/bubble/jftf.png" width="110" height="22">
+						</a>
+						<br>
+						<a href="#" id='orderCheckHref'
+							dojoAttachEvent='onclick:onClickOrderCheckHandle'><img
+								src="common/images/bg/bubble/ddjh.png" width="110" height="22">
+						</a>
+						<br>
+						<a href="#" id='orderMonitorHref'
+							dojoAttachEvent='onclick:onClickOrderMonitorHandle'><img
+								src="common/images/bg/bubble/ddjk.png" width="110" height="22">
+						</a>
+					</td>
+					<td rowspan="2" class="br_r"></td>
+				</tr>
+				<tr>
+					<td class="br_l_b"></td>
+				</tr>
+				<tr>
+					<td class="br_bl"></td>
+					<td class="br_b"></td>
+					<td class="br_br"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>

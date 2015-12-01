@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\web\struts
+2
+c
+19:BaseControllerAction.java|1|13b89692f68|f8b|20745eb7|11a2d20fe87546f8b8519d40276f3322|0
+f:UploadFile.java|1|13b89693786|55d|ab3bb002|1df2edf017d04d30b54f3a1298470a2d|0
+1e:InputStreamDownloadAction.java|1|13b896933ec|4be|59a7bd0f|fc16560bb89049a495e9b65e716ba2ab|0
+14:UploadException.java|1|13b89693709|185|12aa7fd7|8e83e32df002414ea52924a09c00b85f|0
+1e:DownloadInputStreamReader.java|1|13b8969335f|571|1410c17c|4e8ce5e6b23d4cf1a2de4e081748c072|0
+13:DownloadAction.java|1|13b89693208|1452|53bf9405|400e471e5abd4c54b53cfd954cab9d3a|0
+f:UploadData.java|1|13b896936ab|486|c676a8f9|013d4838e88b467da5459fab9227a2ef|0
+15:TDDispatchAction.java|1|13b896935c1|41ba|428fa375|486f94282caf4aa2889a71666d1d04ea|0
+f:DownloadBO.java|1|13b89693275|2c9|449b1dde|274430c189d54646a7d0c3532ee89c67|0
+18:BytesDownloadAction.java|1|13b896930fe|717|e96ea4fb|563dad7aa602466dbd0f6e1993af692c|0
+19:MyTestDownLoadAction.java|1|13b8969344a|805|e53ebba6|d994b883ba8547e09724b6d30024a15b|0
+f:BaseAction.java|1|13b89692d64|28af|1098cdae|8887ed84d02b455fb2f1694314e21e2d|0

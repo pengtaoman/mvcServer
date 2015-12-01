@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--a  edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User)  a-->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>quartz job alarm</description>	
+
+	<bean id="autoJob"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.neusoft.tdframework.quartz.demojob.AutoAcceptJob" />
+		<property name="group" value="stdScheduler4" />
+	</bean>	
+	<bean id="autoCronTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="autoJob" />
+		<property name="name" value="autoTrigger" />
+		<property name="group" value="stdScheduler4" />
+		<property name="cronExpression" value="0 0 23 * * ?" />
+	</bean>	
+	<bean id="autoScheduler"
+			class="com.neusoft.tdframework.quartz.scheduler.TdSchedulerFactoryBean" >
+		<property name="dataSource">
+			<ref bean="crmB_dataSource" />
+		</property>
+	
+		<property name="autoStartup" value="false" />
+		<property name="waitForJobsToCompleteOnShutdown" value="true" />
+		<property name="configLocation"
+			value="classpath:quartz-tddemo.properties" />
+		<property name="startupDelay" value="10"/>
+		<property name="triggers">
+			<list>
+				<ref bean="autoCronTrigger" />
+			</list>
+		</property>
+		<property name="schedulerName" value="autoScheduler"/>
+	</bean>	
+</beans>

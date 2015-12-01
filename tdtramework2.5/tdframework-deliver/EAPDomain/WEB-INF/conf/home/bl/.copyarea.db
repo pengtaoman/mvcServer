@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\home\bl
+2
+3
+1a:dataAccessContext-home.xml|1|13b89646ca0|56f|3a45bff7|d7b5cf071728471d8081e922cb1ff75e|0
+1b:applicationContext-home.xml|1|13b89646c43|50a|a78a24c|5dcc4e347c5c4d468d0758329523347a|0
+15:paramContext-home.xml|1|13b89646d0e|126|f94e5c78|ac0ff1e29e4d4407bb44e2886c233b06|0

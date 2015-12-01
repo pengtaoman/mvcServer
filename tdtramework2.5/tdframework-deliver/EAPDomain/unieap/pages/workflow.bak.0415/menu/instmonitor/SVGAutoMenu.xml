@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="myAutoMenu">
+	<item onactivate="viewActDefDetail()">查看定义信息</item>
+	<separator />
+	<item onactivate="viewActInstDetail()">查看实例信息</item>
+	<item onactivate="viewRelDateDetail()">查看相关数据</item>
+	<separator />
+	<item onactivate="viewApplication()">查看应用程序信息</item>
+</menu>

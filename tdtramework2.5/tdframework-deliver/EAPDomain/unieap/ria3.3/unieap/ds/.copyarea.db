@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\ds
+2
+b
+e:IDataCenter.js|1|13b890e24b9|53e3|8b0908ab|82643fd2709b49b688aef5fce3cee0f1|0
+6:Row.js|1|13b890e2f68|5526|5ceb0980|dfecbc570fa84ad7952ca9bd382af15e|0
+b:MetaData.js|1|13b890e2e3f|4618|4452281d|4e86ab73221141c8a5780ced9ca91a60|0
+c:DataStore.js|1|13b890e239f|9997|8b759dfc|96a66fbea3ee43ada26a45283e54388d|0
+d:IDataStore.js|1|13b890e2853|6acd|162adf4c|e229ff3b97e84f35b361b16d06631ec1|0
+9:RowSet.js|1|13b890e3043|19da2|9463e1a8|a1b4783412354e4e9d3748e9e7f02344|0
+a:IRowSet.js|1|13b890e2dc2|11749|5ef26bed|eb76544f410d4f1698218676f5cbcce1|0
+c:IMetaData.js|1|13b890e2a76|355d|e8a401f6|5572e59559184ca4b0ca974df90e524c|0
+c:Constants.js|1|13b890e2247|d5|2253585|08cfe5f4bfdc47efb1edc3d9d4e44950|0
+7:IRow.js|1|13b890e2ca9|1994|c36bd76a|c717644d4eba439880c38abbac73f20f|0
+d:DataCenter.js|1|13b890e2303|6dd0|419e67b8|53c1bc375780403b93e3ebfa5c7461de|0

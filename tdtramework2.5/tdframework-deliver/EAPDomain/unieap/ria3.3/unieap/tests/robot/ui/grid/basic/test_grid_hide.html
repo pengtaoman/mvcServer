@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - LayoutManager</title>
+				<style type="text/css">
+			@import "../../../../../../unieap/themes/default/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script> 
+		<script type ="text/javascript" src="test_grid_hide.js"></script>
+        <script type="text/javascript">
+			dojo.require("testunit.TestUnit");
+			dojo.require("unieap.grid.Grid");
+			dojo.addOnLoad(function(){
+				testUtil.markNode(unieap.byId("grid").domNode);
+			})
+        </script>
+	</head>
+	<body class="unieap">
+		<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - LayoutManager"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="500px" height="300px"
+			binding="{store:'empDataStore'}"
+			views="{rowNumber:true,orderType:'client'}">
+			<fixed>
+				<cell label="员工编号" width="150" name="attr_empno"></cell>
+			</fixed>
+			<header>
+				<cell width="100px" label="姓名" name="NAME"></cell>
+				<cell width="150px" label="职位" name="attr_job"></cell>
+				<cell width="150px" label="工资" name="attr_sal" dataType="number"></cell>
+			</header>
+		</div>
+		<button onclick="setStructure()" style="text-align: left;" id="changeButton">layout.setStructure()</button>
+		<button onclick="isHide()" style="text-align: left;">layout.isHidden("attr_empno")</button>
+	</body>
+</html>

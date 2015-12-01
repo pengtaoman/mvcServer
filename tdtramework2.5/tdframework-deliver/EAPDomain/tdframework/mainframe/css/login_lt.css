@@ -1,0 +1,148 @@
+*{	font-family: Verdana, Arial, Helvetica, sans-serif, "宋体", "黑体";
+	font-size: 12px;
+	color:#555;
+}
+body>table,body>div { margin-left:auto; margin-right:auto;}
+/*********2.0样式********/
+#index_box{
+	background-image:url(../images/login_bg.gif);
+	width: 600px;
+	height:360px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:75px;
+	background-repeat: no-repeat;
+}
+#index_box_error{
+	background-image:url(../images/login_bg_error.gif);
+	width: 600px;
+	height:360px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:91px;
+	background-repeat: no-repeat;
+}
+#alertMessage{
+	align:center;
+	color:red;
+	font-size:16px;
+	margin-bottom:10px;
+}
+#comp{ padding-top:130px; padding-left:100px;}
+#ver{
+	padding-right:110px;
+	float: right;
+	font-weight:bold;
+	font-size: 12px;	
+}
+#login{
+	margin-left:10px;
+	width:200px;
+	height:127px;
+	margin-top:40px;
+	float: right;
+}
+#company{float:right; padding-bottom:0px; padding-top:0px; margin-left:20px; width:98%; height:20px; }
+html .company_word     {
+	font-family: "黑体";
+	font-size: 30px;
+	color: #C40005;
+	font-weight: bold;
+					}
+html .province_word     {
+	font-family: "黑体";
+	font-size: 25px;
+	color: #555555;
+	font-weight: bold;
+					}					
+input.text {
+	padding-left: 1px;
+	margin: 0px;
+	height: 20px;
+	font-family: 宋体;
+	font-size: 12px;
+	font-style: bold;
+}
+.Button{
+	background: url(../images/button_bg.gif) repeat-x left top;
+	line-height:17px;
+	height:19px;
+	border:1px solid;
+	border-color:#ffb052;
+	font-size:12px;
+	color:#000;
+	letter-spacing: 2px;
+}
+/********旧样式**********/
+.loginform {
+	font-size: 14px;
+}
+.input {
+	font-size: 16px;
+	border: 1px solid #FF0000;
+	height: 25px;
+	width: 125px;
+	background-image: url(../images/login_in.gif);
+	background-repeat: repeat-x;
+
+}
+.button1 {
+	background-image: url(../images/login_button.gif);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 27px;
+	width: 72px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.button2 {
+	background-image: url(../images/login_reset.gif);
+	background-repeat: no-repeat;
+	height: 27px;
+	width: 72px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.bk {
+	background-image: url(../images/login_ok.gif);
+	font-size: 14px;
+}
+.buttonbk {
+    background: transparent;
+	background-image: url(../images/login_button.gif);
+	width: 88;
+	height: 36;
+	border: 0; 
+	font-size: 14px;
+}
+input.default {
+	border:1px solid #bbbbbb;
+	font-size:12px;
+	height:20px;
+	margin:0px;
+	padding-left: 1px;
+	font-style: bold;
+}
+
+input.focus {
+	border:1px solid #ffbbaa;
+	background-color:#fce5e5;
+	font-size:12px;
+	height:20px;
+	margin:0px;
+	padding-left: 1px;
+	font-style: bold;
+}
+

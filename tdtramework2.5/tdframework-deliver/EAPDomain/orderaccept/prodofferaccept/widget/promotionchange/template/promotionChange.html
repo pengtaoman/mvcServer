@@ -1,0 +1,38 @@
+<div style="margin-bottom: 10px; margin-top: 10px;text-align:center;">
+	<div style="margin-bottom: ">
+		<div
+			style="text-align: right;  display: inline-block; * display: inline; zoom: 1;">
+			<label for="promotion-group">
+				促销政策组:
+			</label>
+		</div>
+		<div
+			style="text-align: left;  width: 15%; display: inline-block; * display: inline; zoom: 1;">
+			<select id='promotion-group' 
+				style="width: 100%" dojoAttachEvent="onchange:elementchange" dojoAttachTopic="/promotionGroup"></select>
+		</div>
+		<div
+			style="text-align: right;  display: inline-block; * display: inline; zoom: 1;">
+			<label for="promotion-name">
+				政策名称:
+			</label>
+		</div>
+		<div
+			style="text-align: left; display: inline-block; * display: inline; zoom: 1;">
+			<input id='promotion-name'  
+				value="输入名称，点击【回车】键可模糊查询"  valueCache ="" tips='输入名称，点击【回车】键可模糊查询'  
+				dojoAttachEvent="onkeyup:elementkeyup,onblur:elementblur,onfocus:elementfocus" dojoAttachTopic="/promotionName" />
+		</div>
+		<div
+			style="text-align: right; display: inline-block; * display: inline; zoom: 1;">
+			<label for="promotion-info">
+				促销政策:
+			</label>
+		</div>
+		<div
+			style="text-align:left; width: 15%; display: inline-block; * display: inline; zoom: 1;">
+			<select id='promotion-info' 
+				style="width: 100%" dojoAttachEvent="onchange:elementchange" dojoAttachTopic="/promotionInfo"></select>
+		</div>
+	</div>
+</div>

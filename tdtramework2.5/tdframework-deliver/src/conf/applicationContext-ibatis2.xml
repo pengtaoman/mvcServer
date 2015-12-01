@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- 提供多数据源支持 -->
+	<bean id="defaultDataSource" class="com.neusoft.tdframework.ibaguice.core.datasource.MultiDataSource">
+	   <property name="dataSource" ref="c3p0_dataSource" />   
+	</bean>
+
+	<!-- 事务管理配置 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="defaultDataSource" />
+	</bean>
+
+	<!-- 事务代理配置 -->
+	<bean id="commonTransactionProxy" lazy-init="true" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+			    <prop key="do*">PROPAGATION_REQUIRED,-ServiceException</prop>
+				<prop key="batch*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="edit*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="query*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="select*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+		<!-- 
+		<property name="postInterceptors">
+			<list>
+			    <ref bean="afterAroundAdvisor" />	
+			    <ref bean="beforeAroundAdvisor" />	
+			    <ref bean="logAroundAdvisor" />
+				<ref bean="exceptionAroundAdvisor" />	
+			</list>
+        </property>
+         -->
+	</bean>
+	
+    <!-- 异常切入适配配置 -->
+    <bean id="exceptionAroundAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> 
+        <property name="advice"> 
+            <ref bean="exceptionAroundAdvice" /> 
+        </property> 
+        <property name="patterns"> 
+            <value>.*</value> 
+        </property> 
+  	</bean> 
+  	
+  	<!-- 异常拦截配置 -->
+  	<bean id="exceptionAroundAdvice" class="com.neusoft.tdframework.ibaguice.core.exception.ExceptionAroundAdvice" />
+  	
+  	
+  	<!-- 日志切入适配配置 -->
+    <bean id="logAroundAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> 
+        <property name="advice"> 
+            <ref bean="logAroundAdvice" /> 
+        </property> 
+        <property name="patterns"> 
+            <value>.*</value> 
+        </property> 
+  	</bean> 
+  	
+  	<!-- 统一日志拦截配置 -->
+  	<bean id="logAroundAdvice" class="com.neusoft.tdframework.ibaguice.core.exception.LogAroundAdvice" />
+  	
+  	
+  	<!-- 方法前拦截切入适配配置 -->
+    <bean id="beforeAroundAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> 
+        <property name="advice"> 
+            <ref bean="beforeAroundAdvice" /> 
+        </property> 
+        <property name="patterns"> 
+            <value>.*</value> 
+        </property> 
+  	</bean> 
+  	
+  	<!-- 方法前拦截配置 -->
+  	<bean id="beforeAroundAdvice" class="com.neusoft.tdframework.ibaguice.core.exception.TdMethodBeforeAdvice" />
+  	
+  	
+  	<!-- 方法后拦截切入适配配置 -->
+    <bean id="afterAroundAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> 
+        <property name="advice"> 
+            <ref bean="afterAroundAdvice" /> 
+        </property> 
+        <property name="patterns"> 
+            <value>.*</value> 
+        </property> 
+  	</bean> 
+  	
+  	<!-- 方法后拦截配置 -->
+  	<bean id="afterAroundAdvice" class="com.neusoft.tdframework.ibaguice.core.exception.TdAfterReturningAdvice" />
+  	
+  	
+  	
+
+	<!-- iBatis2会话Bean配置 -->
+	<bean id="sqlMapClient" class="com.neusoft.tdframework.ibaguice.orm.TdSqlMapClientFactoryBean">
+		<property name="dataSource" ref="defaultDataSource" /> 
+		<property name="configLocation">
+		    <value>${ibatis.context.path}</value>
+		</property>
+		<!-- 
+		<property name="configLocations">
+		    <list>
+		       <value>classpath:conf/SqlMapConfig0.xml</value>
+		       <value>classpath:conf/SqlMapConfig1.xml</value>
+		    </list>
+		</property>
+		-->
+		<!--             
+		<property name="mappingLocations" value="classpath:com/neusoft/tdframework/ibaguice/pot/**/**/*.xml" />
+		-->
+	</bean>
+	
+	<bean id="sqlMapClientDaoSupport" class="com.neusoft.tdframework.ibaguice.orm.DefaultSqlMapClientDaoSupport">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<bean id="abstractDAO" abstract="true" class="com.neusoft.tdframework.ibaguice.orm.AbstractDAO">
+		<property name="sqlMapClient" ref="sqlMapClientDaoSupport" />
+		<property name="dataSource" ref="defaultDataSource" />
+	</bean>
+
+	<!-- 基类DAO配置 -->
+	<bean id="baseDao" class="com.neusoft.tdframework.ibaguice.core.Ibatis2DAOImpl">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 动态加载Bean -->
+	<bean id="dynamicLoadBean" class="com.neusoft.tdframework.ibaguice.core.DynamicLoadBean" />
+	
+</beans>

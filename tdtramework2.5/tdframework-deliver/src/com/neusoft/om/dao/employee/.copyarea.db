@@ -1,0 +1,13 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\employee
+2
+9
+12:IntEmployeeVO.java|1|13b8966e60f|b1f|e6f57806|25fba7d5ca54457e95c6f85d08c520c0|0
+13:IntEmployeeDAO.java|1|13b8966e321|427|e06357c7|2340a83c677649c590e23ad22c60fa4f|0
+14:AdjEmployeeColl.java|1|13b8966dcb8|1ee|70d79eee|15ad2dc756ca46d186e5867d6b48ff9f|0
+f:EmployeeVO.java|1|13b8966e2e3|9327|8f4e8c0e|3d540c9e01404bea88403c1b6abfd71e|0
+17:IntEmployeeDAOImpl.java|1|13b8966e5e0|cb4|a45bd896|1399e2202b5441f3bbc93d6496807f37|0
+12:AdjEmployeeVO.java|1|13b8966dcf7|13d8|5833448|49d61bcf2119481ca1822eca5bc14d43|0
+14:EmployeeDAOImpl.java|1|13b8966dfb6|19d7b|6b69251b|16591121fe81498caa96c6e4005232c6|0
+10:EmployeeDAO.java|1|13b8966de3f|304e|b1d1418c|62b33f201aef4648944d6debff9ef726|0
+11:EmployeeColl.java|1|13b8966dd26|20c|9b19aa1f|ecc218d873f54ae38c3ac07e2a5ce8ca|0

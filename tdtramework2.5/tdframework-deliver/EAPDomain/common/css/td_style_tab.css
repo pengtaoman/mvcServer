@@ -1,0 +1,382 @@
+/* ************************** */
+/* ************************** */
+
+
+/*------------- */
+/* gray         */
+/*------------- */
+.TabColorBack1
+{
+  background-color: #c0c0c0;
+}
+
+.TabColorBody1
+{
+  border-left: 1px solid #919B9C;
+  border-right: 1px solid #919B9C;
+  border-bottom: 1px solid #919B9C;
+}
+
+.TabColorSelected1
+{
+  margin-right:  1px;
+  margin-left:   5px;
+  margin-top:    2px;
+  margin-bottom: 0px;
+  BACKGROUND-COLOR: #CECECE;
+  border-left: 1px solid #585858;
+  border-top: 1px solid #585858;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 1px solid #CECECE;
+  POSITION: relative;
+  top: 1px;
+}
+
+.TabColorStandard1
+{
+  margin-right:  1px;
+  margin-left:   5px;
+  margin-top:    2px;
+  margin-bottom: 0px;
+  BACKGROUND-COLOR: #c0c0c0;
+  border-left: 1px solid #c0c0c0;
+  border-top: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.TabColorHover1
+{
+  cursor: hand;
+  margin-right:  1px;
+  margin-left:   5px;
+  margin-top:    2px;
+  margin-bottom: 0px;
+  border-left: 1px solid #FFFFFF;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #585858;
+  border-bottom: 1px solid #585858;
+  background-color:  #E0E0E0;
+}
+
+.TabColorText1
+{
+  width: 100%;
+  height: 100%;
+  margin-top: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  font-family: arial;
+  font-size: 11px;
+}
+
+.TabColorTextSelected1
+{
+  width: 100%;
+  height: 100%;
+  margin-top: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  font-family: arial;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.TabColorSeparator1
+{
+  border-bottom: 1px solid #585858;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/* Image Styles                                                                                         */
+/*------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------*/
+/* Style 1                     */
+/*-----------------------------*/
+.TabBody1
+{
+  border-left: 1px solid #919B9C;
+  border-right: 1px solid #919B9C;
+  border-bottom: 1px solid #919B9C;
+  margin-top:;
+}
+
+/*zsk modify*/
+.TabBack1
+{
+  background-color: #FFFFFF;
+  padding-top:5px;
+}
+
+.TabItemLeft1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/left.gif);
+}
+
+.TabItemRight1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/right.gif);
+}
+
+.TabItemLeftRight1
+{
+  width: 5px;
+  height: 22px;
+  background-image: url(../images/tab/leftright.gif);
+}
+
+
+.TabItemMiddle1
+{
+padding-top: 5px;
+padding-bottom: 0px;
+
+  height: 22px;
+  background-image: url(../images/tab/middle.gif);
+  background-repeat: repeat-x;
+    cursor: pointer;
+}
+
+.TabItemHoverMiddle1
+{
+padding-top: 5px;
+padding-bottom: 0px;
+  cursor: pointer;
+  height: 22px;
+  background-image: url(../images/tab/hoover_middle.gif);
+  background-repeat: repeat-x;
+}
+
+.TabItemSelectedLeft1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/sel_left.gif);
+}
+
+.TabItemSelectedRight1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/sel_right.gif);
+}
+
+.TabItemSelectedMiddle1
+{
+padding-top: 5px;
+padding-bottom: 0px;
+
+  height: 22px;
+  background-image: url(../images/tab/sel_middle.gif);
+  background-repeat: repeat-x;
+  cursor: pointer;
+}
+
+.TabItemLeftSelectedRight1
+{
+  width: 5px;
+  height: 22px;
+  background-image: url(../images/tab/left-sel_right.gif);
+}
+
+.TabItemRightSelectedLeft1
+{
+  width: 5px;
+  height: 22px;
+  background-image: url(../images/tab/sel_right-left.gif);
+}
+
+.TabItemText1
+{
+  margin-left: 4px;
+  margin-right: 7px;
+  font-family: arial;
+  font-size: 10px;
+}
+
+.TabItemTextSelected1
+{
+
+  margin-left: 4px;
+  margin-right: 7px;
+  font-family: arial;
+  font-size: 10px;
+}
+
+
+.TabLine1
+{
+  background-image: url(../images/tab/line.gif);
+  background-repeat: repeat-x;
+}
+
+/*  Bottom */
+.BTabBody1
+{
+  height: 100%;
+  border-left: 1px solid #919B9C;
+  border-right: 1px solid #919B9C;
+  border-top: 1px solid #919B9C;
+}
+
+.BTabBack1
+{
+  background-color: #F0F0F0;
+}
+
+.BTabItemLeft1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/b_left.png);
+}
+
+.BTabItemRight1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/b_right.png);
+}
+
+.BTabItemLeftRight1
+{
+  width: 5px;
+  height: 22px;
+  background-image: url(../images/tab/b_leftright.png);
+}
+
+
+.BTabItemMiddle1
+{
+  height: 22px;
+  background-image: url(../images/tab/b_middle.png);
+  background-repeat: repeat-x;
+}
+
+.BTabItemHoverMiddle1
+{
+  cursor: hand;
+  height: 22px;
+  background-image: url(../images/tab/b_hoover_middle.png);
+  background-repeat: repeat-x;
+}
+
+.BTabItemSelectedLeft1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/b_sel_left.png);
+}
+
+.BTabItemSelectedRight1
+{
+  width: 3px;
+  height: 22px;
+  background-image: url(../images/tab/b_sel_right.png);
+}
+
+.BTabItemSelectedMiddle1
+{
+  height: 22px;
+  background-image: url(../images/tab/b_sel_middle.png);
+  background-repeat: repeat-x;
+}
+
+.BTabItemLeftSelectedRight1
+{
+  width: 5px;
+  height: 22px;
+  background-image: url(../images/tab/b_left-sel_right.png);
+}
+
+.BTabItemRightSelectedLeft1
+{
+  width: 5px;
+  height: 22px;
+  background-image: url(../images/tab/b_sel_right-left.png);
+}
+
+.BTabLine1
+{
+  background-image: url(../images/tab/b_line.png);
+  background-repeat: repeat-x;
+}
+
+.BTabItemText1
+{
+  width: 100%;
+  height: 100%;
+  margin-top: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-family: arial;
+  font-size: 10px;
+}
+
+.BTabItemTextSelected1
+{
+  width: 100%;
+  height: 100%;
+  margin-top: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-family: arial;
+  font-size: 10px;
+}
+
+
+/* ************************** */
+/* ************************** */
+
+.tab_lv2c A:link{
+color:#FF0000;
+font-size:12px;
+}
+.tab_lv2c A:visited{
+color:#FF0000;
+font-size:12px;
+}
+.tab_lv2c A:hover{
+color:#999999;
+font-size:12px;
+text-decoration:underline;
+}
+.tab_lv2c A:active{
+color:#FF0000;
+font-size:12px;
+}
+
+.tab_bg1{
+background-image:url(../images/tab/tab_w2.gif);
+color:#000000;
+font-size:12px;
+padding-bottom:2px;
+}
+.tab_bg2{
+background-image:url(../images/tab/tab_b2.gif);
+color:#000000;
+font-size:12px;
+padding-bottom:2px;
+}
+
+.formButton{
+background-color:transparent;
+background-image:url(../images/button1.gif);
+background-repeat: repeat-x;
+border: outset 1px  #bbbbbb;
+border-collapse:  separate;
+vertical-align: bottom;
+color:#333333;
+cursor:pointer;
+height:22px;
+width:80px;
+margin:3px 4px 3px 4px;
+padding: 3px 3px 0px 3px;
+}

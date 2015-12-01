@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\wire\ml
+2
+7
+7:util.js|1|13b894ad76f|f37|8dcc1a0b|e55d76d70bb24b40b1cd47ee61945232|0
+7:Data.js|1|13b894acdab|763|37d88be|8a7143f570be49ba9d1c9034a1aa4fdc|0
+c:DataStore.js|1|13b894acf03|48c|d28993e9|64b6ce977a174fab943abe61cca871a2|0
+9:Action.js|1|13b894acc82|980|59e14f00|c8343979bed74fecb0ce2acc9404a1ff|0
+a:Service.js|1|13b894ad2bc|f5e|b1cb2ea0|d086407b848b4ebabf6eb248db608867|0
+b:Transfer.js|1|13b894ad646|e2c|cbfeef74|61e58a04ce5e46e7b833e0f297639669|0
+d:Invocation.js|1|13b894ad06a|840|41b6cdee|9004aed74bf64fb398b383a2c612a70d|0

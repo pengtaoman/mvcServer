@@ -1,0 +1,2 @@
+1.把schema转化java类的网址
+http://workshop.bea.com/xmlbeans/XsdUpload3.jsp?ACCEPT=checked

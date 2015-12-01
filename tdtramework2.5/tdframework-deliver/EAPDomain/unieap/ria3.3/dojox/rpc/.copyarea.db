@@ -1,0 +1,13 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\rpc
+2
+9
+e:OfflineRest.js|1|13b89494c7b|123e|8c29390e|7f2e22949d0b49b09fe93a471af87a1e|0
+9:Client.js|1|13b89492ced|2a5|70a3e3c1|a80df1533eb34600859a6422cf4105f7|0
+e:ProxiedPath.js|1|13b89494d94|319|40c706f0|906057f895bc4468947397ab5a05c7a1|0
+b:JsonRest.js|1|13b89492d6a|1e7e|fd922795|ddad152195f144ae82d8d484538d677b|0
+6:README|1|13b89494f79|8fa|4d7bbc7|3e0c6973311d477cb99f7fed2b7da11e|0
+a:Service.js|1|13b894950d0|1761|da9cf721|46f5f11d441b4e6a835795a27f2f7cb0|0
+7:Rest.js|1|13b89495005|9d8|22339d7|6c5b1b472bca4af98303d508bfd65b98|0
+a:JsonRPC.js|1|13b89493327|437|297e6ed9|f3c4b9a7c0414cf7a1aa6e6ca7d87af4|0
+a:SMDLibrary|2|0|0|0|eceaf1b19b2d4180a9b8d896c176914a|0

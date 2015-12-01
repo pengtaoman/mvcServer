@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>树节点在生成的时候，通过回调将其设置为半选</title>
+        <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+       <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad: true,isDebug:false"></script>
+        <script type="text/javascript" src="../../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>
+		<script type="text/javascript" src="../../../../../unieap/global.js">
+        </script>
+	    <script type="text/javascript" src="dataForInitDisabled.js">
+        </script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.tree.Tree");
+			function setHalf(node){
+				if(node.getLabel()=="数据结构"){
+					unieap.byId("unieapTree").getCheckLogic().setHalfChecked(node);
+				}
+			}
+        </script>
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+				测试功能点：
+				<li>树节点支持生成时的回调、通过方法可以将节点设置为半选</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height=500px style="float:left;width:35%" >
+			<div dojoType="unieap.tree.Tree"   id="unieapTree" 
+			  checkLogic ="{'model':'halfChecked'}" label="UniEAP" onAfterNodeRender="setHalf" binding = "{'leaf':'leaf','store':treeStorePart,'label':'label','parent':'parentID',query:{name:'parentID',relation:'=',value:'1212403325756'}}" ></div>
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height=500px style="float:right;width:65%">
+			<table border="1" bordercolor="#99BBE8">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">树节点在生成的时候，可以设置为半选</td>
+					<td style="vertical-align:top">查看“数据结构”节点是否处于半选的状态</td>
+					<td style="vertical-align:top">“数据结构”节点处于半选的样式</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

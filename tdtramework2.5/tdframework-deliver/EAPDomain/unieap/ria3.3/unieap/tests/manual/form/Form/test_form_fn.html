@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RIA原型验证</title>
+<style type="text/css">
+	@import "../../../../themes/default/css/unieap.css";
+	@import "../../../../themes/default/tooltip/ToolTip.css";	
+</style>
+
+<style type="text/css">
+	.unieap .form-layout-left{
+		float:left;
+		margin-right:50px;
+	}
+	
+	.unieap .form-layout-right{
+		float:left;
+	}
+	.unieap .label,.button-layout{
+		margin-right:5px;
+		float:left;
+	}
+	.clear{
+		clear:both;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+</style>
+<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad: true" ></script>
+<script type="text/javascript">
+	dojo.require("unieap.ds");
+	dojo.require("unieap.rpc");
+	dojo.require("unieap.form.TextBox");
+	dojo.require("unieap.form.Form");
+	dojo.require("unieap.form.DateTextBox");
+	dojo.require("unieap.form.InlineEditBox");
+	dojo.require("unieap.form.Textarea");
+	dojo.require("unieap.form.FieldSet");
+	dojo.require("unieap.form.Button");
+</script>
+<script type="text/javascript" src="form_fn.js"></script>
+<body class="unieap">
+	<div dojoType="unieap.form.Form" binding="{store:'demo'}" jsId="form">
+		<div dojoType="unieap.form.FieldSet" label="用户信息">
+			<div>
+				<div class="label">姓名:</div><div dojoType="unieap.form.TextBox" binding="{name:'name'}" class="form-layout-left" required="true"></div>
+				<div class="label">生日:</div><div dojoType="unieap.form.DateTextBox" binding="{name:'birth'}" valueFormatter="{dataFormat:'yyyy-MM-dd'}" class="form-layout-right" required="true"></div>
+			</div>
+			
+			<div class="clear">
+				<div class="label">性别:</div><div dojoType="unieap.form.InlineEditBox" binding="{name:'sex'}" decoder="{store:'sexStore'}" class="form-layout-left"></div>
+				<div class="label">地址:</div><div dojoType="unieap.form.Textarea" binding="{name:'address'}"  class="form-layout-right"></div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="clear" id="info"></div>
+	<div dojoType="unieap.form.Button" label="clear" onClick="clear" class="button-layout"></div>
+	<div dojoType="unieap.form.Button" label="reset" onClick="reset" class="button-layout"></div>
+	<div dojoType="unieap.form.Button" label="validate" onClick="validate" class="button-layout"></div>
+	<div dojoType="unieap.form.Button" label="collectData" onClick="collectData" class="button-layout"></div>
+	<div dojoType="unieap.form.Button" label="bind" onClick="bind" class="button-layout"></div>
+	<div dojoType="unieap.form.Button" label="isModified" onClick="isModified" class="button-layout"></div>
+	<div class="clear"></div>
+	<div dojoType="unieap.form.Button" label="getDataStore(form绑定的datastore)" onClick="getDataStore" class="button-layout"></div>
+	<div dojoType="unieap.form.Button" label="setDataStore(form绑定的datastore)" onClick="setDataStore" class="button-layout"></div>
+	<p></p>
+	<p class="clear" ></p>
+	
+</body>
+</html>

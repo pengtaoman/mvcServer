@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<data-sources />
+	
+	<form-beans />
+	
+	<global-exceptions>
+		<exception key="unknownException" path="/common/jsp/ExceptionGuideJSP.jsp" type="com.neusoft.tdframework.exception.ActionException" />
+		<exception key="unknownException" path="/common/jsp/ExceptionGuideJSP.jsp" type="com.neusoft.tdframework.exception.SysException" />
+	</global-exceptions>
+	
+	<global-forwards>
+		<forward name="Login" path="/mainframe/login.jsp" redirect="true" />
+		<forward name="blank" path="/../views/blank.html" redirect="true" />
+		<forward name="sessionInvalid" path="/mainframe/session_invalid.jsp" redirect="true" />
+	</global-forwards>
+	
+	<action-mappings>
+		<action type="com.neusoft.tdframework.demo.action.ExtremeTable" scope="request" parameter="method" path="/demoExtremeTable">
+		    <forward name="init" path="/demo/operatorMaint/Query.jsp" />
+			<forward name="query" path="/demo/operatorMaint/QueryResult.jsp" />
+			<forward name="queryAll" path="/demo/operatorMaint/QueryResultForAll.jsp" />
+			<forward name="modify" path="/demo/operatorMaint/DetailsEdit.jsp" />
+		</action>
+		<action type="com.neusoft.tdframework.demo.action.EditorDemoAction" scope="request" parameter="method" path="/demoEditor">
+			<forward name="render" path="/demo/editor_demo.jsp" />
+			<forward name="init" path="/demo/editor_demo.jsp" />
+		</action>
+		<action type="com.neusoft.tdframework.batch.action.BatchProcessBrowseAction" parameter="method" scope="request" path="/batchFileManager">
+			<forward name="init" path="/demo/operatorMaint/fileImportManager/QueryStatusInfo.jsp" />
+			<forward name="query" path="/demo/operatorMaint/fileImportManager/StatusInfoList.jsp" />
+		</action>
+		<!-- UpLoadDemo -->
+		<action type="com.neusoft.tdframework.demo.action.DoUpLoadAction" parameter="method" scope="request" path="/upLoadAction">
+			<forward name="init" path="/demo/operatorMaint/DemoUpLoad.jsp" />
+		</action>
+		<!--path="/dianXinAuthTree"-->
+		<action type="com.neusoft.tdframework.demo.action.CommonTree" parameter="method" scope="request" path="/demoCommonTree">
+			<forward name="eaptreeexample" path="/demo/operatorMaint/CommonTree.jsp" />
+		</action>
+		<!--treeDataAction-->
+		<action type="com.neusoft.tdframework.demo.action.RequestInnerTreeData" parameter="method" scope="request" path="/demoRequestInnerTreeData">
+			<forward name="commonTree" path="/demo/operatorMaint/CommonTree.jsp" />
+			<!--innertree-->
+			<forward name="driven" path="/demo/operatorMaint/DrivenTree.jsp" />
+		</action>
+		<!--path="/partRefreshAction"-->
+		<action type="com.neusoft.tdframework.demo.action.PartRefresh" parameter="method" scope="request" path="/demoPartRefresh">
+			<forward name="certificate" path="/demo/operatorMaint/Certificate.jsp" />
+		</action>
+		<action type="com.neusoft.tdframework.demo.action.QueryResultProcess" parameter="method" scope="request" path="/demoQueryResultProcess">
+			<forward name="baseinfo" path="/demo/operatorMaint/BaseInfo.jsp" />
+		</action>
+		<!-- ErrorDemo -->
+		<action type="com.neusoft.tdframework.demo.action.ErrorAction" parameter="method" scope="request" path="/demoErrorAction">
+			<forward name="init" path="/demo/operatorMaint/ErrorDemo.jsp" />
+		</action>
+		<action type="com.neusoft.tdframework.demo.action.CreateComboDataAction" parameter="method" scope="request" path="/createComboDataAction">
+			<forward name="showcombo" path="/demo/operatorMaint/ComboxDemo.jsp" />
+			<forward name="init" path="/demo/operatorMaint/CascadeSelectDemo.jsp" />
+		</action>
+	</action-mappings>
+ 
+	<controller bufferSize="4096" debug="0" locale="false" nocache="false" inputForward="false" />
+	
+	<message-resources null="true" parameter="com.neusoft.struts.ApplicationResources" />
+	
+	<plug-in className="com.neusoft.unieap.config.plugin.EAPPlugin">
+		<set-property value="/WEB-INF/conf/tdframework/demo/tdframework-demoConfig.xml" property="config" />
+	</plug-in>
+	
+</struts-config>

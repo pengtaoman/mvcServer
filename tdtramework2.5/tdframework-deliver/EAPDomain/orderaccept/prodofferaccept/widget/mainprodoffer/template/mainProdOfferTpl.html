@@ -1,0 +1,253 @@
+<table width='100%' id='mainOfferTable-${viewId}' border='0'
+	class='main-prodoffer-table' cellpadding='0' cellspacing='1'
+	style='border-collapse: collapse;'>
+	<tr>
+		<td>
+			<div class='title_top'>
+				<div style="vertical-align: middle;"
+					class='current-accept-class mainprodoffer-class'
+					prodOfferId='${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferId}'
+					prodOfferInstId='${viewInitData.prodOfferViewData.prodOfferInstId}'>
+					<div class='inline-box-elem' style='width: 45%'>
+						<span style="vertical-align: middle; margin-right: 10px">${viewInitData.prodOfferViewData.actionName}</span>
+						<span style="vertical-align: middle; margin-right: 30px"
+							dojoAttachEvent="onmouseover:elementmouseover,onmouseout:elementmouseout"
+							dojoAttachTopic="/prodOfferTips" />${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferName}
+						</span>
+						<!-- 判断是否展现销售品详情 -->
+						<tp:if $$.viewInitData.prodOfferViewData.prodOfferDetailFlag==1>
+							<a href='javascript:void(0);'
+								style="vertical-align: middle; color: #3399cc; font-weight: bold; cursor: pointer"
+								id='productList-${viewInitData.prodOfferViewData.viewId}'
+								name='productList' class='main-prodoffer-detail'
+								dojoAttachEvent='onclick:elementclick'
+								dojoAttachTopic='/mainProdOfferDetail'
+								value='${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferId}'>
+								[销售品详情<img 
+								id='finishImg-main-${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferId}${viewInitData.prodOfferViewData.multipleUniqueId}'
+								class='${viewInitData.prodOfferViewData.finishImg}' src='${$w.BusCard.path.contextPath}/common/images/icon/finish_icon.png'></img><span
+								class="formRequested ${viewInitData.prodOfferViewData.detailNotNull}">*</span>]
+							</a>
+						</tp:if>
+					</div>
+					<div class='inline-box-elem' style='width: 40%'>
+						<!-- 销售品开始结束时间处理 -->
+						<span
+							class="${viewInitData.prodOfferViewData.displayStartEndTime}">
+							<!-- 销售品开始时间处理 --> <span
+							style="vertical-align: middle; margin-left: 30px;">开始时间:<span
+								class='startDate-class'>${viewInitData.prodOfferViewData.startDate}</span>
+						</span> <span
+							class='productStartDateStyle${viewInitData.prodOfferViewData.productStartDateView.style.hiddenStyleOption}'
+							style="vertical-align: middle;"> <input type='hidden'
+									id='delayTime-${viewInitData.prodOfferViewData.productStartDateView.viewId}'
+									value='${viewInitData.prodOfferViewData.productStartDateView.data.time}' />${viewInitData.prodOfferViewData.productStartDateView.data.delayUnitViewInstance}
+						</span> <!-- 销售品结束时间处理 --> <span
+							style="vertical-align: middle; margin-left: 10px">结束时间:<span
+								class='endDate-class'>${viewInitData.prodOfferViewData.endDate}</span>
+						</span> <span
+							class='productEndDateStyle${viewInitData.prodOfferViewData.productEndDateView.style.hiddenStyleOption}'>
+								<span style="vertical-align: middle;">有效期:</span> <select
+									class='effect-class'
+									style="height: 20px; vertical-align: middle;"
+									id='validPeriod-${viewInitData.prodOfferViewData.productEndDateView.viewId}'>
+									${viewInitData.prodOfferViewData.productEndDateView.data.validPeriodOption}
+								</select> <select id='validType-${viewId}' class='effectType-class'
+									style="height: 20px; vertical-align: middle;">
+									${viewInitData.prodOfferViewData.productEndDateView.data.validTypeOption}
+								</select> <input type='hidden'
+									id='prodCycleSize-${viewInitData.prodOfferViewData.productEndDateView.viewId}'
+									value='${viewInitData.prodOfferViewData.productEndDateView.data.prodCycleSize}' />
+						</span> <span
+							class='offerEndDateCycleStyle${viewInitData.prodOfferViewData.productEndDateView.style.cycleStyleOption}'>
+								<span style="vertical-align: middle;">有效期:</span> <select
+									class='cycle-effect-class'
+									style="height: 20px; vertical-align: middle;"
+									id='cyclePeriod-${viewInitData.prodOfferViewData.productEndDateView.viewId}'>
+									${viewInitData.prodOfferViewData.productEndDateView.data.cycleOption}
+								</select> </span> </span>
+					</div>
+					<div class='inline-box-elem' style='width: 10%;float: right;text-align: right;margin-right: 25px'>
+						<!-- 销售品收藏处理 -->
+						<a href='javascript:void(0);'
+							id='collect-${viewInitData.prodOfferViewData.viewId}'
+							style="margin-right: 10px;" name='collect'
+							value='${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferId}~${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferName}~${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferType}'
+							dojoAttachEvent="onclick:elementclick"
+							dojoAttachTopic="/prodOfferCollect" /><img src='${$w.BusCard.path.contextPath}/common/images/button/button_addFav.png' title="收藏销售品"/></a>
+						<a href='javascript:void(0);'
+							id='del-${viewInitData.prodOfferViewData.viewId}'
+							name='delCollect'
+							value='${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferId}~${viewInitData.prodOfferViewData.prodOfferInfoVO.prodOfferType}'
+							dojoAttachEvent="onclick:elementclick"
+							dojoAttachTopic="/prodOfferCancelCollect" /><img src='${$w.BusCard.path.contextPath}/common/images/button/button_cancelFav.png' title="取消收藏"/></a>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<!-- 接入类产品展现处理开始 -->
+	<tr id='tr00' class='<tp:if $$.viewInitData.prodOfferViewData.ifMultipleMainProd==true>hidden-elem</tp:if>'>
+		<td>
+			<table width='100%' border='1' cellpadding='0' cellspacing='0'
+				bordercolor='#d9d9d9' style='border-collapse: collapse;'
+				class='grid-global'>
+				<tr class='tableHeader grid-th'>
+					<td width='20%'>
+						产品
+					</td>
+					<td width="20%">
+						销售品
+					</td>
+					<td width='25%'>
+						号码信息
+					</td>
+					<td width='20'>
+						属性信息
+					</td>
+					<td width='13%'>
+						状态
+					</td>
+				</tr>
+				<tp:for ds='viewInitData.prodViewData'>
+					<tr class='table_content mainProdTr-${viewId} main-product-basic'
+						viewId='${viewId}' serviceKindIndex='${serviceKindIndex}'
+						serviceKind='${serviceKind}' prodOfferId='${prodOfferId}'
+						roleCD='${roleCD}' productId='${productId}'
+						roleNumMin='${roleNumMin}' uniqueId='${uniqueId}'
+						roleNumMax='${roleNumMax}' userId='${userId}'
+						maxCount='${maxCount}' minCount='${minCount}'
+						serviceId="${serviceId}" prodInstId="${prodInstId}"
+						action="${action}"
+						${extendedAttribute}  
+						style='clear: both; background: #c3ffac;'>
+						<td width='20%'>
+							<div style='float: left;width: 100%'>
+								<input type='checkbox'
+									${disabledOption} ${checkedOption} class='${viewId} main-product-check'
+									name='prodOfferCheck' value='${data.prodOfferId}'
+									dojoAttachEvent='onclick:elementclick'
+									dojoAttachTopic='/checkProduct'  style="display: none;"/>
+								<select name='mainProdSel-${viewId}'${roleDisabledOption} style="width: 98%" >
+									${optionList}
+								</select>
+							</div>
+						</td>
+						<td width='20%'>
+							<tp:if $$.memberProdOfferView!=null>
+									${memberProdOfferView}
+								</tp:if>
+						</td>
+						<td width='25%'>
+							<div style='margin-right: 3px; float: left;'>
+								<input type='text' class='serviceId-${viewId}' name='serviceId'
+									DISABLED value='${serviceId}' />
+								<img class='searchNumber-${viewId}' name='searchNumber'
+									src='${webPath}/common/dx20/images/search_icon.gif'
+									style='cursor: pointer; width: 15px; height: 15px;'
+									dojoAttachEvent='onclick:elementclick'
+									dojoAttachTopic='/searchnumber' />
+							</div>
+							<div style='float: left;'>
+								<input type='radio'
+									${oldDisabledOption} ${oldCheckedOption} class='serviceOperOld-${viewId}'
+									name='serviceOper-${viewId}-${uniqueId}' value='1' />
+								&nbsp;已有
+								<input type='radio'
+									${newDisabledOption} ${newCheckedOption} class='serviceOperNew-${viewId}'
+									name='serviceOper-${viewId}-${uniqueId}' value='1' />
+								新装
+								<input type='radio' style="display: none;"
+									${onWayDisabledOption} ${onWayCheckedOption} class='serviceOperOnWay-${viewId}'
+									name='serviceOper-${viewId}-${uniqueId}' value='1' />
+								<font style="display: none;">在途</font>
+							</div>
+						</td>
+						<td width='20%' style="clear: both;">
+							<div style='float: left; margin-left: 10px'
+								class='${prodAttrClass}'>
+								<input type='button'
+									class='productAttr-${viewId} product-serviceinfo-oper-close'
+									name='productAttr' dojoAttachEvent='onclick:elementclick'
+									dojoAttachTopic="/accessprodattr/" value="" />
+								&nbsp;
+							</div>
+							<div
+								style='float: left; text-align: left; vertical-align: bottom; line-height: 24px; color: #3399cc; font-weight: bold;'
+								class='complete-flag-div'>
+								[
+								<img class='complete-init-flag' src="${$w.BusCard.path.contextPath}/common/images/loading16.gif" style="cursor: pointer;color: red;" title="正在加载数据"/>
+								<span style="color: red;display:none;cursor: pointer;" title='存在为空的必填属性' class='complete-flag-span'>*</span>
+								<img  style="display:none"
+									src="${$w.BusCard.path.contextPath}/common/images/icon/finish_icon.png" class ='complete-flag-img'/>
+								]
+							</div>
+						</td>
+						<td width="13">
+							<!-- for memeber prodoffer change -->
+							<tp:if $$.actionName!=null>
+								<div style='float: left; margin-left: 20px; height: 15px;'
+									class='memeber-prodoffer-action-div'>
+									<span class='product-action-span'>${actionName}</span>
+								</div>
+							</tp:if>
+						</td>
+					</tr>
+					<tr class="hidden-elem">
+						<td colspan="5">
+							<div class="mainProdServiceInfo-${viewId}"
+								style="margin-bottom: 20px; margin-top: 5px; padding: 5px"></div>
+							<div class="mainProdAttrInfo-${viewId}" style="display: none"></div>
+						</td>
+					</tr>
+				</tp:for>
+			</table>
+		</td>
+	</tr>
+	<!-- ---------------           以上部分的模板视图需要和新装保存严格一致     --------------->
+
+	<!--                           以下是退订销售品处理模板                                   -->
+	<tp:for ds='viewInitData.quitProdOfferInfoList'>
+		<tr>
+			<td>
+				<div class='title_top'>
+					<div style="vertical-align: middle;"
+						class='mainprodoffer-class mainprodoffer-class-quit'
+						prodOfferId='${prodOfferViewData.prodOfferInfoVO.prodOfferId}'
+						prodOfferType='${prodOfferViewData.prodOfferInfoVO.prodOfferType}'
+						offerKind='${prodOfferViewData.prodOfferInfoVO.offerKind}'
+						prodOfferInstId='${prodOfferViewData.prodOfferInstId}'>
+						<div class='inline-box-elem' style='width: 45%'>
+							<span style="vertical-align: middle; margin-right: 10px"><span class='actionName-class'>${prodOfferViewData.actionName}</span></span>
+							<span style="vertical-align: middle; margin-right: 30px"><span class='prodOfferName-class'>${prodOfferViewData.prodOfferInfoVO.prodOfferName}</span></span>
+						</div>
+						<!-- 销售品开始结束时间处理 -->
+						<div class='inline-box-elem' style='width: 40%'>
+							<span class="${prodOfferViewData.displayStartEndTime}"> <!-- 销售品开始时间处理 -->
+								<span style="vertical-align: middle; margin-left: 30px;">开始时间:
+									<span class='startDate-class'>${prodOfferViewData.startDate}</span>
+							</span> <!-- 销售品结束时间处理 --> <span
+								style="vertical-align: middle; margin-left: 10px">结束时间: <span
+									class='endDate-class'>${prodOfferViewData.endDate}</span> </span> </span>
+						</div>
+
+						<!-- 销售品收藏处理 -->
+						<div class='inline-box-elem' style='width: 10%;float: right;text-align: right;margin-right: 25px'>
+							<a href='javascript:void(0);'
+								id='collect-${prodOfferViewData.viewId}'
+								style="margin-left: 20%" name='collect'
+								value='${prodOfferViewData.prodOfferInfoVO.prodOfferId}~${prodOfferViewData.prodOfferInfoVO.prodOfferName}~${prodOfferViewData.prodOfferInfoVO.prodOfferType}'
+								dojoAttachEvent="onclick:elementclick"
+								dojoAttachTopic="/prodOfferCollect" /><img src='${$w.BusCard.path.contextPath}/common/images/button/button_addFav.png' title="收藏销售品"/></a>
+							<a href='javascript:void(0);'
+								id='del-${prodOfferViewData.viewId}' name='delCollect'
+								value='${prodOfferViewData.prodOfferInfoVO.prodOfferId}~${prodOfferViewData.prodOfferInfoVO.prodOfferType}'
+								dojoAttachEvent="onclick:elementclick"
+								dojoAttachTopic="/prodOfferCancelCollect" /><img src='${$w.BusCard.path.contextPath}/common/images/button/button_cancelFav.png' title="取消收藏"/></a>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tp:for>
+</table>

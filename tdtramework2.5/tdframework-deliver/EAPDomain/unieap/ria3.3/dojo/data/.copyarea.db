@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\data
+2
+5
+15:ItemFileWriteStore.js|1|13b894c1156|2faa|d46e6374|660b50478c204e2eb83ac482539659e3|0
+3:api|2|0|0|0|991244ea01a8446591064ea7f8e29fd3|0
+e:ObjectStore.js|1|13b894c127e|1709|31a6a818|0a3e777afbd944dab9dcb3fc323e1b51|0
+14:ItemFileReadStore.js|1|13b894c0fdf|3521|8f713860|d07bddc7b923459a970b2330ca52361b|0
+4:util|2|0|0|0|9cd5496fd22c486eafecec8782098559|0

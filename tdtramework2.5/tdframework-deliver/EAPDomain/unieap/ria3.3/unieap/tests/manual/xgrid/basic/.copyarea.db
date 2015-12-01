@@ -1,0 +1,19 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\xgrid\basic
+2
+f
+1f:test_grid_displayFormatter.html|1|13b891057c9|1600|ea9728ce|62409da6e6954f96bd5c0976c0f2c0f0|0
+14:test_grid_newGrid.js|1|13b89105db5|602|a4a7e1aa|b1381e31574f42989194581e63e74085|0
+6:images|2|0|0|0|a79c6be5c9e745f08a427638e7778603|0
+14:test_grid_basic.html|1|13b89105325|1911|9e821fcc|a51783926e2f46b6b0369ab3d3f85dd6|0
+19:test_grid_cellstyles.html|1|13b8910575c|862|75f2ac62|cc1ac364a6414a2683e4329a3c4ffbbe|0
+16:test_grid_binding.html|1|13b89105596|926|515cf8a1|962a5900f32c417fb544040e856dd8d9|0
+14:test_grid_binding.js|1|13b89105604|23c|49d3c108|7996ca1de44740088881e45bda7b1d37|0
+19:test_grid_cellformat.html|1|13b89105691|1752|75e7397e|2ba4054e934d405f9c8c2cb8b33334cc|0
+16:test_grid_newGrid.html|1|13b89105ab7|c52|d87af6bc|5b964622cb464431884aab855aa084a8|0
+16:test_grid_layoutMgr.js|1|13b8910596f|2bf|6790df05|8df0102b65984bb78271ec79b5608456|0
+12:test_grid_basic.js|1|13b8910541f|2b4|5b39e39a|b66c5dcba5ec4db8b54dc179c883cc38|0
+1e:test_xgrid_decoder_cascade.jsp|1|13b89105f5b|1034|c6fc6402|ea7009ef27804c3aabd8351a28abfc14|0
+1a:test_xgrid_isMulTitle.html|1|13b89106094|13bc|9a2aa319|cd01560aef5242bc90e8036f821b7f7e|0
+4:demo|2|0|0|0|9de7948d3c3e40c298b1ef3b3ba5cd74|0
+18:test_grid_layoutMgr.html|1|13b89105837|868|2806af4b|624f507307d94e7189bdffe44b6a18e4|0

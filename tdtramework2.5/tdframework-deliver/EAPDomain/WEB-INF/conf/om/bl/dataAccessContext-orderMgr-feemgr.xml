@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--a  edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User)  a-->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Crm feemgr dataAccessContext</description>
+	
+	<bean id="acctItemDAO"	class="com.neusoft.crm.ordermgr.common.outerinterface.feemgr.dao.AcctItemDAOImpl" parent="abstractDAO" />
+	<bean id="acctItemTypeDAO"	class="com.neusoft.crm.ordermgr.common.outerinterface.feemgr.dao.AcctItemTypeDAOImpl" parent="abstractDAO" />
+</beans>

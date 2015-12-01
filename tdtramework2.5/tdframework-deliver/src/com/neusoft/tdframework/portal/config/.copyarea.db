@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\portal\config
+2
+b
+13:TDConfigHelper.java|1|13b896914bb|a74|35e58237|ceb064dba07b495a95c21205fad9dadc|0
+12:NavPathConfig.java|1|13b8969123b|19e|89d080b5|4b2f2b6126d8472e9d6b0d995f31fb22|0
+11:PortalConfig.java|1|13b89691354|2b8|81e1d739|3606412fdd8a4cdca4c8c68cd79107e0|0
+12:CentralConfig.java|1|13b89690eef|19e|8b6d80cc|8cb29caf96cd403fa6f7064046bda476|0
+10:IFaceConfig.java|1|13b89690fe9|54d|f58ea583|dc0411dac7824ffe86b8f5b60f39baba|0
+e:BASConfig.java|1|13b89690e82|3a7|cada2067|8bb7c847a20a43979fa722053f323e28|0
+f:LeftConfig.java|1|13b89691150|647|efe4fe74|785d4dadaee04b2e86311da2bfb75391|0
+14:InterfaceConfig.java|1|13b89691047|757|1dc44c6d|7be39bf8159e44c4a50761ff3ac9fca8|0
+e:SSOConfig.java|1|13b8969143e|279|2d57beef|d0ee66d17d37423e90815065105121c6|0
+11:HeaderConfig.java|1|13b89690f9b|7ac|f69b6e1b|dfd54c1d48434521bf420ad2aa39668e|0
+15:CommonFaceConfig.java|1|13b89690f3d|764|c063535d|855936f6a6314dcc80439ed6f128fdc6|0

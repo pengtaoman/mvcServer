@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<eapConfig>
+	<component name="bl" isEnabled="true" handler="com.neusoft.unieap.config.handler.BLConfigHandler" description="">
+		<CONFIG_PATH>/WEB-INF/conf/tdframework/demo/bl</CONFIG_PATH>
+		<CONFIG_FILE>applicationContext-framework.xml dataAccessContext-framework.xml paramContext-framework.xml</CONFIG_FILE>
+	</component>
+	<component name="innertree" isEnabled="true" handler="com.neusoft.unieap.config.handler.InnerTreeConfigHandler" description="">
+		<CONFIG_FILE>/WEB-INF/conf/tdframework/demo/bl/innertree.xml</CONFIG_FILE>
+	</component>
+	<component name="scheduling" isEnabled="false" handler="com.neusoft.unieap.config.handler.SchedulingHandler" description="">
+	    <CONFIG_File>/WEB-INF/conf/tdframework/demo/bl/applicationContext-job.xml</CONFIG_File>
+	</component>
+</eapConfig>

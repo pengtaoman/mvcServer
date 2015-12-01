@@ -1,0 +1,184 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>可编辑表单</title>
+
+	<!-- 禁止 windows 主题风格 -->
+	<meta http-equiv="MSThemeCompatible" content="no" />
+
+	<!-- 禁止缓存 headers -->
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<!-- end 禁止缓存 headers -->
+
+
+<!-- 公共css  -->
+<link rel="stylesheet" href="../common/css/td_style.css" type="text/css" />
+
+<!-- 公共js  -->
+<script language="javascript" src="../common/js/td_common.js" ></script>
+
+<!-- 等待条js-->
+<script language="javascript" src="../common/js/waitingbar.js" ></script>
+
+<!-- title条js -->
+<script language="javascript" src="../common/js/titlebar.js" ></script>
+
+
+
+<!-- 页面级css样式  -->
+<style type="text/css">
+
+
+</style>
+
+<!-- 页面级js  -->
+<script language="javascript">
+// <![CDATA[
+
+// 应用路径,如果使用jsp,则写成 var APP_PATH="＜％= request.getContextPath() ％＞";
+var APP_PATH="..";
+/*初始化函数*/
+function init(){
+
+// 设置信息框 如果不设置将使用默认的信息 "系统运行中,请稍候..."
+WaitingBar.setMsg("可以自定义等待信息....");
+
+// 通过HTML标签名 id和name 支持多参数
+//addTitleBarByTag  addTitleBarById addTitleBarByName addTitleBar
+//  给所有标签是 select 的对象添加显示title的功能
+TitleBar.addTitleBarByTag('select');
+// addTitleBar('demo22');
+// addTitleBar('demo22','test3','you22');
+
+
+/* 为日历组件添加初始设置 */
+DateUtil.addDateArea("testDate","calendarBt0");
+DateUtil.addDateArea("beginDate","calendarBt1");
+DateUtil.addDateArea("endDate","calendarBt2");
+
+//  enterJump() 脚本为按回车跳转到下一页面组件
+//	enterJumpTo(id) 为按回车跳转到指定页面组件
+
+
+}
+
+
+/* 在下面写入 自定页面级js代码 */
+
+
+// ]]>
+</script>
+
+</head>
+
+<body class="mainBody" onLoad="init();">
+<form name="myform" method="post">
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" class="formTable" >
+
+<!-- 表格标题行-->
+
+		  <tr class="tableTitleTR2" > 
+            <td colspan="3" >
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+				<td class="tableTitleLeft2" >&#160;</td>
+				<td class="tableTitle2">表单标题</td>
+				<td class="tableTitleRight2" >&#160;</td>
+				</tr>
+			 </table>
+           </td>
+          </tr>
+
+          <tr> 
+            <td class="formTableL" >&#160;</td>
+            <td class="formTableC"> 
+
+
+<!-- BEGIN 表单核心区域 -->
+<table align="center" border="0" cellpadding="0" cellspacing="2" class="formTableCore">
+
+	<tr>
+		<td  class="formLabel">表单域标签<span class="formRequested" >*</span></td>
+		<td  class="formField">
+			<input type="text" onKeyDown="enterJump();" name="" value="" class="wideWidth" />
+		</td>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<select name="" >
+				<option value="0" >0 表单域标签很长很长很长很长很长很长c</option>
+				<option value="1" >1 表单域标签c</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly" onKeyDown="enterJump();" name="" value="readonly" />
+		</td>
+		<td class="formLabel">日期选择</td>
+		<td class="formField" colspan="3"> 
+			<input type="text" maxlength="16" class="dateField" onKeyDown="enterJump();" name="testDate" value="" />
+			<button class="calendarImgButton" id="calendarBt0" ></button> 
+		</td>
+	</tr>
+	<tr>
+		<td class="formLabel">复选框</td>
+		<td class="formField" >
+		<input type="checkbox" class="checkbox" name="" value="" checked="checked"/>选框1
+		<input type="checkbox" class="checkbox" name="" value="" />选框2
+		</td>
+		<td class="formLabel">单选框</td>
+		<td class="formField" >
+		<input type="radio" class="radio" name="radio1" value="1" checked="checked"/>选框1
+		<input type="radio" class="radio" name="radio1" value="1" />选框2
+		</td>
+	</tr>
+
+	<tr>
+		<td class="formLabel">起止时间</td>
+		<td class="formField" colspan="3"> 
+			<input type="text" maxlength="16" class="dateField" onKeyDown="enterJump();" name="beginDate" value="" />
+			<button class="calendarImgButton" id="calendarBt1" ></button> 
+			&#160;至&#160;&#160;
+			<input type="text" maxlength="16"  class="dateField" onKeyDown="enterJump();" name="endDate" value=""/>
+			<button class="calendarImgButton" id="calendarBt2" ></button>
+		</td>
+
+	</tr>
+
+	<tr>
+		<td class="formLabel">文本框</td>
+		<td class="formField" colspan="3" >
+			<textarea  rows="3"></textarea>
+		</td>
+	</tr>
+
+</table>
+<!-- END 表单核心区域 -->
+
+
+</td>
+<td class="formTableR" >&#160;</td>
+</tr>
+<tr> 
+<td class="formTableLB">&#160;</td><td class="formTableB">&#160;</td><td class="formTableRB">&#160;</td>
+</tr>
+</table>
+
+<!-- BEGIN 按钮区域 这里放入按钮 两种按钮定义方式 建议采用前者 button 更符合w3c规范 且功能更强大 支持html代码 -->
+<div class="formButtonDIV">
+	<button  class="formButton" name="" onClick="alert('test:ALT+Q');" accesskey="Q">快捷(<u>Q</u>)</button>
+	<button  class="formButton" name="" onClick="WaitingBar.showMe()">查 询</button>
+	<input type="button" class="formButton" onClick="WaitingBar.hideMe()" name=""  value="重 置"/>
+</div>
+<!-- END 按钮区域 -->
+
+
+</form>
+</body>
+</html>

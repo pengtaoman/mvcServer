@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\organdutyrelation
+2
+4
+1d:OrganDutyRelationDAOImpl.java|1|13b8967102d|1dad|e5896b0e|4e8949c125cd48e7aa9f3105510b298a|0
+1a:OrganDutyRelationColl.java|1|13b89670fdf|264|fa73ce9b|b619c8a639cc481bb4116d0ad5dc033d|0
+19:OrganDutyRelationDAO.java|1|13b8967100e|79a|82a0bc99|c7e70bf5e6e4475b9b4b9629224671b5|0
+18:OrganDutyRelationVO.java|1|13b8967104c|c39|95db3756|d2dccc3319284956b61af8863274b73d|0

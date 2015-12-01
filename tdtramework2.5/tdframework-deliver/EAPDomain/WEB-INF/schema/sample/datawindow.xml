@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by hugh (neusoft) -->
+<dataWindow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.neusoft.com/unieap/datawindow/metadata/xml" xsi:noNamespaceSchemaLocation="dataWindow.xsd" height="300" title="雇员信息列表" type="GRID_EDIT" width="600" isAutoRemove="false" isEmptyOnCreate="false" popWinWidth="600" popWinHeight="300" queryWinWidth="600" queryWinHeight="300">
+	<dataStoreInfo dataStoreName="emp"/>
+	<orderInfo attrIndex="1" dataType="STRING" order="descending"/>
+	<attributes>
+		<attribute index="1" dataType="STRING" title="标识" maxlength="4" type="input" width="50" rows="3" cols="4" style="Text" isNullable="false" class="HTCNumber"/>
+		<attribute index="2" dataType="STRING" title="代码1" maxlength="10" type="select" width="100" style="QuickSelect" isNullable="true" defaultValue="03">
+			<codeList catalog="AAC005" Codelistname="otherCodeList">
+				<codeListFilter classname="com.neusoft.example.codelist.AAC005CodeListFilterImpl">
+					<filter-param name="kind" value="firstAAC005"/>
+					<filter-param name="count" value="10"/>
+				</codeListFilter>
+			</codeList>
+		</attribute>
+		<attribute index="3" dataType="STRING" title="代码2" maxlength="9" type="select" width="100" style="QuickSelect" isNullable="true">
+			<option value="01">同意</option>
+			<option value="02">不同意</option>
+		</attribute>
+	</attributes>
+	<editers isAutoDraw="true" colsInOneRow="3">
+		<editer attrIndex="1" prompt="新标识"/>
+	</editers>
+	<headers>
+		<header attrIndex="1" isFixed="true" isHidden="false"/>
+	</headers>
+	<filters>
+		<filter index="1" title="部门" filterName="emp.deptno" operator=">" dataType="4" style="Select" type="select" isNullable="true" width="100">
+		</filter>
+		<filter index="2" title="名字" filterName="emp.ename" operator="right_like" dataType="12" style="Text" type="input" isOpeSelect="true" operatorStyle="width:100" isNullable="true" width="100"/>
+	</filters>
+	<buttons>
+		<button type="custom" value="clickMe" onclick="alert('clicked')"/>
+	</buttons>
+</dataWindow>

@@ -9,6 +9,7 @@ import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.RequestBuilder;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -34,10 +35,11 @@ public class DemoTest extends BaseUnitTest{
 	}
 	
 	@Test  
-	@WithUserDetails("100000")
+	@WithMockUser("ali")
 	public void testControl() throws Exception {  
 	    //mockMvc.perform(MockMvcRequestBuilders.get("/helloWorld/mamamyu"));  
-	    mockMvc.perform(MockMvcRequestBuilders.post("/hello11.do")); 
+		ResultActions ra = mockMvc.perform(MockMvcRequestBuilders.post("/hello11.do")); 
+		System.out.println("++++++++++++++++++++++++++++++++++++++" + ra.getClass().getSimpleName());
 	}  
 	
 	@Test  
@@ -53,10 +55,10 @@ public class DemoTest extends BaseUnitTest{
 			//MockMvcRequestBuilders.get("").buildRequest(servletContext)
 			//MockMvcRequestBuilders.MockHttpServletRequest
 			wac.getServletContext().setAttribute("isforuttest", "justforuttest");
-			RequestBuilder requestBuilder = formLogin("/main/login?isforuttest=justforuttest").user("100000").password("1234256");
+			RequestBuilder requestBuilder = formLogin("/main/login?isforuttest=justforuttest").user("ali").password("12");
 			//requestBuilder.buildRequest(wac.getServletContext());
 			mockMvc.perform(requestBuilder)
-			        .andExpect(unauthenticated());
+			        .andExpect(authenticated());
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

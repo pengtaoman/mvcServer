@@ -1,0 +1,17 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\home\action
+2
+d
+10:HomePageDAO.java|1|13b8968ff30|2d7|3330f789|62a5fc58fb434342be7f22f4680e93bc|0
+11:HomePageUtil.java|1|13b8969022d|63d|f606075c|0c72117925c04632afdc31ec983c3283|0
+13:PortaletMenuVO.java|1|13b89690375|2833|f0201dd4|0e0d7207da4a466a883794f7f14fd6a8|0
+12:PortalPageDAO.java|1|13b8969071f|3b1|21764c8e|f54a96c704c44ac6a4e66f8e01fb980e|0
+13:HomePageBOImpl.java|1|13b8968fe26|2a7|c792dd75|affb6604d1724c089465140afe1d8328|0
+16:PortalPageDAOImpl.java|1|13b89690829|499c|5029f83c|1aca2e23b6914ec28948dbe755b22c5f|0
+13:HomePageAction.java|1|13b8968fd5b|7a3|7160962b|46a87d0a28494b84bf02af64dd5ebddc|0
+14:HomePageDAOImpl.java|1|13b896900b6|2f9a|a5caf4e3|477c21c055cd4d55acf6fa9e9bdb3fce|0
+f:HomePageBO.java|1|13b8968fdb9|1d9|79f2a132|2db77c5d05a249138ad8600ae9b96bf8|0
+11:PortalPageBO.java|1|13b896905d7|3b0|6f0247b6|2b63fb56b145456f99d5c2311a6f3799|0
+15:PortalPageBOImpl.java|1|13b896906b1|847|862bb4a1|00aaf9de4b00420e846afe722438df34|0
+15:PortalPageAction.java|1|13b896904fc|1f81|c45741e3|630bd0963e5f4480b0299fa4e865240c|0
+11:PortalViewVO.java|1|13b89690896|8b2|963577dd|161a61f49baf4140bd30a33a4a9d0aa5|0

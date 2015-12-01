@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\layout\hbox
+2
+5
+9:hbox.html|1|13b890fdf52|c9e|fe6b0773|b7f0ec9d2b194af4b68eb9917c830f8c|0
+1f:test_hboxcontainer_margins.html|1|13b890fe260|e06|56eea709|609717881c674e10b993c9d44f5005ff|0
+1c:test_hboxcontainer_pack.html|1|13b890fe398|1d0b|262652cd|cbebf008935c46e99a167d7e850f7e45|0
+1d:test_hboxcontainer_align.html|1|13b890fe1e3|204c|5668bdd5|e836e1b5b4cd40c4b886dd6cb99e94b8|0
+1f:test_hboxcontainer_padding.html|1|13b890fe425|e63|6678d82c|62810add23df404b971fb2e5e7c23653|0

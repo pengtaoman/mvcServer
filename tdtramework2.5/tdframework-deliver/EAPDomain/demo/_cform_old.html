@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>可编辑表单</title>
+<meta http-equiv="MSThemeCompatible" content="no" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link rel="stylesheet" href="../common/css/td_style.css" type="text/css" />
+<script language="javascript" src="../common/js/td_common.js" ></script>
+<script language="javascript" src="../common/js/waitingbar.js" ></script>
+<script language="javascript" src="../common/js/titlebar.js" ></script>
+<style type="text/css">
+</style>
+
+<script language="javascript">
+// <![CDATA[
+
+var APP_PATH="..";
+/*初始化函数*/
+function init(){
+
+
+}
+
+
+// ]]>
+</script>
+
+</head>
+
+<body class="mainBody" onLoad="init();">
+<form name="myform" method="post">
+
+<table border="0" cellpadding="0" cellspacing="0" class="formTable" >
+
+		  <tr class="tableTitleTR2" > 
+            <td colspan="3" >
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+				<td class="tableTitleLeft2" >&#160;</td>
+				<td class="tableTitle2">表单标题</td>
+				<td class="tableTitleRight2" >&#160;</td>
+				</tr>
+			 </table>
+           </td>
+          </tr>
+
+          <tr> 
+            <td class="formTableL" >&#160;</td>
+            <td class="formTableC"> 
+
+<table align="center" border="0" cellpadding="0" cellspacing="2" class="formTableCore">
+
+	<tr>
+		<td  class="formLabel">表单域标签<span class="formRequested" >*</span></td>
+		<td  class="formField">
+			<input type="text" onKeyDown="enterJump();" name="" value="" />
+		</td>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<select name="" onkeydown="enterJump();" 
+			onmouseover="TitleBar.showTitleBar(this)" onmouseout="TitleBar.hideTitleBar(this)">
+				<option value="0" >0 表单域标签c</option>
+				<option value="1" >1 表单域标签c</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" onkeydown="enterJump();" readonly="readonly" class="readOnly" 
+			onkeydown="enterJump();" name="" value="只读的文本框" />
+		</td>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" onKeyDown="enterJump();" name="" value="" />
+		</td>
+	</tr>
+	<tr>
+		<td class="formLabel">复选框</td>
+		<td class="formField" >
+		<input type="checkbox" onKeyDown="enterJump();" class="checkbox" name="" value="" />选框1
+		<input type="checkbox" onKeyDown="enterJump();" class="checkbox" name="" value="" />选框2
+		</td>
+		<td class="formLabel">单选框</td>
+		<td class="formField" >
+		<input type="radio" onKeyDown="enterJump();" class="radio" name="radio1" value="1" />选框1
+		<input type="radio" onKeyDown="enterJump();" class="radio" name="radio1" value="1" />选框2
+		</td>
+	</tr>
+
+	<tr>
+		<td class="formLabel">文本框</td>
+		<td class="formField" colspan="3" >
+			<textarea  rows="3"></textarea>
+		</td>
+	</tr>
+
+</table>
+</td>
+<td class="formTableR" >&#160;</td>
+</tr>
+<tr> 
+<td class="formTableLB">&#160;</td><td class="formTableB">&#160;</td><td class="formTableRB">&#160;</td>
+</tr>
+</table>
+
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title></title>
+        <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+        <link rel="stylesheet"type="text/css" href="../../../configs/test_config.css">
+        </link>
+		<script type="text/javascript" src="../../../../../dojo/dojo.js" djconfig="parseOnLoad:true,isDebug: false">
+        </script>
+		<script type="text/javascript" src="../../../../../dijit/dijit.js">
+		</script>
+		 <script type="text/javascript" src="../../grid/group/data.js" > </script>
+        <script type="text/javascript" >
+        	dojo.require("unieap.layout.BorderContainer");
+			dojo.require("unieap.layout.BorderPane");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.form.TextBox");
+			dojo.require("unieap.form.ComboBox");
+			dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.form.FieldSet");
+			dojo.require("unieap.form.Form");
+			dojo.require("unieap.form.NumberTextBox");
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.form.DateTextBox");
+			dojo.require("unieap.dialog.Dialog");
+           dojo.require("unieap.dialog.DialogUtil");
+		   dojo.require("unieap.layout.AdaptiveContainer");
+		   	var deptStore = new unieap.ds.DataStore('DEPT',[
+				{CODEVALUE:'1',CODENAME:'研发部'},
+				{CODEVALUE:'2',CODENAME:'销售部'}
+			]);
+			
+			dataCenter.addDataStore(deptStore);
+        </script>
+		<script type="text/javascript" src="test_borderlayout1.js">
+		</script>
+		<style>
+		        #container {
+		            width: 100%;
+		        } .unieap .testtable {
+		            border: 1px #c0c0c0 solid;
+		            width: 100%;
+		            overflow: hidden;
+		        } .u-titlepane-content-inner {
+		            background-color: #f3f98a;
+		        } .unieap .testarea {
+		            border-top: 2px #b7e846 solid;
+		            height: 400px;
+		            width: 100%
+		        }
+   	 </style>
+	</head>
+	<body class="unieap">
+		<div dojoType="unieap.layout.TabContainer" style="width:100%;height:100%">
+			<div dojoType="unieap.layout.ContentPane" title="sidebar">
+				<div dojoType="unieap.layout.BorderContainer" design="sidebar" splitLine="true" height="100%" id="container1">
+					 <div dojoType="unieap.layout.BorderPane" region="top" title="top&test_sidebar" height="20%" >
+					 	
+					 </div>
+					<div dojoType="unieap.layout.BorderPane" region="bottom" title="bottom" height="20%" >
+						
+					</div>
+					<div dojoType="unieap.layout.BorderPane" region="center" title="center">
+						 
+						 	<div dojoType="unieap.layout.AdaptiveContainer" height="100%">
+							 	<div dojoType="unieap.layout.AdaptivePane" >
+							 			<div dojoType="unieap.layout.TitlePane" >
+											自适应容器同BorderLayout
+											<br/><br/><br/><br/>
+										</div>
+							 	</div>
+								<div dojoType="unieap.layout.AdaptivePane" height="80%"  autoHeight=true >
+									<div dojoType="unieap.form.FieldSet" width="auto" height="90%">
+									 	  <div dojoType="unieap.form.Form" id="form" width="100%">
+									  		<table>
+									  			<tr>
+									  				<td>
+									  					<div binding="{name:'col1'}" dojoType="unieap.form.TextBox"></div>
+									  				</td>
+													<td>
+									  					<div binding="{name:'col2'}" dojoType="unieap.form.NumberTextBox"></div>
+									  				</td>
+									  			</tr>
+												<tr>
+									  				<td>
+									  					<div binding="{name:'col3'}" dojoType="unieap.form.DateTextBox" displayFormatter="{dataFormat:'yyyy/MM/dd'}" ></div>
+									  				</td>
+													<td>
+									  					<div  binding="{name:'col4'}" dojoType="unieap.form.ComboBox" dataProvider="{store:'DEPT'}"></div>
+									  				</td>
+									  			</tr>
+									  		</table>
+							         	 </div>
+									 </div>
+						    	</div>
+						    	<div dojoType="unieap.layout.AdaptivePane" height="20%"  autoHeight=true >
+						    		<div style="height:99%;border:1px solid red;">
+						    			内嵌自适应内容 2
+						    		</div>
+						    	</div>
+								<div dojoType="unieap.layout.AdaptivePane"  >
+									<div dojoType="unieap.layout.TitlePane" >
+										自适应容器同BorderLayout<br/><br/><br/><br/>
+									</div>
+							 	</div>
+						</div>
+					</div>
+					<div dojoType="unieap.layout.BorderPane" region="left" title="left" width="20%" >
+						<div dojoType="unieap.layout.TitlePane" title="操作步骤">
+							<table border=2px width="100%">
+								<colgroup>
+									<col style="width:30%"></col>
+									<col></col>
+									<col></col>
+								</colgroup>
+								<tr height="30px">
+									<td><strong>功能点描述</strong></td>
+									<td><strong>操作过程</strong></td>
+									<td><strong>预期结果</strong></td>
+								</tr>
+								<tr height="100px">
+									<td>验证自适应容器在centerPane中的使用</td>
+									<td>
+										拖拽top和bottom的分割线，查看fieldset和“内嵌自适应内容2”是否自适应
+									</td>
+									<td>高度能够自适应</td>
+								</tr>
+								<tr height="100px">
+									<td>验证拖拽之后页面内控件的渲染</td>
+									<td>
+										拖动周围四个pane使得center pane面积变小，查看页面内是否有滚动条
+									</td>
+									<td>由于center pane内的控件设置的是百分比，所以不出现滚动条</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div dojoType="unieap.layout.BorderPane" region="right" title="right" width="20%" >
+						
+					</div>
+				</div>
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="headline">
+				<div dojoType="unieap.layout.BorderContainer" design="headline"  height="100%" id="container2">
+					 <div dojoType="unieap.layout.BorderPane" region="top" title="top&test_sidebar" height="20%" wrap="true" >
+					 	<div dojoType="unieap.layout.TitlePane" title="操作步骤">
+							<table border=2px width="98%">
+								<colgroup>
+									<col style="width:30%"></col>
+									<col></col>
+									<col></col>
+								</colgroup>
+								<tr height="30px">
+									<td><strong>功能点描述</strong></td>
+									<td><strong>操作过程</strong></td>
+									<td><strong>预期结果</strong></td>
+								</tr>
+								<tr>
+									<td>验证初始化关闭的功能</td>
+									<td>
+										查看left pane和right pane初始状态是否为关闭状态
+									</td>
+									<td>为关闭状态，点击箭头后（wrap）或者点击&lt;open&gt;按钮能够展开</td>
+								</tr>
+								<tr>
+									<td>验证与Dialog组合使用情况</td>
+									<td>
+										点击&lt;dialog&gt;按钮,弹出dialog后，查看父页面是否有变化
+									</td>
+									<td>与弹出dialog前一样，无变化。</td>
+								</tr>
+								<tr>
+									<td>验证与Dialog组合使用情况</td>
+									<td>
+										点击&lt;dialog&gt;按钮,弹出dialog后，查看BorderLayout在Dialog中显示是否正常（注意dialog内是否出现滚动条）
+										修改BorderContainer的design属性为“headline”和“sidebar”两种方式进行测试
+									</td>
+									<td>与弹出dialog前一样，无变化。</td>
+								</tr>
+							</table>
+						</div>
+					 </div>
+					<div dojoType="unieap.layout.BorderPane" region="bottom" showTitleBar="false" height="20%" fixed="false">
+						<div dojoType="unieap.layout.AdaptiveContainer" height="100%">
+							 	<div dojoType="unieap.layout.AdaptivePane" >
+							 			<div dojoType="unieap.layout.TitlePane" >
+											自适应容器同BorderLayout
+											<br/><br/><br/><br/>
+										</div>
+							 	</div>
+								<div dojoType="unieap.layout.AdaptivePane" height="80%"  autoHeight=true >
+									<div dojoType="unieap.form.FieldSet" width="auto" height="90%">
+									 	  <div dojoType="unieap.form.Form" id="form1" width="100%">
+									  		<table>
+									  			<tr>
+									  				<td>
+									  					<div binding="{name:'col1'}" dojoType="unieap.form.TextBox"></div>
+									  				</td>
+													<td>
+									  					<div binding="{name:'col2'}" dojoType="unieap.form.NumberTextBox"></div>
+									  				</td>
+									  			</tr>
+												<tr>
+									  				<td>
+									  					<div binding="{name:'col3'}" dojoType="unieap.form.DateTextBox" displayFormatter="{dataFormat:'yyyy/MM/dd'}" ></div>
+									  				</td>
+													<td>
+									  					<div  binding="{name:'col4'}" dojoType="unieap.form.ComboBox" dataProvider="{store:'DEPT'}"></div>
+									  				</td>
+									  			</tr>
+									  		</table>
+							         	 </div>
+									 </div>
+						    	</div>
+						    	<div dojoType="unieap.layout.AdaptivePane" height="20%"  autoHeight=true >
+						    		<div style="height:99%;border:1px solid red;">
+						    			内嵌自适应内容 2
+						    		</div>
+						    	</div>
+								<div dojoType="unieap.layout.AdaptivePane"  >
+									<div dojoType="unieap.layout.TitlePane" >
+										自适应容器同BorderLayout<br/><br/><br/><br/>
+									</div>
+							 	</div>
+						</div>
+					</div>
+					<div dojoType="unieap.layout.BorderPane" region="center" title="center" wrap="true" splitLine="true">
+						<div dojoType="unieap.layout.TitlePane" title="test_API">
+							<table>
+								<tr>
+									<td>
+										<div dojoType="unieap.form.Button" label="open" onClick="open"></div>
+									</td>
+									<td>
+										<div dojoType="unieap.form.Button" label="close" onClick="close"></div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div dojoType="unieap.form.Button" label="dialog" onClick="showDialog"></div>
+					</div>
+					<div dojoType="unieap.layout.BorderPane" region="left" width="200px" wrap="true">
+						<div id="grid"  dojoType="unieap.grid.Grid" width="100%" height="100%"
+							binding="{store:'empDataStore'}">
+							<header>
+								<cell label="员工编号" width="25%" name="attr_empno"></cell>
+								<cell label="姓名" name="NAME" width="25%" ></cell>
+								<cell  label="职位" name="attr_job" width="25%" ></cell>
+								<cell  label="工资" name="attr_sal" width="25%"  dataType="number"></cell>
+							</header>
+						</div>
+					</div>
+					<div dojoType="unieap.layout.BorderPane" region="right" width="20%" wrap="true" >
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

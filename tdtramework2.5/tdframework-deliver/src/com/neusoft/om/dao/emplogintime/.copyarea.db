@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\emplogintime
+2
+4
+15:EmpLoginTimeColl.java|1|13b8966da09|160|9163764a|f87bde9b4c604fd5a4f35170925a859a|0
+13:EmpLoginTimeVO.java|1|13b8966dc7a|1ab6|ca593c53|ccfbc532535946abab10e2c6c1faba9a|0
+18:EmpLoginTimeDAOImpl.java|1|13b8966db32|26ee|95c9f55b|f66f4877e4a044f69bfecafef701a200|0
+14:EmpLoginTimeDAO.java|1|13b8966db03|5d9|fcadf408|21bf37b777a14e51a5599666951a801f|0

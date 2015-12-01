@@ -1,0 +1,22 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\storage
+2
+12
+a:Storage.as|1|13b894987a0|2f63|b7513cd7|37e3d315745c4bffb4906635aba896ca|0
+a:manager.js|1|13b89498406|92a|b2da3dd5|31ad9b0b5df44fb39d343ca35549b6c3|0
+23:AirEncryptedLocalStorageProvider.js|1|13b89497c74|1262|b9472858|8c99465cf6bb4660b19e03753424953b|0
+6:README|1|13b894985ac|dab|16d44463|daa5a039ecff4d278f7f3cc8aca5a559|0
+14:buildFlashStorage.sh|1|13b8949800e|ee|d4ed4f37|921f1579cd314c0d864f5f17538f896d|0
+17:FlashStorageProvider.js|1|13b89498195|156f|bde44952|0e9647c197f647ee853c9e57e19f49db|0
+17:LocalStorageProvider.js|1|13b8949827f|c3e|4572aab|84f114ca08df4347a81c638d6e75ae1d|0
+17:GearsStorageProvider.js|1|13b89498202|195d|35ee5969|4b04c521e8d54e8891c76f4779b5b01f|0
+b:Storage.swf|1|13b89498b59|cfd|1b566dae|d56cf15ebbb644ff90ad624b9259c668|0
+b:Provider.js|1|13b89498492|934|f5d8379e|0f2b641a398f43e59d1d99b8de11b235|0
+1a:BehaviorStorageProvider.js|1|13b89497ee5|1006|cc3185dd|657800b8ac754c8fbcd1e15e5470e475|0
+19:AirFileStorageProvider.js|1|13b89497d9d|1285|882e5287|cc22a5245a6341e698cac0e1cf987414|0
+a:_common.js|1|13b89499490|300|956d10f3|f6ae000103704ef5b7d334598a7de3ee|0
+12:storage_dialog.fla|1|13b89498fdd|54000|d7fed893|40cb8ec376b541119a057586dc1c6ba3|0
+12:storage_dialog.swf|1|13b894990f6|6964|ebba56cb|affc60f8fe1d4af39ec04ecfb149f38d|0
+18:CookieStorageProvider.js|1|13b89498137|cc8|a165637c|66153053c410469fad354f425b6f0aa8|0
+18:WhatWGStorageProvider.js|1|13b8949929c|f9c|e16c4dea|5f56b1d5d8b74532a3e8aeacfe7b00d5|0
+17:AirDBStorageProvider.js|1|13b89497c16|1637|6b3d5b25|bad89d9f895944149667710d5b834979|0

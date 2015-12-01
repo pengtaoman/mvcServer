@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="GB2312"?>
+<reportmodel>
+    <common id="0">
+        <property name="height" displayName="height" readOnly="true" >360</property>
+        <property name="name" displayName="name" >PDFModel</property>
+        <property name="width" displayName="width" readOnly="true" >533</property>
+        <property name="description" displayName="description" ></property>
+    </common>
+    <cell id="13" style="node.textfield">
+        <property name="name" displayName="name" >ssy</property>
+        <property name="width" displayName="width" >26</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >147</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >159</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="14" style="node.textfield">
+        <property name="name" displayName="name" >ssr</property>
+        <property name="width" displayName="width" >24</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >147</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >194</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="33" style="node.textfield">
+        <property name="name" displayName="name" >qw</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >159</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="30" style="node.textfield">
+        <property name="name" displayName="name" >bw</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >181</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="39" style="node.textfield">
+        <property name="name" displayName="name" >sw</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >203</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="40" style="node.textfield">
+        <property name="name" displayName="name" >wan</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >225</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="41" style="node.textfield">
+        <property name="name" displayName="name" >qian</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >247</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="44" style="node.textfield">
+        <property name="name" displayName="name" >bai</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >269</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="45" style="node.textfield">
+        <property name="name" displayName="name" >shi</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >291</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="42" style="node.textfield">
+        <property name="name" displayName="name" >yuan</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >313</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="43" style="node.textfield">
+        <property name="name" displayName="name" >jiao</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >335</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="6" style="node.textfield">
+        <property name="name" displayName="name" >jkkhyh</property>
+        <property name="width" displayName="width" >135</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >113</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >127</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="7" style="node.textfield">
+        <property name="name" displayName="name" >jkzh</property>
+        <property name="width" displayName="width" >136</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >130</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >127</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="12" style="node.textfield">
+        <property name="name" displayName="name" >ssn</property>
+        <property name="width" displayName="width" >35</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >147</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >115</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="4" style="node.textfield">
+        <property name="name" displayName="name" >jkdh</property>
+        <property name="width" displayName="width" >135</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >78</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >127</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="29" style="node.textfield">
+        <property name="name" displayName="name" >yi</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >137</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="5" style="node.textfield">
+        <property name="charlimit" displayName="charlimit" >15</property>
+        <property name="name" displayName="name" >jkqc</property>
+        <property name="width" displayName="width" >137</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >95</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >127</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="46" style="node.textfield">
+        <property name="name" displayName="name" >fen</property>
+        <property name="width" displayName="width" >16</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >1</property>
+        <property name="x" displayName="x" >357</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="1" style="node.textfield">
+        <property name="name" displayName="name" >lsgx</property>
+        <property name="width" displayName="width" >90</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >50</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >97</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >12</property>
+    </cell>
+    <cell id="2" style="node.textfield">
+        <property name="name" displayName="name" >zclx</property>
+        <property name="width" displayName="width" >85</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >65</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >96</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >12</property>
+    </cell>
+    <cell id="3" style="node.textfield">
+        <property name="name" displayName="name" >tfn</property>
+        <property name="width" displayName="width" >32</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >65</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >221</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >10</property>
+    </cell>
+    <cell id="18" style="node.textfield">
+        <property name="name" displayName="name" >tfy</property>
+        <property name="width" displayName="width" >21</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >65</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >254</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >10</property>
+    </cell>
+    <cell id="25" style="node.textfield">
+        <property name="name" displayName="name" >tfr</property>
+        <property name="width" displayName="width" >22</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >65</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >288</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >10</property>
+    </cell>
+    <cell id="26" style="node.textfield">
+        <property name="name" displayName="name" >yd</property>
+        <property name="width" displayName="width" >22</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >47</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >335</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >12</property>
+    </cell>
+    <cell id="27" style="node.textfield">
+        <property name="name" displayName="name" >hao</property>
+        <property name="width" displayName="width" >108</property>
+        <property name="font" displayName="font" >9</property>
+        <property name="y" displayName="y" >47</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >413</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >12</property>
+    </cell>
+    <cell id="28" style="node.textfield">
+        <property name="name" displayName="name" >zsjg</property>
+        <property name="width" displayName="width" >143</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >65</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >379</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >14</property>
+    </cell>
+    <cell id="8" style="node.textfield">
+        <property name="name" displayName="name" >ysbm</property>
+        <property name="width" displayName="width" >205</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >78</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >317</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >17</property>
+    </cell>
+    <cell id="9" style="node.textfield">
+        <property name="name" displayName="name" >ysmc</property>
+        <property name="width" displayName="width" >206</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >96</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >317</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="10" style="node.textfield">
+        <property name="name" displayName="name" >ysjc</property>
+        <property name="width" displayName="width" >203</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >114</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >317</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="11" style="node.textfield">
+        <property name="name" displayName="name" >skgk</property>
+        <property name="width" displayName="width" >201</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >132</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >317</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="15" style="node.textfield">
+        <property name="name" displayName="name" >sxn</property>
+        <property name="width" displayName="width" >34</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >147</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >317</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="16" style="node.textfield">
+        <property name="name" displayName="name" >sxy</property>
+        <property name="width" displayName="width" >29</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >147</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >365</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="17" style="node.textfield">
+        <property name="name" displayName="name" >sxr</property>
+        <property name="width" displayName="width" >25</property>
+        <property name="font" displayName="font" >8</property>
+        <property name="y" displayName="y" >147</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >411</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="19" style="node.textfield">
+        <property name="charlimit" displayName="charlimit" >7</property>
+        <property name="name" displayName="name" >pm</property>
+        <property name="width" displayName="width" >73</property>
+        <property name="font" displayName="font" >10</property>
+        <property name="y" displayName="y" >194</property>
+        <property name="charspace" displayName="charspace" >5</property>
+        <property name="x" displayName="x" >52</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="21" style="node.textfield">
+        <property name="name" displayName="name" >jsje</property>
+        <property name="width" displayName="width" >81</property>
+        <property name="font" displayName="font" >9</property>
+        <property name="y" displayName="y" >195</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >178</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="22" style="node.textfield">
+        <property name="name" displayName="name" >sl</property>
+        <property name="width" displayName="width" >49</property>
+        <property name="font" displayName="font" >9</property>
+        <property name="y" displayName="y" >195</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >261</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="23" style="node.textfield">
+        <property name="name" displayName="name" >yj</property>
+        <property name="width" displayName="width" >69</property>
+        <property name="font" displayName="font" >9</property>
+        <property name="y" displayName="y" >195</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >314</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="24" style="node.textfield">
+        <property name="name" displayName="name" >sjje</property>
+        <property name="width" displayName="width" >131</property>
+        <property name="font" displayName="font" >9</property>
+        <property name="y" displayName="y" >195</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >383</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >16</property>
+    </cell>
+    <cell id="20" style="node.textfield">
+        <property name="name" displayName="name" >sjjeh</property>
+        <property name="width" displayName="width" >126</property>
+        <property name="font" displayName="font" >9</property>
+        <property name="y" displayName="y" >256</property>
+        <property name="charspace" displayName="charspace" >2</property>
+        <property name="x" displayName="x" >385</property>
+        <property name="description" displayName="description" ></property>
+        <property name="height" displayName="height" >18</property>
+    </cell>
+</reportmodel>

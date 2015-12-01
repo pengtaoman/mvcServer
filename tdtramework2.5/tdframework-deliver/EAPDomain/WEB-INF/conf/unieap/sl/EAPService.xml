@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xb:services xmlns:xb="http://com/neusoft/unieap/sl/EAPServices">
+	<service 
+		name="HelloWorldJavaBean" 
+		type="JavaBean" 
+		businessObjectID="HelloWorld" />
+	<service 
+		name="HelloWorldEJB" 
+		type="EJB" 
+		homeInterface="examples.HelloHome" 
+		remoteInterface="examples.Hello" 
+		jndi="HelloHome" 
+		url="t3://192.168.210.66:7001"
+		initialContextFactory="weblogic.jndi.WLInitialContextFactory" />
+	<service 
+		name="HelloWorldWebServices" 
+		type="WebServices" 
+		webServicesEndpoint="http://192.168.210.66:8080/eapdomain/services/HelloWorld" />
+</xb:services> 

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>FieldSet测试</title>
+	<style>
+		@import "../../../../themes/default/css/unieap.css";
+	</style>
+
+    <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true" ></script>
+	<script type="text/javascript">
+		dojo.require("unieap.rpc");
+		dojo.require("unieap.form.FieldSet");
+		dojo.require("unieap.form.TextBox");
+		dojo.require("unieap.form.DateTextBox");
+		dojo.require("unieap.form.ComboBox");
+		dojo.require("unieap.form.FileInput");
+		dojo.require("unieap.layout.TitlePane");
+		dojo.require("unieap.form.Button");
+		
+		//设置控件的标题信息
+		function setTitle(){
+			fnFieldSet.setTitle('标题改变了');
+			dojo.byId('info').innerHTML='控件的标题变成了\"标题改变了\"'
+			dojo.animateProperty({
+				node:'info',
+				properties:{
+					backgroundColor:{start:'yellow',end:'white'}
+				},
+				duration:2000
+			}).play();
+		}
+		
+		//toggle控件的状态
+		function toggle(){
+			var open=fnFieldSet.open;
+			fnFieldSet.toggle();
+			if(open){
+				dojo.byId('info').innerHTML='控件现在处于关闭状态'
+			}else{
+				dojo.byId('info').innerHTML='控件现在处于展开状态'
+			}
+			dojo.animateProperty({
+				node:'info',
+				properties:{
+					backgroundColor:{start:'yellow',end:'white'}
+				},
+				duration:2000
+			}).play();
+		}
+		
+		//点击控件按钮回调事件
+		function evtToggle1(){
+			alert('点击按钮前触发,控件可以展开或者关闭');
+			return true;
+		}
+		
+		//点击控件按钮回调事件
+		function evtToggle2(){
+			alert('点击按钮前触发,控件不可以展开或者关闭');
+			return false;
+		}
+		
+		//点击控件按钮事件
+		function evtToggle3(){
+			alert('您点击了按钮');
+		}
+	</script>
+	</head>
+	<body class="unieap">
+		<div dojoType="unieap.layout.TitlePane" title="控件展示">
+			<div dojoType="unieap.form.FieldSet" title="FieldSet控件">
+				<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				<div dojoType="unieap.form.DateTextBox" width="500px"></div><p></p>
+				<div dojoType="unieap.form.ComboBox" width="500px"></div><p></p>
+				<div dojoType="unieap.form.FileInput" width="500px"></div><p></p>
+			</div>
+		</div>
+		<p></p>
+				
+		<!--属性测试-->
+		<div dojoType="unieap.layout.TitlePane" title="属性测试">
+			
+			<!--open属性-->
+			<div dojoType="unieap.layout.TitlePane" title="open属性,用来设置FieldSet控件的状态(展开或者关闭)" open="false">
+				<div dojoType="unieap.form.FieldSet" open="false" title="默认处于关闭状态">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+				<div dojoType="unieap.form.FieldSet" open="true" title="默认处于展开状态">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+			</div>
+			
+			<!--showIcon属性-->
+			<div dojoType="unieap.layout.TitlePane" title="showIcon属性,用来设置FieldSet控件是否显示下拉图标" open="false">
+				<div dojoType="unieap.form.FieldSet" showIcon="false" title="默认不显示下拉图标">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+				<div dojoType="unieap.form.FieldSet" showIcon="true" title="默认显示下拉图标">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+			</div>
+			
+			<!--label属性-->
+			<div dojoType="unieap.layout.TitlePane" title="label属性,用来设置FieldSet控件的标题文字信息" open="false">
+				<div dojoType="unieap.form.FieldSet" title="信息1">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+				<div dojoType="unieap.form.FieldSet"  title="信息2">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+			</div>
+
+		</div>
+		<p></p>
+		
+		<!--方法测试-->
+		<div dojoType="unieap.layout.TitlePane" title="方法测试" open="false">
+			<div dojoType="unieap.form.FieldSet" open="true" title="方法" jsId="fnFieldSet">
+				<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+			</div>
+			<div dojoType="unieap.form.Button" style="margin-right:5px" onclick="setTitle" label="改变控件标题信息(setTitle)"></div>
+			<div dojoType="unieap.form.Button" style="margin-right:5px" onclick="toggle" label="改变控件状态(toggle)"></div>
+			<div id="info"></div>
+			<p></p>
+		</div>
+		<p></p>
+		
+		<!--事件测试-->
+		<div dojoType="unieap.layout.TitlePane" title="事件">
+			<div dojoType="unieap.layout.TitlePane" title="控件按钮点击前回调事件(onBeforeToggle)" open="false">
+				<div dojoType="unieap.form.FieldSet"  title="点击前触发(可展开和关闭)" onBeforeToggle="evtToggle1">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+				<div dojoType="unieap.form.FieldSet"  title="点击前触发(不可展开和关闭)" onBeforeToggle="evtToggle2">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+			</div>
+			<div dojoType="unieap.layout.TitlePane" title="控件按钮点击事件(onToggle)" open="false">
+				<div dojoType="unieap.form.FieldSet"  title="点击按钮" onToggle="evtToggle3">
+					<div dojoType="unieap.form.TextBox" width="500px"></div><p></p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
+		

@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tdextend\layout\layout
+2
+c
+10:TabController.js|1|13b890f00a6|2d50|999ee8e|36216a9501e747eebd1ff747ce607fe9|0
+14:AdaptiveContainer.js|1|13b890ef914|ab7|ddaeb64c|5a86c483d72c45e19918f25148ec93e1|0
+12:BorderContainer.js|1|13b890efa1d|282a|4b9c2b05|cb7b60518336448d9139a4cece4d0080|0
+f:TabContainer.js|1|13b890efed1|298|6e28e911|1f6f15a20c2b4dbabdd64f0c60bda7aa|0
+10:HBoxContainer.js|1|13b890efe44|2919|a8a55d4|f5fb554a97704bf6882c1222ca6843a9|0
+11:_BaseContainer.js|1|13b890f050b|91b|ae713575|7c8062841759490fb26ce7f0578c1378|0
+e:ContentPane.js|1|13b890efc8f|2302|7baf0dd9|df68e36c913b4a3b89ab31285f6ca3ab|0
+d:BorderPane.js|1|13b890efae8|6334|6fa28c17|945a59d27ce04a85b2554ec09e96eba1|0
+c:Container.js|1|13b890efb94|2581|8a9fd23e|9b623ba0c3ba42ffa541adad1fe48906|0
+f:AdaptivePane.js|1|13b890ef9a0|711|55c29d70|c45474c4e1d943ffbaad8943464e3d85|0
+c:TitlePane.js|1|13b890f047e|2ef0|5fec9e8d|dbb1c125ca5a42e392a4c48cb959f8ae|0
+14:TabScrollProvider.js|1|13b890f03e2|1be9|d850ceda|ea7d11e6f28f4f0d870f2508d5de7935|0

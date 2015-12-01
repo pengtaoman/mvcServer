@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="myAutoMenu"> 
+ <item onactivate="showRunApplication()">查看运行应用</item> 
+ <item onactivate="showComApplication()">查看完成应用</item> 
+ <item onactivate="showAllApplication()">查看所有应用</item> 
+</menu>

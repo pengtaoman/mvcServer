@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\form\Form
+2
+b
+1c:test_form_backgroucolor.html|1|13b890f44aa|c69|ec84be28|ec950f030d0041c08300ccaaa24beff0|0
+15:test_form_inline.html|1|13b890f4844|19f3|9cca2882|169c0f51492649618056cd2542e97aff|0
+1c:test_form_textbox_focus.html|1|13b890f4a0a|529|54dc7b98|fd909211ec9e4de78e034a8932deae5d|0
+27:test_form_grid_bindingwithcombobox.html|1|13b890f474a|ecf|7c468135|2a6d72a3b8384104be12325d776c407a|0
+7:data.js|1|13b890f42d5|45d|733d37d9|60b30d13752d4151b10a6b4721a8c933|0
+11:test_form_fn.html|1|13b890f46dd|be5|8d714ce|ea7194c041ad4b56b832c781b0e82911|0
+17:test_form_validate.html|1|13b890f4a87|1897|38a6b2fa|b9626ffd77a6416b8ac7f70912eb528c|0
+e:test_form.html|1|13b890f43c0|b05c|9091a2f1|57d7a6f10b5440bcbcc3d4cab79a756a|0
+19:test_form_popupstyle.html|1|13b890f491f|e0f|8f6a76fb|a098596abbd646928814b6284b42d7c3|0
+18:test_form_enter2tab.html|1|13b890f4650|1c7c|c43cc87d|e03d64434a964517951254f6ada8ef2e|0
+a:form_fn.js|1|13b890f4343|865|100835b3|0b5e9c7853124bf59d725a4638a44109|0

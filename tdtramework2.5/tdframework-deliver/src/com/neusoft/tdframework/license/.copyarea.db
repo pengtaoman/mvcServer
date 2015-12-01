@@ -1,0 +1,14 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\license
+2
+a
+16:LicenseViewAction.java|1|13b8969921a|c60|995c3928|464b11ebd3384ea1a2b5ac9caedc89cb|0
+13:ConfigFileUtil.java|1|13b89698c5d|11b1|ca1c7e63|02273e86e6de481ca1f05e50c6aee9be|0
+9:exception|2|0|0|0|dfc710fdce6347aeaf095e227ae34c24|0
+11:CalendarUtil.java|1|13b89698bf0|149a|d39f9a0c|79ef56beb9b24d6f83f246654d10a2ba|0
+e:LicenseVO.java|1|13b89699382|50d|7145a84f|b259214d95f845da830d843f91dcfb1b|0
+10:LicenseColl.java|1|13b89698f1c|199|f20385f4|47e09352ee8e44fd8f525da125eb553f|0
+11:DesEncrypter.java|1|13b89698e32|1073|13ddd29|3aa1156e3a13468580d2b4db58f5d1e6|0
+16:LicenseWarnConfig.java|1|13b896993df|28a|9b4cdc42|242719c201a54a608c2c30e0cf211914|0
+10:LicenseUtil.java|1|13b896990e2|875|d5a2a837|46a38514a4a34586a11dc5ee4294a0c6|0
+1b:LicenseMaintenanceUtil.java|1|13b89699036|1dc6|f8de6b4c|58b7470f4a7a4d04b10cba8b77490410|0

@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\standard\procinstmgt\procinstlist\actions
+2
+4
+1b:CreateNewVersionAction.java|1|13b896aa840|d66|e3808553|fd4a4516d9d247a8bbf5929ecd8fb9d9|0
+13:UpdateRDAction.java|1|13b896aaa72|826|b2f1ba55|eab242858759431cb55eeda535e5bdcb|0
+13:ProcInstAction.java|1|13b896aa8cc|125b|5b3d00ed|dc8d775291344475b41bc78f501fad0a|0
+d:RDAction.java|1|13b896aa959|bfc|91e3091d|0365ae9be5d347d7a0cdf67dc2778bb0|0

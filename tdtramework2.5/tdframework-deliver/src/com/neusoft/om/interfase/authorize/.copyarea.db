@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\interfase\authorize
+2
+b
+15:AuthorizeDAOImpl.java|1|13b89675e0f|11b7|ec8dc427|8c0fce7e73a94c65a9b2c7f45ff7d317|0
+16:DataSourceDAOImpl.java|1|13b89676003|171|b7a376fd|c9c6058f5aa54a5cad8a5d12482d0c83|0
+f:MoreCityBO.java|1|13b89676458|1f8|a2fcc2d7|e3b4bdc3e8d84d71aae936795b8b14d4|0
+12:AuthBOExtImpl.java|1|13b896754e7|1184|d08fdf69|1ea6dcc5c0744020afa2cb24a3345e2f|0
+11:AuthorizeDAO.java|1|13b89675cf6|2f3|b1a122cc|de48fc9b062047bd8cb59c640b0f866c|0
+11:OMSystemColl.java|1|13b89676301|4a5|449d8e56|fe8e1a854f994e4388f833a62fe80e08|0
+13:MoreCityBOImpl.java|1|13b896765b0|745|875f92d0|675e2214d17d4c5291ca9de1357de15b|0
+12:OMAuthorizeVO.java|1|13b8967614b|1ecc|e0b72fd6|09f9e5248d0e47848ab4a6d2bbae83d0|0
+1a:OMObjectToFrameObject.java|1|13b89676235|c1d|2ac13f3f|f1451cdeb0c6420e87c6f3f418a8473b|0
+14:AuthorizeBOImpl.java|1|13b89675bad|8cd7|29948d3|7aab10268e89408cacfd7072a09a9564|0
+12:AuthVOExtImpl.java|1|13b89675f28|d69|bfa8181a|7279f4cef68d403caa2b9226ee697d81|0

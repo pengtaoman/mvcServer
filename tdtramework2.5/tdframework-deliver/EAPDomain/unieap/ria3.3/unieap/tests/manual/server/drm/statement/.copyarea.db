@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\server\drm\statement
+2
+4
+11:test_statement.js|1|13b89100f9e|23b|a27ab0db|1afafb05c18d4847b40ca65cb510b3d0|0
+15:test_withAttribute.js|1|13b891010f6|b2e|77dd69a|a763a26ef4014f4287807eba389a1aca|0
+16:test_withAttribute.jsp|1|13b89101173|dc4|712cd0fb|2c27ccf87498458db9f0b6978346ed50|0
+12:test_statement.jsp|1|13b8910100b|490|d5c564db|fbbed4dcb80b41dd99a7674b26f1a980|0

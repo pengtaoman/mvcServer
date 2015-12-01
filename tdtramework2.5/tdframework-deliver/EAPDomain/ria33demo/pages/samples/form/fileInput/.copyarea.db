@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\ria33demo\pages\samples\form\fileInput
+2
+6
+13:fileInput_server.js|1|13b8908c518|2e4|e60ec91|7f0d2e1af1594f12985d9cc218f542be|0
+10:fileInput_db.jsp|1|13b8908c4e9|e5f|7d998e07|6aca09633c6a4fafbc736fcbc7cdb4b9|0
+14:fileInput_server.jsp|1|13b8908c557|c35|e6dd130c|2b2e06eabc0f4077a5ebe67fffb25b22|0
+f:fileInput_db.js|1|13b8908c4ca|51d|dfc77700|7c86beeb005c4279b3674ccb8c5d1170|0
+c:fileList.jsp|1|13b8908c586|986|be44fadc|dfd4e1f6bc644c45aa6b34a0887a86f1|0
+6:upload|2|0|0|0|eff97bec27054d578d17bbb5f1d09434|0

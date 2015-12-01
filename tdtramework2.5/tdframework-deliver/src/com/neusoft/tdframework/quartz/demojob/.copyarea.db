@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\quartz\demojob
+2
+c
+19:ReserveEffectCornJob.java|1|13b8969b0ce|84d|ea0fc6f9|e7c60a749c4a4d73a2b47553985dbcfc|0
+1b:CustTypeCountUpdateJob.java|1|13b8969a852|756|7fe16e1a|aa4d3d369b94438db7307a59a103e407|0
+22:ReserveCustOrderEffectCornJob.java|1|13b8969aca7|771|c7d5800a|bcdab742f595443ea0559bbbbec931d6|0
+1a:BookingOrderUpdateJob.java|1|13b8969a767|743|916466a5|53fd55d183464630b3a8b9956f188583|0
+1e:ProdOverdateEffectCronJob.java|1|13b8969aa46|67a|bdb23e58|8542a62d784748259d41e96b6eb2f794|0
+d:AlarmJob.java|1|13b8969a5b2|6b5|9ad34704|3ef4cb59bde84803b9611bed14c8d568|0
+15:ForceQuitCronJob.java|1|13b8969a9e8|6fe|a572644b|4fbe8aaa131d405697c06bfe2fcaea9d|0
+1b:FirstCallEffectCronJob.java|1|13b8969a8cf|6dd|c90d5c4d|326c28777cc547dc9f6433bebdf75656|0
+23:PromotionOverdateEffectCronJob.java|1|13b8969ab7e|68a|b2224451|1baaf6a3fbd64276b72845c5d74d1a17|0
+10:CrmOrderJob.java|1|13b8969a7e4|e22|6bddc212|2e436cb90992418a8ae97b1ab1d91182|0
+15:BatchDealExecJob.java|1|13b8969a6fa|73e|d97f6075|1f59bd6cd31241acb0159a2b5a74d97e|0
+12:AutoAcceptJob.java|1|13b8969a69c|4cf|851a9ae|06c9792238a24456b8d743d8ca1fd56a|0

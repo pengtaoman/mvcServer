@@ -20,6 +20,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.poi.util.SystemOutLogger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -113,6 +114,7 @@ public class TDWebController extends BaseController {
 	@RequestMapping(value = "/hello22", method = RequestMethod.POST)
 	public String hello22(@ModelAttribute String lnameff) {
 		logger.trace("++++++++++++++++++@hello22+++++++??????????????++++++++++");
+		System.out.println("++++++++++++++++++@hello22+++++++??????????????++++++++++");
 
 		return "hello002";
 	}

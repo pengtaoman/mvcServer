@@ -1,0 +1,30 @@
+
+<html>
+<body>
+<SCRIPT language="javascript" src="print_something.js"></SCRIPT> 
+<script>
+	
+	function pr_fun(probject)
+	{	
+		var print_str="100~400~20~~信息~500~600~20~~项目~";	
+		for (var i=0; i< 2; i++)
+		{
+			print_something(probject,print_str);
+			
+		}
+		alert('打印成功');
+	}
+</script>
+
+<form>
+<object ID='NeuPrint' WIDTH='0' HEIGHT='0' CLASSID='clsid:FBFD55C9-C23C-11D3-B65D-004005E66149' CODEBASE='/swiftprint.ocx'>
+<param name='_Version' value='65536'>
+<param name='_ExtentX' value='1870'>
+<param name='_ExtentY' value='670'>
+<param name='_StockProps' value='0'>
+</object>
+<input type="submit" value="打印" onClick="pr_fun(NeuPrint)">
+
+</form>
+</body>
+</html>

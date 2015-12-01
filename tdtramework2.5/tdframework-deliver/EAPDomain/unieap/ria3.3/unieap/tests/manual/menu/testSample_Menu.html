@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>测试MENU</title>
+	
+	<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="parseOnLoad:true"></script>
+	<script type="text/javascript" src="testData.js"></script>
+	<script type="text/javascript" src="testSample_Menu.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../themes/default/css/unieap.css"></link>
+	<script>
+		dojo.require('unieap.form.Button');
+		dojo.require('unieap.form.Form');
+		dojo.require('unieap.layout.TitlePane');
+	</script>
+	
+	<style type='text/css'>
+	.plusIcon{
+		background-image: url(plus.gif);
+		background-repeat: no-repeat; 
+		background-position: center center;
+		display:inline-block;
+		width: 15px;
+		height: 15px;
+	}
+	</style>
+
+</head>
+<body class="unieap">
+	<div dojoType="unieap.layout.TitlePane" title="测试树控件绑定菜单">
+			<div dojoType="unieap.tree.Tree" id="tree1" label="Tree with Menu" onContextMenu="nodeContextMenu" animate="false"
+			binding="{'leaf':'leaf','id':'id','store':'treeStore','parent':'parentID', query:{name:'parentID',relation:'=',value:''}}"></div>
+			
+			<h2>点击树中节点，可以展开树，只有“叶子A”,“叶子B”和“树根1”右键绑定了不同的菜单</h2>
+			<h2>其他叶子节点没有绑定菜单，右键没有响应</h2>
+	</div>
+	
+	
+	<div dojoType="unieap.layout.TitlePane" title="测试按钮控件绑定菜单" height="600px">
+		<div style="color:#0000FF"><h2>请点击下面的按钮后，再右键点击测试Button</h2></div>
+		<div dojoType="unieap.form.Button" label="请右键点击我" id="btn" height=30></div>
+		<table border="2">
+			<div dojoType="unieap.form.Form" id="attr">
+				<tr>
+					<td><h3>属性测试</h3></td>
+				</tr>
+				
+				<tr>
+					<td>1</td>
+					<td>点击旁边的按钮,将targetNodeIds[]中的"btn,btn1"（测试按钮和本按钮）绑定一个相同的菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" id="btn1" label="点击左键" onClick="attr_targetNodeIds"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>2</td>
+					<td>点击旁边的按钮会屏蔽系统菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="attr_contextMenu"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>3</td>
+					<td>点击旁边的按钮会在测试Button上绑定一个带图标的菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="attr_iconClass"></div>
+					</td>
+				</tr>
+			</div>
+		</table>
+		
+		
+		<table border="2">
+			<div dojoType="unieap.form.Form" id="fn">
+				<tr>
+					<td><h3>方法测试</h3></td>
+				</tr>
+				
+				<tr>
+					<td>1</td>
+					<td>点击旁边的按钮,根据测试按钮的id绑定一个菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_bindById"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>2</td>
+					<td>点击旁边的按钮,根据测试按钮的domNode绑定一个菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_bindDomNode"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>3</td>
+					<td>点击旁边的按钮会在测试Button上绑定一个菜单，其中的一项被禁用</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_setDisabled"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>4</td>
+					<td>点击旁边的按钮会将禁用菜单项激活</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_setAbled"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>5</td>
+					<td>点击旁边的按钮会在测试Button上绑定一个带有MenuSeparator的菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_withSeparator"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>6</td>
+					<td>点击旁边的按钮绑定一个三级菜单到测试Button上</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_multiMenu"></div>
+					</td>
+				</tr>	
+				
+				<tr>
+					<td>7</td>
+					<td>点击旁边的按钮绑定一个二级菜单到测试Button上，其中一个弹出菜单被禁用</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_disabledPopup"></div>
+					</td>
+				</tr>	
+				
+				<tr>
+					<td>8</td>
+					<td>点击旁边的按钮会绑定菜单到测试Button上,点击菜单项会看到弹出信息</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="evt_onClick"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>9</td>
+					<td>点击旁边的按钮会在坐标{10,10}主动弹出一个菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_popup1"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>10</td>
+					<td>点击旁边的按钮会在测试按钮处看到一个主动弹出菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_popup2"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>11</td>
+					<td>点击旁边的按钮会在鼠标右键处看到一个主动弹出菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_popup3"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>12</td>
+					<td>点击旁边的按钮会给menu设置一个Object</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_setObj"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>13</td>
+					<td>点击旁边的按钮会获取到menu的Object</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_getObj"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>14</td>
+					<td>左键点击旁边的按钮会根据Id解除菜单的绑定</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_unBindDomNodebyId"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>15</td>
+					<td>左键点击旁边的按钮会根据domNode解除菜单的绑定</td>
+					<td>
+						<div dojoType="unieap.form.Button" label="点击左键" onClick="fn_unBindDomNode"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>右键点击旁边的按钮会生成一个菜单</td>
+					<td>
+						<div dojoType="unieap.form.Button" id="btn2" label="右键点击生成一个菜单"></div>
+						<div dojoType="unieap.menu.Menu" targetNodeIds="btn2" id="menuspan" style="display:none">
+							<div dojoType="unieap.menu.MenuItem">中国</div>
+							<div dojoType="unieap.menu.MenuItem">日本</div>
+							<div dojoType="unieap.menu.MenuSeparator"></div>  
+							<div dojoType="unieap.menu.PopupMenuItem">
+								<span>美国</span>
+									<div dojoType="unieap.menu.Menu">
+										<div dojoType="unieap.menu.MenuItem">阿拉斯加</div>
+										<div dojoType="unieap.menu.MenuItem">拉斯维加斯</div>
+										<div dojoType="unieap.menu.MenuSeparator"></div>
+										<div dojoType="unieap.menu.MenuItem">纽约</div>
+									</div>
+							</div>	
+						</div>
+					</td>
+				</tr>
+			</div>
+		</table>
+</body>
+</html>

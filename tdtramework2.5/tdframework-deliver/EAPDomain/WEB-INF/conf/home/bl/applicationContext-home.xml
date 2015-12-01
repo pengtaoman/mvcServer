@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Home applicationContext</description>
+
+	<bean id="homepageBO" class="com.neusoft.tdframework.home.action.HomePageBOImpl">
+		<property name="homepageDAO">
+			<ref bean="homepageDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="portalpageBO" class="com.neusoft.tdframework.home.action.PortalPageBOImpl">
+		<property name="portalpageDAO">
+			<ref bean="portalpageDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="omQueryBO" class="com.neusoft.crm.channel.outInterface.om.bo.OmQueryBOImpl">
+		<property name="omQueryDAO">
+			<ref bean="omQueryDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="schedulerBeanNameHold" class="com.neusoft.tdframework.quartz.scheduler.SchedulerBeanNameHold">
+	</bean>
+	
+	<bean id="promptInfoBO" class="com.neusoft.tdframework.message.bo.PromptInfoBOImpl">
+		<property name="promptInfoDAO" ref="promptInfoDAO" />
+	</bean>
+	
+    <bean id="schedulerMonitorBO" class="com.neusoft.tdframework.quartz.bo.SchedulerMonitorBOImpl">
+		<property name="schedulerMonitorDAO" ref="schedulerMonitorDAO" />
+	</bean>
+	
+	 <bean id ="authLoginCheck" class="com.neusoft.tdframework.authorization.AuthLoginCheckBOImpl">
+       <property name="dataSource">
+	  	  <ref bean="om_dataSource"/>
+	   </property>
+    </bean>
+
+</beans>

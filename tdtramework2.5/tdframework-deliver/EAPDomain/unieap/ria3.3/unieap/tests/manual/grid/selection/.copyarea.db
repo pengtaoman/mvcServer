@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\grid\selection
+2
+4
+17:test_grid_select_evt.js|1|13b890fb4d3|797|4ef18c29|608ce41abdff4c6b8601be6b028aa00e|0
+1c:test_grid_select_overview.js|1|13b890fb5dd|64d|217b14d3|8fbd9f440e0447a3938eff753f541b89|0
+19:test_grid_select_evt.html|1|13b890fb476|d51|ff4c6322|a05f8f67eb854012a255080365741316|0
+1e:test_grid_select_overview.html|1|13b890fb550|d11|8d7652aa|c4680b8cde4544328552563b092ed75d|0

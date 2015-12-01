@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>unieap.dialog.Dialog Unit Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            @import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true"></script>
+        <script>
+        	dojo.require("unieap.dialog.MessageBox");
+		   function showMessageBox(){           
+                MessageBox.cancelConfirm();
+		   }
+        </script>
+    </head>
+    <body class="unieap">
+    	对话框的内容来自另一个文件
+		<input type = "button"  value = "弹出"  onclick="showMessageBox()">
+    </body>
+</html>
+

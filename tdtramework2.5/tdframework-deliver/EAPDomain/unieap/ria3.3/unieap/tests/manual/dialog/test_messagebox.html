@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>unieap.dialog.Dialog Unit Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+			@import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true">
+        </script>
+        <script>
+            dojo.require("unieap.dialog.MessageBox");
+			dojo.require("unieap.util.util");
+            function testReturn(value){
+                alert("您选择的是："+value)
+            }
+            
+            function testPromptReturn(obj){
+                alert("您选择的按钮是："+ obj.btn+"。您的输入是"+obj.text);
+            }
+            
+            function testConfirm(){
+                MessageBox.confirm({
+                    onComplete: testReturn
+                }, document.getElementById("confirm"));
+            }
+            
+            function testCancelConfirm(){
+                MessageBox.cancelConfirm({
+                    onComplete: testReturn
+                }, document.getElementById("cancelconfirm"));
+            }
+            function testCustomerButtonConfirm(){
+                MessageBox.customerButtonConfirm({
+                    onComplete: testReturn,
+                    customerButtons: [{
+                        label: "跳过",
+                        returnValue: "skip"
+                    }, {
+                        label: "忽略",
+                        returnValue: "ignore"
+                    }, {
+                        label: "确定",
+                        returnValue: "confirm"
+                    }, {
+                        label: "取消",
+                        returnValue: "cancel"
+                    }]
+                }, document.getElementById("customerbuttonconfirm"));
+            }
+			function  testPrompt(){
+				MessageBox.prompt({
+                    onComplete: testPromptReturn
+                }, document.getElementById("prompt"));
+			}
+			function testMultiPrompt(){
+					MessageBox.multiPrompt({
+                    onComplete: testPromptReturn
+                }, document.getElementById("multiprompt"));	
+			}
+			function testInfoAlert(){
+				MessageBox.alert({type:"info"},document.getElementById("infoalert"));
+			}
+			function testWarnAlert(){
+				MessageBox.alert({type:"warn"},document.getElementById("warnalert"));
+			}
+			function testAutoCloseAlert(){
+				MessageBox.autoCloseAlert({},document.getElementById("autoclosealert"));
+			}
+			
+			function testConfirmWithNoIcon(){
+				MessageBox.alert({
+					isClose:false,
+					message:'右上角没有关闭按钮'
+				},dojo.byId('noIcon'))
+			}
+			
+			function testIconWithNoCB(){
+				MessageBox.confirm({
+					iconCloseComplete:false,
+					onComplete:function(value){
+						alert("返回值为:"+value)
+					}
+				},dojo.byId('noCB'));
+			}
+        </script>
+    </head>
+    <body class="unieap">
+        <input type="button" value="简单确认弹出框" onclick="testConfirm()"  id="confirm">
+		<input type="button" value="复杂确认弹出框" onclick="testCancelConfirm()"  id="cancelconfirm">
+		<input type="button" value="自定义按钮确认弹出框" onclick="testCustomerButtonConfirm()" id="customerbuttonconfirm">
+		<br>
+		<input type="button" value="单行输入提示框" onclick="testPrompt()" id="prompt">
+		<input type="button" value="多行输入提示框" onclick="testMultiPrompt()" id="multiprompt">
+		<br>
+		<input type="button" value="info提示框" onclick="testInfoAlert()" id="infoalert">
+		<input type="button" value="warn提示框" onclick="testWarnAlert()"  id="warnalert">
+		<input type="button" value="自动关闭的提示框" onclick="testAutoCloseAlert()"  id="autoclosealert">
+		
+		<input type="button" value="不显示右上角X按钮" onclick="testConfirmWithNoIcon()" id="noIcon" />
+		<input type="button" value="点右上角X按钮不执行回调" onclick="testIconWithNoCB()" id="noCB" />
+    </body>
+</html>

@@ -1,0 +1,22 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\ria33demo\pages\samples\dialog
+2
+12
+14:interactiveDialog.js|1|13b8908b1b2|b62|24a27957|94d8e335f4ff4089a36a9c2fa30fa610|0
+d:dialogData.js|1|13b8908a7f7|c6a|6b54435c|748cdf2182e84044919b7bff8c6b8258|0
+9:demo1.jsp|1|13b8908a7b8|27b|6b0bbf57|de390cbbf46a423da8c2a6f76f0e2b3e|0
+1b:.tmp_basicDialog.jsp.76105~|1|13b8908a565|dca|6067569a|d4a25f0b3b374d30be7ef0a2edadaa43|0
+12:tag_dialog_url.jsp|1|13b8908b24f|4a1|fb1a6c93|041dd918beb74c7ebf308cd997c374a8|0
+f:innerSelect.jsp|1|13b8908b02a|7f2|51c27e26|7d8c3d703d3748a196d2c0a517d93412|0
+17:basicdialog.js.unloaded|1|13b8908a5e2|4e2|ed4b442|d12b935d82cf4741b78ce0cb0f86073b|0
+e:tag_dialog.jsp|1|13b8908b23f|6dc|78a83d89|2a877e1eebc04489871a6fa928b0734d|0
+15:interactiveDialog.jsp|1|13b8908b220|1d85|773e345a|be280c9e873f4e96ad73572f2eb0168e|0
+f:dialogSelect.js|1|13b8908ad69|218|29f1bfbd|d93d7d99f36946ca943e399ea498b017|0
+e:basicdialog.js|1|13b8908a5a4|3a8|1ddb6fb8|b97ecc99ad584c4fb7e90662efb19e83|0
+9:inner.jsp|1|13b8908ae16|2e7|fd01f1f5|8c9b9e19b15e4b388fe4b649e08566b0|0
+e:innerSelect.js|1|13b8908ae45|218|b50ab3d7|5bf2d50e5f22498cb9f30ffdcb7dac51|0
+10:dialogSelect.jsp|1|13b8908ade7|e01|d3eca693|86a2aa0fd8bf4bb6a992d30f36380a7d|0
+14:dialogData_dialog.js|1|13b8908a97f|276|4361ca7f|0d8a8e401bcf4526a05115970fa0f0db|0
+f:basicDialog.jsp|1|13b8908a75a|dca|6067569a|5d71c6841b5b4a9e8271f143c2ceda0f|0
+15:dialogData_dialog.jsp|1|13b8908a9cd|8d6|d8d19393|f2dfc267a41249adb93505021b6d4344|0
+e:dialogData.jsp|1|13b8908a940|e83|e2d70ecb|88bc24c27591498f89279106ad2bfb49|0

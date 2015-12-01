@@ -1,0 +1,65 @@
+.member-product-tr {
+	background: #c3ffac;
+}
+
+.member-accept-header {
+	background: silver;
+}
+
+.member-product-table {
+	width: 700px;
+}
+
+.member-prompt-p {
+	font: 12px/ 1.5 tahoma, arial, 宋体;
+	width: 100%;
+	border-bottom: 1px silver solid;
+	margin-bottom: 10px;
+	text-indent: 10px;
+}
+
+.independence-prodoffer-name {
+	color: red;
+}
+
+.important-tip {
+	color: red;
+}
+
+.memeber-oper-div {
+	text-align: right;
+}
+
+.memeber-oper-div button {
+	cursor: pointer;
+}
+
+.member-offer-keep {
+	margin-left: 2px;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.member-offer-split {
+	margin-left: 2px;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.member-offer-quit {
+	margin-left: 2px;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.memeber-oper-td {
+	vertical-align: middle;
+}
+.action-selected{
+	color: red;
+
+}
+.memeber-prodoffer-action{
+	color: red;
+
+}

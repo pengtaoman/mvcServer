@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\grid\unitedCell
+2
+7
+1c:test_grid_unitedCell_UI.html|1|13b890fc09c|e17|9c62a544|fd477e3809224fb5986778d105c614ab|0
+21:test_grid_unitedCellWithEdit.html|1|13b890fbe89|128a|ca671178|d03e69bacb7a458a80f7fe6e9f33dfa5|0
+7:data.js|1|13b890fbbf8|a987|b970061e|9ad71f9ad18a4e5dab0b7f25f989ab9a|0
+1f:test_grid_withRowOperation.html|1|13b890fc109|13ee|acdd932e|a1c3162ad6254b708007dd47681ad882|0
+1f:test_grid_unitedCell_group.html|1|13b890fbf73|c3a|2f4fe1a8|8c68c0efae2147a68c9d44c1f7b460d3|0
+17:test_grid_unitedCell.js|1|13b890fbd7f|1a3|abf2826f|6b65bb1ca8ed4e27a32870c0a0202444|0
+19:test_grid_unitedCell.html|1|13b890fbd21|c06|8882d300|046f3aaf64c748f99f7215f451c20e96|0

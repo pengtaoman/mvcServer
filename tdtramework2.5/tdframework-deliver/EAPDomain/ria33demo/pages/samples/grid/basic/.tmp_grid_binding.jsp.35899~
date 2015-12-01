@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ include file="/unieap/ria3.3/pages/config.jsp" %>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid样例</title>
+		<style type="text/css">
+			@import "<%=appPath%>/pages/samples/syntaxHighlighter/Styles/SyntaxHighlighter.css";
+		</style>
+		<script type="text/javascript" src="<%=appPath%>/pages/samples/syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="<%=appPath%>/pages/samples/syntaxHighlighter/Scripts/shBrushXml.js"></script>
+		<script type="text/javascript" src="<%=appPath%>/pages/samples/syntaxHighlighter/Scripts/shBrushJScript.js"></script>
+		<script type="text/javascript" src="<%=appPath%>/pages/samples/grid/data.js"></script>
+		<script type="text/javascript" src="<%=appPath%>/pages/samples/grid/basic/grid_binding.js"></script>      
+    </head>
+    <body class="unieap">
+	   <div dojoType="unieap.form.FieldSet" title="FieldSet控件" height="60%" >
+		<div id="grid" dojoType="unieap.grid.Grid" width="100%" height="60%"
+			binding="{store:'empDataStore'}">
+			<fixed>
+				<cell label="员工编号" width="150" name="attr_empno"></cell>
+			</fixed>
+			<header>
+				<cell width="250px" label="姓名" name="NAME"></cell>
+				<cell width="250px" label="职位" name="attr_job"></cell>
+				<cell width="200px" label="工资" name="attr_sal" dataType="number"></cell>
+			</header>
+		</div>
+		</div>
+    </body>
+</html>

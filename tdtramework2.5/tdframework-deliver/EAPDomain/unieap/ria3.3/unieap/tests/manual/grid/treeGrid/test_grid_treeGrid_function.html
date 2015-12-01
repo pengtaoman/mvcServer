@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - TreeGrid</title>
+		<style type="text/css">
+			@import "../../../performance/blackbird.css";
+			@import "../../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../../themes/base/css/unieap.css";
+			@import "../../../../themes/blue/css/unieap.css";
+		</style>
+
+		<script type="text/javascript" src="../../../performance/blackbird.js"></script>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: true"></script>
+		<script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.grid.Grid");
+			function expand() {
+				var value = dojo.byId("expandInput").value;
+				var treeManager = grid.getManager("TreeManager");
+				treeManager.expand(value);
+			}
+			function collapse() {
+				var value = dojo.byId("collapseInput").value;
+				var treeManager = grid.getManager("TreeManager");
+				treeManager.collapse(value);
+			}
+			function expandAll() {
+				var treeManager = grid.getManager("TreeManager");
+				treeManager.expandAll(); 
+			}
+			function collapseAll() {
+				var treeManager = grid.getManager("TreeManager");
+				treeManager.collapseAll(); 
+			}
+        </script>
+    </head>
+    <body class="unieap">
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - TreeGrid"));
+	    </script>
+		<br/>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="300px"
+			binding="{store:'menuTree'}" views="{rowNumber:true}" rows="{defaultRowHeight:25}"
+			edit="{editType:'rowEdit'}"
+			tree="{id:'id',parent:'parentID',expandOnLoad:true}">
+			<header>
+				<cell width="250px" label="名称" name="label" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+				<cell width="150px" label="id" name="id" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+				<cell width="150px" label="parent" name="parentID" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+				<cell width="250px" label="位置" name="location" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+				<cell width="150px" label="类型" name="type" editor="{editorClass:'unieap.form.TextBox'}"></cell>
+			</header>
+			<toolbar individual="{}"></toolbar>
+		</div>
+		<br/>
+		<table cellpadding="1" border="1">
+			<tr>
+				<td>展开所有行</td>
+				<td><button onclick="expandAll()" style="width:100%">expandAll</button></td>
+			</tr>
+			<tr>
+				<td>收缩所有行</td>
+				<td><button onclick="collapseAll()" style="width:100%">collapseAll</button></td>
+			</tr>
+		</table>
+		<table cellpadding="1" border="1">
+			<tr>
+				<td>展开指定ID的行</td>
+				<td><input id="expandInput"></input></td>
+				<td><button onclick="expand()" style="width:100%">展开</button></td>
+			</tr>
+			<tr>
+				<td>收缩指定ID的行</td>
+				<td><input id="collapseInput"></input></td>
+				<td><button onclick="collapse()" style="width:100%">收缩</button></td>
+			</tr>
+		</table>
+    </body>
+</html>

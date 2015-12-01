@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\chart
+2
+c
+16:BaseCoorPropsImpl.java|1|13b8968d57f|bcb|ba7746dd|d73a0df87fe7414eaaefae6f0f4e85c0|0
+1a:BaseChartDataSetInter.java|1|13b8968d3ba|212|b0bdaed8|5d669c4d3d9b4a069bf902c5ff258623|0
+17:BaseCoorPropsInter.java|1|13b8968da42|3f5|23413fc6|ded631fa13bd4e538a18d60a815bdbd1|0
+6:action|2|0|0|0|25705c2723304335bcc7de438839b41a|0
+e:ChartData.java|1|13b8968dbc9|8df|f1de96cb|e258e73388bd4fd3bf67ffe9817e4a17|0
+12:BaseChartImpl.java|1|13b8968d4b4|24d2|47f34ac|52aaf6ac629d4b028990913a93ba1c22|0
+17:BaseChartException.java|1|13b8968d447|119|733d5aea|395ee7db319f4f4daa35ffeb462bc390|0
+19:BaseChartDataSetImpl.java|1|13b8968d36c|3d4|6d293189|da5bdd3405ab4fdcb3759f8092e8896c|0
+16:BaseChartDataImpl.java|1|13b8968d2a1|806|29cc7900|db29d12204684970a461e60818c45bb7|0
+19:DefaultCoorPropsImpl.java|1|13b8968dcb3|9cd|1969cf01|d5f4bac1a04d4973a4c2ff62b99d03bc|0
+13:BaseChartInter.java|1|13b8968d512|430|7ce54c1c|ace8e6935fe745fb9b3975ac59621f81|0
+17:BaseChartDataInter.java|1|13b8968d2ff|235|a20fb9f9|a612a9ee588246a399b60b6cdcd366eb|0

@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\monitor\procdef\beans
+2
+7
+e:Transtion.java|1|13b896a0f0c|a93|2a06673f|401ee4c6d80d4fb395322ac39b48bfda|0
+15:SVGCreateFactory.java|1|13b896a0d18|7e46|e6b6b3e3|d75a0889026447fa8f801fd08f46e661|0
+11:WorkItemBean.java|1|13b896a0f5a|723|4d992ae0|0be056e456a746c181c379cf61502636|0
+18:SVGTranstionManager.java|1|13b896a0e9e|3ca|feb58f81|dbfefa972b5441dca8e50931408bb2a4|0
+c:ActBean.java|1|13b896a0aa6|6ac|abfe1acc|a84a3a17046e40b8addf949622b8c91f|0
+11:SVGTranstion.java|1|13b896a0e31|5531|31b9ac45|d88663fd54cf4f018f37ff48032f60ed|0
+18:OldSVGCreateFactory.java|1|13b896a0bdf|75ac|3507b9f4|530e1597176f40f2939fb10ffb9c59ea|0

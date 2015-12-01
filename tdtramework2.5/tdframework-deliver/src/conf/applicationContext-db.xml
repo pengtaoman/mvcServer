@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <!-- 载入资源文件 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:**/jdbc.properties</value>
+				<value>classpath:**/configure.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 第1个数据源：c3p0数据源配置 -->
+	<bean id="c3p0_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${c3p0.driver}" />
+		<property name="jdbcUrl" value="${c3p0.url}" />
+		<property name="user" value="${c3p0.username}" />
+		<property name="password" value="${c3p0.password}" />
+		<property name="minPoolSize" value="${c3p0.minPoolSize}" />
+		<property name="maxPoolSize" value="${c3p0.maxPoolSize}" />
+		<property name="initialPoolSize" value="${c3p0.initialPoolSize}" />
+		<property name="maxIdleTime" value="${c3p0.maxIdleTime}" />
+		<property name="acquireIncrement" value="${c3p0.acquireIncrement}" />
+		<property name="maxStatements" value="${c3p0.maxStatements}" />
+		<property name="maxStatementsPerConnection" value="${c3p0.maxStatementsPerConnection}" />
+		<property name="idleConnectionTestPeriod" value="${c3p0.idleConnectionTestPeriod}" />
+		<property name="acquireRetryAttempts" value="${c3p0.acquireRetryAttempts}" />
+		<property name="breakAfterAcquireFailure" value="${c3p0.breakAfterAcquireFailure}" />
+		<property name="testConnectionOnCheckout" value="${c3p0.testConnectionOnCheckout}" />
+	</bean>
+
+	<!-- 第2个数据源 -->
+	<bean id="multi_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${multi.driver}" />
+		<property name="jdbcUrl" value="${multi.url}" />
+		<property name="user" value="${multi.username}" />
+		<property name="password" value="${multi.password}" />
+	</bean>
+
+</beans>

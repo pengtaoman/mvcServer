@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="pracApplogic" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="com.neusoft.unieap.ria33demo.action.server.pojo.applogic.PractiseApplogic">
+				<property name="practiseDao">
+					<ref bean="practiseDao"/>
+				</property>
+				<property name="companyDao">
+					<ref bean="companyDao"/>
+				</property>
+				<property name="pojoMgr">
+					<ref bean="pojoMgr"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="pracInteraction" class="com.neusoft.unieap.ria33demo.action.server.pojo.interaction.PractiseInteractionImpl">
+		<property name="pracApplogic">
+			<ref bean="pracApplogic"/>
+		</property>
+	</bean>
+	<bean id="practiseDao" class="com.neusoft.unieap.ria33demo.action.server.pojo.dao.PractiseDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="companyDao" class="com.neusoft.unieap.ria33demo.action.server.pojo.dao.CompanyDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+</beans>

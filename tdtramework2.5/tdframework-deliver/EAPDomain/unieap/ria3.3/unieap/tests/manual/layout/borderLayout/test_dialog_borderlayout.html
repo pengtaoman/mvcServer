@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title></title>
+        <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+        <link rel="stylesheet"type="text/css" href="../../../configs/test_config.css">
+        </link>
+		<script type="text/javascript" src="../../../../../dojo/dojo.js" djconfig="parseOnLoad:true,isDebug: false">
+        </script>
+		<script type="text/javascript" src="../../../../../dijit/dijit.js">
+		</script>
+		 <script type="text/javascript" src="../../grid/group/data.js" > </script>
+		 	<script type="text/javascript" src="test_dialog_borderLayout.js">
+		</script>
+        <script type="text/javascript" >
+			dojo.require("unieap.layout.BorderContainer");
+			dojo.require("unieap.layout.BorderPane");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.form.TextBox");
+			dojo.require("unieap.form.ComboBox");
+			dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.form.FieldSet");
+			dojo.require("unieap.form.Form");
+			dojo.require("unieap.form.NumberTextBox");
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.form.DateTextBox");
+			dojo.require("unieap.dialog.Dialog");
+           dojo.require("unieap.dialog.DialogUtil");
+        </script>
+		
+	</head>
+	<body class="unieap">
+		<div dojoType="unieap.form.Button" label="弹出BorderLayout" onClick="showDialog"></div>		
+	</body>
+</html>

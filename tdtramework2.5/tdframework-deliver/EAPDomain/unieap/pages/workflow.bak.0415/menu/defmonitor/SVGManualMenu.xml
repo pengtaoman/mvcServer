@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="myManualMenu"> 
+ <item onactivate="showRunWorkList()">查看待办任务</item> 
+ <item onactivate="showComWorkList()">查看完成任务</item> 
+ <item onactivate="showAllWorkList()">查看所有任务</item> 
+</menu>

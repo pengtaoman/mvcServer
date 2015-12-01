@@ -1,0 +1,27 @@
+.label{
+	float:left;
+	margin-right:20px;
+}
+
+.clear{
+	clear:both;
+	margin:2px 0px 2px 0px;
+	width:2px;
+	height:2px;
+}
+
+.unieap .newIcon{
+	border-left: 1px solid #7f9db9; 
+	width: 16px; 
+	height: 19px; 
+	float: right; 
+	overflow:hidden;
+	background:url("../images/find.gif") no-repeat;
+}
+
+.unieap .newBtn{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url("../images/find.gif") no-repeat;
+}

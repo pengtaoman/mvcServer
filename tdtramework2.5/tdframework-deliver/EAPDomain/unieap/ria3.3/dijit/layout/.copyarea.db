@@ -1,0 +1,19 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dijit\layout
+2
+f
+10:AccordionPane.js|1|13b894d9871|25f|303fd361|6d5c0309e5d74889b76832fa1c004396|0
+10:TabController.js|1|13b894da5cf|da2|78ead19c|d8cbe736d10f45b1a95901e42002d3fe|0
+10:_LayoutWidget.js|1|13b894da802|df2|8871bab2|8b3114646d444b2abd1fba6e26f0ac56|0
+12:StackController.js|1|13b894da1b8|1607|6d80a927|db1d9c6cc7974594876dd1fc85c93c4c|0
+14:_TabContainerBase.js|1|13b894da8fc|b0a|bc8bf809|b7a92fe5dbe24fad9e04a4f8fd128dfa|0
+b:LinkPane.js|1|13b894d9c69|2e0|191002c2|65d2cb1e11094c5988aa46914b8e6d14|0
+f:TabContainer.js|1|13b894da32f|51c|702dd62a|21d3c249bc634c5bbcba2f27d33fe459|0
+e:ContentPane.js|1|13b894d9a08|1a42|a1c847e4|09969e1dae2e4deda696a3cb82fe2f3b|0
+19:ScrollingTabController.js|1|13b894d9d92|245c|bc30fd22|b80c1cc5a7cd4b3dbc7e6b4cb083b7bc|0
+1a:_ContentPaneResizeMixin.js|1|13b894da6e8|c94|2277191|7d3238ed94f24c83a757f67425c731f9|0
+15:AccordionContainer.js|1|13b894d96db|2112|cf3ec603|e77f9ddf04614fbaac489c63cb000f7f|0
+11:SplitContainer.js|1|13b894d9ee9|22ca|4611456f|b5a03be28f104b25b2e8e65e33f08311|0
+12:BorderContainer.js|1|13b894d98cf|1f5d|83e0938|c18f13f18f7744bda9f6bd1381f5ba7d|0
+11:StackContainer.js|1|13b894d9fd4|1093|e01ed35b|fc9fd77757a84116b939958785608e4f|0
+12:LayoutContainer.js|1|13b894d9b5f|441|e4f187eb|c4c3af2fb910425a87a497a01cddeff2|0

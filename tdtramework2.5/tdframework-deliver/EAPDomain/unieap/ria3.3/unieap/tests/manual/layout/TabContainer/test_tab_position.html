@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+	<title>unieap.layout.TabContainer Unit Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+	<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true">
+	</script>
+	<script type="text/javascript" src="../../grid/data.js">
+	</script>
+	<script>
+		dojo.require("unieap.layout.TitlePane");
+		dojo.require("dijit.layout.ContentPane");
+		dojo.require("dijit.TitlePane");
+		dojo.require("unieap.form.Button");
+		dojo.require("unieap.form.ComboBox");
+		dojo.require("unieap.layout.TabContainer");
+		dojo.require("unieap.grid.Grid");
+		
+	</script>
+	<style>
+	</style>
+</head>
+<body class="unieap">
+	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+		该样例展示了Tab组件的如下特性：<br>
+			1.Tab页布局支持 1.top 上  2.bottom 下  3.left-h 左  4.right-h 右<br>
+			2.4中布局在tab页较多时都会出现滚动按钮
+	  	</div>
+	<div dojoType="unieap.layout.TitlePane" title="TabContainer布局:1.top 上  2.bottom 下  3.left-h 左  4.right-h 右">
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:250px;width:25%;float:left" tabPosition="top">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三" closable="true">
+			</div>
+		</div>
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:250px;width:25%;float:left" tabPosition="left-h">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三">
+			</div>
+		</div>
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:250px;width:25%;float:left" tabPosition="bottom">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器四" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab6">
+			</div>
+		</div>
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:250px;width:25%;float:left" tabPosition="right-h">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三">
+			</div>
+		</div>
+	</div>
+	<div dojoType="unieap.layout.TitlePane" title="TabContainer滚动按钮,tab页较多时出现滚动按钮">
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:300px;width:25%; float:left" tabPosition="top">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+				出现滚动条后的Menu按钮在IE下存在bug:<br>
+				当Menu下拉以后，鼠标在Menu上来回晃动，会出现popup下拉错位或突然消失的情况<br>
+				缺陷已提到CQ,此缺陷属于Menu控件的缺陷
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十一">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab十二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十三" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十一">
+			</div>
+		</div>
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:300px;width:25%; float:left" tabPosition="left-h">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十一">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab十二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十三" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十一">
+			</div>
+		</div>
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:300px;width:25%; float:left" tabPosition="bottom">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器四" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab6">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十一">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab十二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十三" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十一">
+			</div>
+		</div>
+		<div dojoType="unieap.layout.TabContainer" jsId="tabcontainer" style="height:300px;width:25%; float:left" tabPosition="right-h">
+			<div dojoType="unieap.layout.ContentPane" title="tab1">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器三">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十一">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="tab十二">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十三" closable="true">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十四">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十五">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十六">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十七">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十八">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器十九">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十">
+			</div>
+			<div dojoType="unieap.layout.ContentPane" title="容器二十一">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

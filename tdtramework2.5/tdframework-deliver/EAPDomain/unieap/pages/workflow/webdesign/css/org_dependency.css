@@ -1,0 +1,108 @@
+
+.x-tree-node img.dimension{
+    background-image:url(../images/dimension.gif);
+}
+.x-tree-node img.unitroot{
+    background-image:url(../images/org.gif);
+}
+.x-tree-node img.unit{
+    background-image:url(../images/unit.gif);
+}
+.x-tree-node img.gunit{
+    background-image:url(../images/partner.gif);
+}
+.x-tree-node img.lunit{
+    background-image:url(../images/partner.gif);
+}
+.x-tree-node img.string{
+    background-image:url(../images/str_data.gif);
+}
+.x-tree-node img.xml{
+    background-image:url(../images/xml_data.gif);
+}
+.x-tree-node img.variable{
+    background-image:url(../images/variable.gif);
+}
+.x-tree-node img.bsubexpressions{
+    background-image:url(../images/bsubexpressions.gif);
+}
+.x-tree-node img.app{
+    background-image:url(../images/partner_in_pal.gif);
+}
+.x-tree-node img.role{
+    background-image:url(../images/role.png);
+}
+.x-tree-node-leaf img.role{
+    background-image:url(../images/role.png);
+}
+.x-tree-node img.person{
+    background-image:url(../images/person.png);
+}
+.x-tree-node-leaf img.unitroot{
+    background-image:url(../images/org.gif);
+}
+.x-tree-node-leaf img.unit{
+    background-image:url(../images/unit.gif);
+}
+.x-tree-node-leaf img.person{
+    background-image:url(../images/person.png);
+}
+.x-tree-node img.businessrole{
+    background-image:url(../images/businessrole.gif);
+}
+.x-tree-node-leaf img.administrativerole{
+    background-image:url(../images/businessrole.gif);
+}
+.x-tree-node-leaf img.menu{
+    background-image:url(../images/menu-leaf.gif);
+}
+.x-tree-node-leaf img.data{
+    background-image:url(../images/data-leaf.gif);
+}
+.x-tree-node-leaf img.desktop{
+    background-image:url(../images/desktop-leaf.gif);
+}
+.add-cmp .x-btn-text {
+    background-image:url(../images/add.gif);
+}
+.add-opt .x-btn-text {
+    background-image:url(../images/edit.gif);
+}
+.add-new .x-menu-item-icon {
+    background-image:url(../images/add.gif);
+}
+.add-copy .x-menu-item-icon {
+    background-image:url(../images/copy.gif);
+}
+.query .x-btn-text {
+    background-image:url(../images/query.gif);
+}
+.remove .x-btn-text, .remove-mi .x-menu-item-icon {
+    background-image:url(../images/del.gif);
+}
+.expand-all .x-btn-text {
+    background-image:url(../images/expand.gif);
+}
+.collapse-all .x-btn-text {
+    background-image:url(../images/collapse.gif);
+}
+.x-tree-node img.folder, .x-tree-node-collapsed img.folder{
+    background-image:url(../images/default/tree/folder.gif);
+}
+.x-tree-node-expanded img.folder {
+    background-image:url(../images/default/tree/folder-open.gif);
+}
+.x-tree-node .croot{
+    background:#c3daf9;
+}
+.x-tree-node div.cmp{
+    background:#eee url(images/cmp-bg.gif) repeat-x;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:1px;
+}
+.x-tree-node-collapsed .x-tree-node-icon,.x-tree-node-expanded .x-tree-node-icon,.x-tree-node-leaf .x-tree-node-icon{border:0 none;height:18px;margin:0;padding:0;vertical-align:middle;width:16px;background-position:center;background-repeat:no-repeat;}
+.x-tree-node-collapsed .x-tree-node-icon{background-image:url(../images/folder.gif);}
+.x-tree-node-expanded .x-tree-node-icon{background-image:url(../images/folder-open.gif);}

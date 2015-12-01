@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\datarole
+2
+4
+10:DataRoleDAO.java|1|13b8966cae6|660|a40c2f75|adf2e2179ebe4cf5b6757ab95980bdbc|0
+11:DataRoleColl.java|1|13b8966cac7|37a|ece8302f|fdacf6936cee4d96b9a046f3fa46ee8b|0
+14:DataRoleDAOImpl.java|1|13b8966cb15|172e|db9f6a85|8d3d1014af9c4a83bfcd3894deb75388|0
+f:DataRoleVO.java|1|13b8966cb44|1638|d869b892|130a7e8087fb47f08cfdc9fe52ae67b8|0

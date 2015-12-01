@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>	
+	<description>Crm custmgr param dataAccessContext</description>
+
+	<bean id="crmA_dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+			<property name="jndiName">
+				<value>java:comp/env/jdbc/crm</value>
+			</property>
+	</bean>
+
+
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+
+		<!-- <property name="configLocation" value="WEB-INF/conf/ordermgr/SqlMapConfig.xml" /> -->
+		<property name="configLocation" value="/WEB-INF/conf/om/bl/SqlMapConfig.xml" />
+		<property name="dataSource" ref="crmA_dataSource" />
+	</bean>
+
+	<bean id="baseDao" class="com.neusoft.tdframework.ibaguice.core.Ibatis2DAOImpl">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+
+	<bean id="sqlMapClientDaoSupport" class="com.neusoft.tdframework.ibaguice.orm.DefaultSqlMapClientDaoSupport">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+
+	<bean id="abstractDAO" abstract="true" class="com.neusoft.tdframework.ibaguice.orm.AbstractDAO">
+		<property name="sqlMapClient" ref="sqlMapClientDaoSupport" />
+	</bean>
+
+
+</beans>

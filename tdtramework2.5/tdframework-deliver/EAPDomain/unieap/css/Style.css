@@ -1,0 +1,86 @@
+A.link_v9_bk:link {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link_v9_bk:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link_v9_bk:active {
+	TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link_v9_bk:hover {
+	COLOR: #000000; TEXT-DECORATION: underline;font-family: "宋体"; font-size: 12px;
+}
+A.link2_v9_bk:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family:"宋体"; font-size: 12px;
+}
+A.link2_v9_bk:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link2_v9_bk:active {
+	COLOR: #000000; TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link2_v9_bk:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+
+.T_song12 {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none; clip:   rect(   ); font-weight: normal}
+.T_song14_bk {  font-family: "宋体"; font-size: 14px; font-weight: bold; color: #000000}
+.T_song12_wt {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; text-decoration: none}
+.td {  font-family: "宋体"; color: #000000; background-color: #FFFFFF; font-size: 12px; height: 25px}
+.th {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; vertical-align: bottom; background-color: #003C9A}
+.Menu100 {  width: 100px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu120 {  width: 120px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu150 {  width: 150px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu170 {  width: 170px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu200 {  width: 200px; font-family: "宋体"; font-size: 12px; color: #000000}
+.Menu300 {  width: 390px; font-family: "宋体"; font-size: 12px; color: #000000}
+BODY {SCROLLBAR-FACE-COLOR: #eeeeee; SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; SCROLLBAR-SHADOW-COLOR: #eeeeee; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR:  #666666; SCROLLBAR-TRACK-COLOR: #eeeeee; SCROLLBAR-DARKSHADOW-COLOR: #666666; }.line_input {  border-left:0px;border-right:0px;border-top:0px;border-bottom:1px groove #000000;font-size:12px}
+.head_bg1 {  background-image: url(../images/unieap/menutool/head/bg_1.gif)}
+.head_bg2 {  background-image: url(../images/unieap/menutool/head/bg_2.gif)}
+.tab_bg1 {  background-image: url(../images/unieap/menutool/tab/tab_bg1.gif); background-repeat: repeat}
+.tab1 {  background-image: url(../images/unieap/menutool/tab/t1.gif); background-repeat: no-repeat}
+.button1 {  background-image: url(../images/unieap/menutool/button1.gif); background-repeat: no-repeat}
+.tab2 {  background-image: url(../images/unieap/menutool/tab/t2.gif); background-repeat: no-repeat}
+.menu_G150 {  font-family: "宋体"; font-size: 12px; color: #000000; background-color: #eeeeee; width: 150px}
+.button2 {  background-image: url(../images/unieap/menutool/button2.gif); background-repeat: no-repeat}
+
+
+
+.icon_head {  background-image: url(images/icon/icon1.gif); background-repeat: no-repeat; width: 20px}
+.na_bg {  background-color: #000084; font-size: 12px; color: #FFFFFF}
+.na_bg2 {  background-color: #ffffff; font-size: 12px; color: #000000}
+.login_bg {  background-image: url(images/login_bg.gif); background-repeat: no-repeat}}
+.head_logo {  background-image: url(images/head/logo_neusoft.gif); background-repeat: no-repeat}
+.na1 {  background-image: url(images/na1.gif); background-repeat: no-repeat}
+.na2 {  background-image: url(images/na2.gif); background-repeat: repeat-x}
+.T_song12B {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: underline}
+.head_na1 {  background-image: url(images/head/bg_na1.gif)}
+.head_na2 {  background-image: url(images/head/bg_na2.gif)}
+.line_T {  background-image: url(images/line1.gif); background-repeat: repeat-x}
+.line_l {  background-image: url(images/line1.gif); background-repeat: repeat-y}
+.line_b {  background-image: url(images/line2.gif); background-repeat: repeat-x}
+.line_l {  }
+.tab1 {  }
+.head_bg3 {  background-image: url(images/head/bg_3.gif); background-repeat: no-repeat}
+.T_song14_wt {  font-family: "宋体"; font-size: 14px; color: #FFFFFF}
+
+.button_out {  background-image: url(../images/button_out.gif); background-repeat: no-repeat}
+.button_in {  background-image: url(../images/button_in.gif); background-repeat: no-repeat}
+.T_song12bk2 {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none}
+.T_song12bk1 {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none}
+A.link3_song12:link {
+	COLOR: #000000; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+A.link3_song12:visited {
+	COLOR: #000000; TEXT-DECORATION: none;font-family:"宋体"; font-size: 12px;
+}
+A.link3_song12:active {
+	COLOR: #000000; TEXT-DECORATION: none; font-family: "宋体"; font-size: 12px;
+}
+A.link3_song12:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;font-family: "宋体"; font-size: 12px;
+}
+.T_song12_G {  font-family: "宋体"; font-size: 12px; color: #999999}
+.T_v12_G {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #999999}
+
+.login_bg2 {  background-image: url(../images/bg1.gif); background-repeat: no-repeat}

@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\ria
+2
+6
+14:DataStoreToBean.java|1|13b896999bb|436|95135f2f|2e61ad1ac4c24df2908ca0fa1dabaa29|0
+18:RiaTransWrapperImpl.java|1|13b89699bee|d7e|c4028809|2a4d57742e7d46b9a89291fdddbd6ccc|0
+14:RiaTransWrapper.java|1|13b89699a77|920|ba217f18|e549a592a23c4ed7b8633f62819932d7|0
+8:Row.java|1|13b89699cd8|12a7|4b1ce1f3|defc6493a504485984a25a101594f10b|0
+e:VOManager.java|1|13b89699d26|349|ece70eca|8caaeda0aa5743fb9d3da914f446bf8d|0
+9:IRow.java|1|13b89699a19|60a|76d7ea69|98a2ef1c58bb4faca60be05658257433|0

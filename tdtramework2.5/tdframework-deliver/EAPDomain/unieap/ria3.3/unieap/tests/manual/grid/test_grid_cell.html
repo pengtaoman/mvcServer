@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>grid</title>
+		<style type="text/css">
+			@import "../../../themes/default/css/unieap.css";
+		</style>
+
+		<script type="text/javascript" src="../../blackbird/blackbird.js"></script>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: true"></script>
+		<script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.grid.Grid");
+        </script>
+		<script type="text/javascript">
+			var ds = new unieap.ds.DataStore("DEPT", [ {
+				CODEVALUE : "10",
+				CODENAME : "财务部"
+			}, {
+				CODEVALUE : "20",
+				CODENAME : "人力资源部"
+			}, {
+				CODEVALUE : "30",
+				CODENAME : "会计部"
+			}, {
+				CODEVALUE : "40",
+				CODENAME : "文体部"
+			} ]);
+			dataCenter.addDataStore(ds);
+			function refreshCell(){
+				var cell=grid.getManager('LayoutManager').getCell(0); //获得第一列Cell
+     			grid.getManager('ViewManager').refreshCell(0,cell)
+			}
+			function getItemText(){
+				var cell=grid.getManager('LayoutManager').getCell(4); //获得第四列Cell
+     			var text=grid.getManager('ViewManager').getItemText(cell,0);
+				alert(text);
+			}
+        </script>
+    </head>
+    <body class="unieap">
+    	<div dojoType="unieap.layout.TitlePane" title="">
+    		点击按钮调用grid的refreshCell方法<br>
+			 <div dojoType="unieap.form.Button" label="refreshCell" onClick="refreshCell"></div><br>
+			 点击按钮调用grid的getItemText方法<br>
+			 <div dojoType="unieap.form.Button" label="getItemText" onClick="getItemText"></div><br>
+		</div>
+		<div dojoType="unieap.layout.TitlePane" title="Panel: Grid" open="true" style="height:200px">
+			<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="100%" height="60%"
+				binding="{store:'empDataStore'}"
+				views="{rowBar:false}">
+				<header>				
+						<cell width="500px" label="职位" name="attr_job" headerStyles="text-align: left;"></cell>
+						<cell width="20%" label="工资" name="attr_sal"></cell>
+						<cell width="500px" label="工资" name="attr_sal"></cell>
+						<cell width="20%" label="员工编号" name="attr_empno"></cell>
+						<cell width="15%" label="部门" width="25%" name="attr_deptno" 
+						decoder="{store:'DEPT',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}" ></cell>
+			</header>
+			</div>
+		</div>
+    </body>
+</html>

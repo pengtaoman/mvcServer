@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuit>
+	<testcase filename="test_grid_treeGrid_function.html" folder="ui/grid/treeGrid/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		<method id="expandAll" snapshot="true" depends="">
+			<event id="expandAllButton"  name="onClick" value=""/>
+		</method>
+		<method id="collapseAll" snapshot="true" depends="">
+			<event id="collapseAllButton"  name="onClick" value=""/>
+		</method>
+		<method id="expand" snapshot="true" depends="">
+			<event id="expandButton"  name="onClick" value=""/>
+		</method>
+		<method id="collapse" snapshot="true" depends="">
+			<event id="collapseButton"  name="onClick" value=""/>
+		</method>
+		
+	</testcase>
+	<testcase filename="test_grid_treeGrid_icon.html" folder="ui/grid/treeGrid/">
+		<method id="testInit" snapshot="true" depends="">
+		</method>
+		
+		
+	</testcase>
+	
+	
+</testsuit>

@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\pages\compress
+2
+8
+6:压缩.bat|1|13b894b0f29|98|2afc3e1c|79a58fc5c0494affa20dee0c996fb4ba|0
+11:config-all-js.xml|1|13b894b0788|1e66|6be54478|bb91eed3b2ec4e1a9bab5f383c3d7218|0
+e:compressor.exe|1|13b894b044b|138000|bd1c61c9|e1ee14f7dad042a294c0219038bab448|0
+12:config-all-css.xml|1|13b894b0545|629|ab47196b|b4e4f5fa50744d3394fd1a2fa85dc747|0
+17:yuicompressor-2.4.2.jar|1|13b894b0e2f|cfd13|cab58191|4cae6ead885742cc85862e2a99bf00fe|0
+13:dockbook-all-js.xml|1|13b894b0891|1ce6|b427d0ce|4304921e48764a718ed171abd288ff61|0
+9:build.xml|1|13b894b015d|b0|730357b5|1500d808ea9c436b810fc09e338993a5|0
+a:readme.txt|1|13b894b09aa|7b|abd6596e|4b0d288425394c09b25043cfb3c95b36|0

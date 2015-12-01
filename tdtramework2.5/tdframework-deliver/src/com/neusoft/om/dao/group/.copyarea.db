@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\group
+2
+6
+11:GroupDAOImpl.java|1|13b8966f0dd|531f|2d7035d6|b6f31e3e85b44690b21b77a428f51e7e|0
+d:GroupDAO.java|1|13b8966f0ae|6cb|7f376498|53effcdda50f462cb34c45fae49d9184|0
+e:GroupColl.java|1|13b8966f07f|126|373e6128|cc391c9f71574c61ab19ffa3357e150e|0
+f:GroupEmpVO.java|1|13b8966f1f6|42f|16905385|6f3343b1dc01435f91ce222592784439|0
+c:GroupVO.java|1|13b8966f33e|549|7ad3aa0a|40a5a2b819d8469dbae75bec46013e1c|0
+11:GroupEmpColl.java|1|13b8966f15a|136|50da6859|7a61882f38fa4b9bb0713fcbda7f7704|0

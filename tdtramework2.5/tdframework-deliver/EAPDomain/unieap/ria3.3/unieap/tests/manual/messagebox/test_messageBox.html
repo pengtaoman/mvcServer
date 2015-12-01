@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>MessageBox测试</title>
+        <style>
+            @import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/global.js">
+        </script>
+		
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.dialog.MessageBox");
+			
+			//执行回调函数
+			function doCallback(){
+				MessageBox.alert({
+					title:'提示信息',
+					message:'点击右上角关闭按钮执行回调',
+					onComplete:function(){
+						alert('回调函数执行成功!');
+					}
+				},dojo.byId('btn1'));
+			}
+
+			//不执行回调函数
+			function doNotCallback(){
+				MessageBox.alert({
+					title:'提示信息',
+					message:'点击右上角关闭按钮不执行回调',
+					iconCloseComplete:false,
+					onComplete:function(){
+						alert('回调函数执行成功!');
+					}
+				},dojo.byId('btn2'));
+			}
+			
+			//隐藏关闭按钮
+			function hideCloseIcon(){
+				MessageBox.alert({
+					title:'提示信息',
+					message:'右上角不显示关闭按钮',
+					isClose:false,
+					onComplete:function(){
+						alert('回调函数执行成功!');
+					}
+				},dojo.byId('btn3'));
+			}
+			
+			//测试MessageBox confirm
+			function testConfirm(){
+				MessageBox.confirm({
+					onComplete:function(val){
+						alert("您选择的是:"+val)
+					}
+				},dojo.byId('btn4'));
+			}
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+				测试功能点：
+				<li>点MessageBox右上角的X按钮执行回调</li>
+				<li>点MessageBox右上角的X按钮不执行回调</li>
+				<li>隐藏MessageBox右上角的X按钮</li>
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height=500px style="float:left;width:35%" >
+			<div dojoType="unieap.form.Button" id='btn1' label="执行回调" onClick="doCallback" style="margin-right:10px"></div>
+			<div dojoType="unieap.form.Button" id='btn2' label="不执行回调" onClick="doNotCallback" style="margin-right:10px"></div>
+			<div dojoType="unieap.form.Button" id='btn3' label="隐藏关闭按钮" onClick="hideCloseIcon" style="margin-right:10px"></div>
+			<div dojoType="unieap.form.Button" id='btn4' label="测试MessageBox确认框" onClick="testConfirm" style="margin-right:10px;margin-top:10px"></div>
+			
+			
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height=500px style="float:right;width:65%">
+			<table border="1" bordercolor="#99BBE8">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">点MessageBox右上角的X按钮执行回调</td>
+					<td style="vertical-align:top">点击<b>"执行回调" 、"测试MessageBox确认框"</b>按钮</td>
+					<td style="vertical-align:top">回调成功执行</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">点MessageBox右上角的X按钮不执行回调</td>
+					<td style="vertical-align:top">点击<b>"不执行回调"</b>按钮</td>
+					<td style="vertical-align:top">回调不执行</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">隐藏MessageBox右上角的X按钮</td>
+					<td style="vertical-align:top">点击<b>"隐藏关闭按钮"</b>按钮</td>
+					<td style="vertical-align:top">看不到右上角的关闭按钮</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

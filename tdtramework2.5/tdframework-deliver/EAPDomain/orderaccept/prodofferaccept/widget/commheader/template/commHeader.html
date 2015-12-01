@@ -1,0 +1,29 @@
+<div style="margin-bottom: 10px; margin-top: 10px;">
+	<div style="margin-bottom: ">
+		<div
+			style="text-align: right; width: 30%; display: inline-block; * display: inline; zoom: 1;">
+			<label for="common-belongcode">
+				行政区:
+			</label>
+		</div>
+		<div
+			style="text-align: left; width: 60%; display: inline-block; * display: inline; zoom: 1;">
+			<select id='common-belongcode' class='common-belongcode'
+				style="width: 100%" dojoAttachEvent="onchange:elementchange" dojoAttachTopic="/belongCode"></select>
+		</div>
+	</div>
+	<div>
+		<div
+			style="text-align: right; width: 30%; display: inline-block; * display: inline; zoom: 1;">
+			<label for='prodOfferSearch'>
+				销售品搜索:
+			</label>
+		</div>
+		<div 
+			style="text-align: left; width: 65%; display: inline-block; * display: inline; zoom: 1;">
+			<input id='prodOfferSearch' class='prodoffer-search' style="width:76%;color: #cccccc" 
+				value="输入名称，点击【回车】键可模糊查询"  valueCache ="" tips='输入名称，点击【回车】键可模糊查询'  
+				dojoAttachEvent="onkeyup:elementkeyup,onblur:elementblur,onfocus:elementfocus" dojoAttachTopic="/prodOfferSearch" /><img src="${$w.BusCard.path.contextPath}/common/images/search_btn.png" style="cursor: pointer;margin-left: 5px"  dojoAttachEvent="onclick:elementclick" dojoAttachTopic="/clickProdOfferSearch" title='点击模糊查询销售品'/>
+		</div>
+	</div>
+</div>

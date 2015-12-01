@@ -1,0 +1,415 @@
+body
+{
+	font-family: verdana;
+	font-size: 9pt;
+}
+table
+{
+	font-family: verdana;
+	font-size: 9pt;
+}
+div
+{
+	scrollbar-3dlight-color:gray;
+	scrollbar-arrow-color:black;
+	scrollbar-base-color:#cccccc;
+	scrollbar-darkshadow-color:white;
+	scrollbar-face-color:#cccccc;
+	scrollbar-highlight-color:#cccccc;
+	scrollbar-shadow-color:gray;
+}
+a
+{
+	color: blue;
+}
+
+/* 表格 */
+table.datatable
+{
+	cursor: default;
+	border-collapse: collapse;
+}
+
+/* 表格的页眉 */
+table.datatable thead
+{
+	text-align: center
+}
+
+/* 表格体 */
+table.datatable tbody
+{
+
+}
+
+/* 表格的页脚 */
+table.datatable tfoot
+{
+	background-color: #f0f0f0;
+	text-align: center
+}
+
+/* 表格的奇数行 */
+table.datatable tr.row_odd
+{
+
+}
+
+/* 表格的偶数行 */
+table.datatable tr.row_even
+{
+
+}
+
+/* 表格的选中行 */
+table.datatable tr.row_selected
+{
+	background-color: #e0e0e0;
+}
+
+/* 当前激活表格的选中行 */
+table.datatable tr.row_active
+{
+	background-color: #8989bc;
+	color: white;
+}
+
+/* 表格的指示器 */
+table.datatable td.indicate
+{
+	background-color: #f0f0f0;
+}
+
+/* 下拉表格 */
+table.dropdowntable
+{
+	border: gray 1px solid;
+	cursor: default;
+	border-collapse: collapse
+}
+
+/* 下拉表格的页眉 */
+table.dropdowntable thead
+{
+	font-size: 9pt;
+	text-align: center
+}
+
+/* 下拉表格体 */
+table.dropdowntable tbody
+{
+	font-size: 9pt;
+	background-color: whitesmoke;
+}
+
+/* 下拉表格的页脚 */
+table.dropdowntable tfoot
+{
+	font-size: 9pt;
+	background-color: #f0f0f0;
+}
+
+/* 下拉表格的奇数行 */
+table.dropdowntable tr.row_odd
+{
+
+}
+
+/* 下拉表格的偶数行 */
+table.dropdowntable tr.row_even
+{
+
+}
+
+/* 下拉表格的选中行 */
+table.dropdowntable tr.row_selected
+{
+	background-color: #8989bc;
+	color: white;
+}
+
+/* 编辑框 */
+.editor
+{
+	font-family: verdana;
+	font-size: 9pt;
+	border: darkgray 1px solid;
+	scrollbar-3dlight-color:gray;
+	scrollbar-arrow-color:black;
+	scrollbar-base-color:#cccccc;
+	scrollbar-darkshadow-color:white;
+	scrollbar-face-color:#cccccc;
+	scrollbar-highlight-color:#cccccc;
+	scrollbar-shadow-color:gray;
+}
+
+/* 激活的编辑框 */
+.editor_active
+{
+	font-family: verdana;
+	font-size: 9pt;
+	border: dimgray 1px solid;
+	scrollbar-3dlight-color:gray;
+	scrollbar-arrow-color:black;
+	scrollbar-base-color:#cccccc;
+	scrollbar-darkshadow-color:white;
+	scrollbar-face-color:#cccccc;
+	scrollbar-highlight-color:#cccccc;
+	scrollbar-shadow-color:gray;
+	background-color: window;
+}
+
+/* 按钮 */
+.button
+{
+	font-family: verdana;
+	border: darkgray 1px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 23px;
+	background-color: white;
+}
+
+/* 被按下的按钮 */
+.button_down
+{
+	font-family: verdana;
+	border: dimgray 1px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 23px;
+	background-color: white;
+}
+
+/* 数据导航条 */
+table.datapilot
+{
+	cursor: default;
+	border-width: 1px;
+}
+
+/* 树状列表 */
+table.tree
+{
+	cursor: default;
+	border-collapse: collapse
+}
+
+/* 树状列表的奇数行 */
+table.tree tr.row_odd
+{
+
+}
+
+/* 树状列表的偶数行 */
+table.tree tr.row_even
+{
+
+}
+
+/* 树状列表的当前行 */
+table.tree tr.row_selected
+{
+	background-color: #8989bc;
+	color: white;
+}
+
+/* 树状列表的响应当前鼠标右击的行 */
+table.tree tr.row_rightclick
+{
+	background-color: #e0e0e0;
+	color: black;
+}
+
+/* 树状列表中的展开按钮 */
+table.tree .expandbutton
+{
+	cursor: hand;
+	margin-top: 3px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+/* 树状列表中的图标 */
+table.tree .icon
+{
+	margin-right: 4px
+}
+
+/* 字段标题 */
+.fieldlabel
+{
+	size:9pt;
+}
+
+/* 数据标签 */
+.datalabel
+{
+	size:9pt;
+}
+
+/* 标签页 */
+.tabset
+{
+	font-size:9pt;
+	cursor: default;
+}
+
+/* 标签页中的单个标签 */
+.tab
+{
+	text-align: center;
+	font-size: 9pt;
+	padding-top: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	cursor: hand;
+}
+
+/* 菜单的外框 */
+.menuframe
+{
+	border-style: outset;
+	border-width: 2px;
+	filter: blendtrans(duration=0.5);
+}
+
+/* 菜单 */
+table.menu
+{
+	border: solid 1 silver;
+	border-collapse: collapse;
+	font-size: 9pt;
+	background-color: whitesmoke;
+	cursor:hand;
+}
+
+/* 菜单中的行 */
+table.menu tr
+{
+
+}
+
+/* 菜单中的选中行 */
+table.menu tr.row_selected
+{
+	background-color: #8989bc;
+	color: whitesmoke;
+}
+
+/* 菜单中的无效行 */
+table.menu tr.row_disabled
+{
+	color: gray;
+}
+
+/* 菜单工具条 */
+table.menubar
+{
+	cursor: hand;
+	border: solid 1px silver;
+	border-collapse: collapse;
+	font-size: 9pt;
+	background: whitesmoke;
+}
+
+/* 菜单工具条中的按钮 */
+table.menubar td
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+}
+
+/* 菜单工具条中的当前按钮 */
+table.menubar td.button_active
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #8989bc;
+	color: whitesmoke;
+}
+
+/* 菜单工具条中的灰化的按钮 */
+table.menubar td.button_disabled
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: gray;
+}
+
+/* 下拉选单的边框 */
+.dropdown_frame
+{
+	border-style: outset;
+	border-width: 0px;
+	background-color: white;
+	padding: 0px;
+	filter: blendtrans(duration=0.3);
+}
+
+/* db和custom下拉选单中的iframe */
+.dropdown_frame iframe
+{
+	filter: blendtrans(duration=0.3);
+}
+
+/* 用来打开和关闭下拉选单的按钮 */
+.dropdown_button
+{
+	border: whitesmoke 1px solid;
+	font-family: marlett;
+	font-size: 10px;
+	cursor: hand;
+}
+
+/* 日历 */
+.calendar
+{
+	border-collapse: collapse;
+	border: gray 1px solid;
+	font-size: 9pt;
+	cursor: default
+}
+
+/* 日历的页眉 */
+.calendar .title
+{
+	background-color: #e4e4e4;
+}
+
+/* 日历的页脚 */
+.calendar .footer
+{
+	background-color: #e4e4e4;
+}
+
+/* 日历中的日期单元格 */
+.calendar .cell_day
+{
+	height: 18px;
+	color: black;
+	background-color: #ffffcc;
+}
+
+
+/* 日历中的当前单元格 */
+.calendar .cell_selected
+{
+	height: 18px;
+	color: white;
+	background-color: #8989bc;
+}
+
+/* 日历中前月和后月的日期单元格 */
+.calendar .cell_trailing
+{
+	height: 18px;
+	color: gray;
+	background-color: white;
+}

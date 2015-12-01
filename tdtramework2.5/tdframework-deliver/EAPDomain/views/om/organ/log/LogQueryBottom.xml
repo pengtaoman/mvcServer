@@ -1,0 +1,106 @@
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="gb2312"?>  
+<?xml-stylesheet type="text/xsl" href="/om/views/om/organ/funcrole/FuncRoleQueryBanner.xsl"?>
+
+<root>
+	<create>
+		<!--职员职务信息-->
+		<Log>
+		
+			<LogList>
+				<RowNo>1</RowNo>
+				<PartCity>501</PartCity>
+				<PartYyyymm></PartYyyymm>
+				<SequenceId>10</SequenceId>
+				<AreaId>050501</AreaId>
+				<EmployeeId>001</EmployeeId>
+				<WorkNo>test</WorkNo>
+				<SystemId>18</SystemId>
+				<ModuleId>0</ModuleId>
+				<MenuId>180EAA</MenuId>
+				<MenuName>TEST</MenuName>
+				<BottomId>180EAAA</BottomId>
+				<BottomName>增加</BottomName>
+				<OperateDate>2005-01-25 09:21:24</OperateDate>
+				<LoginHost>192.168.216.89</LoginHost>
+				<Mac></Mac>
+				<OperateDesc>测试增加按钮写日志</OperateDesc>
+
+			</LogList>
+		
+			<LogList>
+				<RowNo>2</RowNo>
+				<PartCity>501</PartCity>
+				<PartYyyymm></PartYyyymm>
+				<SequenceId>11</SequenceId>
+				<AreaId>050501</AreaId>
+				<EmployeeId>001</EmployeeId>
+				<WorkNo>test</WorkNo>
+				<SystemId>18</SystemId>
+				<ModuleId>0</ModuleId>
+				<MenuId>180EAA</MenuId>
+				<MenuName>TEST</MenuName>
+				<BottomId>180EAAA</BottomId>
+				<BottomName>增加</BottomName>
+				<OperateDate>2005-01-25 11:22:32</OperateDate>
+				<LoginHost>192.168.216.89</LoginHost>
+				<Mac></Mac>
+				<OperateDesc>测试增加按钮写日志</OperateDesc>
+
+			</LogList>
+		
+			<LogList>
+				<RowNo>3</RowNo>
+				<PartCity>501</PartCity>
+				<PartYyyymm></PartYyyymm>
+				<SequenceId>12</SequenceId>
+				<AreaId>050501</AreaId>
+				<EmployeeId>001</EmployeeId>
+				<WorkNo>test</WorkNo>
+				<SystemId>18</SystemId>
+				<ModuleId>0</ModuleId>
+				<MenuId>180EAA</MenuId>
+				<MenuName>TEST</MenuName>
+				<BottomId>180EAAA</BottomId>
+				<BottomName>增加</BottomName>
+				<OperateDate>2005-01-25 11:42:39</OperateDate>
+				<LoginHost>192.168.216.89</LoginHost>
+				<Mac></Mac>
+				<OperateDesc>测试增加按钮写日志</OperateDesc>
+
+			</LogList>
+		
+			<LogList>
+				<RowNo>4</RowNo>
+				<PartCity>501</PartCity>
+				<PartYyyymm></PartYyyymm>
+				<SequenceId>14</SequenceId>
+				<AreaId>050501</AreaId>
+				<EmployeeId>001</EmployeeId>
+				<WorkNo>test</WorkNo>
+				<SystemId>18</SystemId>
+				<ModuleId>0</ModuleId>
+				<MenuId>180EAA</MenuId>
+				<MenuName>TEST</MenuName>
+				<BottomId>180EAAA</BottomId>
+				<BottomName>增加</BottomName>
+				<OperateDate>2005-01-25 13:53:35</OperateDate>
+				<LoginHost>192.168.216.89</LoginHost>
+				<Mac></Mac>
+				<OperateDesc>测试增加按钮写日志</OperateDesc>
+
+			</LogList>
+		
+		</Log>
+    <path>/om</path> 
+    <message>查询成功!</message>
+    <OperFlag>1</OperFlag>
+   </create> 
+</root>

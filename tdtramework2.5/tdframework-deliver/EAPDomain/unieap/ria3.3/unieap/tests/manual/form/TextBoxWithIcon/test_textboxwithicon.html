@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>unieap.form.ComboBox Unit Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true">
+        </script>
+        <script type="text/javascript" src="../../../../../unieap/ds.js">
+        </script>
+		<script type="text/javascript" src="../../../../../unieap/util/util.js">
+        </script>
+        <script type="text/javascript" src="test_textboxwithicon.js">
+        </script>
+        <script type="text/javascript" src="../../test_util.js">
+        </script>
+        <script type="text/javascript" src="../../test_ds.js">
+        </script>
+        <script>
+            dojo.require("unieap.form.TextBoxWithIcon");
+            dojo.require("unieap.layout.TitlePane");
+        </script>
+		<style>
+			.myclass{
+				height:21px;
+				background:url(find.gif) center no-repeat !important;
+				width:16px;
+				float:right;
+				border-left:1px solid #7f9db9;
+			}
+		</style>
+    </head>
+    <body class="unieap">
+    	<h1>按下alt+x查看数据中心</h1>
+    	<div dojoType="unieap.form.TextBoxWithIcon" iconClass="myclass"></div>
+        <div dojoType="unieap.layout.TitlePane" title="属性测试" open="false">
+            <div id="attribute" >
+                <div id="attributeWidget" style='float:left;width:300px;margin-left:20px;'>
+                </div>
+            </div>
+        </div>
+		<div dojoType="unieap.layout.TitlePane" title="方法测试" open="false">
+	        <div id="fun">
+	        	 <div id="funWidget" style='float:left;width:300px;margin-left:20px;'>
+                </div>
+	        </div>
+		 </div>
+		 	<div dojoType="unieap.layout.TitlePane" title="事件测试" open="false">
+        <div id="event">
+        	<div id="eventWidget" style='float:left;width:300px;margin-left:20px;'></div>
+        </div>
+		 </div>
+    </body>
+</html>

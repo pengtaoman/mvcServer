@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>页面标题</title>
+
+	<!-- 禁止 windows 主题风格 -->
+	<meta http-equiv="MSThemeCompatible" content="no" />
+
+	<!-- 禁止缓存 headers -->
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<!-- end 禁止缓存 headers -->
+
+
+<!-- 公共css  -->
+<link rel="stylesheet" href="../common/css/td_style.css" type="text/css" />
+
+
+<!-- 公共js  -->
+<script language="javascript" src="../common/js/td_common.js" ></script>
+
+
+<!-- 页面级css样式  -->
+<style type="text/css">
+
+
+</style>
+
+<!-- 页面级js  -->
+<script language="javascript">
+// <![CDATA[
+
+
+// 应用路径,如果使用jsp,则写成 var APP_PATH="＜％= request.getContextPath() ％＞";
+var APP_PATH="..";
+/*初始化函数*/
+function init(){
+
+
+
+}
+
+/* 在下面写入 自定页面级js代码 */
+
+
+// ]]>
+</script>
+
+</head>
+
+<body onLoad="init();" class="mainBody">
+<form name="myform" method="POST">
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" class="simpleFormTable" >
+
+<!-- 表格标题行-->
+		  <tr class="tableTitleTR3" > 
+				<td class="tableTitle3">标题</td>
+          </tr>
+          <tr> 
+            <td class="formTableC"> 
+<!-- BEGIN 表单核心区域 -->
+<table align="center" border="0" cellpadding="0" cellspacing="3" class="formTableCore">
+	<tr>
+		<td><p>表格正文区</p></td>
+	</tr>
+</table>
+<!-- END 表单核心区域 -->
+</td>
+</tr>
+
+</table>
+
+
+<br />
+
+
+
+
+
+<div class="listTableBox" style="width:300px;" >
+  <table id="mt1" border="0" align="center" cellpadding="0" cellspacing="1" class="listTable">
+
+    <tr class="listTableHeadSimple">
+      <td >列1</td>
+      <td >列2</td>
+      <td >列3</td>
+    </tr>
+<tbody>
+   <tr class="listTableRow" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td >数据1</td>
+		<td width="100"><span class="ellipsis" style="width:100px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+	</tr>
+	<tr class="listTableRowDark" style="cursor:hand;" 
+	onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td >数据1</td>
+		<td width="100"><span class="ellipsis" style="width:100px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td ></td>
+	</tr>
+   <tr class="listTableRow" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td >数据1</td>
+		<td ><span class="ellipsis" style="width:80px" title="数据1">数据1</span></td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRowDark" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td >数据1</td>
+		<td width="100"><span class="ellipsis" style="width:100px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRow" style="cursor:hand;" 
+   onmouseover="TableRow.lightMe(this);" onMouseOut="TableRow.resetMe(this);" onClick="TableRow.selectMe(this)" >
+        <td >数据1</td>
+		<td ><span class="ellipsis" style="width:80px" title="数据1">数据1</span></td>
+		<td >数据1</td>
+	</tr>
+	</tbody>
+  </table>
+</div>
+<br />
+
+报表(有跨行 跨列的单元格)
+<div class="listTableBox" style="width:400px;" >
+  <table id="mt1" border="0" align="center" cellpadding="0" cellspacing="1" class="listTable">
+
+    <tr class="listTableHeadSimple">
+      <td >列1</td>
+      <td colspan="2">列2</td>
+	  <td >列3</td>
+    </tr>
+<tbody>
+   <tr class="listTableRow" style="cursor:hand;"  >
+        <td rowspan="3"  >数据1</td>
+		<td width="100"><span class="ellipsis" style="width:100px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+		<td >数据1</td>
+	</tr>
+	<tr class="listTableRowDark" style="cursor:hand;"  >
+		<td width="100"><span class="ellipsis" style="width:100px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td ></td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRow" style="cursor:hand;" >
+		<td ><span class="ellipsis" style="width:80px" title="数据1">数据1</span></td>
+		<td >数据1</td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRowDark" style="cursor:hand;"  >
+        <td rowspan="2" class="listTableHeadSimpleTD" >数据1</td>
+		<td width="100"><span class="ellipsis" style="width:100px" title="很长很长很长很长很长很长很长很长很长很长很长很长的数据1">很长很长很长很长很长很长很长很长很长很长很长很长的数据1</span></td>
+		<td >数据1</td>
+		<td >数据1</td>
+	</tr>
+   <tr class="listTableRow" style="cursor:hand;"  >
+		<td ><span class="ellipsis" style="width:80px" title="数据1">数据1</span></td>
+		<td >数据1</td>
+		<td >数据1</td>
+	</tr>
+	</tbody>
+  </table>
+</div>
+
+
+
+</form>
+</body>
+</html>
+

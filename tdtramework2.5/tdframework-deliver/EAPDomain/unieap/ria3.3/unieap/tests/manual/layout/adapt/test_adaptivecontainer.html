@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>unieap.form.ComboBox Unit Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+			@import "../../../../themes/base/css/unieap.css";
+			@import "../../../../themes/blue/css/unieap.css";
+		</style>
+    <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true"> </script>
+    <script type="text/javascript" src="../../grid/group/data.js" > </script>
+   
+    
+    <script>
+    	dojo.require("unieap.layout.TitlePane");
+        dojo.require("unieap.layout.AdaptiveContainer");
+        dojo.require("unieap.grid.Grid");
+    </script>
+    <style>
+    </style>
+</head>
+<body class="unieap">
+	
+    <div  dojoType="unieap.layout.AdaptiveContainer"  jsId="adaptcontainer" height="90%" width="80%">
+    	<div dojoType="unieap.layout.AdaptivePane">
+    		<div dojoType="unieap.layout.TitlePane" title="伸缩容器">
+    			<br>固定内容
+    			<br>固定内容
+    			<br>固定内容
+    			<br>固定内容
+    		</div>
+    	</div>
+    	<div dojoType="unieap.layout.AdaptivePane">
+    		<div dojoType="unieap.layout.TitlePane" title="伸缩容器">
+    		<div dojoType="unieap.layout.TitlePane" title="伸缩容器">
+    		<div dojoType="unieap.layout.TitlePane" title="伸缩容器">
+    			<br>固定内容
+    			<br>固定内容
+    			<br>固定内容
+    			<br>固定内容
+    		</div>
+    		</div>
+    		</div>
+    	</div>
+    	<div dojoType="unieap.layout.AdaptivePane" autoHeight=true>
+    		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="auto" height="99%"
+			binding="{store:'empDataStore'}"
+			rows="{defaultRowHeight:21}"
+			views="{rowNumber:true,rowBar:true,orderType:'client'}"
+			selection="{selectType:'m'}"
+			>
+			<fixed>
+				<cell label="员工编号" width="10%" name="attr_empno" headerStyles="text-align: left;"></cell>
+			</fixed>
+			<header>
+				<cell width="150px" label="姓名" name="NAME" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="部门" name="attr_deptno" decoder="{store:'DEPT',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}"></cell>
+				<cell width="150px" label="职位" name="attr_job" headerStyles="text-align: left;"></cell>
+				<cell width="150px" label="所在省"  name="attr_province" decoder="{store:'p',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}"
+					  editor="{editorClass:'unieap.form.ComboBox',editorProps:{id:'ed_province',dataProvider:{store: 'p'}}}"></cell>
+				<cell width="150px" label="所在市"  name="attr_city" decoder="{store:'c',valueAttr:'CODEVALUE',displayAttr:'CODENAME'}"
+					  editor="{editorClass:'unieap.form.ComboBox',editorProps:{dataProvider:{store: 'c1'}}}"></cell>
+				<cell width="150px" label="工资" name="attr_sal"></cell>
+			</header>
+		</div>
+    	</div>
+    	<div dojoType="unieap.layout.AdaptivePane">
+    		<div dojoType="unieap.layout.TitlePane" title="伸缩容器">
+    			<br>固定内容
+    			<br>固定内容
+    			<br>固定内容
+    			<br>固定内容
+    		</div>
+    	</div>
+    </div>
+       
+</body>
+</html>

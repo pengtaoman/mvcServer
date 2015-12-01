@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312"?>
+<OPConnectionPool>
+   <COMMON>
+      <OPSessionTimeOut>1000</OPSessionTimeOut>
+      <ResultSetCountsLimitation>5000</ResultSetCountsLimitation>
+      <opdgarbage>6000</opdgarbage>
+      <pdfgarbage>600</pdfgarbage>
+      <defaultSourceID>X233</defaultSourceID>
+      <dump-pool>yes</dump-pool>
+   </COMMON>
+
+<LOGIN>
+       
+
+  </LOGIN>
+
+</OPConnectionPool>

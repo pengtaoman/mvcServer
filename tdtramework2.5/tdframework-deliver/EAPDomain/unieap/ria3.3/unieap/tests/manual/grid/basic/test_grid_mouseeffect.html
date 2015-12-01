@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - MouseEffect</title>
+		<style type="text/css">
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+		<script type="text/javascript" src="../../../blackbird/blackbird.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shBrushXml.js"></script>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.grid.Grid");
+			dojo.require("unieap.layout.TitlePane")
+			function custom(){
+				return '自定义信息';
+			}
+        </script>
+	</head>
+	<body class="unieap">
+		<div dojoType='unieap.layout.TitlePane' title='带鼠标特效' style='width:800px'>
+			<div  dojoType="unieap.grid.Grid" width="100%" height="300px"
+				binding="{store:'empDataStore'}"
+				views="{rowNumber:true,orderType:'client'}">
+				<header>
+					<cell label="员工编号" width="150" name="attr_empno"></cell>
+					<cell width="100px" label="姓名" name="NAME"></cell>
+					<cell width="150px" label="职位" name="attr_job"></cell>
+					<cell width="150px" label="工资" name="attr_sal" dataType="number"></cell>
+					<cell width="150px" label='自定义' get='custom'></cell>
+				</header>
+			</div>
+		</div>
+		
+		<p style='margin:15px;font-size:14px'>
+			<b>鼠标特效</b>:当鼠标滑过Grid控件的某一行时，会给该行加上背景色。<br />
+			<b>问题描述</b>:在ie8下,设置鼠标特效会导致某些电脑的cpu占用率达到100%(原因不明),解决方法是给鼠标特效设置一个开关,让用户自己选择是否开启鼠标特效 。<br />
+			<b>测试方法</b>:分别在上下两组Grid上移动鼠标,查看是否有鼠标特效以及CPU的占用率。<br />
+			<b>预期结果</b>:第一组Grid上存在鼠标特效、第二组不存在,第一组cpu占用率比第二组高
+		</p>
+		
+		<div dojoType='unieap.layout.TitlePane' title='不带鼠标特效' width='800px'>
+			
+			<div  dojoType="unieap.grid.Grid" width="100%" height="300px"
+				binding="{store:'empDataStore'}"
+				rows="{mouseEffect:false}"
+				views="{rowNumber:true,orderType:'client'}">
+				<header>
+					<cell label="员工编号" width="150" name="attr_empno"></cell>
+					<cell width="100px" label="姓名" name="NAME"></cell>
+					<cell width="150px" label="职位" name="attr_job"></cell>
+					<cell width="150px" label="工资" name="attr_sal" dataType="number"></cell>
+					<cell width="150px" label='自定义' get='custom'></cell>
+				</header>
+			</div>
+		</div>
+		
+	</body>
+</html>

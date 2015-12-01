@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>unieap.tree.Tree Unit Test</title>
+		<style type="text/css">
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+		 <link id="themeStyles" rel="stylesheet" href="../../../../../unieap/themes/default/tree/tree.css">
+		<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad: true,isDebug:false"></script>
+        <script type="text/javascript">
+            dojo.require("dijit.dijit");
+            dojo.require("unieap.ds");
+            dojo.require('unieap.tree.Tree')
+			dojo.require('unieap.form.Button')
+            dojo.require("dojo.parser");	
+			function selectAll(){
+				 unieap.byId("unieapTree").selectAll(true);
+				
+			}
+			function unSelectAll(){
+				unieap.byId("unieapTree").selectAll(false);
+			}
+	    </script>
+		<script type="text/javascript" src="../data.js"></script>
+	</head>
+	<body class="unieap">
+		<p>树支持选择所有节点</p>
+	  <div dojoType="unieap.tree.Tree"   id="unieapTree" checkLogic ={} label="UniEAP"  binding = "{'leaf':'leaf','store':treeStore,'label':'label','parent':'parentID',query:{name:'parentID',relation:'=',value:'1212403325756'}}" ></div>
+	  <div dojoType="unieap.form.Button" label="全选" onClick="selectAll"></div>
+	  <div dojoType="unieap.form.Button" label="取消全选" onClick="unSelectAll"></div>
+	</body>
+</html>

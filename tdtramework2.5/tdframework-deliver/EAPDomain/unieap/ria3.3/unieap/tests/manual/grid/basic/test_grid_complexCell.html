@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid Unit Test - 复杂表头</title>
+		<style type="text/css">
+			@import "../../../blackbird/blackbird.css";
+			@import "../../../syntaxHighlighter/Styles/SyntaxHighlighter.css";
+			@import "../../../../themes/default/css/unieap.css";
+		</style>
+		<script type="text/javascript" src="../../../blackbird/blackbird.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shCore.js"></script>
+		<script type="text/javascript" src="../../../syntaxHighlighter/Scripts/shBrushXml.js"></script>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:false,isDebug: false"></script>
+		<script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript">
+			dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.grid.Grid");
+			dojo.addOnLoad(function(){
+				logger.profile("grid");
+				dojo.parser.parse();
+				logger.profile("grid");
+				dp.SyntaxHighlighter.HighlightAll('code');
+			});
+        </script>
+    </head>
+    <body class="unieap">
+    	<h1 class="testTitle" id="title"></h1>
+	    <script>
+	        dojo.byId('title').appendChild(document.createTextNode("unieap.form.Grid Unit Test - complex cell"));
+	    </script>
+		<div id="grid" jsId="grid" dojoType="unieap.grid.Grid" width="900px" height="250px"
+			binding="{store:'empDataStore'}"
+			rows="{defaultRowHeight:21}"
+			views="{rowBar:true}">
+			<fixed>
+				<cell label="员工编号" width="150" name="attr_empno"></cell>
+			</fixed>
+			<header>
+				<row>
+					<cell rowSpan="2" label="员工编号" width="150" name="attr_empno"></cell>
+					<cell colSpan="2" label="姓名" name="NAME"  width="150" headerStyles="text-align: center;color: red;" styles="text-align: center;color: red;"></cell>
+				</row>
+				<row>
+					<cell label="工资" width="250" name="attr_sal" styles="text-align: center;"></cell>
+					<cell label="职务" width="300" name="attr_job" styles="text-align: center;"></cell>
+				</row>
+			</header>
+		</div>
+		<div dojoType="unieap.layout.TitlePane" open="false" title="参照截图">
+			<img src = "images/test_grid_complexCell.png"></img>
+		</div>
+		<div dojoType="unieap.layout.TitlePane" open="open" title="说明">
+			<span style="font-size:14px;color:red;">测试点一：</span>
+			<span style="font-size:14px;color:blue;">复杂表头结构与Grid表体结构一致。</span>
+			<br>
+			<span style="font-size:14px;color:red;">测试点二：</span>
+			<span style="font-size:14px;color:blue;">复杂表头支持数据绑定。</span>
+			<br>
+		</div>
+    </body>
+</html>

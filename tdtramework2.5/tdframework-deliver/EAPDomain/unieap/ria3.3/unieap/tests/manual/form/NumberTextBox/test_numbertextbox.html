@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+	<style>
+		@import "../../../../themes/default/css/unieap.css";
+	</style>
+	<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'" ></script>
+	<script type="text/javascript" src="test_numbertextbox.js"></script>
+	<script type="text/javascript" src="../../test_util.js"></script>
+</head>
+<body class="unieap">
+	<div id="widget"></div>
+	<P></P>
+	<div id="attribute"></div>
+	<P></P>
+	<div id="fn"></div>
+	<P></P>
+	<br><br>
+	meta数据类型为整型时，格式化的数据前面不能以0开头(数据绑定)
+	<form dojoType="unieap.form.Form" binding="{store:'emp'}">
+		<div id="salary" dojoType="unieap.form.NumberTextBox" binding="{name:'salary'}"></div>
+	</form>
+	<button dojoType="unieap.form.Button" onClick="getSalaryValue" label="获取Salary值"></button><br>
+	配置displayFormatter的属性指定数据类型<br>
+	<div dojoType="unieap.form.NumberTextBox" displayFormatter="{dataType:'number'}" onBlur="alert(this.getValue())"></div>
+</body>
+</html>

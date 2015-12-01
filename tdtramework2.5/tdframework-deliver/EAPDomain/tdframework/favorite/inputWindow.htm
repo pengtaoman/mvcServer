@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>加入收藏夹</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function init(){
+
+myform.favoriteName.value=window.dialogArguments;
+
+}
+
+function Button1_OnClick() {
+	favoriteName=myform.favoriteName.value;
+	if (favoriteName.length==0){
+		alert ('您必须输入一个名称');
+		return false;
+	}
+	window.returnValue=myform.favoriteName.value;
+	window.close();
+}
+
+//-->
+</SCRIPT>
+<LINK REL="stylesheet" HREF="../../common/css/td_style.css" TYPE="text/css"/>
+</head>
+
+<body class="mainBody" onload="init();" >
+<form name="myform">
+
+<table border="0" cellpadding="0" cellspacing="0" class="simpleFormTable" >
+
+          <tr> 
+            <td class="formTableC"> 
+<table align="center" border="0" cellpadding="0" cellspacing="3" class="formTableCore">
+	<tr>
+		<td class="formLabel">收藏名称<span class="formRequested" >*</span></td>
+		<td class="formField"><input id="ss_NewFolder" name="favoriteName" type="text" maxlength="30"  value="" /></td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<div class="formButtonDIV">
+	<button  class="formButton" name="Button1" onclick="return Button1_OnClick();" >确  定</button>
+	<button  class="formButton" name="Button2" onclick="window.close();" >取  消</button>
+</div>
+
+
+</form>
+</body> 
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<card id="charge_comm" cardType="0" name="缴费表格展示"
+	xmlns="http://www.crm1.com/buscard" pageColumn="3">
+	<metaData>
+		<attrList>
+			<subGroup id="100" name="找零信息">
+				<attr id="back_fee_mode" label="返款方式" cType="2" value="1" />
+				<attr id="dibs_pay" label="找零费用" cType="1" disabled="1" value="0" />
+			</subGroup>
+			<subGroup id="paymentMethod_3" name="信用卡/银行卡信息">
+				<attr id="cardNumber" label="卡号" isNull="0"/>
+				<attr id="bankId" label="银行" cType="2" />
+				<attr id="cardKind" label="银行卡类型" cType="2" />
+				<attr id="cardShortNo" label="信用卡短号" cType="1" />
+			</subGroup>
+			<subGroup id="paymentMethod_2" name="支票信息">
+				<attr id="checkHolder" label="持票人姓名"  isNull="0"/>
+				<attr id="certType" label="证件类型" cType="2"/>
+				<attr id="certId" label="证件号码" isNull="0" />
+				<attr id="bankid" label="银行" cType="2"/>
+				<attr id="checkKind" label="支票类型" cType="2"/>
+				<attr id="commitPeriod" label="支票确认有效期限(天)" isNull="0" />
+			</subGroup>
+			<subGroup id="paymentMethod_6" name="托收信息">
+				<attr id="ts_bank" label="托收行" cType="2" isNull="0"  />
+				<attr id="ts_protocol" label="托收协议" />
+			</subGroup>
+			<subGroup id="paymentMethod_13" name="银行分期付款">
+				<attr id="posBankId" label="银行" cType="2"/>
+				<attr id="posBank" label="pos机编码" cType="2"/>
+				<attr id="deviceNo" label="终端编号"/>
+				<attr id="deviceNoDesc" label="终端类型"/>
+			</subGroup>
+		</attrList> 
+	</metaData>
+	<resource>
+	<import type="1" uri="/buscardapp/protocol/js/card_pi_charge_comm.js"/>
+	</resource>
+</card>

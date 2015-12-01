@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 配置工作流产品应用程序管理服务信息
+ 	messageType：应用程序管理服务处理的消息类型
+ 	name：应用程序管理服务名
+ 	enable：是否开启应用程序管理服务
+ 	interval：应用程序管理服务在无处理任务时的间歇时间
+ 	maxThreads：应用程序管理服务使用的最大处理线程数
+ 	minThreads：应用程序管理服务使用的最小处理线程数
+ 	jarScanInterval：应用程序管理服务检测自定义Java应用程序的间歇时间
+ 	isDebug：应用程序管理服务运行模式，true：开发模式，false：生产模式
+ 	isLog：是否记录应用程序管理服务日志		-->
+<appmgr messageType="appmanager" name="appmgr" enable="true" interval="10" 
+maxThreads="30" minThreads="10" jarScanInterval="10" isDebug="false" isLog="true">
+<threadpools>
+        <threadpool name="default" minThreads="10" maxThreads="10"/>
+        <threadpool name="autoNode" minThreads="10" maxThreads="30"/>
+</threadpools>
+<!-- message type字段：
+	0：自动节点
+	1：流程（节点、工作项）事件
+	2：新任务通知
+	3：超时 预警应用程序
+	4：流程业务异常(下一节点没有参与人、子流程节点没绑定流程模板)
+-->
+<messageServices>
+        <messageService name="autoNodeService" class="com.neusoft.uniflow.appmgr.DefaultMessageService"  condition="type=0"  orderBy="priority" isAsc="true" count="10" messageBufferSize="100" refThreadPool="autoNode"/>
+        <messageService name="otherService" class="com.neusoft.uniflow.appmgr.DefaultMessageService"     condition="type!=0"  orderBy ="buildTime" isAsc="true" count="2" messageBufferSize="100" refThreadPool="default"/>
+</messageServices>
+<!-- 配置工作流产品新任务通知服务信息
+	 name：新任务通知服务名
+	 class：新任务通知功能实现类信息
+	 mailServer：邮件服务器信息
+	 from：发件人邮箱信息
+	 account：发件人邮箱账号
+	 password：发件人邮箱密码		-->
+<notify name="notifyService" 
+	    class="com.neusoft.uniflow.email.EMailNotify"
+        mailServer="smtp.neusoft.com" from="zhangshb@neusoft.com" 
+ 		account="" password="">
+</notify>
+</appmgr>

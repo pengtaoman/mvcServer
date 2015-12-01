@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>unieap.form.ComboBox Unit Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		@import "../../../../themes/base/css/unieap.css";
+		@import "../../../../themes/blue/css/unieap.css";
+	</style>
+	<script type="text/javascript" src="../../../../../dojo/dojo.js"
+		djConfig=" parseOnLoad: true"></script>
+	<script type="text/javascript"
+		src="../../../../../unieap/layout/AccordionContainer.js"></script>
+	<script type="text/javascript"
+		src="../../../../../unieap/layout/ContentPane.js"></script>
+	<script type="text/javascript"
+		src="../../../../../unieap/layout/AccordionPane.js"></script>
+	<script>
+		dojo.require("unieap.layout.TitlePane");
+	</script>
+	<style>
+.unieap .myIcon {
+	margin-right: 5px;
+	width: 16px;
+	height: 16px;
+	background: url("bell.png") no-repeat;
+}
+</style>
+</head>
+<body class="unieap">
+		<div dojoType="unieap.layout.AccordionContainer" style="height: 100%;width:500px;margin-left:10px;">
+			<div dojoType="unieap.layout.AccordionPane" title="普通文本"
+				iconClass="myIcon">
+				<select>
+					<option>red</option>
+					<option>blue</option>
+					<option>green</option>
+
+				</select>
+				<p>Nunc consequat nisi vitae quam. Suspendisse sed nunc. Proin
+					suscipit porta magna. Duis accumsan nunc in velit. Nam et nibh.
+					Nulla facilisi. Cras venenatis urna et magna. Aenean magna mauris,
+					bibendum sit amet, semper quis, aliquet nec, sapien. Aliquam
+					aliquam odio quis erat. Etiam est nisi, condimentum non, lacinia
+					ac, vehicula laoreet, elit. Sed interdum augue sit amet quam
+					dapibus semper. Nulla facilisi. Pellentesque lobortis erat nec
+					quam.</p>
+				<p>
+					Sed arcu magna, molestie at, <input value="fringilla in, sodales" />
+					fringilla in, sodales eu, elit. Curabitur mattis lorem et est.
+					Quisque et tortor. Integer bibendum vulputate odio. Nam nec ipsum.
+					Vestibulum mollis eros feugiat augue. Integer fermentum odio
+					lobortis odio. Nullam mollis nisl non metus. Maecenas nec nunc eget
+					pede ultrices blandit. Ut non purus ut elit convallis eleifend.
+					Fusce tincidunt, justo quis tempus euismod, magna nulla viverra
+					libero, sit amet lacinia odio diam id risus. Ut varius viverra
+					turpis. Morbi urna elit, imperdiet eu, porta ac, pharetra sed,
+					nisi. Etiam ante libero, ultrices ac, faucibus ac, cursus sodales,
+					nisl. Praesent nisl sem, fermentum eu, consequat quis, varius
+					interdum, nulla. Donec neque tortor, sollicitudin sed, consequat
+					nec, facilisis sit amet, orci. Aenean ut eros sit amet ante
+					pharetra interdum.
+				</p>
+			</div>
+			<div dojoType="unieap.layout.AccordionPane" title="默认被选中"
+				selected="true">
+				1 <br>1 <br>
+			</div>
+			<div dojoType="unieap.layout.AccordionPane" title="百度"
+				href="http://www.baidu.com"></div>
+			<div dojoType="unieap.layout.AccordionPane" title="内嵌TitlePane">
+				<div dojoType="unieap.layout.TitlePane" title="Hello2"
+					style="height: 100%;"></div>
+			</div>
+		</div>
+</body>
+</html>

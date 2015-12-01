@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://www.neusoft.com/unieap/workshop/dwtool" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="UntitledProject1" rootpath=""> 
+<OPDataSource location=""/>
+
+<DataMap name="DataSet">
+</DataMap>
+
+<DataMap name="DataWindow">
+</DataMap>
+
+</Project>

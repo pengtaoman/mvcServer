@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--a  edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User)  a-->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Ordermgr applicationContext</description>
+
+	<bean id="feeMgrFacadeBO"
+		class="com.neusoft.crm.ordermgr.common.outerinterface.feemgr.bo.FeeMgrFacadeBOImpl">
+		<property name="acctItemDAO">
+			<ref bean="acctItemDAO" />
+		</property>
+		<property name="acctItemTypeDAO">
+			<ref bean="acctItemTypeDAO" />
+		</property>
+	</bean>
+</beans>

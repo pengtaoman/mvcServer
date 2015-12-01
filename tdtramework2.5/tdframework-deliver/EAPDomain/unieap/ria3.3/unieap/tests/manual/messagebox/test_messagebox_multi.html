@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>MessageBox修改</title>
+        <style>
+            @import "../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/patch/dojo-patch.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../dijit/dijit.js" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/rpc.js">
+        </script>
+        <script type="text/javascript" src="../../../../unieap/global.js">
+        </script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.form.Button");
+			dojo.require("unieap.dialog.MessageBox");
+        </script>
+		<script type="text/javascript">
+			//简单确认提示框
+			function confirm(){
+                MessageBox.confirm({
+					message:'当存在很多的                    空格时\n以前会只显示             一个空格\n而现在\n都可以显示出来了\n而且再也没有\n滚动条了'
+                }, document.getElementById("confirm"));
+            }
+			//复杂确认提示框
+            function cancelConfirm(){
+                MessageBox.cancelConfirm({
+					message:'这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行，这个例子用来测试折行的功能，当长度超过规定会会自动折行。'
+                }, document.getElementById("cancelconfirm"));
+            }
+            //多行输入
+            function multiPrompt(){
+            	MessageBox.multiPrompt({
+					onComplete: promptReturn,
+					message:'可以输入空格，回车等各种方式写文本，都能正确的呈现出来。'
+                }, document.getElementById("multiprompt"));	
+            }
+           //单行输入
+            function prompt(){
+            	MessageBox.prompt({
+					message:'当存在很多的                    空格时\n以前会只显示             一个空格\n而现在\n都可以显示出来了\n而且再也没有\n滚动条了'
+                }, document.getElementById("prompt"));	
+            }
+			
+	function promptReturn(value){
+		if(value.btn){
+	      MessageBox.alert({message:value.text},document.getElementById("multiprompt"));
+	    }
+	}
+		</script>
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+			测试功能点：
+				<li>MessageBox的message中有多个空格时空格数目应相对应而不是只有一个</li>
+				<li>MessageBox的message中有多行文本时应该自动撑开而不应该出现滚动条</li>
+				<li>MessageBox的message支持拆行，回车等输入</li>
+				
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height="250px">
+        	<table>
+        			    		<tr>
+	    			<td style="font-size: 13px;font-family: 宋体;width:150px">
+	    				确认对话框:
+	    			</td>
+	    			<td>
+	    				<div id="confirm" dojoType="unieap.form.Button" label="简单确认弹出框" onclick="confirm()"></div>&nbsp;&nbsp;
+	    				<div id="cancelconfirm" dojoType="unieap.form.Button" label="复杂确认弹出框" onclick="cancelConfirm()"></div>&nbsp;&nbsp;
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td style="font-size: 13px;font-family: 宋体;width:150px">
+	    				输入提示框:
+	    			</td>
+	    			<td>
+	    			   <div id="prompt" dojoType="unieap.form.Button" label="单行输入提示框" onclick="prompt()"></div>&nbsp;&nbsp;
+	    				<div id="multiprompt" dojoType="unieap.form.Button" label="多行输入提示框" onclick="multiPrompt()"></div>
+	    			</td>
+	    		</tr>
+        	</table>	
+        </div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height="250px">
+			<table border="1" bordercolor="#99BBE8" style="margin-top:20px;">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">MessageBox空格及滚动条问题</td>
+					<td style="vertical-align:top">点所有列出的MessageBox</td>
+					<td style="vertical-align:top">MessageBox空格在message中定义几个就显示几个且自动撑开不显示滚动条</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">在多行输入提示框的文本域中输入各种文字，支持回车，空格等写入</td>
+					<td style="vertical-align:top">在多行输入提示框的文本域中输入各种文字，支持回车，空格等写入</td>
+					<td style="vertical-align:top">弹出messagebox为所输入的文本</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

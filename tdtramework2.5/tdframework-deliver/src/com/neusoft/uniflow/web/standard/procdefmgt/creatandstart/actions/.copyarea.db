@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\standard\procdefmgt\creatandstart\actions
+2
+4
+1a:UpdateCreatRoleAction.java|1|13b896aa002|7e4|b3e1af50|ea8fcf4bdcbf4fe899c960ae48b5105c|0
+19:CreateProcInstAction.java|1|13b896a9f27|f65|acf906d3|31dd5d52a4324304bc03e9865649f8b5|0
+19:UpdateProcInstAction.java|1|13b896aa14a|fac|5d00208b|826eaa1595554c6081c3d6ca20828324|0
+14:CreatRoleAction.java|1|13b896a9f95|8ff|914509a3|53a04af101cd416f9ea51fb0e3d25183|0

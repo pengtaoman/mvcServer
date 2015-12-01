@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <!-- ========== Form Bean Definitions =================================== -->
+  <form-beans>
+    <!-- workitem list -->
+    <form-bean name="bizpersonWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.mywork.forms.PersonWorkListForm"/>
+    <form-bean name="bizroleWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.rolework.forms.RoleWorkListForm"/>
+    <form-bean name="bizagentWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.agentwork.forms.AgentWorkListForm"/>
+    <form-bean name="bizallWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.allwork.forms.AllWorkListForm"/>
+    <form-bean name="bizovertimeWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.overtimework.forms.OverTimeWorkListForm"/>
+
+
+    <!--  workitem operation -->
+    <form-bean name="bizadhocForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.AdhocForm" />
+    <form-bean name="bizsendtoForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.SendtoForm" />
+    <form-bean name="biznexttoForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.NexttoForm" />
+    <form-bean name="biznextActForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.NextActForm"/>
+    <form-bean name="bizupdatePartiActionForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.UpdatePartiActionForm"/>
+    <form-bean name="bizreassignForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.ReassignForm" />
+    <form-bean name="bizopenworkitemForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.OpenWorkitemForm" />
+    <form-bean name="bizrollBackForm" type= "com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.RollBackForm"/>
+	<form-bean name="biztransitionForm"
+		type="com.neusoft.uniflow.web.extend.workitemmgt.operation.forms.TransitionForm"></form-bean>
+    <!--  procdef list -->
+    <form-bean name="bizprocdeflistForm" type="com.neusoft.uniflow.web.extend.procdefmgt.procdeflist.forms.ProcDefListForm" />
+
+    <!-- create and start process -->
+    <form-bean name="bizcreateProcInstForm" type="com.neusoft.uniflow.web.extend.procdefmgt.creatandstart.forms.CreateProcInstForm" />
+    <form-bean name="bizcreatroleForm" type="com.neusoft.uniflow.web.extend.procdefmgt.creatandstart.forms.CreatRoleForm" />
+
+    <!-- procinst list -->
+    <form-bean name="bizprocinstForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procinstlist.forms.BizProcInstForm"/>
+    <form-bean name="bizrdForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procinstlist.forms.RDForm" />
+    <!-- process instance monitor -->
+    <form-bean name="procDetailForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procmonitor.forms.DetailForm" />
+
+  </form-beans>
+  <action-mappings>
+    <!-- my work -->
+    <action name="bizpersonWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.mywork.actions.PersonWorkListAction" scope="request" path="/mybizwork">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/list/mybizwork.jsp"/>
+    </action>
+    <!-- role work -->
+    <action name="bizroleWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.rolework.actions.RoleWorkListAction" scope="request" path="/rolebizwork">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/list/rolebizwork.jsp"/>
+    </action>
+    <!-- role work -->
+    <action name="bizagentWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.agentwork.actions.AgentWorkListAction" scope="request" path="/agentbizwork">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/list/agentbizwork.jsp"/>
+    </action>
+    <!-- role work -->
+    <action name="bizallWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.allwork.actions.AllWorkListAction" scope="request" path="/allbizwork">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/list/allbizwork.jsp"/>
+    </action>
+    <!-- role work -->
+    <action name="bizovertimeWorkListForm" type="com.neusoft.uniflow.web.extend.workitemmgt.overtimework.actions.OverTimeWorkListAction" scope="request" path="/overtimebizwork">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/list/overtimebizwork.jsp"/>
+    </action>
+    
+    
+    <!-- workitem operation -->
+    <action name="bizadhocForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.AdhocAction" scope="request" path="/bizadhoc">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/adhoc.jsp" />
+    </action>
+    <action name="bizsendtoForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.SendtoAction" scope="request" path="/bizsendto">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/sendto.jsp" />
+    </action>
+    <action name="biznexttoForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.NexttoAction" scope="request" path="/biznextto">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/nextto.jsp" />
+    </action>
+    <action name="biznextActForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.NextActAction" scope="request" path="/biznextAct">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/nextactdo.jsp"/>
+    </action>
+    <action name="bizupdatePartiActionForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.UpdatePartiAction" scope="request" path="/bizupdateParti">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/updateparti.jsp"/>
+    </action>
+    <action name="bizreassignForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.ReassignAction" scope="request" path="/bizreassign">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/reassign.jsp" />
+    </action>
+    <action name="bizopenworkitemForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.OpenWorkitemAction" scope="request" path="/bizopenworkitem">
+      <forward name="taskhandler" path="/unieap/pages/workflow/extend/workitem/operation/taskhandler.jsp" />
+      <forward name="taskviewer" path="/unieap/pages/workflow/extend/workitem/operation/taskviewer.jsp" />
+    </action>
+    <action name="bizopenworkitemForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.TaskHandlerAction" scope="request" path="/biztaskhandler">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/handler.jsp" />
+    </action>
+    <action name="bizrollBackForm" type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.RollBackAction" scope="request" path="/bizrollback">
+      <forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/rollback.jsp" />
+    </action>
+    <action name="biztransitionForm" 
+		type="com.neusoft.uniflow.web.extend.workitemmgt.operation.actions.TransitionAction" path="/biztranList">
+		<forward name="success" path="/unieap/pages/workflow/extend/workitem/operation/transationList.jsp"></forward>
+		</action>
+    <!-- procdef list -->
+    <action name="bizprocdeflistForm" type="com.neusoft.uniflow.web.extend.procdefmgt.procdeflist.actions.ProcDefListAction" scope="request" path="/bizprocdeflist" >
+      <forward name="success" path="/unieap/pages/workflow/extend/procdef/list/procdeflist.jsp" />
+    </action>
+    <!--  create and start process -->
+    <action name="bizcreateProcInstForm" type="com.neusoft.uniflow.web.extend.procdefmgt.creatandstart.actions.CreateProcInstAction" scope="request" path="/bizcreateProcInst">
+      <forward name="success" path="/unieap/pages/workflow/extend/procdef/operation/createprocinst.jsp" />
+    </action>
+    <action name="bizcreateProcInstForm" type="com.neusoft.uniflow.web.extend.procdefmgt.creatandstart.actions.UpdateProcInstAction" scope="request" path="/bizupdateProcInst">
+      <forward name="success" path="/unieap/pages/workflow/extend/procdef/operation/createprocinst.jsp" />
+    </action>
+    <action name="bizcreatroleForm" type="com.neusoft.uniflow.web.extend.procdefmgt.creatandstart.actions.CreatRoleAction"  scope="request" path="/bizcreatrole">
+      <forward name="success" path="/unieap/pages/workflow/extend/procdef/operation/creat_role.jsp" />
+    </action>
+    <action name="bizcreatroleForm" type="com.neusoft.uniflow.web.extend.procdefmgt.creatandstart.actions.UpdateCreatRoleAction" scope="request" path="/bizupdatecreatrole">
+      <forward name="success" path="/unieap/pages/workflow/extend/procdef/operation/creat_role.jsp" />
+    </action>
+    
+    <!--  procinst list -->
+    <action name="bizprocinstForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procinstlist.actions.BizProcInstAction"  scope="request" path="/bizprocinst">
+      <forward name="success" path="/unieap/pages/workflow/extend/procinst/list/bizprocinst.jsp" />
+    </action>
+    <action name="bizrdForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procinstlist.actions.RDAction" scope="request" path="/bizrd">
+      <forward name="success" path="/unieap/pages/workflow/extend/procinst/list/rd.jsp" />
+    </action>
+    <action name="bizrdForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procinstlist.actions.UpdateRDAction"  scope="request" path="/bizupdateRD">
+      <forward name="success" path="/unieap/pages/workflow/extend/procinst/list/rd.jsp" />
+    </action>
+    <!-- process instance monitor -->
+    <action name="bizprocDetailForm" type="com.neusoft.uniflow.web.extend.procinstmgt.procmonitor.actions.DetailAction" scope="request" path="/unieap/pages/workflow/extend/procinst/monitor/bizprocdetail">
+      <forward name="success" path="/unieap/pages/workflow/extend/procinst/monitor/procdetail.jsp" />
+    </action>
+    
+  </action-mappings>
+</struts-config> 

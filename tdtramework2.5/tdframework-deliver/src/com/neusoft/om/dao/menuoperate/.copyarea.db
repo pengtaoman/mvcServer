@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\menuoperate
+2
+5
+1d:CopyOfMenuOperateDAOImpl.java|1|13b89670698|1b9f|e0feae5b|0aefdae5519b4a1bafe7e28dd4ce5982|0
+12:MenuOperateVO.java|1|13b89670734|20d3|c6026460|ee882f105f1844e0b98468159719d127|0
+17:MenuOperateDAOImpl.java|1|13b89670715|1a2d|a1b93b54|62f987b8c4974aa69e8fe8fcf43ac966|0
+14:MenuOperateColl.java|1|13b896706c6|2da|2c1ceb14|06eae981ec4f4457a071b98c1710a7cb|0
+13:MenuOperateDAO.java|1|13b896706e6|2e9|fb0b0724|44e253ccf3334290b9b38a3e9f8d14fb|0

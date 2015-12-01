@@ -1,0 +1,13 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\collections
+2
+9
+d:BinaryTree.js|1|13b893b1911|e88|b36fc52b|72dce00e8abb4091a3c6113a025973b7|0
+d:Dictionary.js|1|13b893b1a2a|681|27893df2|1747db247549490c9e3ef1c4764f527e|0
+6:Set.js|1|13b893b1db4|5f4|57ddf132|5ae197e2118644c8b2235401e72833de|0
+c:ArrayList.js|1|13b893b18a3|716|b50a66e0|22b8eb00a0024e0eb9e42013dc51a024|0
+8:_base.js|1|13b893b219c|505|77db9de|c417abe7c2454d2e8cb320d0011cc481|0
+d:SortedList.js|1|13b893b1f1c|a8c|145a96f7|d8dac8c4530b4445a961278663f7d36a|0
+6:README|1|13b893b1bd0|6b8|ae29e442|c0f9fe2e567b4de09f9ab2a769923a64|0
+8:Stack.js|1|13b893b20a2|449|f30a7ab9|ad796b95d90a4bc281346785fec43b00|0
+8:Queue.js|1|13b893b1aa7|447|4e6c7b0a|321be326d4bf4ced861b7c48a1134222|0

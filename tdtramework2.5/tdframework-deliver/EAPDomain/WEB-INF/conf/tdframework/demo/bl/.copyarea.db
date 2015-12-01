@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\tdframework\demo\bl
+2
+5
+1f:dataAccessContext-framework.xml|1|13b89647ced|4db|8ff49827|2bd1c99481f24b31a3b2ce6809f4ffa0|0
+d:innertree.xml|1|13b89647d1c|c2|43d4416b|18a4094d1b5a4f9fbc0f9d0ab4db7f61|0
+1a:paramContext-framework.xml|1|13b89647d3b|2d0|8b4fe84b|acd843e3207f4061ab7d04169d581f37|0
+20:applicationContext-framework.xml|1|13b89647cce|82b|f653c128|35e77636e277476f9ab6f365f9b83429|0
+19:applicationContext-bl.xml|1|13b89647b76|357|58f12758|7840928d6fa34226bf025ae5e7e3b5d1|0

@@ -1,0 +1,17 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\webdesign\AttributeOperation\util\nodeAttrSave
+2
+d
+17:ChoiceNodeAttrSave.java|1|13b896af4ca|444|4d2564b4|bd160a623b24447285473eabb4d655b5|0
+18:SubProcNodeAttrSave.java|1|13b896afac5|1026|45222be5|5cb1112cf7eb4205aed19cb0bfe7a024|0
+15:ParallelAttrSave.java|1|13b896af7c8|945|fc5fb9ba|78b83f2dc7184f6b89079d7aafb2216f|0
+13:BranchAttrSave.java|1|13b896af22a|454|d207483|ffabdaef6bee48829dada896f8e31e42|0
+1a:BranchEndNodeAttrSave.java|1|13b896af3c0|5cd|891cf71a|36b9454d156e432daa34715b8814f165|0
+17:ManualNodeAttrSave.java|1|13b896af5b4|1357|c61dff87|f26b787a8e5f4744b79e7b87338f94b8|0
+15:AutoNodeAttrSave.java|1|13b896af1cc|4e4|bd619d71|7f8729d1eaf74b66852a94d031ce85bf|0
+16:RouteNodeAttrSave.java|1|13b896af825|1a1|b97b8e76|6dd1e62841e5489584ab1b4ef7fba6c1|0
+1c:BranchBeginNodeAttrSave.java|1|13b896af363|654|306b2c6c|e8c9c57751a643bdacc6cd9b67ca7552|0
+14:EndNodeAttrSave.java|1|13b896af537|3f1|ad346c3|ddbd2d87ff1e4a248a68e237b7aef765|0
+19:ActivityNodeAttrSave.java|1|13b896af14f|de0|34cd745b|7e6e571645c244fa8c0903a898350ac4|0
+16:StartNodeAttrSave.java|1|13b896afa58|4a4|5e3e8e1f|0db6627da28740fcb4a97ab1c767ea60|0
+11:NodeAttrSave.java|1|13b896af6ae|5cb|9af0e4a4|373e35e4438148ab87ab8e109c517e00|0

@@ -1,0 +1,24 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\ria33demo\pages\samples\integration
+2
+14
+19:grid_pojo_query_dialog.js|1|13b890902dd|20b|d1e4abf2|6528aa15cacd450fbb5a6dc863d0eca2|0
+13:tab_grid_dialog.jsp|1|13b890906f5|1030|56579916|2115a328029840359714f765ea303dc8|0
+a:multitable|2|0|0|0|5708ac8fb0744a968d96f43e12bfdfc6|0
+7:tooltip|2|0|0|0|1a943e046aea4c99a908ad644aa97c29|0
+d:grid_pojo.jsp|1|13b890902be|3cae|45bebafd|a4321ea6c5554d2dbcaf192f56b67627|0
+14:grid_unite_group.jsp|1|13b890905fb|7d6|43fca92b|e2fecda36df645f6b4aef05c0749a54a|0
+c:grid_pojo.js|1|13b89090195|191f|f7fff399|eb7aaba1eb854d9bad05c3fcaa64c11c|0
+e:tree_form_grid|2|0|0|0|6134c9b3755c4be9b89982a54eb5b6c5|0
+c:pageauth.jsp|1|13b89090688|14a4|7ecb0996|01fc9fc5d9414a1f98c732d2a2cf1ed2|0
+12:grid_statement.jsp|1|13b890904f1|1d12|e264ed0a|6b441cb12b4942df87d43f2f2659fbbe|0
+13:grid_unite_group.js|1|13b890905bc|276|e0fccb83|6d4aafb717e541b1bd553ff44a5546c6|0
+c:grid_form.js|1|13b89090166|62d|3202236f|acd9b1a5ff5144ae84190c9611ffab8b|0
+7:encrypt|2|0|0|0|44daac3faaef47199ab07e85e223e9e8|0
+d:grid_form.jsp|1|13b89090185|1bdf|251f1801|b29c2f4ca774450989b7cd4241748389|0
+c:grid_tree.js|1|13b89090530|1295|81d851bb|53ffec3614884f54977df063c88cef22|0
+d:grid_tree.jsp|1|13b8909058d|144a|20f3840b|e65745c648e54511872a148aec25a57e|0
+12:tab_grid_dialog.js|1|13b890906a7|2b2|b92f0f9|9c073f1d43de4251b33e8371ad81fe97|0
+11:grid_statement.js|1|13b890904b2|b52|ac71f340|64aa1e1270764fb08873005b253a2c1a|0
+b:pageauth.js|1|13b8909062a|704|abb5f29|57f66a8a444c48979a5a9aa0cd8efe6e|0
+1a:grid_pojo_query_dialog.jsp|1|13b8909030c|ada|d2453f70|93f2a449a5a44372a7f627582448fc84|0

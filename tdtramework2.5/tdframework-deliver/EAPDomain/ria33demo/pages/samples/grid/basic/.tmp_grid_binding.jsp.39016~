@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ include file="/unieap/ria3.3/pages/config.jsp" %>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Grid样例</title>
+		<style type="text/css">
+			@import "<%=appPath%>/pages/samples/syntaxHighlighter/Styles/SyntaxHighlighter.css";
+		</style>
+		
+		<script type="text/javascript" src="<%=appPath%>/pages/samples/grid/data.js"></script>
+        <script type="text/javascript">
+			
+			
+		
+			
+
+		 function beforeEdit(inRowIndex){
+	      //  var binding = grid.getBinding();
+	       // var isValid = binding.isValid();
+		   
+		   var tesd=unieap.byId("grid");
+		   
+	      unieap.debug(tesd.managers.managers.ViewManager.scroller.lastVisibleRow);
+		  
+		   return true;
+	    }
+
+        </script>
+    </head>
+	
+	
+    <body class="unieap">
+	  
+		<div id="grid"  dojoType="unieap.grid.Grid" width="100%" height="300px" selection="{selectType:'s'}"
+			edit="{editType:'rowEdit',singleClickEdit:true}" views="{rowNumber:true,orderType:'client'}"  binding="{store:'largedata',pageSize:'5'}">
+			<fixed>
+				<cell label="员工编号" width="150" name="attr_empno" 
+				editor="{editorClass:'unieap.form.TextBox', editorProps:{required:true}}" onBeforeEdit="beforeEdit"></cell>
+			</fixed>
+			<header>
+				<cell width="250px" label="姓名(改)" name="NAME" editor="{editorClass:'unieap.form.TextBox', editorProps:{required:true}}"
+				></cell>
+				<cell width="250px" label="职位" name="attr_job" editor="{editorClass:'unieap.form.TextBox', editorProps:{required:true}}"
+			    ></cell>
+				<cell width="200px" label="工资" name="attr_sal" dataType="number" editor="{editorClass:'unieap.form.TextBox', editorProps:{required:true}}"
+				onBeforeEdit="beforeEdit"></cell>
+			</header>
+		</div>
+	
+		
+    </body>
+</html>

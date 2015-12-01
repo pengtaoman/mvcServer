@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\fckeditor\editor\filemanager\connectors\perl
+2
+8
+b:commands.pl|1|13b8913dcf0|1588|4ea9827a|9f057f2b8078419080155e7acb3a2230|0
+9:config.pl|1|13b8913d8d9|5c0|2d3bf003|8b12b8ac161b4272b81a95c97e65ac49|0
+7:util.pl|1|13b8913d261|53f|6d449640|080eba3dabd04a7e97cbd5a33baba2bd|0
+d:connector.cgi|1|13b8913d7c0|cf0|d4c50bff|096bea1bb199471783f6e9c1a47f335b|0
+a:upload.cgi|1|13b8913d57d|839|f8e98f3f|c94c325a3d324117a36c574107784c23|0
+d:upload_fck.pl|1|13b8913d3d8|46ab|360fdb2b|e377044935274286bf020dc6d4d5509a|0
+a:basexml.pl|1|13b8913df42|6a6|f26b1053|23c93897f59b4e40b1e842af5f330c4e|0
+5:io.pl|1|13b8913d687|ade|5fe94751|78506d7c3db24128a8395e22cdba109e|0

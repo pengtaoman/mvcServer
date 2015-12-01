@@ -1,0 +1,53 @@
+<div>
+	<div dojoType="unieap.layout.TitlePane" title="批量受理" >
+		<form dojoType="unieap.form.Form" enctype="multipart/form-data" method="post" id="batchForm">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="table_left" width="25%">文件上传：</td>
+					<td class="table_right" width="50%">
+						<div dojoType="unieap.form.FileInput" id="fileName" required="true" fileFilter="xlsx,xls" width="90%"></div>
+					</td>
+					<td>
+					<!--  	<input type='button' id='batchExpBtn' value='生成模板' 
+								dojoAttachEvent='onclick:elementclick'
+								dojoAttachTopic='/generationTemplate'  />-->
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left" width="25%">执行开始时间(形如:<span class="formRequested">20:10</span>)：</td>
+					<td class="table_right"  width="25%">
+						<div dojoType="unieap.form.TextBox" id="doStartTime" validator="{regExp:/(([0-1]?[0-9])|20|21|22|23)(:)([0-5][0-9])/,errorMsg:'输入的时间格式不正确'}"
+							inputFilter="{filterRule:/([0-9]|:)/}" width="90%" title="执行开始时间" maxLength="5">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left" width="25%">执行结束时间(形如:<span class="formRequested">20:10</span>)：</td>
+					<td class="table_right" width="25%">
+						<div dojoType="unieap.form.TextBox" id="doEndTime"  validator="{regExp:/(([0-1]?[0-9])|20|21|22|23)(:)([0-5][0-9])/,errorMsg:'输入的时间格式不正确'}"
+							inputFilter="{filterRule:/([0-9]|:)/}" width="90%" title="执行结束时间" maxLength="5"></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left" width="25%">备注：</td>
+					<td class="table_right" width="25%">
+						<div dojoType="unieap.form.TextBox" id="remark"  width="90%" title="备注"></div>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" colspan="3">
+						<div id="relationGroup"  labelAlign="right" dojoType="unieap.form.RadioButtonGroup" width="50%"
+								dataProvider="{'store':'relation_group_store'}">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div dojoType='unieap.layout.TitlePane' title='费用信息' open='false'
+		id='budgetHeadPane'></div>
+	<div style="display:none">
+		<iframe name="batchresult" id="batchresult">
+		</iframe>	
+	</div>
+</div>

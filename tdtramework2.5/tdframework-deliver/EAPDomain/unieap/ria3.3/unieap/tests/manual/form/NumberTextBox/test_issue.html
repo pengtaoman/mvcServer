@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </meta>
+		<title>修改成有意义的Title</title>
+         <style>
+            @import "../../../../themes/default/css/unieap.css";
+        </style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig=" parseOnLoad: true,locale:'zh'"></script>
+        <script type="text/javascript" src="../../../../patch/dojo-patch.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../../../../../dijit/dijit.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../../../../rpc.js"></script>
+        <script type="text/javascript" src="../../../../global.js"></script>
+		 <script type="text/javascript" src="test_issue.js"></script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+			dojo.require("unieap.layout.TabContainer");
+			dojo.require("unieap.layout.ContentPane");
+			dojo.require("unieap.form.NumberTextBox");
+        </script>
+		
+    </head>
+    <body class="unieap">
+	  	<div id="titlePane1" dojoType="unieap.layout.TitlePane" title="用例说明" height=100px>
+				测试功能点：数据类型为整型时，焦点离开后格式化内容不能以0开头
+	  	</div>
+        <div id="titlePane2" dojoType="unieap.layout.TitlePane" title="测试用例" height=500px style="float:left;width:35%" >
+			1、数据绑定的情况下，绑定列有Metadata定义<br>
+			<form dojoType="unieap.form.Form" binding="{store : empDataStore}">
+				<div dojoType="unieap.form.NumberTextBox" binding="{name: 'salary'}"></div>
+			</form>
+			2、数据绑定的情况下，绑定列没有Metadata定义，自定义binding中的dataType类型<br>
+			<form dojoType="unieap.form.Form" binding="{store : empDataStore}">
+				<div dojoType="unieap.form.NumberTextBox" binding="{dataType:'number',name : 'bonus'}"></div>
+			</form>
+			3、没有数据绑定的情况下，自定义displayFormatter下的dataType类型<br>
+			<div dojoType="unieap.form.NumberTextBox" displayFormatter="{dataType:'number'}"></div>
+		</div>
+		<div id="titlePane3" dojoType="unieap.layout.TitlePane" title="说明" height=500px style="float:right;width:65%">
+			<table border="1" bordercolor="#99BBE8">
+				<colgroup>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+					<col style="width:300px"></col>
+				</colgroup>
+				<tr height="50px">
+					<td><strong>功能点描述</strong></td>
+					<td><strong>操作过程</strong></td>
+					<td><strong>预期结果</strong></td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">数据绑定的情况下，绑定列salary有Metadata定义，里面有dataType定义为number类型</td>
+					<td style="vertical-align:top">输入以0开头的数字</td>
+					<td style="vertical-align:top">会自动格式化字数，去掉多余的0</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">数据绑定的情况下，绑定列bonus没有Metadata定义，在binding中自定义dataType类型为number</td>
+					<td style="vertical-align:top">输入以0开头的数字</td>
+					<td style="vertical-align:top">会自动格式化字数，去掉多余的0</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">没有数据绑定的情况下，在displayFormatter中自定义的dataType类型为number</td>
+					<td style="vertical-align:top">输入以0开头的数字</td>
+					<td style="vertical-align:top">会自动格式化字数，去掉多余的0</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">&nbsp</td>
+					<td style="vertical-align:top">&nbsp</td>
+					<td style="vertical-align:top">&nbsp</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">&nbsp</td>
+					<td style="vertical-align:top">&nbsp</td>
+					<td style="vertical-align:top">&nbsp</td>
+				</tr>
+				<tr height="50px">
+					<td style="vertical-align:top">&nbsp</td>
+					<td style="vertical-align:top">&nbsp</td>
+					<td style="vertical-align:top">&nbsp</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

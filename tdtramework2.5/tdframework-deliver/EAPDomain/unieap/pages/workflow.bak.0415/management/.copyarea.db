@@ -1,0 +1,19 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow.bak.0415\management
+2
+f
+10:procdefauthority|2|0|0|0|0d7ffaffee7d44bdb44c880bfa6479c5|0
+f:procresourcemgt|2|0|0|0|5e41034eacda43c1931abbf997c2bf68|0
+a:workdaymgt|2|0|0|0|c51da06b05d64b3d939a23334b9f3353|0
+b:worktimemgt|2|0|0|0|97498f2b498a42d08fc0b5734fed7727|0
+7:statmgt|2|0|0|0|78251bb651744b87a0f571239cbca8ad|0
+8:agentmgt|2|0|0|0|ceb47abe8cf74b61a4a66465f04292a1|0
+9:enginecap|2|0|0|0|695e8ca119fe4b19a827fb61e4b9d2d1|0
+16:applicationresourcemgt|2|0|0|0|91c5b7d05a30476ba23d5de6a04643cf|0
+b:engineaudit|2|0|0|0|dc4a37ed2c99411cab501ed4f92711ff|0
+11:acttmpresourcemgt|2|0|0|0|eb369c1932c54d71afcef195c8502aee|0
+11:vartmpresourcemgt|2|0|0|0|8ff42f68288c49d396c27e634129561b|0
+e:applicationmgt|2|0|0|0|0e81d139cc434c9690bdc92f11c20ac8|0
+a:procdefmgt|2|0|0|0|ffb20a1d4ce948eea82604dc187abc36|0
+c:organization|2|0|0|0|e78e2664e60345fba70f8004f99a4b16|0
+8:timermgt|2|0|0|0|8e8f7c9daf3045ef825c4ebdf5cd6a84|0

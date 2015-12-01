@@ -1,0 +1,203 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>模板_3</title>
+
+	<!-- 禁止 windows 主题风格 -->
+	<meta http-equiv="MSThemeCompatible" content="no" />
+
+	<!-- 禁止缓存 headers -->
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<!-- end 禁止缓存 headers -->
+
+
+
+<!-- 公共css  -->
+<link rel="stylesheet" href="../common/css/td_style.css" type="text/css"/>
+
+<!-- 公共js  -->
+<script language="javascript" src="../common/js/td_common.js" ></script>
+
+<!-- 等待条js-->
+<script language="javascript" src="../common/js/waitingbar.js" ></script>
+
+<!-- title条js -->
+<script language="javascript" src="../common/js/titlebar.js" ></script>
+
+
+
+<!-- 页面级css样式  -->
+<style type="text/css">
+
+
+</style>
+
+<!-- 页面级js  -->
+<script language="javascript">
+// <![CDATA[
+
+// 应用路径,如果使用jsp,则写成 var APP_PATH="＜％= request.getContextPath() ％＞";
+var APP_PATH="..";
+/*初始化函数*/
+function init(){
+
+// 设置信息框
+WaitingBar.setMsg("可以自定义等待信息....");
+
+// 通过HTML标签名 id和name 支持多参数
+//addTitleBarByTag  addTitleBarById addTitleBarByName addTitleBar
+//  给所有标签是 select 的对象添加显示title的功能
+TitleBar.addTitleBarByTag('select');
+// addTitleBar('demo22');
+// addTitleBar('demo22','test3','you22');
+
+}
+
+
+/* 在下面写入 自定页面级js代码 */
+
+
+// ]]>
+</script>
+
+</head>
+
+<body class="mainBody" onLoad="init();">
+<form name="myform" method="post">
+<!-- ============================  -->
+<!-- ============================  -->
+<table border="0" cellpadding="0" cellspacing="0" class="formTable" >
+
+<!-- 表格标题行-->
+
+		  <tr class="tableTitleTR2" > 
+            <td colspan="3" >
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+				<td class="tableTitleLeft2" >&#160;</td>
+				<td class="tableTitle2">有标题</td>
+				<td class="tableTitleRight2" >&#160;</td>
+				</tr>
+			 </table>
+           </td>
+          </tr>
+
+          <tr> 
+            <td class="formTableL" >&#160;</td>
+            <td class="formTableC"> 
+
+
+<!-- BEGIN 表单核心区域 -->
+<table align="center" border="0" cellpadding="0" cellspacing="2" class="formTableCore">
+
+	<tr>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly"  name="" value="readOnly" />
+		</td>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly"  name="" value="readOnly" />
+		</td>
+	</tr>
+	<tr>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly"  name="" value="readOnly" />
+		</td>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly"  name="" value="readOnly" />
+		</td>
+	</tr>
+	<tr>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly"  name="" value="readOnly" />
+		</td>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			<input type="text" readonly="readonly" class="readOnly"  name="" value="readOnly" />
+		</td>
+	</tr>
+</table>
+<!-- END 表单核心区域 -->
+
+
+</td>
+<td class="formTableR" >&#160;</td>
+</tr>
+<tr> 
+<td class="formTableLB">&#160;</td><td class="formTableB">&#160;</td><td class="formTableRB">&#160;</td>
+</tr>
+</table>
+
+<br />
+<!-- ============================  -->
+<!-- ============================  -->
+<table border="0" cellpadding="0" cellspacing="0" class="formTable" >
+
+<!-- 表格标题行-->
+
+          <tr> 
+            <td class="formTableLT">&#160;</td><td class="formTableT">&#160;</td><td class="formTableRT">&#160;</td>
+          </tr>
+
+          <tr> 
+            <td class="formTableL" >&#160;</td>
+            <td class="formTableC"> 
+
+
+<!-- BEGIN 表单核心区域 -->
+<table align="center" border="0" cellpadding="0" cellspacing="2" class="formTableCore">
+
+	<tr>
+		<td  class="formLabel">表单域标签</td>
+		<td  class="formField">
+			(信息内容信息内容)
+		</td>
+		<td  class="formLabel">信息标签</td>
+		<td  class="formField">
+			(信息内容信息内容)
+		</td>
+	</tr>
+	<tr>
+		<td  class="formLabel">信息标签</td>
+		<td  class="formField">
+			(信息内容信息内容)
+		</td>
+		<td  class="formLabel">信息标签</td>
+		<td  class="formField">
+			(信息内容信息内容)
+		</td>
+	</tr>
+</table>
+<!-- END 表单核心区域 -->
+
+
+</td>
+<td class="formTableR" >&#160;</td>
+</tr>
+<tr> 
+<td class="formTableLB">&#160;</td><td class="formTableB">&#160;</td><td class="formTableRB">&#160;</td>
+</tr>
+</table>
+
+
+<br />
+
+
+<!-- BEGIN 按钮区域 这里放入按钮 两种按钮定义方式 建议采用前者 button 更符合w3c规范 且功能更强大 支持html代码 -->
+<div class="formButtonDIV">
+	<button  class="formButton" name="" onClick="alert('test:ALT+Q');" accesskey="Q">快捷(<u>Q</u>)</button>
+	<button  class="formButton" name="" onClick="" accesskey="Q">返 回</button>
+</div>
+<!-- END 按钮区域 -->
+
+
+
+</form>
+</body>
+</html>

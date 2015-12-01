@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\dtl\filter
+2
+7
+8:logic.js|1|13b893c22be|32a|f2670dca|4c777b7fbde144d5875020f3b7ae32f3|0
+a:strings.js|1|13b893c257d|17db|eaf1a235|07da1f465de64834ac703c57f7c60f63|0
+8:dates.js|1|13b893c1e1b|47c|b6cd7873|044a7ac5b790402dac66b6e383609969|0
+b:integers.js|1|13b893c207c|294|28bfd6bc|f2eee710e6ca44c7a12e666f161c4a19|0
+e:htmlstrings.js|1|13b893c1f05|54a|c51fccf1|2c39cde03c164a649fb721996ca87bdb|0
+7:misc.js|1|13b893c2464|4e2|cb04866b|c4c514370fcd4fb0b9f475b630c824db|0
+8:lists.js|1|13b893c2109|860|8941b751|6ff6ca3e167c46abb58c72aa6d6358f6|0

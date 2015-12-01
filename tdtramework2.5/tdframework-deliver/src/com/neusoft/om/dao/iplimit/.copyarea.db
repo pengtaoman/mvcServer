@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\iplimit
+2
+4
+10:IpLimitColl.java|1|13b8966f93a|13f|8278695c|3e3fa1b9233e4789bf051504cb804aab|0
+13:IpLimitDAOImpl.java|1|13b8966f9b7|263f|38dfa0e2|96be7f079afe44a0ae2522b04d8b0bb5|0
+e:IpLimitVO.java|1|13b8966f9e5|1b46|354160b6|04f5f6b896bc4088b0d84ec1357756dd|0
+f:IpLimitDAO.java|1|13b8966f968|57e|316d746|34b45fd2d666488da6e657f721b20f3c|0

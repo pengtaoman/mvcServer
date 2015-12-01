@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<configs>
+		<config>WebContent/WEB-INF/conf/unieap/security/applicationContext_CAS.xml</config>
+		<config>WebContent/WEB-INF/conf/unieap/security/applicationContext.xml</config>
+		<config>WebContent/WEB-INF/conf/unieap/cache/applicationContext-cache.xml</config>
+		<config>WebContent/WEB-INF/conf/unieap/scheduling/applicationContext-job.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

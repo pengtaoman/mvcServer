@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\quartz-tddemo\bl
+2
+c
+22:applicationContext-quartz-pool.xml|1|13b8965073f|3ee6|6ab43eb7|3cce29eeebea4edfa8ad1882dbc8f442|0
+23:applicationContext-quartz-alarm.xml|1|13b8965056b|50e|6e3da1d5|2daa9534f63c4d3c8732f0795212d787|0
+11:promotionoverdate|2|0|0|0|a8adacaecf154ee9a0661b84593de689|0
+9:firstcall|2|0|0|0|7957ca767db84ad99b7224523421d694|0
+10:prodinstoverdate|2|0|0|0|f9dcd21cb7df4096a96dc0d8fdb7114e|0
+13:custtypecountupdate|2|0|0|0|7b6d8c701bb14be185059218c34c358b|0
+a:autoaccept|2|0|0|0|145767da47d34b1688f22aa06a165411|0
+14:preacceptorderupdate|2|0|0|0|fb542a58e8df4aaca127e1a9cfd3842d|0
+10:custorderreserve|2|0|0|0|b4d11f3e0120417fbeeabd1d65515dde|0
+9:forcequit|2|0|0|0|89a82e489a834d9da86b5b03bc3f8af0|0
+5:batch|2|0|0|0|40c51caefc9643af8917995349265e1d|0
+e:reserveoperate|2|0|0|0|51ae98ecff3048169a7149251d591975|0

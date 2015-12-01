@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>grid</title>
+	<style>
+		@import "../../../../themes/default/css/unieap.css";
+	</style>
+        <script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="parseOnLoad:true,isDebug: true">
+        </script>
+        <script type="text/javascript" src="../data.js">
+        </script>
+		 <script type="text/javascript" src="test_grid_menu.js">
+        </script>
+        <script type="text/javascript">
+            dojo.require("unieap.layout.TitlePane");
+            dojo.require("unieap.form.Button");
+            dojo.require("unieap.form.TextBox");
+            dojo.require("unieap.grid.Grid");
+        </script>
+    </head>
+    <body class="unieap">
+        <div dojoType="unieap.layout.TitlePane" title="自定义菜单" open="true">
+            <div jsId='grid' dojoType="unieap.grid.Grid" 
+				menu='{filter:{}}' width="100%" height="350px" 
+				binding="{store:'empFilterDataStore'}" 
+				views="{rowBar:true,rowNumber:true}">
+                <fixed>
+                    <cell label="员工编号" width="150" name="attr_empno">
+                    </cell>
+                </fixed>
+                <header>
+                    <row>
+                 		<cell colSpan="2" isMulTitle="true"  label="员工信息（多标题）"  headerStyles="text-align: center;color: red;" styles="text-align: center;color: red;">
+                        </cell>
+                        <cell colSpan="2" isMulTitle="true" label="员工信息（多标题）" headerStyles="color: red;">
+                        </cell>
+                    </row>
+                    <row>
+                    	 <cell  label="姓名" name="NAME" width="150" headerStyles="text-align: left;">
+                        </cell>
+						<cell   label="日期" name="attr_hiredate" displayFormatter="{declaredClass:'unieap.form.DateDisplayFormatter',dataFormat:'yyyy-MM-dd HH:mm:ss'}">
+                        </cell>
+                        <cell label="工资" width="250" name="attr_sal">
+                        </cell>
+                        <cell label="职务" width="300" name="attr_job">
+                        </cell>
+                    </row>
+                </header>
+                <foot style="text-align:center;">
+				                    最大薪资：<span style="color: #2748c2" express="max(attr_sal)"></span>；
+				                    最小薪资：<span style="color: #2748c2" express="min(attr_sal)"></span>；
+				                    行数：<span style="color: #2748c2" express="getRowCount()"></span>；
+                </foot>
+				<toolbar>
+				</toolbar>
+            </div>
+        </div>
+        <div dojoType="unieap.layout.TitlePane" open="open" title="说明">
+            <span style="font-size:14px;color:red;">测试点一：</span>
+            <span style="font-size:14px;color:blue;">1.鼠标移至表头,表头右侧出现下拉箭头,点击弹出四个菜单</span>
+            <br>
+            <span style="font-size:14px;color:red;">测试点二：</span>
+            <span style="font-size:14px;color:blue;">1.自定义菜单,姓名列不可点击</span>
+            <br>
+            <br>
+			<span style="font-size:14px;color:red;">测试点三：</span>
+            <span style="font-size:14px;color:blue;">1.点击自定义菜单,弹出‘Hello’</span>
+        </div>
+    </body>
+</html>
