@@ -27,6 +27,7 @@
 <script src="<%=contextPath%>/resources/common/angular/angular.min.js"></script>
 
 <script src="<%=contextPath%>/resources/tdframework/js/mainpage.js"></script>
+<script src="<%=contextPath%>/resources/tdframework/js/otherApp.js"></script>
 <script>
 var contextPath='<%=contextPath%>';
 

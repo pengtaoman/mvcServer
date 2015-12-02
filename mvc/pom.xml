@@ -232,7 +232,7 @@
 	        <version>2.0-alpha-1</version>
 	    </dependency>
 	    <!-- 
-		<dependency> 
+		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.3.0</version>
@@ -269,6 +269,7 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
+					<encoding>utf8</encoding>
 				</configuration>
 			</plugin> 
 			<plugin>
