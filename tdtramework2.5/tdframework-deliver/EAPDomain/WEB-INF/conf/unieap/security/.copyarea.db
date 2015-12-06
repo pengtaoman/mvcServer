@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\unieap\security
-2
-4
-1a:applicationContext_CAS.xml|1|13b8964abce|2308|a8d99d89|d1efc5c7d41c4eb39c1442d4d2e75ac5|0
-14:ehcache-failsafe.xml|1|13b8964abfd|c62|34ea78f9|56b69302557f47c3b6a2be464e7e5434|0
-16:applicationContext.xml|1|13b8964ab9f|22a6|e4227d8a|2e2f51de92874c59a5ade5b2a682d690|0
-9:jaas.conf|1|13b8964ac99|65|44b222d2|6a951bb534b244abbb3ccf03298d97a4|0

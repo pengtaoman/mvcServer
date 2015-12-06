@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xb:serviceType xmlns:xb="http://com/neusoft/unieap/sl/serviceType">
-	<provider name="JavaBean" clazz="com.neusoft.unieap.sl.impl.JavaBeanProvider" />
-	<provider name="EJB" clazz="com.neusoft.unieap.sl.impl.EJBProvider" />
-	<provider name="WebServices" clazz="com.neusoft.unieap.sl.impl.WebServicesProvider" />
-</xb:serviceType> 

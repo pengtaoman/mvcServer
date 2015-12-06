@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\uuid
-2
-5
-15:generateRandomUuid.js|1|13b8949ac1f|30b|dcc7f9a3|3e69f119175d4c3cb210edb8292df8e2|0
-7:Uuid.js|1|13b8949afc9|913|50d63734|39e7d5299ca8410fa546d12445b37604|0
-8:_base.js|1|13b8949b0f2|ce0|506c0e8a|81043177fc3e4bea830fbd09242f0bca|0
-6:README|1|13b8949aeaf|758|89260f72|a0a4d7d562d94b60b9103d7933536e89|0
-18:generateTimeBasedUuid.js|1|13b8949ae23|f7e|8cb8c487|d330f817df8e45108a178bbfc9c831b2|0

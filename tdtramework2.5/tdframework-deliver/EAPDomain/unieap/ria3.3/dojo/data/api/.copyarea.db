@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\data\api
-2
-5
-f:Notification.js|1|13b894c1492|350|178c25b2|4dc30b1570c2417396720ae69562ca68|0
-8:Write.js|1|13b894c1a3f|559|a64cdbbb|14baf7c8696a4a99a4a1ac9d964324f0|0
-a:Request.js|1|13b894c1906|1d5|66dd9fd6|7d37a85955cf4829bc47a114b4e951ee|0
-7:Read.js|1|13b894c15ab|742|45c82c7|ba42562529054fe89a7186c749b1e6b1|0
-b:Identity.js|1|13b894c1398|3ae|c4a24931|b16f56b831d345209b7a255590965469|0

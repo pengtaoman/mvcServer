@@ -1,5 +1,0 @@
-/**
- * @unieap:editpart name="begin" type="start" x="200" y="0" labelX="200" labelY="30" formName="" formClassName=""
- * @unieap:editpart name="index.jsp" type="page" x="200" y="100" labelX="200" labelY="130" path=""
- * @unieap:forward name="begin;success" path="index.jsp" sourceAnchorIndex="0" targetAnchorIndex="0"
- */￿

@@ -1,8 +1,0 @@
-DataSourceID=PlatformSupportDataSource
-DataSourceTitle=EapTest
-DriverName=oracle.jdbc.driver.OracleDriver
-TargetDatabase=ORACLE
-DBServer=intf
-DataSourceURL=jdbc:oracle:thin:@localhost:1521:wanghx
-UserName=drm_u2
-Password=unieap

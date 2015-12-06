@@ -35,7 +35,7 @@
 		    
 		});
 	}).filter("getSubSystem",function(){
-		return function(data, pro) {
+		var func = function(data, pro) {
 			if (angular.isArray(data)) {
 				var rtn = [];
 				for (var i =0; i < data.length; i++)  {
@@ -51,6 +51,7 @@
 			}
 			return null;
 		}
+		return func;
 	});
 	
 
@@ -83,6 +84,7 @@
 			url: contextPath+"/main/getSys",
 			method:'GET'
 			}).success(function(data,header,config,status){
+				console.log("SYSYSYSYSYSYSY : " + angular.toJson(data));
 				angular.forEach(data, function(system) {
 					if (angular.equals(system['fparentSystemId'],'')) {
 						$scope.sysParent.push(system);
@@ -166,4 +168,4 @@
     });
     
     
-    todoApp.requires("otherApp");
+    //todoApp.requires("otherApp");

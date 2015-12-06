@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<menu id="myCustomMenu"> 
- <item action="Find" id="Find">查找文字</item>
- <item action="Copy" id="Copy">复制文字</item>
- <separator/>
- <item onactivate="showRunProcinst()">查看运行实例</item> 
- <item onactivate="showComProcinst()">查看完成实例</item> 
- <item onactivate="showAllProcinst()">查看所有实例</item> 
-</menu>

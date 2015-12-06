@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojox\encoding\crypto
-2
-5
-b:Blowfish.js|1|13b893f2048|47f5|3ef79702|a883651649444d09be8283bc9302c71e|0
-8:_base.js|1|13b893f26d0|225|5f68b855|d578e557971b4080a06e675d811d05e3|0
-9:RSAKey.js|1|13b893f23b3|5b2|3487e42b|a99399361324452989f0949275b1358e|0
-c:SimpleAES.js|1|13b893f24fb|1552|d94208ba|95e26d30dbe840939b28be709444eefb|0
-d:RSAKey-ext.js|1|13b893f221d|99e|635025ce|c4c314ab6e194bb1995e04b67aa1270d|0

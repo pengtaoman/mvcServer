@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\cldr\nls\zh-hant
-2
-5
-9:number.js|1|13b894c06a7|2a4|1391e827|44598649b4fd4ab6a6e08a8d62105a66|0
-b:buddhist.js|1|13b894c031d|e2c|8fc1322b|f8824d6799704e32be6e56356821a431|0
-c:gregorian.js|1|13b894c05ad|11a6|452cd8f0|2e32b04134d04d78bb34e67b5e8acd68|0
-b:currency.js|1|13b894c037b|195|41c09a31|e479cf5d38554cb2828b42bc99f7952e|0
-a:islamic.js|1|13b894c063a|e39|9d53f6a0|24e2978501b64937b0d57903022d2cbc|0

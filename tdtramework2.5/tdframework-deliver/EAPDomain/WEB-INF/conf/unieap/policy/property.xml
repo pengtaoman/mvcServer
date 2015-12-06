@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configures>
-   <!-- notice: localUse属性表示本地是否可以调用 -->
-   <configure tagName="menu" localUse="true" title="菜单授权" handler="com.neusoft.unieap.service.policy.impl.MenuConfigureHandler"/>
-   <configure tagName="pageAuth" localUse="true" title="页面级权限" handler="com.neusoft.unieap.service.policy.impl.PageConfigureHandler"/>
-   <configure tagName="dataAuth" localUse="true" title="数据级权限" handler="com.neusoft.unieap.service.policy.impl.DataConfigureHandler"/>
-   <configure tagName="pageTemplete" localUse="false" title="页面导航" handler="com.neusoft.unieap.comp.workitemhandler.listener.config.ModulePolicyImpl" />
-   
-</configures>

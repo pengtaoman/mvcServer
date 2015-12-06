@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\dojo\cldr\nls\da
-2
-5
-9:number.js|1|13b894b6ebd|2a8|55baeadc|885ec30ddda6438895516a7dc1beec86|0
-b:buddhist.js|1|13b894b6a87|d56|9bd42e4f|9ca0507177f5413d97aa3dff99d9f27d|0
-c:gregorian.js|1|13b894b6bfe|fc0|eb1a19a2|79fd51a6f9b04ae8ae79f1b09870ae43|0
-b:currency.js|1|13b894b6ae5|1d7|b3c9e93|7708dd7bf05f473eb808348586a15719|0
-a:islamic.js|1|13b894b6ce8|e6d|1e67913f|6bbd683a35bf48a38a7e5b262d7b2361|0

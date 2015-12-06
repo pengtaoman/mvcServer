@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<transaction-policy xmlns="www.neusoft.com/unieap/transaction">
-   	<transaction name="default">
-			<transaction-type>JDBC</transaction-type>
-			<transaction-jndi>java:comp/UserTransaction</transaction-jndi>
-			<transactionIntegrationPoint-class>com.neusoft.unieap.transaction.BizTransIntegrationPointImpl</transactionIntegrationPoint-class>
-	</transaction>
-</transaction-policy>

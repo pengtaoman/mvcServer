@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
-<eapConfig>
-	<component name="bl" isEnabled="true" handler="com.neusoft.unieap.config.handler.BLConfigHandler" description="">
-		<CONFIG_PATH>/WEB-INF/conf/om/bl</CONFIG_PATH>
-		<CONFIG_FILE>dataAccessContext-om.xml applicationContext-om.xml paramContext-om.xml applicationContext-orderMgr-productinst.xml applicationContext-orderMgr-ruleconfig.xml dataAccessContext-orderMgr-productinst.xml dataAccessContext-orderMgr-ruleconfig.xml paramContext-ordermgr.xml paramContext-ordermgr.xml paramContext-custmgr.xml applicationContext-custmgr.xml dataAccessContext-custmgr.xml</CONFIG_FILE>
-	</component>
-</eapConfig>

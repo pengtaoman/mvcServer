@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\common\jsk\util
-2
-5
-b:validate.js|1|13b89073d7b|24b0|8de0eb1d|e32924215ed146629336b37fb45e57e7|0
-7:form.js|1|13b89073c9f|2f65|1b344a36|71bc1bd685c44fc3941e85768c02e4b8|0
-a:element.js|1|13b89073c51|18a0|feec5331|58478ed2764249a68dbbc5b13fe3ec07|0
-c:_package_.js|1|13b89073d8a|8d|55da2f28|98996b6000a346abab62a81898805112|0
-9:string.js|1|13b89073cce|5fc|9230a919|63ad19ca2a964d51a3f5f0a26c055d46|0

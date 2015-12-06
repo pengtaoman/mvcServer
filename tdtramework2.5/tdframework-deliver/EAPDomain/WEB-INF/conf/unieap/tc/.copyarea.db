@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\unieap\tc
-2
-3
-e:BaseConfig.xml|1|13b8964adc2|3c3|f59225cc|6b626a8b296049a181cb50f529871ff0|0
-c:tcConfig.xml|1|13b8964ae5f|e67|7f69b979|48b3745de56e4751a02d919e180c67c9|0
-1a:ContainerConfig.properties|1|13b8964adf1|3e3|3a0d5216|c8377b0815954598a2a0c15da07b4789|0

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by User (User) -->
-<eapConfig>
-	<component name="bl" isEnabled="true" handler="com.neusoft.unieap.config.handler.BLConfigHandler" description="">
-		<CONFIG_PATH>/WEB-INF/conf/home/bl</CONFIG_PATH>
-		<CONFIG_FILE>dataAccessContext-home.xml applicationContext-home.xml paramContext-home.xml</CONFIG_FILE>
-	</component>
-</eapConfig>

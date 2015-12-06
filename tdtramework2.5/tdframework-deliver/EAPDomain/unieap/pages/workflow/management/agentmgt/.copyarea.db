@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\pages\workflow\management\agentmgt
-2
-5
-f:modifyagent.jsp|1|13b8960bfc3|205a|9ef12751|7c5bd53a46fc4b34b9d0bbf909f96fd6|0
-10:categorytree.jsp|1|13b8960beb9|9ff|2b1b5fd1|e05e8cc979af41cea9018c451661d427|0
-f:createagent.jsp|1|13b8960bca6|235d|c0201750|86f94a5863ca4110aeecfb5fa402233b|0
-d:agentlist.jsp|1|13b8960bda0|163b|dd790cdb|d91a161d706b4da58c89057e23eb8194|0
-b:orgtree.jsp|1|13b8960bd23|a70|ec2aa678|c59a3ade8571408186d21d632c6aeb5d|0

@@ -1,2 +1,0 @@
-将htc控件改造为 JS对象
-QuickSelect的改造没有完成，继续使用HTC的模试

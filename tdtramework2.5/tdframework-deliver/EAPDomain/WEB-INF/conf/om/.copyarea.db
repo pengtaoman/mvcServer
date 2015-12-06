@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\WEB-INF\conf\om
-2
-3
-d:om_Config.xml|1|13b89646dba|2df|1fb602d6|789c34b3840843e48752ba181fe32299|0
-14:om_config_struts.xml|1|13b89646e37|724a|43b6e9ac|baf52858d0eb475396c66da973254ee9|0
-2:bl|2|0|0|0|82771a0e582b4c9396c1f406d530e827|0
