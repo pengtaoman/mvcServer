@@ -1,6 +1,7 @@
 package com.neusoft.tdframework.auth.menu.service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,10 @@ public class MenuService extends BaseService {
 		String id = eDao.createMenu(menu);
 		
 		return id;
+	}
+	public List<OmMenuT> getMenu() {
+		
+		
+		return eDao.getMenu();
 	}
 }
