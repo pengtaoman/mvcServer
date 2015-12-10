@@ -32,6 +32,8 @@ public class TDTilesViewResolver extends TilesViewResolver {
 			
 			View result = this.applyLifecycleMethods(tilesViewName, view);
 			return (view.checkResource(locale) ? result : null);
+		} else if ("".equals(viewName)){
+			return super.loadView(viewName, locale);
 		} else {
 			return super.loadView(viewName, locale);
 		}

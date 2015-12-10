@@ -26,7 +26,7 @@ public class TDSecurityController extends BaseController {
 		logger.trace("++++++++++++++  forwardLoginForm  forwardLoginForm  ++++++++++++++++" + request.getParameter("name"));
 		logger.trace("++++++++++++++  forwardLoginForm  forwardLoginForm  ++++++++++++++++" + request.getRequestURL());
 		
-		return "tiles.loginpage";
+		return "framework/login";
 	}
 
 }

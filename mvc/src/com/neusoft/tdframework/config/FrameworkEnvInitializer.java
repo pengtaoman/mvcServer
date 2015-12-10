@@ -45,6 +45,7 @@ public class FrameworkEnvInitializer extends
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
+		//return new Class[] { PersistenceConfig.class, AppConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
 		return new Class[] { PersistenceConfig.class, AppConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
 	}
 

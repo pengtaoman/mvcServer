@@ -117,7 +117,7 @@ public class TDWebController extends BaseController {
 		System.out
 				.println("++++++++++++++++++@indexindexindexindexindex index+++++++??????????????++++++++++");
 		// request.setAttribute("bodyjsp", "/view/index.jsp");
-		return "tiles.mainpage";
+		return "framework/mainPage1";
 		// return "mainpage";
 	}
 

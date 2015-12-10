@@ -97,7 +97,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	public void configure(WebSecurity web) throws Exception {
 		web.debug(true);
 		//web.
-		web.ignoring().antMatchers("/resources/**","/main/tdlogin", "/main/register", "/main/logout");
+		web.ignoring().antMatchers("/resources/**","/bower_components/**","/main/tdlogin", "/main/register", "/main/logout","app01");
 		//web.
 		
 		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 333333333333333333333333333333333");
