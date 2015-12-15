@@ -16,6 +16,9 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.core.env.Environment;
+import org.springframework.http.converter.GenericHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
@@ -33,6 +36,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.SimpleUrlHandlerMapping;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.ViewNameMethodReturnValueHandler;
 import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver;
 import org.springframework.web.servlet.support.RequestDataValueProcessor;
@@ -145,6 +149,16 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 //		handlerMethodReturnValueHandlerComposite.addHandler(new TDHandlerMethodReturnValueHandler());
 //		
 		return new TDHandlerMethodReturnValueHandler();
+		
+	}
+	@Bean
+	public RequestMappingHandlerAdapter requestMappingHandlerAdapter() {
+		RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
+		requestMappingHandlerAdapter.setIgnoreDefaultModelOnRedirect(true);
+		List<HttpMessageConverter<?>> lst = new ArrayList<HttpMessageConverter<?>>();
+		lst.add(new GsonHttpMessageConverter());
+		requestMappingHandlerAdapter.setMessageConverters(lst);
+		return requestMappingHandlerAdapter;
 		
 	}
 	

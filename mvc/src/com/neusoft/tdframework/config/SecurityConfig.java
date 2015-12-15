@@ -97,7 +97,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	public void configure(WebSecurity web) throws Exception {
 		web.debug(true);
 		//web.
-		web.ignoring().antMatchers("/resources/**","/bower_components/**","/main/tdlogin", "/main/register", "/main/logout","app01");
+		web.ignoring().antMatchers("/resources/**","/bower_components/**","/main/tdlogin", "/main/register", "/main/logout","/app01/**");
 		//web.
 		
 		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 333333333333333333333333333333333");
@@ -112,7 +112,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		
 		http.csrf().disable().authorizeRequests()
 		        .antMatchers("/**").hasRole("tduser")
-		        .antMatchers("/app01/**").access("hasRole('ADMIN') and hasRole('DBA')")
+		        //.antMatchers("/app01/**").access("hasRole('ADMIN') and hasRole('DBA')")
 		        .anyRequest().authenticated()
 				.and()
 				.formLogin().loginPage("/main/tdlogin")

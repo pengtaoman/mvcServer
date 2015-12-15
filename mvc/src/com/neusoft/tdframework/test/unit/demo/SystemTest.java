@@ -3,9 +3,9 @@ package com.neusoft.tdframework.test.unit.demo;
 import org.junit.Test;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.neusoft.tdframework.auth.menu.service.EmployeeService;
 import com.neusoft.tdframework.auth.menu.service.MenuService;
 import com.neusoft.tdframework.auth.menu.service.SystemService;
-import com.neusoft.tdframework.demo.EmployeeService;
 import com.neusoft.tdframework.entity.OmSystemT;
 import com.neusoft.tdframework.test.unit.BaseUnitTest;
 
