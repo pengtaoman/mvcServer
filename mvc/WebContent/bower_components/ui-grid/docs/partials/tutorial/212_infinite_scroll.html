@@ -102,7 +102,7 @@ hold the scroll position.</p>
 
       $scope.getFirstData = function() {
         var promise = $q.defer();
-        $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json')
+        $http.get('/myAngular/app/bower_components/ui-grid/data/10000_complex.json')
         .success(function(data) {
           var newData = $scope.getPage(data, $scope.lastPage);
           $scope.data = $scope.data.concat(newData);
@@ -113,7 +113,7 @@ hold the scroll position.</p>
 
       $scope.getDataDown = function() {
         var promise = $q.defer();
-        $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json')
+        $http.get('/myAngular/app/bower_components/ui-grid/data/10000_complex.json')
         .success(function(data) {
           $scope.lastPage++;
           var newData = $scope.getPage(data, $scope.lastPage);
@@ -132,7 +132,7 @@ hold the scroll position.</p>
 
       $scope.getDataUp = function() {
         var promise = $q.defer();
-        $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json')
+        $http.get('/myAngular/app/bower_components/ui-grid/data/10000_complex.json')
         .success(function(data) {
           $scope.firstPage--;
           var newData = $scope.getPage(data, $scope.firstPage);

@@ -136,7 +136,7 @@ children of the selected rowHeader.</p>
       }
     };
 
-    $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
     .success(function(data) {
       for ( var i = 0; i < data.length; i++ ){
         data[i].state = data[i].address.state;

@@ -45,7 +45,7 @@ See api docs for both cellNav and edit for default navigation keys and how you c
       { name: 'name', displayName: 'Name (editOnFocus)', width: 200}
     ];
 
-    $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
       .success(function(data) {
         $scope.gridOptions.data = data;
       });

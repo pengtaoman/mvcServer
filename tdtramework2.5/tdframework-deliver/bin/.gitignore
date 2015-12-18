@@ -1,3 +1,10 @@
+/.copyarea.db
+/AppError.properties
+/LogInfo.properties
+/OmParams.properties
+/SysLog.Config
+/SysParams.properties
+/appenders.properties
 /com/
 /commons-logging.properties
 /commons-logging.properties.keep

@@ -49,7 +49,7 @@ rather than internally filtering the data that is held in the grid.</p><h2 id="E
 
     $scope.getPage = function(pageNumber, pageSize){
       var startingRow = pageSize * ( pageNumber - 1);   // page number starts at 1, not zero
-      $http.get('/mvc/resources/common/ui-grid/data/100.json')
+      $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
       .success(function (data) {
         var newData = [];
         for( var i = startingRow; i < startingRow + $scope.gridOptions.paginationPageSize; i++ ) {

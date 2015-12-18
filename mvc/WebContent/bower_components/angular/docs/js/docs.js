@@ -90,7 +90,7 @@ angular.module('DocsController', [])
 
     path = path.replace(/^\/?(.+?)(\/index)?\/?$/, '$1');
 
-    currentPage = $scope.currentPage = NG_PAGES[path];
+    var currentPage = $scope.currentPage = NG_PAGES[path];
 
     if ( currentPage ) {
       $scope.partialPath = 'partials/' + path + '.html';

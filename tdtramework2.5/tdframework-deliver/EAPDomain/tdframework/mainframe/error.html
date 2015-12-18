@@ -1,0 +1,239 @@
+<%@ page contentType="text/html; charset=GBK" %>
+<%@ page import="com.neusoft.unieap.config.EAPConfigHelper" %>
+<%
+
+String path=EAPConfigHelper.getContextPath(request);
+%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>欢迎登录 河北联通 BSS系统</title>
+<style>
+.inputtext {
+height:12px;
+font-size:12px;
+color:#817267;
+border-left-width: 0; border-right-width: 0; border-top-width: 0; 
+border-bottom-style: solid; border-bottom-width: 1; padding: 0;
+
+}
+
+
+form {
+margin:0px;
+padding:0px;
+
+}
+
+
+.loginForm {
+	font-size:14px;
+}
+
+.loginForm td {
+	height:30px;
+	font-size:14px;
+}
+
+input.default {
+	border:1px solid #bbbbbb;
+	font-size:14px;
+	height:22px;
+	margin:2px;
+	padding:2px 2px 2px 2px;
+	width:130px;
+}
+
+input.focus {
+	border:1px solid #ffbbaa;
+	background-color:#fefaf6;
+	font-size:14px;
+	height:22px;
+	margin:2px;
+	padding:2px 2px 2px 2px;
+	width:130px;
+}
+
+button {
+
+background-color:transparent;
+background-image:url(./images/button1.gif);
+background-repeat: repeat-x;
+border: outset 1px  #bbbbbb;
+border-collapse:  separate;
+vertical-align: bottom;
+color:#333333;
+cursor:pointer;
+height:22px;
+width:80px;
+margin:3px 4px 3px 4px;
+padding: 3px 3px 0px 3px;
+
+	margin:15px 6px 4px 6px;
+	padding:3px 4px 0px 4px;
+	cursor:pointer;
+
+}
+</style>
+
+<script language="javascript">
+<!--
+
+var APP_PATH=".";
+
+if (top.location != self.location) top.location=self.location;
+
+function init(){
+	document.getElementById("relogin").focus();
+
+	var ht1 =  document.getElementById("headBg");
+	ht1.style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+	
+	var ht2 =  document.getElementById("footBg");
+	ht2.style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+
+
+}
+
+function doRelogin(){
+	window.location.href='<%=response.encodeURL(path+"/login.do?method=begin") %>';
+
+}
+
+function reload()
+{
+	logonform.j_username.value='';
+	logonform.j_password.value='';
+	return;
+}
+function setClass(eleName,clsName) {
+	document.all(eleName).className = clsName;
+}
+
+function doSubmit(){
+	if ( document.getElementById("j_username").value=='') {
+
+	var ht1 =  document.getElementById("headBg");
+	ht1.style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+	
+	var ht2 =  document.getElementById("footBg");
+	ht2.style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+
+			alert("用户名不能为空!");
+			document.getElementById("j_username").focus();
+
+			ht1.style.filter = "";
+			ht2.style.filter = "";
+			return;
+	}
+	if ( document.getElementById("j_password").value=='') {
+			
+			var ht = document.getElementsByTagName("body")[0];
+			ht.style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+
+			alert("登录口令不能为空!");
+			document.getElementById("j_password").focus();
+
+			ht.style.filter = "";
+			return;
+	}
+	//alert("ok");
+  document.all("logonform").submit();
+}
+
+
+function enterToTab(){
+  if(event.srcElement.type != 'button' 
+  && event.srcElement.type != 'textarea' && event.keyCode == 13){
+    event.keyCode = 9;
+  }
+}
+
+function enterToSubmit(){
+  if (event.keyCode == 13){
+    doSubmit();
+  }
+}
+
+function inputTextFocus(){
+	var obj=event.srcElement;
+	obj.className="focus";
+}
+
+function inputTextBlur(){
+	var obj=event.srcElement;
+	obj.className="default";
+}
+
+//-->
+</script>
+
+</head>
+<body onload="init();" >
+<form  name="logonform" method="post" action="<%=EAPConfigHelper.getContextPath(request)%>/j_unieap_security_check.do">
+<table align="center" id="maintable" border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr>
+	<td width="100%" height="100%">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" height="370" style="border:1px solid #eeeeee">
+<tr>
+<td id="headBg" colspan="2" align="right" style="height:40px;
+background-image:url(./images/u_logo_top.gif);
+background-position:bottom;
+">
+</tr>
+<tr>
+<td style="padding:20px 0px 0px 30px;"><img src="./images/u_logo_l.gif" /></td>
+<td valign="middle">
+
+
+<table class="loginForm" width="100%" border="0" cellpadding="0" cellspacing="0" >
+	<tr>
+		<td  style="height:100px;padding-right:25px;padding-bottom:30px" align="middle">
+		<font face="黑体" style="font-size:18px;font-weight:normal">中国联通河北分公司<br/>BSS系统</font>
+		<br/>( 文字和按钮将采用图片 )
+	    </td>
+	</tr>
+	<tr>
+		<td align="center" style="fonct-size:10pt;"><b><font color="red"></font>用户名不存在或密码错误<font color="red">！</font></b></td>
+
+	</tr>
+	<tr>
+		<td  align="center">
+			<button id="relogin" onclick="doRelogin();">重 登 录</button>
+		</td>
+	</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td id="footBg"  colspan="2" align="right" style="height:70px;background-image:url(./images/u_logo_bottom.gif)">
+<img src="./images/u_logo_text.gif" style="margin:0px" /></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+
+<!--
+
+	      <tr>
+	       
+	        <td width="93" rowspan="6">
+	        <img src="./images/unicom_brand_right_001.gif" width="92" height="40"/>
+	        <img src="./images/unicom_brand_right_002.gif" width="92" height="40"/>
+	        <img src="./images/unicom_brand_right_003.gif" width="92" height="40"/>
+	        <img src="./images/unicom_brand_right_004.gif" width="92" height="40"/>
+	        <img src="./images/unicom_brand_right_005.gif" width="92" height="40"/>
+	        <img src="./images/unicom_brand_right_006.gif" width="92" height="40"/>　</td>
+	      </tr>
+-->
+</form>
+</body>
+</html>

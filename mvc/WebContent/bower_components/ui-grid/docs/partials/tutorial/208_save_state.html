@@ -96,7 +96,7 @@ to something different, and use the restore button to set the grid back the way 
         $scope.gridApi.saveState.restore( $scope, $scope.state );
       };
 
-      $http.get('/mvc/resources/common/ui-grid/data/100.json')
+      $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

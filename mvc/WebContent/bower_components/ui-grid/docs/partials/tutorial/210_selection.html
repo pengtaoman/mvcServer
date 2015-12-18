@@ -104,7 +104,7 @@ auto-selects the first row once the data is loaded.</p>
 
       $scope.gridOptions.multiSelect = true;
 
-      $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+      $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
           $timeout(function() {
@@ -195,7 +195,7 @@ auto-selects the first row once the data is loaded.</p>
         $scope.gridApi.core.notifyDataChange( uiGridConstants.dataChange.OPTIONS);
       };
 
-      $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+      $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
 

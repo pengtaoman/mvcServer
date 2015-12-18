@@ -82,7 +82,7 @@ You can override the default grid footer template with gridOptions.footerTemplat
     $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.OPTIONS);
   };
 
-  $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+  $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
     .success(function(data) {
       data.forEach( function(row) {
         row.registered = Date.parse(row.registered);

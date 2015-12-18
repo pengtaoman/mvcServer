@@ -5868,6 +5868,7 @@ button.close {
 }
 .modal-open {
   overflow: hidden;
+  margin-right: 15px;
 }
 .modal {
   position: fixed;

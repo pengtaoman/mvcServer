@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>∷DEMO 展现层演示</title>
+<script language="JavaScript">
+<!--
+
+window.lastMenus=[];
+window.maxLastMenus=5;
+
+var APP_PATH="../..";
+
+function init(){
+	//document.getElementById('main').src=url;
+}
+
+
+function addToFavorite(){
+
+
+		var webpath=APP_PATH;
+	
+			var myObj=parent.mainleft.myform;
+		if (myObj.menuId.value==''){
+			alert ('您不能将此项目添加入收藏!');
+			return false;
+		}
+		var menuId,systemId,favoriteName,pageLink
+		favoriteName=myObj.favoriteName.value;
+		menuId=myObj.menuID.value;
+		systemId=myObj.systemID.value;
+		pageLink=myObj.CurrentLocation.value;
+		var msg='您是否要将"'+favoriteName+'"加入收藏夹?'
+		isContinue=confirm(msg);
+		
+		if (isContinue){
+			var theResponse = ''
+			while (theResponse == '' )
+			//theResponse = window.showModalDialog(webpath+"/views/mainframe/jsp/mainframe/inputWindow.htm",favoriteName,"dialogHeight: 50px; dialogWidth: 60px; status: no;");
+			theResponse = window.showModalDialog(webpath+"/tdframework/favorite/inputWindow.htm",favoriteName,'dialogWidth:300px;DialogHeight=150px;status:no');
+
+			if  (theResponse==null || typeof(theResponse) =='undefined' ) return false;
+
+			favoriteName = theResponse;
+
+			parent.mainleft.refreshFavorite(menuId,favoriteName,systemId,pageLink);
+
+
+			/*
+			var rowsLength=parent.mainleft.tblFavorite.rows.length;//当前的长度
+			var objRow = parent.mainleft.tblFavorite.insertRow();  //增加行
+			var objCell = objRow.insertCell();
+			if(typeof(myObj.lastImg)!="undefined") {
+				myObj.lastImg.src=webpath+"/tdframework/mainframe/images/line.gif";
+				myObj.lastImg.id='';
+			}
+		    objRow.cells[0].innerHTML = "<IMG src='"+webpath+"/tdframework/mainframe/images/spacer.gif' width='20px' height='1'/>";
+		    objRow.insertCell();
+		    var myHtml="<a href='' id='"+pageLink+"' onclick='deal_click_link(this,0,\"\");return false;' title='"+favoriteName+"'><span onmouseover='DoOver();' onmouseout='DoOut();' onclick='DoClick();'><font color='black' id='"+menuId+"'>"+favoriteName+"</font></span></a>";
+	 	    //var pageHtml = "<IMG src=webpath+\"/views/common/images/line1.gif\" STYLE='cursor:hand' align=\"absMiddle\"/>";
+	 	    var pageHtml = "<img src=\"" +webpath+"/views/common/images/page.gif\" />";
+	 	    objRow.cells[1].innerHTML = '<IMG id=\"lastImg\" src=\"'+webpath+'/views/common/images/line1.gif\" STYLE=\"cursor:hand\" align="absMiddle"/>'+ pageHtml + myHtml;
+			*/
+			var linkId = "/favoriteMenuAdmin.do?operType=add";
+			var linkValue = "&favoriteName=" + encodeURI(favoriteName);
+			linkValue = linkValue + "&menuId=" + menuId;
+			linkValue = linkValue + "&systemId=" + systemId;
+			linkValue = linkValue + "&pageLink=" + pageLink;
+			
+			linkValue= webpath + linkId + linkValue;
+
+			parent.hide_page_message.location.href =linkValue;
+		}
+
+
+}
+
+
+window.defaultStatus="登录信息";
+//-->
+</script>
+</head>
+<frameset cols="*,768,*" frameborder="NO" border="0" framespacing="0" onLoad="init();" >
+<frame src=""  scrolling="NO" noresize="true">
+
+<frameset rows="102,*" frameborder="NO" border="0" framespacing="0" id="topFrame" style="border:1px solid #cccccc">
+  <frame src="./top.html" name="top_page" scrolling="NO" noresize="true" style="border-bottom:1px solid #dddddd">
+  <frameset cols="156,*" frameborder="NO" border="0" framespacing="0" id="mainFrame">
+    <frame src="./left.xml" name="mainleft" scrolling="auto" noresize="true" style="border-right:1px solid #cccccc">
+    <frameset rows="20,*,0,0,0,0,0" frameborder="NO" border="0" framespacing="0"> 
+	  <frame src="./nav_info.html" name="work_items" scrolling="NO" noresize="true" style="border-bottom:1px solid #eeeeee">
+ 	  <frame src="" name="main" style="border:0px solid #999999">
+  	  <frame src="<%=blankUri%>" name="hide_page" scrolling="NO" noresize>
+      <frame name="notify_message" noresize src="<%=blankUri%>">
+	  <Frame name="hide_page_message" noresize src="<%=blankUri%>">
+	  <Frame name="info_board" noresize src="<%=blankUri%>">
+	  <Frame name="remoteAuth" noresize src="<%=remoteAuth%>">
+	</frameset>
+  </frameset>
+</frameset>
+<frame src=""  scrolling="NO" noresize>
+</frameset>
+
+	<noframes>
+	  <body>
+		<p>此网页使用了框架，但您的浏览器不支持框架，请升级您的浏览器。</p>
+	  </body>
+	</noframes> 
+	
+</html>

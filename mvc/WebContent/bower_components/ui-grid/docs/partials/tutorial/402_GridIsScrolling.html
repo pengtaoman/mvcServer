@@ -57,7 +57,7 @@
                $scope.gridApi = gridApi;
             };
 
-    $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/10000_complex.json')
       .success(function(data) {
         $scope.gridOptions.data = data;
       });

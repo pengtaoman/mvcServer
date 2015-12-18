@@ -50,7 +50,7 @@ so the currently recommended approach is to use $interval, and to call every 500
         }
     };
 
-    $http.get('/mvc/resources/common/ui-grid/data/100.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
       .success(function(data) {
         $rootScope.gridOptions.data = data;
       });

@@ -54,7 +54,7 @@ set the background and foreground color of the header if the sort direction is A
         }
       };
 
-      $http.get('/mvc/resources/common/ui-grid/data/100.json')
+      $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

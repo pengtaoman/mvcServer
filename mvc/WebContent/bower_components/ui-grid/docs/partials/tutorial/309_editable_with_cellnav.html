@@ -74,7 +74,7 @@ of combining cellNav and edit to give a more spreadsheet-like experience.</p>
             });
           };
 
-    $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
       .success(function(data) {
         for(i = 0; i < data.length; i++){
           data[i].registered = new Date(data[i].registered);

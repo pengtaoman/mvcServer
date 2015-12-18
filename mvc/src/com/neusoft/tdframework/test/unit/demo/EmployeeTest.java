@@ -2,6 +2,7 @@ package com.neusoft.tdframework.test.unit.demo;
 
 import org.junit.Test;
 
+import com.google.gson.Gson;
 import com.neusoft.tdframework.auth.menu.service.EmployeeService;
 import com.neusoft.tdframework.demo.UserService;
 import com.neusoft.tdframework.test.unit.BaseUnitTest;
@@ -13,5 +14,12 @@ public class EmployeeTest extends BaseUnitTest{
 		for (int i = 100; i < 199; i ++ ) {
 		    employeeService.createEmp(i);
 		}
+	}
+	
+	@Test  
+	public void getEmp() throws Exception { 
+		EmployeeService employeeService = this.wac.getBean(EmployeeService.class);
+		
+		System.out.println(new Gson().toJson(employeeService.getEmployee()));
 	}
 }

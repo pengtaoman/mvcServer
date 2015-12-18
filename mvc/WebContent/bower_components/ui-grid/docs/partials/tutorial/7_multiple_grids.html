@@ -38,12 +38,12 @@
     $scope.gridOptions1 = {};
     $scope.gridOptions2 = {};
 
-    $http.get('/mvc/resources/common/ui-grid/data/100.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
     .success(function(data) {
       $scope.gridOptions1.data = data;
     });
 
-    $http.get('/mvc/resources/common/ui-grid/data/500.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/500.json')
     .success(function(data) {
       $scope.gridOptions2.data = data;
     });

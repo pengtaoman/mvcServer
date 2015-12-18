@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+TDFramework2.5\TDFramework2.5_Src\EAPDomain\tdframework\mainframe\css
+2
+c
+9:login.css|1|13b8909d70c|5b5|14cdcf84|a69a49cf3d4049a19e028b882b29e5ba|0
+10:td_style_top.css|1|13b8909da58|f7a|d4bfd7df|5a19be9039ae4f928b514c2c3ece1949|0
+13:td_style_top_lt.css|1|13b8909dab6|2bc9|32f6ac0f|a65f0b4c89a649b4ab05e9f67d9da7f0|0
+c:modstyle.css|1|13b8909d8e1|b57|597e80a8|38cfd0f07d7f483ba97d694ba56ddb4a|0
+13:td_style_top_dx.css|1|13b8909da97|fb2|95e21c|06d38f35d3df4dd5abc645cdefffecea|0
+15:td_style_frame_lt.css|1|13b8909d9ac|93b|4010d06d|619cddb95fae4afea7e7977ab318ecc2|0
+c:login_lt.css|1|13b8909d8b2|c01|fdd0d16d|80c4de399212438f8f00df868f3e5860|0
+14:td_style_left_lt.css|1|13b8909da1a|1989|6a32ca9|39426a4c644f4b13bcecd07879be90d0|0
+14:td_style_left_dx.css|1|13b8909d9eb|1bec|5281f080|a5bc7b2b473f46b1b30dfede1655d0be|0
+11:td_style_left.css|1|13b8909d9cb|1c1e|26030547|2bf7fe6ed4404755b8e2ce91384add1e|0
+12:td_style_frame.css|1|13b8909d94e|8c2|efcea7ef|d7c9cec1e5cd426a872a739895e2195a|0
+c:td_style.css|1|13b8909d91f|3b63|d78f1b03|43d0476a378844c59431f744033a57ac|0

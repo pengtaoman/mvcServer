@@ -5,17 +5,21 @@
 
 "use strict";
 define(["angularAMD",
-        "jquery",
+        "angular-locale",
+        "angular-touch",
+        "angular-animate",
         "angular-route",
-        
-        
         "ui-bootstrap",
         "angular-sanitize",
-        "blockUI",
         "ui-router",
         "ui-grid",
+        //"ngDialog",
+        "blockUI",
+        "jquery",
         "bootstrap",
         "jquery-ui-bootstrap",
+        "fast-click",
+        "inputmask",
         "framework-service",
         "framework-directive",
         "framework-filter","main-page-app"
@@ -23,9 +27,18 @@ define(["angularAMD",
     ],
     function (angularAMD) {
         var app = angular.module("framework.app",
-            ["ui.router", "blockUI", "ngSanitize", "ui.bootstrap","framework.service","framework.filter","framework.directive"]);
+            ["ui.router","ngTouch",
+                "ui.grid","ui.grid.resizeColumns","ui.grid.selection",
+                "ui.grid.pinning","ui.grid.edit","ui.grid.pagination",
+                //"ngDialog",
+                "blockUI", "ngSanitize",
+                "ui.bootstrap",
+                "framework.service","framework.filter","framework.directive"]);
 
-        app.config(['$stateProvider','$urlRouterProvider','$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        app.config(['$stateProvider','$urlRouterProvider',
+            '$locationProvider', 'blockUIConfig',
+            function ($stateProvider, $urlRouterProvider, $locationProvider, blockUIConfig) {
+            blockUIConfig.delay = 0;
             $urlRouterProvider.otherwise("/");
 
             $stateProvider.state("main",
@@ -35,7 +48,7 @@ define(["angularAMD",
                     },
                     views :{"ui_view_main":{
                         templateUrl: function(params){
-                            console.log("?????????????????????" + angular.toJson(params));
+                            //console.log("?????????????????????" + angular.toJson(params));
                             return jsContextPath+'views/framework/welcom.html';
                         }
                     }},
@@ -67,16 +80,17 @@ define(["angularAMD",
                     resolve: {
                         load: ["$q", "$rootScope", "$location","blockUI","$timeout","$stateParams",
                             function ($q, $rootScope, $location,blockUI,$timeout,$stateParams) {
-                                blockUI.start("Loading....");
+                                //blockUI.start("Loading....");
+                                //console.log("#######################  blockUI.start ###########" );
                                 var deferred = $q.defer();
-                                require([jsContextPath+"resources/"+ $stateParams.pack +"/"+$stateParams.model+"/controllers/"+$stateParams.func+"Controller.js"], function () {
+                                require([jsContextPath+"views/"+ $stateParams.pack +"/"+$stateParams.model+"/controllers/"+$stateParams.func+"Controller.js"], function () {
                                     $rootScope.$apply(function () {
                                         deferred.resolve();
                                     });
                                 });
-                                $timeout(function() {
-                                    blockUI.stop();
-                                }, 10000);
+                                //$timeout(function() {
+                                //    blockUI.stop();
+                                //}, 10000);
                                 return deferred.promise;
                             }]
                     }
@@ -92,36 +106,55 @@ define(["angularAMD",
                 //console.log("##########  previous.url :" + previous.url);
                 //console.log("##########  previous.params :" + angular.toJson(previous.params));
             });
+
+
         }]);
         // Bootstrap Angular when DOM is ready
         angularAMD.bootstrap(app);
 
 
-        app.controller("mainController",function($scope, $location, $http, $compile, showMenuService) {
+        app.controller("mainController",function($scope, $location, $http, $compile,$timeout,
+                                                 $uibModal, blockUI, showMenuService,i18nService) {
+            $scope.langs = i18nService.getAllLangs();
+            $scope.lang = 'en';
+            $scope.animationsEnabled = true;
+
+            blockUI.start("Loading...");
+            $scope.init = function() {
+                $(":input").inputmask();
+            };
             $scope.texx = "texxtexxtexx111111111";
             $scope.rootMenu = [];
             $scope.subMenu = [];
+
             var promise = $http({
-                method:'GET',
-                url:jsContextPath+"main/getMenu"//"resources/data/menu.json"
+                method: 'GET',
+                url: jsContextPath + "resources/data/menu.json"
+                //url: "/mvc/app01/getMenu"//"resources/data/menu.json"
             });
-            promise.then(function(resp){
-                console.log(":::::" + angular.toJson(resp.data));
-                angular.forEach(resp.data, function(menu) {
-                    if (angular.equals(menu["fParentMenuId"],"")) {
+            promise.then(function (resp) {
+                //console.log(":::::" + angular.toJson(resp.data));
+
+                angular.forEach(resp.data, function (menu) {
+                    if (angular.equals(menu["fParentMenuId"], "")) {
                         $scope.rootMenu.push(menu);
                     } else {
                         $scope.subMenu.push(menu);
                     }
                 });
                 //console.log("################### promise menu over!!!!");
-            }).then(function(){
+            }, function error(msg) {
+                console.error('Failure!', msg);
+                blockUI.stop();
+            }).then(function () {
                 var strHtml = showMenuService.getMenuHtml($scope.rootMenu, $scope.subMenu);
                 var menuDirect = angular.element(strHtml);
                 var showDiv = $("#showMenuDiv").append(menuDirect);
                 //$compile(showDiv)($scope);
                 console.log("################### promise menu over222!!!!");
+                blockUI.stop();
             });
+
         });
 
         return app;

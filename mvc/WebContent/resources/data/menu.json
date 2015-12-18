@@ -2,7 +2,7 @@
   {
     "fMenuId": "8a84fcfe511ee9c401511ee9d7030001",
     "fLayer": 1,
-    "fMenuName": "营销菜单01",
+    "fMenuName": "人员管理",
     "fMenuType": 0,
     "fModuleId": "1",
     "fParentMenuId": "",
@@ -15,9 +15,10 @@
   {
     "fMenuId": "8a84fcfe511ee9c401511ee9d7040002",
     "fLayer": 1,
-    "fMenuName": "营销菜单-02",
+    "fMenuName": "增加人员",
     "fMenuType": 0,
     "fModuleId": "1",
+    "fPageLink": "/om/employee/dealEmployee",
     "fParentMenuId": "8a84fcfe511ee9c401511ee9d7030001",
     "omSystemT": {
       "fSystemId": "8a84fcfe511ee9c401511ee9d6e90000",
@@ -28,7 +29,7 @@
   {
     "fMenuId": "8a84fcfe511ee9c401511ee9d7040003",
     "fLayer": 1,
-    "fMenuName": "营销菜单-03",
+    "fMenuName": "人员权限设定",
     "fMenuType": 0,
     "fModuleId": "1",
     "fParentMenuId": "8a84fcfe511ee9c401511ee9d7030001",
@@ -67,7 +68,7 @@
   {
     "fMenuId": "8a84fcfe511ee9c401511ee9d7060006",
     "fLayer": 1,
-    "fMenuName": "营销菜单-22",
+    "fMenuName": "Angular-dataTables",
     "fMenuType": 0,
     "fModuleId": "1",
     "fParentMenuId": "8a84fcfe511ee9c401511ee9d7050005",

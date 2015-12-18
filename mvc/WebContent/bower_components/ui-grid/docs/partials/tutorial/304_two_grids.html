@@ -44,7 +44,7 @@ each other.</p>
       $scope.gridApi.core.scrollTo( $scope.gridOptions.data[rowIndex], $scope.gridOptions.columnDefs[colIndex]);
     };
 
-    $http.get('/mvc/resources/common/ui-grid/data/100.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
       .success(function(data) {
         $scope.gridOptions.data = data;
       });
@@ -54,7 +54,7 @@ each other.</p>
   app.controller('SecondCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
     $scope.gridOptions = {};
 
-    $http.get('/mvc/resources/common/ui-grid/data/100.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
       .success(function(data) {
         $scope.gridOptions.data = data;
       });

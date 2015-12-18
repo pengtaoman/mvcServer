@@ -90,7 +90,7 @@ appears when you quickly scroll through the grid.</p><h2 id="Example">Example</h
       { name: 'address.city'}
     ];
 
-    $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
       .success(function(data) {
         for(i = 0; i < data.length; i++){
           data[i].subGridOptions = {
@@ -128,7 +128,7 @@ appears when you quickly scroll through the grid.</p><h2 id="Example">Example</h
           { name: 'address.city'}
         ];
 
-        $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+        $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
           .success(function(data) {
             for(i = 0; i < data.length; i++){
               data[i].subGridOptions = {
@@ -154,7 +154,7 @@ appears when you quickly scroll through the grid.</p><h2 id="Example">Example</h
                       { name: 'company'}
                     ]};
                   
-                    $http.get('/mvc/resources/common/ui-grid/data/100.json')
+                    $http.get('/myAngular/app/bower_components/ui-grid/data/100.json')
                       .success(function(data) {
                         row.entity.subGridOptions.data = data;
                       });
@@ -170,7 +170,7 @@ appears when you quickly scroll through the grid.</p><h2 id="Example">Example</h
           { name: 'address.city'}
         ];
 
-        $http.get('/mvc/resources/common/ui-grid/data/500_complex.json')
+        $http.get('/myAngular/app/bower_components/ui-grid/data/500_complex.json')
           .success(function(data) {
             $scope.gridOptions.data = data;
           });

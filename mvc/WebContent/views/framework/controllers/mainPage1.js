@@ -2,7 +2,7 @@
  * Created by pqmagic on 2015/12/7.
  */
 "use strict";
-define([jsContextPath+"resources/application-configuration"], function (app) {
+define(["application-configuration"], function (app) {
     app.register.controller("welcomeController",
         ["$scope", "$rootScope", "$stateParams","blockUI","$timeout","$http","$location",
             function ($scope,$rootScope, $stateParams,blockUI,$timeout, $http, $location) {
@@ -13,7 +13,7 @@ define([jsContextPath+"resources/application-configuration"], function (app) {
                 //console.log("########################### $location3######################## "+ $location.path()+"###" + $scope.$id );
                 //var promise = $http({
                 //    method:'GET',
-                //    url:'/myAngular/app/resources/data/menu.json'
+                //    url:'/mvc/resources/data/menu.json'
                 //});
                 //promise.then(function(resp){
                 //    console.log(":::::" + resp.data.length);

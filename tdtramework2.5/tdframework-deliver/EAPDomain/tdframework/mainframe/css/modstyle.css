@@ -1,0 +1,183 @@
+html{
+	font-family: Tahoma, Verdana, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+	font-size: 11px;
+}
+
+body {
+color:#333333;
+background-color:#f9f9f9;
+font-size:12px;
+
+font-family: "宋体","Verdana","Arial","Helvetica","sans-serif";
+scrollbar-3dlight-color:#999999;
+scrollbar-arrow-color:#666666;
+scrollbar-darkshadow-color:#999999;
+scrollbar-face-color:#E0E0E0;
+scrollbar-highlight-color:#EEEEEE;
+scrollbar-shadow-color:#EEEEEE;
+scrollbar-track-color:#F3F3F3;
+
+margin:0px;
+padding:0px;
+ 
+
+}
+
+div {
+font-size:12px;
+font-family: "宋体","Verdana","Arial","Helvetica","sans-serif";
+margin:0px;
+padding:0px;
+}
+
+span {
+font-size:12px;
+font-family: "宋体","Verdana","Arial","Helvetica","sans-serif";
+}
+
+table{
+padding:0px;
+margin:0px;	
+}
+td {
+font-size:12px;
+font-family: "宋体","Verdana","Arial","Helvetica","sans-serif";
+}
+
+img {
+border:0px;
+margin:0px;
+padding:0px;
+}
+
+form {
+font-size:12px;
+margin:0px;
+padding:0px;
+}
+
+P {
+font-size:12px;
+font-family: "宋体","Verdana","Arial","Helvetica","sans-serif";
+margin:2px;
+}
+
+
+	A:link {text-decoration:none; color: black}
+	A:visited {text-decoration:none; color: #000000}
+	A:active {text-decoration:none;}
+	A:hover {text-decoration:none; color: #cccccc}
+
+#maintable{
+	margin-top: 15px;
+}
+
+
+.module{
+	/* border: 2px solid #ECECEC; */
+	background: #FFF;
+	margin: 5px;
+	
+	border : double  1px #cccccc  ;
+	overflow: hidden;
+}
+
+.moduleFrame{
+	border : 1px solid #79A7E2;
+	overflow: hidden;
+}
+
+.moduleHeader{
+	cursor: move;
+	
+
+	background-color: #D71920;
+	height:24px;
+	text-align:center;
+	vertical-align:middle;
+	font-weight: bold;
+	padding:0px 0px 0px 0px;
+
+	
+	overflow: hidden;
+	border-bottom : 1px solid #EEe9e0;
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	/* height: 1.8em; */
+		color:#ffffff;
+}
+.moduleHeader .showHide{
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	float: left;
+/*	padding: 2px 6px 2px 3px;*/
+	padding: 2px 0 0 2px;
+}
+.moduleHeader .title{
+	font-weight: bold;
+	padding-top: 2px;
+	line-height: 1.4em;
+		color:#ffffff;
+}
+.moduleHeader .title a{
+		color:#ffffff;
+}
+.moduleHeader .title a:hover{
+		color:#ffffff;
+}
+.moduleHeader .edit{
+	float: right;
+	padding: 2px 5px 0 5px;
+	cursor: pointer;
+}
+
+.moduleHeader .edit a{
+	color: #858585;
+	text-decoration: underline;
+	border-bottom: none;
+}
+
+.moduleHeader .edit a:hover{
+	color: #F60;	
+}
+.moduleHeader .close{
+	float: right;
+	padding: 2px 2px 2px 0;
+	cursor: pointer;
+}
+
+.moduleHeader .refresh{
+	float: right;
+	padding: 3px 5px 2px 0;
+	cursor: pointer;
+}
+
+.moduleContent{
+	clear: both;
+	padding: 7px;
+	background: #FFF;
+}
+
+.moduleGhost{
+	border: 1px dashed #F00;
+	margin: 2px;
+}
+
+#moduleGhost{
+	border: 1px dashed #F00;
+	margin: 2px;
+}
+
+
+.divColonne{
+	float:left;
+	overflow: hidden;
+}
+
+
+
+
+
+

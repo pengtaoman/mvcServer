@@ -57,7 +57,7 @@
       return res;
     };
 
-    $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json')
+    $http.get('/myAngular/app/bower_components/ui-grid/data/10000_complex.json')
       .success(function(data) {
         $scope.gridOptions.data = getData(data, page);
         ++page;
@@ -65,7 +65,7 @@
 
     $scope.gridOptions.onRegisterApi = function(gridApi){
       gridApi.infiniteScroll.on.needLoadMoreData($scope,function(){
-        $http.get('/mvc/resources/common/ui-grid/data/10000_complex.json')
+        $http.get('/myAngular/app/bower_components/ui-grid/data/10000_complex.json')
           .success(function(data) {
             $scope.gridOptions.data = getData(data, page);
             ++page;
