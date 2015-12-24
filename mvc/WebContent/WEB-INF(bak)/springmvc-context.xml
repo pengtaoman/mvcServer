@@ -16,7 +16,7 @@
 	<mvc:annotation-driven>
 	    
 		<mvc:message-converters>
-			<bean class="com.neusoft.crm.mvc.test.convert.MyConverter" />
+			<bean class="com.lilai.crm.mvc.test.convert.MyConverter" />
 		</mvc:message-converters>
 		 
 	</mvc:annotation-driven>

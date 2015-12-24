@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
+<!--<?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE tiles-definitions PUBLIC  
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
-	<!--  -->    
+	  
 	<definition name="mainpage" template="/WEB-INF/view/tdframework/mainpage.jsp"
-	        preparer="com.neusoft.tdframework.web.page.preparer.MainPagePreparer">
+	        preparer="com.lilai.framework.web.page.preparer.MainPagePreparer">
 	    <put-attribute name="htmlhead" value="mainpage.htmlhead" />
 		<put-attribute name="header" value="mainpage.header" />
 		<put-attribute name="menu" value="mainpage.menu" />
@@ -44,7 +44,7 @@
 	</definition>
 	
 	<definition name="loginpage" template="/WEB-INF/view/tdframework/login.jsp"
-	        preparer="com.neusoft.tdframework.web.page.preparer.MainPagePreparer">
+	        preparer="com.lilaiilai.framework.web.page.preparer.MainPagePreparer">
 	    <put-attribute name="htmlhead" value="mainpage.htmlhead" />
 		<put-attribute name="header" value="loginpage.header" />
 		<put-attribute name="body" value="loginpage.body" />
@@ -72,4 +72,4 @@
 	<definition name="loginpage.body.form.captcha" template="/WEB-INF/view/tdframework/loginpage_body_form_captcha.jsp">
 	</definition>
 	
-</tiles-definitions>  
+</tiles-definitions>  -->    
