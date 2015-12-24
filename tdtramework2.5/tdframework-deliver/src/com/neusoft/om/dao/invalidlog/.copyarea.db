@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\invalidlog
-2
-4
-11:InvalidLogVO.java|1|13b8966f801|3c6|c50038ee|abbc1559136e4cf79aef08e98be535e0|0
-16:InvalidLogDAOImpl.java|1|13b8966f7c3|1eb4|6b0dfbd5|54a0f15e9021419f987dcb6529a269a9|0
-12:InvalidLogDAO.java|1|13b8966f794|21e|82f8becb|d332119fa08c493ca2720c96b7f4fea2|0
-13:InvalidLogColl.java|1|13b8966f503|163|4bbc79a1|769999003aed4deb93d10e5136ea5e11|0

@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\systemoperate
-2
-4
-19:SystemOperateDAOImpl.java|1|13b8967253c|1d64|d1ef3adc|f4d281dbc0c6483f8770a3094b9f882d|0
-15:SystemOperateDAO.java|1|13b8967251c|64f|58b4bcb|f755064a3ee14b8697a2c28e25cd2b97|0
-16:SystemOperateColl.java|1|13b896724ed|32b|b6217ba|e83987cb3fe149fba86edcd3d45bfe90|0
-14:SystemOperateVO.java|1|13b8967258a|10c2|62a8796c|d263501b2a5247c8a7cb394471de4be7|0

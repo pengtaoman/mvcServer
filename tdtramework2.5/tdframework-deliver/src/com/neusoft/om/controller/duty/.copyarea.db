@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\controller\duty
-2
-4
-12:DutyTreeQuery.java|1|13b896697ee|a89|8938c805|070d8d8412b84c94adb27f7fbf9a94a4|0
-17:BaseDutyController.java|1|13b89669704|4fd|35229a63|f4eac17fb4664e27a5f7b573f1e74b02|0
-15:DutyPrivilegeGet.java|1|13b896697a0|784|482caaf1|c020cf61773b451a8d73e7b54a59fb1f|0
-18:DutyPrivilegeSubmit.java|1|13b896697bf|81f|c23e6cc|89d9993479c349438f8ccefe59dc35dd|0

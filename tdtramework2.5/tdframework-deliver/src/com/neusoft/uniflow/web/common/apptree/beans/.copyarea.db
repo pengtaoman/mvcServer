@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\common\apptree\beans
-2
-3
-14:ApplicationTree.java|1|13b8969c715|1f8d|19cd0821|a90a76ae5dd940aba975c6b104a593ec|0
-10:TreePrinter.java|1|13b8969c87c|16cc|e19c8a00|c122fd38c8e54b17ad82c623ea79e043|0
-14:ApplicationNode.java|1|13b8969c62b|10d3|541b399a|6f80ab44b82545239fd1ab862cb8bca8|0

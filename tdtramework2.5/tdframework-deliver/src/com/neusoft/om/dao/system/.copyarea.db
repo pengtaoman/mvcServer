@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\system
-2
-5
-11:SystemVOJson.java|1|13b896724bf|bd3|58e6bb16|16562c8b887742af81c0d49a754f4790|0
-e:SystemDAO.java|1|13b896722cb|ff5|b64fd808|9cebe983f3524063b51da9c28439fea6|0
-12:SystemDAOImpl.java|1|13b896723e4|9175|cc093723|1f498a9173b049169aa3cbd4128f22a5|0
-f:SystemColl.java|1|13b89672069|3f1|3dd44f50|f1d5b80f3ea84c93ae00522516443485|0
-d:SystemVO.java|1|13b89672442|1b0e|2f2ade79|f641bfaf5d3e4dc7976a6e908391367f|0

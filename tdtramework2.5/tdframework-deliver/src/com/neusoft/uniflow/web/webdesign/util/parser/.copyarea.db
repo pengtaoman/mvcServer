@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\webdesign\util\parser
-2
-4
-8:Sym.java|1|13b896b32ae|4e3|1fc5701d|af63394e439747599e6fc44019f175b8|0
-a:Lexer.java|1|13b896b30ab|609e|48c8435d|f4cacdc2e72e46228c82c651cc63b1b5|0
-b:Parser.java|1|13b896b31d3|d611|77fc57b7|4ebe4d89ab6842ce870986c0cdfd0bad|0
-1d:TransitionValidateAction.java|1|13b896b3399|6ee|2f8653f3|4fd0cf8bda364dc7b52f74ab873333c7|0

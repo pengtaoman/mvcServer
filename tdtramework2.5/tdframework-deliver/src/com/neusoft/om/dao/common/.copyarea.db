@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\common
-2
-4
-12:SwitchDAOImpl.java|1|13b8966c652|38ce|17ad98a2|ec10a9d64831419b93daf1740743fd44|0
-e:SwitchDAO.java|1|13b8966b75e|660|74cd3bf7|03062feb134f4ffbb5819b41bf1f92b9|0
-18:CommonExportDAOImpl.java|1|13b8966b5f6|b60|2468bda1|0dbda6b0065046ddb542be18f9aefe01|0
-14:CommonExportDAO.java|1|13b8966b5c7|375|d3cd7a44|5b3d68ac88494399a49432e04739fdb9|0

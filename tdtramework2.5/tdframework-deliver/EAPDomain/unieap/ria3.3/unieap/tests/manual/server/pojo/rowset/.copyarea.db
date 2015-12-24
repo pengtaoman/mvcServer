@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\server\pojo\rowset
-2
-4
-12:test_pojoPersis.js|1|13b8910127d|b45|c2d7a097|dee79198871a420290232ff343206857|0
-15:test_withCondition.js|1|13b89101423|b0c|fbcd884a|35d2793ef33b4edd9e9d3d0984ed077a|0
-16:test_withCondition.jsp|1|13b8910156b|ef7|d7894d4c|b2ceeda2ceee45a88f6b92b9c26d6ccf|0
-13:test_pojoPersis.jsp|1|13b891013a6|ff7|68069fc4|a8e22228876b44168b507fc9d03322a6|0

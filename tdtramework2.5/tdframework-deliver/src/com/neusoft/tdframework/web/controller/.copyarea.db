@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\web\controller
-2
-4
-13:ControllerData.java|1|13b896939e7|5b4|eda5fbb2|1112b6adc3b7488eaa7fd6b19978cbab|0
-13:BaseController.java|1|13b896937e4|819|c48617cf|992ca66b9cab4327bf09f69923586835|0
-18:UnValidateException.java|1|13b89693ad2|12b|5e55634b|d697a37de6194b319855784d3a997314|0
-17:BaseTestController.java|1|13b896938fd|7a9|25cf07|5391f1cfd2494c19928eba11992ef828|0

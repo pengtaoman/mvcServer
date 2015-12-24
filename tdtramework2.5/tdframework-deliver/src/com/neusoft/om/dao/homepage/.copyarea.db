@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\homepage
-2
-5
-14:HomePageDAOImpl.java|1|13b8966f3ac|1ffc|9c26ec93|5f489ee13435416e946ae953329c4933|0
-10:HomePageDAO.java|1|13b8966f36d|185|72d786a5|4f1ecc01801646aa9161838c5347c997|0
-14:MainContentColl.java|1|13b8966f3fa|17c|586f81ba|fdaeb3ec1592454ca935fddaf57170a7|0
-c:InputVO.java|1|13b8966f3db|1ad|b4a392e3|bb1377722a61412eb51c3ab40ef44224|0
-12:MainContentVO.java|1|13b8966f4e4|35d|400b24b4|9ea3f5df7e8a4da495f16fc4b53def44|0

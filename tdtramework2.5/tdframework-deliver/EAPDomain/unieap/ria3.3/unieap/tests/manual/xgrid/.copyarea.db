@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\manual\xgrid
-2
-5
-f:dataMulTitle.js|1|13b89104d29|13da42|ca50e750|629cb87670d340c99727944264b2e651|0
-5:basic|2|0|0|0|da5f844609a04ba0832bef5b66eba580|0
-7:data.js|1|13b891046b1|11e2b0|524cabf7|eb254d24e641459b8f60fca42cbc291c|0
-8:advanced|2|0|0|0|1e6671473c9547dfa1673749b87f349d|0
-1e:xgrid_displayFormatter_data.js|1|13b89104df5|44a|b1d85d5b|152c4276cdbe441099be631234e86a16|0

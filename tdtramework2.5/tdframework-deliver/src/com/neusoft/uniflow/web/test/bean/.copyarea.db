@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\test\bean
-2
-4
-15:ProcessEventTest.java|1|13b896acef2|398|f98a2bbd|4af2bb92499648f89860f0e2ae8fa0a5|0
-16:WorkItemEventTest.java|1|13b896ad059|327|8ef503b1|e0a6c04ce598459a93a89eacdfd77bb5|0
-16:ActivityEventTest.java|1|13b896ace27|3b3|57262bef|405593dce8e44724b50b3f11ff3ad06f|0
-e:DlTestVar.java|1|13b896ace94|1ef|b1dd93a4|827030710bb04569a3e4efb72576d0b9|0

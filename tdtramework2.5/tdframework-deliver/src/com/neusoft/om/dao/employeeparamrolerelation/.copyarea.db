@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\employeeparamrolerelation
-2
-4
-20:EmployeeParamRoleRelationVO.java|1|13b8966e89f|ff9|f0e4b2a8|2e4f7dde81e141608d2e90b914f1c35a|0
-25:EmployeeParamRoleRelationDAOImpl.java|1|13b8966e861|15d8|e45e60e2|7b5505ddb6a946a3b30cdaf7dcfda4a5|0
-21:EmployeeParamRoleRelationDAO.java|1|13b8966e832|61b|1b4a536e|72dc46e154a640f5b2188ee694ab1030|0
-22:EmployeeParamRoleRelationColl.java|1|13b8966e7e4|315|dcc842d3|635aeff60ba043c49c58e1581cf62f01|0

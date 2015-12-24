@@ -1,1 +1,0 @@
-dojo.provide("unieap.tests.robot.logic.tree.module");

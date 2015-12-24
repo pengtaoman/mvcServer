@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\webdesign\AttributeOperation\actions\exportXmlAction
-2
-3
-f:Base64Util.java|1|13b896adb75|697|35cf372f|4534ae7e231c4ecca959a989cd3ce65d|0
-14:ExportXmlAction.java|1|13b896adcfc|6cb|770e505f|2919419ca4524258bf784737c8fc90a2|0
-14:ExportJpgAction.java|1|13b896adc9e|6f1|50d7526d|061822e7e09448e2bbd1981bccbd79da|0

@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\powerlog
-2
-4
-14:PowerLogDAOImpl.java|1|13b89671aeb|2ef9|75519d95|1e7520f5bf2247c8abcbe369b432e65d|0
-10:PowerLogDAO.java|1|13b89671aac|349|b2912915|70d19531d4cc43c9b111e5cc3a923e0d|0
-11:PowerLogColl.java|1|13b89671a8d|151|967b7317|8a697cb6400c42b696caf6ead1d87b52|0
-f:PowerLogVO.java|1|13b89671b0a|111c|9bc7753f|469d3080c0494d5ca46988c5f6d8840b|0

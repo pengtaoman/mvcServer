@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\management\worktimemgt\actions
-2
-5
-1d:WorktimePeriodListAction.java|1|13b896a9b6e|1f18|6edf1380|cefbb2faa35a4433a61b14672feb747a|0
-1d:AddDefaultWorkTimeAction.java|1|13b896a9822|ed0|4cfd241a|34e8de4b5add44f09d702fbbc808a6ac|0
-1d:EditWorktimePeriodAction.java|1|13b896a99d8|13a5|144180fc|496670fc5b274d8290b76628b39d6ed2|0
-1e:DefaultWorktimeListAction.java|1|13b896a98ee|199b|6247389d|ca2418bebb4d476fb51fae163f3655d8|0
-1c:AddWorktimePeriodAction.java|1|13b896a9890|1482|20f0f666|a54fc12bdb6f4e28bca7881a95e5c9a0|0

@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\webdesign\AttributeOperation\util\otherAttrSave
-2
-5
-11:ProcAttrSave.java|1|13b896b05e1|10b2|5b99822a|a505a0c7fd2b4c1e806293943485028f|0
-11:DataAttrSave.java|1|13b896b0574|679|7e4b0fbe|bd2e10108abb4020a7c086ae444de2be|0
-18:WorkflowResAttrSave.java|1|13b896b0748|20f|766b3dd|0811c2e5696742b68ef8b971e9e8b58c|0
-10:AppAttrSave.java|1|13b896b0516|6a8|e9e72591|0e10eae7047d43a08b10738b0baba3e0|0
-17:TransitionAttrSave.java|1|13b896b064e|fdf|5cf935a|90802add13a44deeacdd109b0aae375f|0

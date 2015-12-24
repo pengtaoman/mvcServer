@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\management\procdefmgt\actions
-2
-4
-1c:ProcVerManagementAction.java|1|13b896a820a|ba6|bcdf102|63af455c9db748cdabb587acfef615ba|0
-16:ProcDefListAction.java|1|13b896a817d|955|c7f11603|c4b0cbf47d45423a8ade0722aa0ad113|0
-1b:CategoryResourceAction.java|1|13b896a80e1|1138|aa64965e|7a4af8899b6a456e96a4a90e4bd1a1a3|0
-1a:CategoryManagerAction.java|1|13b896a8083|2bc7|d33c6ce4|d489bc6b8a3e4d218e55e17a5508d0b4|0

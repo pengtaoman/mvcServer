@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\quartz\data
-2
-3
-e:TriggerVO.java|1|13b8969b2a3|4c5|a52b8873|c2ba4acc3dff42ea9cb952acaa341fe5|0
-a:JobVO.java|1|13b8969b13b|40b|5684445|9d0148c2b4d641428cebe0ee6772c8de|0
-10:SchedulerVO.java|1|13b8969b235|595|f902c05a|4cb6525b5b6b443692154c9f0ee012c0|0

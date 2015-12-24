@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\paramrole
-2
-4
-15:ParamRoleDAOImpl.java|1|13b89671926|3af6|4928500d|25e3d3019d6649ab8f4ba71b5405aa83|0
-12:ParamRoleColl.java|1|13b896716f3|393|99f75b2e|cfc7a1b2f45541debf2720f3f5d5e95b|0
-11:ParamRoleDAO.java|1|13b8967182c|a2e|53cccb0e|d3cd3e3b7f094718a660cea3bf3e5aff|0
-10:ParamRoleVO.java|1|13b89671964|1147|4659c469|6fdeb21f698a419f87b7ae9bca656525|0

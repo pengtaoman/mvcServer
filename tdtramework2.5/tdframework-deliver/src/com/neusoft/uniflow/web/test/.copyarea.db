@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\test
-2
-5
-c:AppTest.java|1|13b896aca2f|2e9|5ff7fe76|fb57676b6aa741b08f93c382774c4634|0
-7:actions|2|0|0|0|23d3587c874f430284d785cef8ae4399|0
-5:forms|2|0|0|0|aaf3bb6c348c4ac0af0e33961db7e559|0
-d:VappTest.java|1|13b896acb0a|3a2|9f4e3e97|87603a0a510545a0ab02078a77d16e9c|0
-4:bean|2|0|0|0|ce9e899540b34f568a41db2fa490ee5e|0

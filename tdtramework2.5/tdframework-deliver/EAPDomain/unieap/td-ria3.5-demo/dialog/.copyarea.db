@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\td-ria3.5-demo\dialog
-2
-5
-f:crm-message.jsp|1|13b89632949|352|67eb02e5|2fd1ca37ada145ef892aa7d36f353a0e|0
-11:dialog-window.jsp|1|13b896326f7|4d8|7ba69f17|65a2dfb2fc4c4e40a71de3afd3557ec9|0
-f:dialog-util.jsp|1|13b89632801|1d8|27148fe8|65f0e8063c834c2d8a2d7575bf123879|0
-12:dialog-message.jsp|1|13b8963287e|c55|47a945bd|6b2f623532474a1590e0f7a5d13e4cf1|0
-c:dialog01.jsp|1|13b896328eb|45e|c83c5e25|5c13fb5df40b4a6399be811ebcf80fff|0

@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\menu
-2
-4
-10:MenuDAOImpl.java|1|13b89670501|17513|507bf7b5|f4c1a996f3e04e699c4d55cc98965971|0
-c:MenuDAO.java|1|13b8967038a|1fdc|6e50bd64|ef5861d3b64f4571a26122c23f0be79a|0
-d:MenuColl.java|1|13b89670158|305|8361ef47|9cb156d17527490da2e06aa7a8c55e37|0
-b:MenuVO.java|1|13b89670649|3310|e3ae3009|7d8154e32861403e91c1d2640956fabe|0

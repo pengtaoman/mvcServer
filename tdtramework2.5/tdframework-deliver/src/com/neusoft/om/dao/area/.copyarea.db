@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\area
-2
-4
-10:AreaDAOImpl.java|1|13b8966ae74|dadc|4d35b029|d5c2e747316c470ebb97f9f67d31cec3|0
-c:AreaDAO.java|1|13b8966ac80|1906|cec6f2e6|7199563378584407a45bfe69c80cfc52|0
-b:AreaVO.java|1|13b8966aeb3|16ff|57bd1016|d77374d1597642e1852fb07504347f87|0
-d:AreaColl.java|1|13b8966ab86|3a1|d5bb1c1b|bfc81da4c3554aa881d19e8dc24249ef|0

@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\error\dao
-2
-3
-d:ErrorDAO.java|1|13b896998e1|259|b457cffd|ecb5dd6c9ffe4ae0bda7c8eae6002f68|0
-c:ErrorVO.java|1|13b8969994e|764|e0349204|a85405e38cca4daf95639c36d74d61d7|0
-e:ErrorColl.java|1|13b89699864|38e|210c32bd|ac0b58ca58b14c7ba138a22c67850db2|0

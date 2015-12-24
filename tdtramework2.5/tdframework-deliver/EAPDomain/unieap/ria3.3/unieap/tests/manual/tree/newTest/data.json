@@ -1,9 +1,0 @@
-[{data:{id:'01',text:'01'},children:[
-	{data:{text:'01-01',leaf:true}},
-	{data:{text:'01-02'},children:[
-	{data:{text:'01-02-01',leaf:true}},
-	{data:{text:'01-02-02',leaf:true}}]},
-	{data:{text:'01-03',leaf:true}}]},
-	{data:{text:'02',leaf:true}},
-	{data:{text:'03',leaf:false}}
-]

@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\checkPerson
-2
-3
-13:CheckPersonDAO.java|1|13b8966b4cd|567|1e16ba3a|48257cd13b324d84b345ed3a2869b221|0
-12:CheckPersonVO.java|1|13b8966b53b|bfb|2f096375|4447b86b8060408595a4d382ccb3edfa|0
-17:CheckPersonDAOImpl.java|1|13b8966b4fc|1d9d|b4598d28|0f2b648e081d4d60a65b7140e64153ee|0

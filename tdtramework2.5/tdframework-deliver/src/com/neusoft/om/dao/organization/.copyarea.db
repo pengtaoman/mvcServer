@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\organization
-2
-4
-18:OrganizationDAOImpl.java|1|13b89674f4a|6271|b78324d8|1b9fb60a04c748faaffeef523d3dedb0|0
-c:OrganVO.java|1|13b8967475a|d72|12cd8902|8af7894b55604667b512397be1f1ed6d|0
-e:OrganColl.java|1|13b896745e3|2fa|a348e913|ff150ced6a9849c8a2b66f27464b2e21|0
-d:OrganDAO.java|1|13b89674a77|ff5|f8bbd9f4|a6b89794e3e84f238894e5a1cd7aaf99|0

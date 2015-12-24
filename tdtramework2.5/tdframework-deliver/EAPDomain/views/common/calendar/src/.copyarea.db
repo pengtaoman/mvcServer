@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\views\common\calendar\src
-2
-4
-8:utils.js|1|13b89633c06|4d09|ab26333|ccda22ad8d4c4f04919e53548ca08f4c|0
-b:calendar.js|1|13b89633b89|17be1|c2a41b2|05538ee713df4b38b068c157c632119c|0
-11:calendar-setup.js|1|13b89633b3b|2c39|5e52ec41|8773ba5c23a447c88933e866d81df4e0|0
-b:tooltips.js|1|13b89633bc8|1869|a8edce2b|d6f6c8b719534bed8066892119f84199|0

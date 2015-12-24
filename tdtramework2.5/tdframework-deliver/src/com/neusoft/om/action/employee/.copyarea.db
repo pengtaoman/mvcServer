@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\action\employee
-2
-3
-1c:EmployeeMaintanceAction.java|1|13b89666d72|1eec2|135677d1|5d26994803bf4afcae443589121e7ad2|0
-1e:EmployeePowerAdjustAction.java|1|13b89666db1|1c59|664ae1b4|87cafade13094064a80974fc212c4eb7|0
-18:EmployeeQueryAction.java|1|13b89666ee9|6200|768b5804|66c435fa0bda4d969df7bf76b493c3f0|0

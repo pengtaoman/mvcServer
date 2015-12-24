@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\support\favorite\controller
-2
-5
-17:FavoriteMenuDelete.java|1|13b896917c9|861|7a180444|5ef1a81979a448e6ad88548aa60f2f89|0
-1f:BaseFavoriteMenuController.java|1|13b896915c5|4b0|62499495|b77c30e56dc8436eb3385ad188900265|0
-17:FavoriteMenuModify.java|1|13b89691930|ba8|1d6725c7|f9a133c266044608b3ed7f48397ce9e0|0
-14:FavoriteMenuAdd.java|1|13b896916a0|9ee|28c78a70|3fa7b342d95a4543a330a47f1908547d|0
-1a:FavoriteMenuListQuery.java|1|13b89691836|92d|91c648af|e874089da8ec4f25a5d281ad3df73398|0

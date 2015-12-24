@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\funcrole
-2
-4
-10:FuncRoleDAO.java|1|13b8966efd3|b2c|c7c828dc|f327cb41309343c281139b3e0ea3d7d3|0
-14:FuncRoleDAOImpl.java|1|13b8966f021|363e|23e5c043|51f0bde8f34d4b1db295e5abd1524a82|0
-f:FuncRoleVO.java|1|13b8966f050|e08|3157b5f8|bc615056a5024c319645e32e581d6506|0
-11:FuncRoleColl.java|1|13b8966efa4|2c6|1253f092|834b776df4d0413c8dc5b270d899feff|0

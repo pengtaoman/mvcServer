@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\EAPDomain\unieap\ria3.3\unieap\tests\robot\ui\grid\unitedCell
-2
-3
-21:test_grid_unitedCellWithEdit.html|1|13b8910e214|177b|b8730037|17c7654c7a8648c88c4f88b16c235fea|0
-7:data.js|1|13b8910e12a|a987|b970061e|a2c8327ec85743bcaf1b158e2ebcf3fc|0
-19:test_grid_unitedCell.html|1|13b8910e1a7|a3e|68dc3de2|10ec81edb4e348e99b97f83c629083b9|0

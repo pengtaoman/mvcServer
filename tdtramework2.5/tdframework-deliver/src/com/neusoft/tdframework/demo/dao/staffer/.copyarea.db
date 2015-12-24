@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\demo\dao\staffer
-2
-4
-15:OptrMaintDaoImpl.java|1|13b8968fcbf|37e8|cef771fc|6e4040cdb777462e969ce968847956cd|0
-d:Employee.java|1|13b8968f82b|5fd|5c60c44c|9927adb5c6e04b86a903f891e1fe97f0|0
-11:OptrMaintDao.java|1|13b8968f9d1|478|8a4c8a59|d6e8c11dd9a943a9871138ca2e840fc7|0
-f:EmployeeVO.java|1|13b8968f898|fc0|4bdbd16a|b014625ef3ac45b589fe5f9726314fba|0

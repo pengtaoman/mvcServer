@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\omswitch
-2
-4
-10:OmSwitchDAO.java|1|13b89670a8f|12d9|ad7ddfc9|1d5ba095b38e438eb1e13567f41a9ba2|0
-f:OmSwitchVO.java|1|13b89670abe|d21|9641818a|314d54d27ea043e8bb07f421434caa31|0
-11:OmSwitchColl.java|1|13b89670a70|21a|3460b312|241fbbcdac134679ae9a2f853763dade|0
-14:OmSwitchDAOImpl.java|1|13b89670aae|66f3|d02114ec|7cb7d04f697e45c58ca4f529965c92ee|0

@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\tdframework\dao\jdbchandler
-2
-5
-15:JdbcTemplatePlus.java|1|13b89695d8d|2225|7658914c|107a7e17bee1454f9d7bb297067cfa55|0
-1b:StoredProcedureHandler.java|1|13b89695e48|29f|cc9a149f|a11eed30295f48f5816d8b7c6d6797a1|0
-15:ResultSetHandler.java|1|13b89695dea|329|22e361fd|9f8e125e6f8d406180aca210ac44cd9e|0
-17:BatchUpdateHandler.java|1|13b89695b89|286|80980b2e|7d662d2bf0de4b79bfc1fcd0600a1129|0
-10:JdbcHandler.java|1|13b89695c73|39e1|82f5ed66|40377b588ee14d6bb1f6ed616357b7c7|0

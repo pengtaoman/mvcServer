@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\dutyrolerelation
-2
-4
-17:DutyRoleRelationVO.java|1|13b8966d8d0|850|1eddd2d8|9f021569d5f543d687bf480825cecf4a|0
-18:DutyRoleRelationDAO.java|1|13b8966d873|6a0|41835820|beac87e1d1df4e41adbf0ca46c31d0ed|0
-19:DutyRoleRelationColl.java|1|13b8966d73a|259|8ab0c993|3b28f21abe5f4308a2292b19654c5ad6|0
-1c:DutyRoleRelationDAOImpl.java|1|13b8966d8a2|1fa3|f1613cc5|a9bb0c59926e4156ab88d473d46f2223|0

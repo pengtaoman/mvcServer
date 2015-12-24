@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\conf\cache
-2
-5
-10:cache-config.xsd|1|13b896b7e5d|3b8|e9f93263|72bfa5fa67154f8dac8426cb16c38ffb|0
-10:cache-config.xml|1|13b896b73bf|292|13f1f20b|19ebbe3f9d564deeb72bd65c102d5f17|0
-1c:cache-config-tdframework.xml|1|13b896b75b3|5bc|cac33af|9dd5c88188af45dea4b5fbe6b718df04|0
-1c:cache-config-contextpath.xsd|1|13b896b7739|d35|7f5a3bae|69a8b9a3d41848e69cec66f1c842f7b8|0
-15:cache-config-crm1.xml|1|13b896b742c|575|30431d78|6cea5dee0fa34d8e871f068c8580b5cf|0

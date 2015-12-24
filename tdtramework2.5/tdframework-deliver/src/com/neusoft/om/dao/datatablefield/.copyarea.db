@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\datatablefield
-2
-4
-1a:DataTableFieldDAOImpl.java|1|13b8966ce70|6be|37ce3f15|d76300e7252e4685b21319bc9de227c9|0
-16:DataTableFieldDAO.java|1|13b8966ce41|329|34920aa1|2bbc0e721c3e42feabd7d58c77c86719|0
-17:DataTableFieldColl.java|1|13b8966ce22|3bf|b8ab4581|4f918b37a01242ac8ba1ccdb20184ee9|0
-15:DataTableFieldVO.java|1|13b8966ce9f|1cc4|df44ce2b|9d6e2f283e6a4b399b8bf62e9854c069|0

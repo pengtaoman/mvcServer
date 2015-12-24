@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\employeepower
-2
-4
-14:EmployeePowerVO.java|1|13b8966ec59|2a2f|c64481c0|8bc2a8514b9140a28ee9792cca63369d|0
-19:EmployeePowerDAOImpl.java|1|13b8966ec2a|a07|3e650a4|fba2704628d14dd8ba2f75416f3cf1db|0
-16:EmployeePowerColl.java|1|13b8966e8fd|23f|f2e9be55|cf41b1e7b9a148b692bb599d3ebf45bb|0
-15:EmployeePowerDAO.java|1|13b8966eb20|4b6|c357ba8a|2462dc562a6b43a4a433d5a522b98026|0

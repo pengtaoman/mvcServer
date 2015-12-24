@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\dictionary
-2
-3
-18:OMDictionaryDAOImpl.java|1|13b8966d3df|740f|a9d28a27|a601d6dc13ee4242853457a944bb21b8|0
-14:OMDictionaryDAO.java|1|13b8966d2a6|f87|bfcb85d0|2254f60e2cb9403fb9bcb815dba98bc5|0
-11:OMDictionary.java|1|13b8966d277|1d8e|87c766ca|cbde4518707549d6887ae7712ddd948b|0

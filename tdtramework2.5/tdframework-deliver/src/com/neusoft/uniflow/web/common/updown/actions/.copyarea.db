@@ -1,7 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\uniflow\web\common\updown\actions
-2
-3
-3:CVS|2|0|0|0|a456fd80bed94af78feb0ad70f29d55b|0
-17:FileDownloadAction.java|1|13b8969f8b5|a5a|a1815d52|53608319b38349dc91817dcaedbea0fb|0
-16:FileUploadsAction.java|1|13b8969fa3b|b74|1448a635|cd3eb19cc12d46bdb38baaad00bebc61|0

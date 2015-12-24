@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-TDFramework2.5\TDFramework2.5_Src\src\com\neusoft\om\dao\role
-2
-4
-10:RoleDAOImpl.java|1|13b89671f50|698a|1ca24755|e4312b55acbd4c299121d25f36e8e87b|0
-d:RoleColl.java|1|13b89671df8|39b|e6b130b4|edc5298fc8bc4a79a5532c49a22a948c|0
-b:RoleVO.java|1|13b89671fcd|1f9d|acb5e5b3|68385820686a41a5970f1b4a51a7cc85|0
-c:RoleDAO.java|1|13b89671e56|137d|ea3a1c7f|8515a81dbce844e48b9cc60e05a1b39d|0
