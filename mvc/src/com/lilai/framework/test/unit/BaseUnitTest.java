@@ -4,6 +4,7 @@ package com.lilai.framework.test.unit;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.TestExecutionListeners;
@@ -48,9 +49,17 @@ public class BaseUnitTest {
 	@Before
 	public void setUp() {
 
+		OpenEntityManagerInViewFilter openEntityManagerInViewFilter = new OpenEntityManagerInViewFilter();
+		openEntityManagerInViewFilter.setEntityManagerFactoryBeanName("entityManagerFactory");
+		openEntityManagerInViewFilter.setServletContext(wac.getServletContext());
+		
+		System.out.println("???????????????  wac.getServletContext() :: " + wac.getServletContext());
+		//wac.getServletContext().addFilter("openEntityManagerInViewFilter", "org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter").addMappingForUrlPatterns(null, true, "/*");;
 		mockMvc = MockMvcBuilders
 				.webAppContextSetup(wac)
+				.addFilter(openEntityManagerInViewFilter, "/*")
 				.apply(SecurityMockMvcConfigurers.springSecurity())
+				
 				.build();
 
 	}

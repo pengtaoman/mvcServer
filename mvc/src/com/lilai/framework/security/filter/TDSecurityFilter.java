@@ -1,6 +1,8 @@
 package com.lilai.framework.security.filter;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.security.Principal;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -71,17 +73,30 @@ public class TDSecurityFilter  extends GenericFilterBean {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filterChain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		System.out.println("????????????????????? doFilter :: " + request.getParameter("name"));
-		//if ()
+		 
 		WebApplicationContext wtc = WebApplicationContextUtils.getWebApplicationContext(request.getServletContext());
 		SessionRegistry ss = wtc.getBean(SessionRegistry.class);
+ 
+		boolean isAjax = "XMLHttpRequest".equals(((HttpServletRequest)request).getHeader("x-requested-with"));
+		System.out.println("################## TDSecurityFilter isAjax ######### " + (isAjax));
+		Principal principal = ((HttpServletRequest)request).getUserPrincipal();
+		 
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		boolean isAuthenticated = (authentication == null?false:authentication.isAuthenticated());
+
 		
-		System.out.println("????????????????????? TDSecurityFilter doFilter :: " + new Gson().toJson(ss.getAllPrincipals()));
+		if (!isAuthenticated && isAjax) {
+			String jsonObject = "error:302";
+			//String contentType = "application/json";
+			//response.setContentType(contentType);
+			PrintWriter out = response.getWriter();
+			out.print(jsonObject);
+			out.flush();
+			out.close();
+			return;
+		}
 		
-		//System.out.println("????????????????????? TDSecurityFilter getAuthenticationManager :: " + this.getAuthenticationManager().getClass().getName());
-		((HttpServletRequest)request).getUserPrincipal();
-		if ("ali".equals(request.getParameter("username"))) {
+		if (!isAuthenticated && "ali".equals(request.getParameter("username"))) {
 			User us = new User();
 			us.setId(1000000009L);
 			us.setLastname("ali");

@@ -78,7 +78,7 @@ public class OmMenuT implements Serializable {
 
 
 	//bi-directional many-to-one association to OmSystemT
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)  //http://stackoverflow.com/questions/13459718/could-not-serialize-object-cause-of-hibernateproxy
 	@JoinColumn(name="F_SYSTEM_ID")
 	private OmSystemT omSystemT;
 

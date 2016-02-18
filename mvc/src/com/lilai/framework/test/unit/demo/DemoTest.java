@@ -31,17 +31,25 @@ public class DemoTest extends BaseUnitTest{
 	}
 	
 	@Test  
-	@WithMockUser("ali")
+	@WithMockUser(roles="tduser")
 	public void testControl() throws Exception {  
+		
+		MockHttpServletRequestBuilder mb = MockMvcRequestBuilders.get("/hello11.do");
+		//mb.buildRequest(this.wac.getServletContext());
+		
 	    //mockMvc.perform(MockMvcRequestBuilders.get("/helloWorld/mamamyu"));  
-		ResultActions ra = mockMvc.perform(MockMvcRequestBuilders.post("/hello11.do")); 
-		System.out.println("++++++++++++++++++++++++++++++++++++++" + ra.getClass().getSimpleName());
+		System.out.println("++++++++++++++++++++++++++++++++++++++" + this.wac.getServletContext());
+		ResultActions ra = mockMvc.perform(mb); 
+		
+		
 	}  
 	
 	@Test  
+	@WithMockUser(roles="tduser")
 	public void testControl22() throws Exception {  
 	    //mockMvc.perform(MockMvcRequestBuilders.get("/helloWorld/mamamyu"));  
-	    mockMvc.perform(MockMvcRequestBuilders.post("/hello22")); 
+		ResultActions rsa = mockMvc.perform(MockMvcRequestBuilders.get("/getMenu")); 
+		//rsa.
 	}  
 	
 	@Test

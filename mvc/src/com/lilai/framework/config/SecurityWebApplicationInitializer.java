@@ -1,30 +1,29 @@
 package com.lilai.framework.config;
-//package com.lilai.tdframework.config;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//import javax.servlet.FilterRegistration;
-//import javax.servlet.ServletContext;
-//import javax.servlet.ServletException;
-//
-//import org.apache.logging.log4j.web.Log4jServletContextListener;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.annotation.Configuration;
-//import org.springframework.security.core.session.SessionRegistry;
-//import org.springframework.security.core.session.SessionRegistryImpl;
-//import org.springframework.security.web.FilterChainProxy;
-//import org.springframework.security.web.SecurityFilterChain;
-//import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
-//import org.springframework.security.web.session.ConcurrentSessionFilter;
-//import org.springframework.security.web.session.HttpSessionEventPublisher;
-//import org.springframework.web.context.WebApplicationContext;
-//import org.springframework.web.context.support.WebApplicationContextUtils;
-//import org.springframework.web.filter.CharacterEncodingFilter;
-//import org.springframework.web.filter.DelegatingFilterProxy;
-//import org.springframework.web.multipart.support.MultipartFilter;
-//import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-//
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.FilterRegistration;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
+import org.apache.logging.log4j.web.Log4jServletContextListener;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.session.SessionRegistry;
+import org.springframework.security.core.session.SessionRegistryImpl;
+import org.springframework.security.web.FilterChainProxy;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+import org.springframework.security.web.session.ConcurrentSessionFilter;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.DelegatingFilterProxy;
+import org.springframework.web.multipart.support.MultipartFilter;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
 //import com.lilai.tdframework.security.filter.TDSecurityFilterChain;
 //import com.lilai.tdframework.web.config.WebConfig;
 //
@@ -80,6 +79,6 @@ package com.lilai.framework.config;
 //	protected boolean enableHttpSessionEventPublisher() {
 //		return true;
 //	}
-//
-//
+
+
 //}

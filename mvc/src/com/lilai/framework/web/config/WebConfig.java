@@ -47,6 +47,9 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.TypeAdapter;
+import com.lilai.framework.web.adapter.HibernateProxyTypeAdapter;
 import com.lilai.framework.web.handler.TDHandlerMethodReturnValueHandler;
 import com.lilai.framework.web.handler.TdHandlerInterceptor;
 import com.lilai.framework.web.resolver.TDEcxeptionResolver;
@@ -156,8 +159,18 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
 		requestMappingHandlerAdapter.setIgnoreDefaultModelOnRedirect(true);
 		List<HttpMessageConverter<?>> lst = new ArrayList<HttpMessageConverter<?>>();
-		lst.add(new GsonHttpMessageConverter());
+		
+		GsonHttpMessageConverter gsc = new GsonHttpMessageConverter();
+		
+		GsonBuilder b = new GsonBuilder();
+		b.registerTypeAdapterFactory(HibernateProxyTypeAdapter.FACTORY);
+		Gson gson = b.create();
+		gsc.setGson(gson);
+		lst.add(gsc);
 		requestMappingHandlerAdapter.setMessageConverters(lst);
+		
+		//HibernateProxyTypeAdapter aa;
+		//TypeAdapter tt;
 		return requestMappingHandlerAdapter;
 		
 	}

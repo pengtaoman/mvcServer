@@ -24,7 +24,7 @@ public class TdHandlerInterceptor implements HandlerInterceptor{
 			ModelAndView modelAndView) throws Exception {
 		// TODO Auto-generated method stub
 		response.setHeader("X-Frame-Options", "SAMEORIGIN");
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@  postHandle postHandle postHandle postHandle postHandle postHandle" + modelAndView.getViewName());
+		//System.out.println("@@@@@@@@@@@@@@@@@@@@@  postHandle postHandle postHandle postHandle postHandle postHandle" + modelAndView.getViewName());
 	}
 
 	@Override

@@ -35,7 +35,7 @@ public class BaseDAO extends ApplicationObjectSupport {
 	
 	protected Session getHibernateSession() {
 		Session session = em.unwrap(org.hibernate.Session.class);
-		em.close();
+		//em.close();
 		return session;
 	}
 	

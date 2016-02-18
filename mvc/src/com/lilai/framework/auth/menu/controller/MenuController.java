@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.hibernate.Hibernate;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,8 +37,9 @@ public class MenuController extends BaseController {
 	@ResponseBody
 	public List<OmMenuT> getMenu(Model mode) {
 		logger.trace("++++++++++++++++++@@getMenu +++++++d001+++++++");
-
-		return this.getService(MenuService.class).getMenu();
+		List<OmMenuT> lst = this.getService(MenuService.class).getMenu();
+		Class os = Hibernate.getClass(lst.get(0).getOmSystemT());
+		return lst;
 	}
 	
 	@RequestMapping(value = "/getEmp", method = RequestMethod.GET,  produces=MediaType.APPLICATION_JSON_VALUE)

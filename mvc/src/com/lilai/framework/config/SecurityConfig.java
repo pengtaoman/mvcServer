@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.orm.hibernate4.support.OpenSessionInViewFilter;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
@@ -38,6 +39,7 @@ import org.springframework.security.web.authentication.session.ConcurrentSession
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy;
+import org.springframework.security.web.authentication.switchuser.SwitchUserFilter;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.security.web.context.SecurityContextPersistenceFilter;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
@@ -48,6 +50,8 @@ import org.springframework.web.filter.DelegatingFilterProxy;
 import com.lilai.framework.config.AppConfig;
 import com.lilai.framework.security.filter.TDCaptchaFilter;
 import com.lilai.framework.security.filter.TDSecurityFilter;
+import com.lilai.framework.security.handler.XMLHttpRequestAccessHandler;
+import com.lilai.framework.security.handler.XMLHttpRequestLoginFailerHandler;
 import com.lilai.framework.security.provider.TDAuthenticationManager;
 import com.lilai.framework.security.provider.TDUserAuthenticationProvider;
 import com.lilai.framework.security.service.TDUserDetailService;
@@ -100,6 +104,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		//web.
 		
 		System.out.println(">>>>>>>>>>>>>>>>>>>>  SECURITY ORDER 333333333333333333333333333333333");
+	
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -109,17 +114,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.addFilterBefore(concurrentSessionFilter(), TDSecurityFilter.class);
 		http.addFilterBefore(new TDCaptchaFilter(), ConcurrentSessionFilter.class);
 		
+//		OpenSessionInViewFilter openSessionInViewFilter = new OpenSessionInViewFilter();
+//		openSessionInViewFilter.setSessionFactoryBeanName("entityManagerFactory");
+//		http.addFilterAfter(openSessionInViewFilter, SwitchUserFilter.class);
+		
 		http.csrf().disable().authorizeRequests()
 		        .antMatchers("/**").hasRole("tduser")
 		        //.antMatchers("/app01/**").access("hasRole('ADMIN') and hasRole('DBA')")
 		        .anyRequest().authenticated()
 				.and()
-				.formLogin().loginPage("/main/tdlogin")
+				.formLogin()
+				//.failureHandler(xmlHttpRequestLoginFailerHandler())
+				.loginPage("/main/tdlogin")
 				.defaultSuccessUrl("/main")
 				.loginProcessingUrl("/main/login")
+				//if failureHandler has been configged,failureUrl would be disabled.
 				.failureUrl("/main/tdlogin?loginfailureUrl")
 				.and()
-				.exceptionHandling().accessDeniedPage("/main/tdlogin"); 
+				.exceptionHandling()
+				//.accessDeniedHandler(xmlHttpRequestAccessHandler())
+				.accessDeniedPage("/main/tdlogin?access-denied")
+				; 
 		
 		http.sessionManagement().sessionFixation().newSession()//.changeSessionId()
 		        .sessionAuthenticationStrategy(compositeSessionAuthenticationStrategy())
@@ -218,9 +233,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		 return new TDUserAuthenticationProvider();
 		 
 	}
+	
+	@Bean
+	public XMLHttpRequestAccessHandler xmlHttpRequestAccessHandler() {
+		return new XMLHttpRequestAccessHandler();
+	}
 
 
-
+	@Bean
+	public XMLHttpRequestLoginFailerHandler xmlHttpRequestLoginFailerHandler() {
+		return new XMLHttpRequestLoginFailerHandler();
+	}
 	
 
 }

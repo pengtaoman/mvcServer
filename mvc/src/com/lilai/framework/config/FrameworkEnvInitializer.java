@@ -6,6 +6,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javax.servlet.Filter;
+import javax.servlet.FilterRegistration;
 
 import org.sitemesh.config.ConfigurableSiteMeshFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
+import org.springframework.orm.hibernate4.support.OpenSessionInViewFilter;
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.security.web.FilterChainProxy;
 import org.springframework.security.web.SecurityFilterChain;
@@ -66,8 +68,15 @@ public class FrameworkEnvInitializer extends
 		
 //		ConfigurableSiteMeshFilter cc = new ConfigurableSiteMeshFilter();
 //		cc.init(filterConfig);
+		
+	    //如果在service层hibernate session，在view层或ut层session会置空，导致异常
+//		OpenSessionInViewFilter openSessionInViewFilter = new OpenSessionInViewFilter();
+//		openSessionInViewFilter.setSessionFactoryBeanName("entityManagerFactory");
+		OpenEntityManagerInViewFilter openEntityManagerInViewFilter = new OpenEntityManagerInViewFilter();
+		openEntityManagerInViewFilter.setEntityManagerFactoryBeanName("entityManagerFactory");
         return new Filter[]{
         		new DelegatingFilterProxy("springSecurityFilterChain"),
+        		openEntityManagerInViewFilter
         	//	new ConfigurableSiteMeshFilter()
               //,new OpenEntityManagerInViewFilter()
               };

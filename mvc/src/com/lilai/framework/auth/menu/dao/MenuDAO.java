@@ -16,7 +16,18 @@ public class MenuDAO  extends BaseDAO{
 	}
 	
 	public List<OmMenuT> getMenu() {
-		return this.getHibernateSession().createQuery("SELECT o FROM OmMenuT o").list();
+		List<OmMenuT> lst = this.getHibernateSession().createQuery("SELECT o FROM OmMenuT o").list();
+		for (OmMenuT m : lst) {
+			this.getHibernateSession().update(m.getOmSystemT());
+		}
+		
+		return lst;
+	}
+	
+	public OmMenuT loadMenu(String id) {
+		OmMenuT mm = (OmMenuT) this.getHibernateSession().load(OmMenuT.class, id);
+		String sName = mm.getOmSystemT().getFSystemName();
+		return mm;
 	}
 	
 }

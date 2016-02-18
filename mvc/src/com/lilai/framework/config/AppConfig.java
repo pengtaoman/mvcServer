@@ -30,10 +30,11 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 import org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.support.RequestDataValueProcessor;
 
 import com.lilai.framework.base.BaseController;
-import com.lilai.framework.web.config.TDRequestDataValueProcessor;
+//import com.lilai.framework.web.config.TDRequestDataValueProcessor;
 import com.lilai.framework.web.config.WebConfig;
 import com.lilai.framework.web.controller.TDWebController;
 
@@ -75,6 +76,12 @@ public class AppConfig  extends ApplicationObjectSupport{
 		return new ConcurrentMapCacheManager();
 	}
 
-	
+	@Bean
+	public CommonsMultipartResolver multipartResolver(){
+		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
+	    commonsMultipartResolver.setDefaultEncoding("utf-8");
+	    commonsMultipartResolver.setMaxUploadSize(50000000);
+	    return commonsMultipartResolver;
+	}
 
 }

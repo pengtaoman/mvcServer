@@ -2,6 +2,7 @@ package com.lilai.framework.config;
 
 import java.util.Set;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
@@ -28,6 +29,13 @@ public class ContainerInitializer  implements ServletContainerInitializer {
 	    
 	    ServletRegistration sr = servletContext.addServlet("jcaptcha", "com.lilai.framework.security.servlet.TDCaptchaServlet");
 	    sr.addMapping("/resources/jcaptcha.jpg");
+	    
+	    //如果在service层hibernate session，在view层或ut层session会置空，导致异常
+//	    FilterRegistration openSessionInViewFilter = 
+//	    		servletContext.addFilter("Spring OpenSessionInViewFilter", "org.springframework.orm.hibernate3.support.OpenSessionInViewFilter");
+//	    
+//	    openSessionInViewFilter.setInitParameter("sessionFactoryBean", "entityManagerFactory");
+//	    openSessionInViewFilter.addMappingForUrlPatterns(null, true, "/*");
 	    
 	}
 

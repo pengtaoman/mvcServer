@@ -1,6 +1,8 @@
 package com.lilai.framework.web.controller;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.Map;
 import javax.net.ssl.X509TrustManager;
 import javax.servlet.http.HttpServletRequest;
 //import javax.transaction.Transactional;
-
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lilai.framework.base.BaseController;
@@ -117,8 +120,38 @@ public class TDWebController extends BaseController {
 		System.out
 				.println("++++++++++++++++++@indexindexindexindexindex index+++++++??????????????++++++++++");
 		// request.setAttribute("bodyjsp", "/view/index.jsp");
-		return "framework/mainPageIndex";
+		return "redirect:views/framework/mainPageIndex.html";
+		//return "redirect:http://localhost:8099/mvcFront/app/views/framework/mainPageIndex.html";
 		// return "mainpage";
+	}
+	
+	
+	@RequestMapping("filesUpload")
+	@ResponseBody
+	public String filesUpload(@RequestParam("file") MultipartFile[] files, 
+			HttpServletRequest request, HttpServletResponse response) {
+		// 判断file数组不能为空并且长度大于0
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + request.getParameter("all"));
+		if (files != null && files.length > 0) {
+			// 循环获取file数组中得文件
+			for (int i = 0; i < files.length; i++) {
+				MultipartFile file = files[i];
+
+				if (!file.isEmpty()) {
+					try {
+						String filePath = "c:/upload/" + file.getOriginalFilename();
+						// 转存文件
+						file.transferTo(new File(filePath));
+
+					} catch (Exception e) {
+						e.printStackTrace();
+						return "NG";
+					}
+				}
+			}
+		}
+		// 重定向
+		return "OK";
 	}
 
 	@RequestMapping(value = "/tem")

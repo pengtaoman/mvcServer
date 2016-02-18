@@ -3,6 +3,7 @@ package com.lilai.framework.auth.menu.service;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,8 +33,18 @@ public class MenuService extends BaseService {
 		return id;
 	}
 	public List<OmMenuT> getMenu() {
-		
-		
-		return eDao.getMenu();
+		List<OmMenuT> lst = eDao.getMenu();
+		if(lst != null && !lst.isEmpty()) {
+			//如果在service层不使用Hibernate.getClass，在view层或ut层session会置空，导致异常
+			//规范的做法为使用 OpenSessionInViewFilter
+			//System.out.println(Hibernate.getClass(lst.get(0).getOmSystemT())) ;
+		} else { 
+			System.out.println("NO data");
+		}
+		return lst;
+	}
+	
+	public OmMenuT loadMenu(String id){
+		return eDao.loadMenu(id);
 	}
 }
