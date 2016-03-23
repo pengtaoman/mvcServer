@@ -1,0 +1,16 @@
+<div ng-controller="directiveTest">
+------------------------------------------
+
+    <crm-date-picker dateformat="yyyy-MM-dd" ng-model="myDate" label="什么日期111："></crm-date-picker>
+    <a href="javascript:void(0);" ng-click="getDate()">getDateeeee</a>
+    <crm-date-picker dateformat="yyyy-MM-dd" ng-model="myDateValue" label="什么日期222："></crm-date-picker>
+     <br>-------------
+    <crm-file-upload uploader="uploader" 
+        is-multiple=true
+        file-size-limit=1 
+        show-image-preview=false
+        show-bottom-buttons=true
+        form-data={{formdata}} 
+        remove-after-upload=false 
+        auto-upload-after-select=false></crm-file-upload>
+</div>

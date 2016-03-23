@@ -1,0 +1,21 @@
+<div class="row" ng-controller="demo2Controller">
+	<br><br><br><br><br><br>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Popover With Template</button>
+            
+            <br><br><br><br><br><br>
+            <input type="text" value="Click me!" uib-popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="focus" class="form-control">
+            
+        </div>
+    </div>
+    
+    <script type="text/ng-template" id="myPopoverTemplate.html">
+        <div>{{dynamicPopover.content}}</div>
+        <div class="form-group">
+          <label>Popup Title:</label>
+          <input type="text" ng-model="dynamicPopover.title" class="form-control">
+        </div>
+	</script>
+</div>
+
