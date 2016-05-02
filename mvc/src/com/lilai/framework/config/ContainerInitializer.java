@@ -10,8 +10,9 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 import org.apache.logging.log4j.web.Log4jServletContextListener;
+import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
 
-public class ContainerInitializer  implements ServletContainerInitializer {
+public class ContainerInitializer implements ServletContainerInitializer {
 
 	@Override
 	public void onStartup(Set<Class<?>> arg0, ServletContext servletContext)

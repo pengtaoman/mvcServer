@@ -77,10 +77,11 @@ public class TDSecurityFilter  extends GenericFilterBean {
 		WebApplicationContext wtc = WebApplicationContextUtils.getWebApplicationContext(request.getServletContext());
 		SessionRegistry ss = wtc.getBean(SessionRegistry.class);
  
+		
 		boolean isAjax = "XMLHttpRequest".equals(((HttpServletRequest)request).getHeader("x-requested-with"));
 		System.out.println("################## TDSecurityFilter isAjax ######### " + (isAjax));
 		Principal principal = ((HttpServletRequest)request).getUserPrincipal();
-		 
+		//System.out.println("################## SecurityContextHolder ######### " + SecurityContextHolder.get);
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		boolean isAuthenticated = (authentication == null?false:authentication.isAuthenticated());
 

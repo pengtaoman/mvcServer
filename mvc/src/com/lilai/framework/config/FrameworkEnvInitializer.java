@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
 
-import org.sitemesh.config.ConfigurableSiteMeshFilter;
+//import org.sitemesh.config.ConfigurableSiteMeshFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
@@ -37,7 +37,7 @@ public class FrameworkEnvInitializer extends
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		//return new Class[] { PersistenceConfig.class, AppConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
-		return new Class[] { PersistenceConfig.class, AppConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
+		return new Class[] { PersistenceConfig.class, AppConfig.class, RedisConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
 	}
 
 	@Override

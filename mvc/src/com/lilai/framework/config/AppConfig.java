@@ -20,6 +20,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ApplicationObjectSupport;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.connection.jredis.JredisPool;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.core.session.SessionRegistry;
 import org.springframework.security.core.session.SessionRegistryImpl;
@@ -37,6 +39,8 @@ import com.lilai.framework.base.BaseController;
 //import com.lilai.framework.web.config.TDRequestDataValueProcessor;
 import com.lilai.framework.web.config.WebConfig;
 import com.lilai.framework.web.controller.TDWebController;
+
+import redis.clients.jedis.JedisPoolConfig;
 
 @Configuration
 @PropertySource(value = { "classpath:resource/properties/system-config.properties" })
@@ -83,5 +87,7 @@ public class AppConfig  extends ApplicationObjectSupport{
 	    commonsMultipartResolver.setMaxUploadSize(50000000);
 	    return commonsMultipartResolver;
 	}
+	
+
 
 }

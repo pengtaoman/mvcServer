@@ -120,9 +120,9 @@ public class TDWebController extends BaseController {
 		System.out
 				.println("++++++++++++++++++@indexindexindexindexindex index+++++++??????????????++++++++++");
 		// request.setAttribute("bodyjsp", "/view/index.jsp");
-		return "redirect:views/framework/mainPageIndex.html";
+		//return "redirect:views/framework/mainPageIndex.html";
 		//return "redirect:http://localhost:8099/mvcFront/app/views/framework/mainPageIndex.html";
-		// return "mainpage";
+		return "tdframework/mainpage";
 	}
 	
 	

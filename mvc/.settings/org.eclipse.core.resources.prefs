@@ -1,10 +1,6 @@
 eclipse.preferences.version=1
-encoding//WebContent/resources/framework/directives/templates/date-picker-template.html=UTF-8
-encoding//WebContent/resources/framework/directives/templates/file-upload-template.html=UTF-8
-encoding//WebContent/views/framework/welcom.html=UTF-8
-encoding//WebContent/views/om/employee/dealEmployee.html=UTF-8
-encoding//WebContent/views/om/employee/directiveTest.html=UTF-8
+encoding//src/com/lilai/framework/config/AppConfig.java=UTF-8
 encoding//src/resource/properties/business-config.properties=UTF-8
 encoding//src/resource/properties/db-config.properties=UTF-8
 encoding//src/resource/properties/system-config.properties=UTF-8
-encoding/<project>=UTF-8
+encoding/src=utf8

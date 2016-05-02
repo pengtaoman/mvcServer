@@ -33,7 +33,10 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.FilterChainProxy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.ExceptionTranslationFilter;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
+import org.springframework.security.web.authentication.AnonymousAuthenticationFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
@@ -42,7 +45,12 @@ import org.springframework.security.web.authentication.session.SessionFixationPr
 import org.springframework.security.web.authentication.switchuser.SwitchUserFilter;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.security.web.context.SecurityContextPersistenceFilter;
+import org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter;
+import org.springframework.security.web.header.HeaderWriterFilter;
+import org.springframework.security.web.savedrequest.RequestCacheAwareFilter;
+import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
+import org.springframework.security.web.session.SessionManagementFilter;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.filter.DelegatingFilterProxy;
@@ -67,9 +75,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private TDUserDetailService tdUserDetailService;
 	
+	  WebAsyncManagerIntegrationFilter webAsyncManagerIntegrationFilter;
+	  SecurityContextPersistenceFilter securityContextPersistenceFilter;
+	  HeaderWriterFilter headerWriterFilter;
+	  LogoutFilter logoutFilter;
+	  TDCaptchaFilter tdCaptchaFilter;
+	  ConcurrentSessionFilter concurrentSessionFilter;
+	  TDSecurityFilter tdSecurityFilter;
+	  UsernamePasswordAuthenticationFilter usernamePasswordAuthenticationFilter;
+	  RequestCacheAwareFilter requestCacheAwareFilter;
+	  SecurityContextHolderAwareRequestFilter securityContextHolderAwareRequestFilter;
+	  AnonymousAuthenticationFilter anonymousAuthenticationFilter;
+	  SessionManagementFilter sessionManagementFilter;
+	  ExceptionTranslationFilter exceptionTranslationFilter;
+	  FilterSecurityInterceptor filterSecurityInterceptor;
+	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth)
 			throws Exception {
+		
+
 		logger.trace(">>>>>>>>>>>>>>>>>>>>  auth >>>>>>>>>>>>>>>" + auth.getClass().getName());
 		//logger.trace(">>>>>>>>>>>>>>>>>>>>  dataSource >>>>>>>>>>>>>>>" + dataSource);
 		//auth.get

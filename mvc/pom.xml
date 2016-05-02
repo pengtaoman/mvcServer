@@ -7,17 +7,18 @@
 	<packaging>war</packaging>
 
 	<repositories>
-		<repository>
+		<repository> 
 			<id>spring-milestone</id>
 			<name>Spring Milestone Repository</name>
 			<url>http://repo.springsource.org/milestone</url>
 		</repository>
-		
+
 		<repository>
-        	<id>sourceforge-releases</id>
-	        <name>Sourceforge Releases</name>
-	        <url>https://oss.sonatype.org/content/repositories/sourceforge-releases</url>
-	    </repository>
+			<id>sourceforge-releases</id>
+			<name>Sourceforge Releases</name>
+			<url>https://oss.sonatype.org/content/repositories/sourceforge-releases</url>
+		</repository>
+
 	</repositories>
 
 	<dependencies>
@@ -28,6 +29,12 @@
 		</dependency>
 		<!-- -->
 		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
+			<version>1.2.0.RC2</version>
+		</dependency>  
+
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>4.1.6.RELEASE</version>
@@ -36,7 +43,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.1.6.RELEASE</version>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>org.springframework.webflow</groupId>
 			<artifactId>spring-webflow</artifactId>
@@ -52,6 +59,11 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
 			<version>1.8.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>1.7.1.RELEASE</version>
 		</dependency>
 
 		<dependency>
@@ -70,7 +82,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-		</dependency> 
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -142,12 +154,12 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.3.8.Final</version>
 		</dependency>
-	    <dependency>
-	      <groupId>org.springframework.security</groupId>
-	      <artifactId>spring-security-core</artifactId>
-	      <version>4.0.0.RELEASE</version>
-	      <scope>compile</scope>
-	    </dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>4.0.0.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -163,7 +175,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<version>4.0.0.RELEASE</version>
 		</dependency>
-      
+
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
@@ -173,15 +185,15 @@
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
-			<version>1.6.10</version>  
+			<version>1.6.10</version>
 		</dependency>
-		
-		<dependency>  
-		    <groupId>org.aspectj</groupId>  
-		    <artifactId>aspectjweaver</artifactId>  
-		    <version>1.6.10</version>  
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.10</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
@@ -197,42 +209,33 @@
 			<artifactId>tiles-servlet</artifactId>
 			<version>3.0.5</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-jsp</artifactId>
-			<version>3.0.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.sitemesh</groupId>
-			<artifactId>sitemesh</artifactId>
-			<version>3.0.1</version>
-		</dependency>
-		
+
+
 		<dependency>
 			<groupId>com.lowagie</groupId>
 			<artifactId>itext</artifactId>
 			<version>4.2.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>3.12</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.bull.javamelody</groupId>
 			<artifactId>javamelody-core</artifactId>
 			<version>1.57.0</version>
 		</dependency>
-		
-	    <dependency> 
-	        <groupId>com.octo.captcha</groupId>
-	        <artifactId>jcaptcha</artifactId>
-	        <version>2.0-alpha-1</version>
-	    </dependency>
-	    
-	    <dependency>
+
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha</artifactId>
+			<version>2.0-alpha-1</version>
+		</dependency>
+
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
@@ -242,31 +245,13 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-	    <!-- 
+		<!-- -->
 		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.3.0</version>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.8.1</version>
 		</dependency>
-	    
-	    	    <dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.5.1</version>
-		</dependency>
-	    <dependency> 
-	        <groupId>com.octo.captcha</groupId>
-	        <artifactId>jcaptcha-integration-simple-servlet</artifactId>
-	        <version>2.0-alpha-1</version>
-	        <exclusions>
-				<exclusion>
-		            <groupId>javax.servlet</groupId>
-		            <artifactId>servlet-api</artifactId>
-		            <version>2.5</version>
-				</exclusion>
-			</exclusions>
-	    </dependency>
-	     -->
+
 	</dependencies>
 
 
@@ -282,7 +267,7 @@
 					<target>1.7</target>
 					<encoding>utf8</encoding>
 				</configuration>
-			</plugin> 
+			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
