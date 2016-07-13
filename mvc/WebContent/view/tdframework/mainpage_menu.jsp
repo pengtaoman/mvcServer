@@ -1,7 +1,0 @@
-
-
-
-<script>
-
-//$('.collapse').collapse();
-</script>
