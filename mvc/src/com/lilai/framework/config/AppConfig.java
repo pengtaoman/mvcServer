@@ -38,11 +38,10 @@ import org.springframework.web.servlet.support.RequestDataValueProcessor;
 import com.lilai.framework.base.BaseController;
 //import com.lilai.framework.web.config.TDRequestDataValueProcessor;
 import com.lilai.framework.web.config.WebConfig;
-import com.lilai.framework.web.controller.TDWebController;
 
 import redis.clients.jedis.JedisPoolConfig;
 
-@Configuration
+//@Configuration
 @PropertySource(value = { "classpath:resource/properties/system-config.properties" })
 @ComponentScan(basePackages = {"${base.framework.package}"}, 
         excludeFilters = {@Filter(type = FilterType.ANNOTATION, value=Controller.class ),

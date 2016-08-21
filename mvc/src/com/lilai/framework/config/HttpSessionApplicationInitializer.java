@@ -1,6 +1,6 @@
 package com.lilai.framework.config;
 
-import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
+//import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
 
 
 /**
@@ -10,6 +10,6 @@ import org.springframework.session.web.context.AbstractHttpSessionApplicationIni
  * 通过WebApplicationContext查找名为springSessionRepositoryFilter的Filter类对request、response
  * 和session进行包装。
  * */
-public class HttpSessionApplicationInitializer extends AbstractHttpSessionApplicationInitializer {
+//public class HttpSessionApplicationInitializer extends AbstractHttpSessionApplicationInitializer {
 	
-}
+//}

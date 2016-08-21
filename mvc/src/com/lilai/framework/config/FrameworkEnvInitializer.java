@@ -25,7 +25,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import com.lilai.framework.demo.UserService;
+//import com.lilai.framework.demo.UserService;
 import com.lilai.framework.web.config.WebConfig;
 
 
@@ -37,7 +37,7 @@ public class FrameworkEnvInitializer extends
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		//return new Class[] { PersistenceConfig.class, AppConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
-		return new Class[] { PersistenceConfig.class, AppConfig.class, RedisConfig.class, JcaptchaConfig.class ,SecurityConfig.class,  BusinessConfig.class};
+		return new Class[] {AppConfig.class, BusinessConfig.class};
 	}
 
 	@Override
@@ -72,11 +72,12 @@ public class FrameworkEnvInitializer extends
 	    //如果在service层hibernate session，在view层或ut层session会置空，导致异常
 //		OpenSessionInViewFilter openSessionInViewFilter = new OpenSessionInViewFilter();
 //		openSessionInViewFilter.setSessionFactoryBeanName("entityManagerFactory");
-		OpenEntityManagerInViewFilter openEntityManagerInViewFilter = new OpenEntityManagerInViewFilter();
-		openEntityManagerInViewFilter.setEntityManagerFactoryBeanName("entityManagerFactory");
+		//OpenEntityManagerInViewFilter openEntityManagerInViewFilter = new OpenEntityManagerInViewFilter();
+		//openEntityManagerInViewFilter.setEntityManagerFactoryBeanName("entityManagerFactory");
         return new Filter[]{
-        		new DelegatingFilterProxy("springSecurityFilterChain"),
-        		openEntityManagerInViewFilter
+        		//not secutiry
+        		//new DelegatingFilterProxy("springSecurityFilterChain"),
+        	//	openEntityManagerInViewFilter
         	//	new ConfigurableSiteMeshFilter()
               //,new OpenEntityManagerInViewFilter()
               };

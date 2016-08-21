@@ -37,7 +37,7 @@ import org.springframework.transaction.jta.JtaTransactionManager;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
-@Configuration
+//@Configuration
 @EnableTransactionManagement  //(proxyTargetClass=false)
 @PropertySource(value = { "classpath:resource/properties/db-config.properties" })
 @EnableJpaRepositories
@@ -146,7 +146,7 @@ public class PersistenceConfig {
 		dataSource.setUsername(env.getProperty("jdbc.username"));
 		dataSource.setPassword(env.getProperty("jdbc.password"));
 		*/
-
+        System.out.println("##########  DATABASE POOL #########");
 		/**C3P0����*/
 		ComboPooledDataSource dataSource = new ComboPooledDataSource();
 		try {

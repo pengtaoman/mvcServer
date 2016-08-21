@@ -27,8 +27,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lilai.framework.base.BaseController;
-import com.lilai.framework.demo.UserService;
-import com.lilai.framework.entity.User;
+
 import com.lilai.framework.web.pojo.PojoOne;
 
 import org.springframework.http.MediaType;

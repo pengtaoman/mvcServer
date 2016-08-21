@@ -1,4 +1,3 @@
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE html>
 <html ng-app="td.login">
 
@@ -34,6 +33,7 @@
 </head>
 
 <body>
+<!-- 
 	<div class="navbar-wrapper">
 		<div class="container-fluid">
            <tiles:insertAttribute name="header" />
@@ -41,6 +41,9 @@
 		</div>
 
         <tiles:insertAttribute name="footer" />
+         -->
+         
+         LLOOGIN
 </body>
 
 </html>

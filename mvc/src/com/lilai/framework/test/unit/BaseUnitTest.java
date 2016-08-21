@@ -22,7 +22,7 @@ import com.lilai.framework.config.AppConfig;
 import com.lilai.framework.config.BusinessConfig;
 import com.lilai.framework.config.PersistenceConfig;
 import com.lilai.framework.config.RedisConfig;
-import com.lilai.framework.config.SecurityConfig;
+//import com.lilai.framework.config.SecurityConfig;
 import com.lilai.framework.web.config.WebConfig;
 
 import org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener;
@@ -34,14 +34,16 @@ import org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfig
 @RunWith(SpringJUnit4ClassRunner.class)  
 @WebAppConfiguration(value = "/")  
 @ContextHierarchy({  
-      @ContextConfiguration(name = "parent", classes = { PersistenceConfig.class, AppConfig.class, RedisConfig.class, SecurityConfig.class, BusinessConfig.class}),  
+      //@ContextConfiguration(name = "parent", classes = { PersistenceConfig.class, AppConfig.class, RedisConfig.class, SecurityConfig.class, BusinessConfig.class}), 
+	  @ContextConfiguration(name = "parent", classes = { AppConfig.class, BusinessConfig.class}),  
       @ContextConfiguration(name = "child", classes = WebConfig.class)  
 }) 
 @TestExecutionListeners(listeners={ServletTestExecutionListener.class,
 		DependencyInjectionTestExecutionListener.class,
 		DirtiesContextTestExecutionListener.class,
-		TransactionalTestExecutionListener.class,
-		WithSecurityContextTestExecutionListener.class})
+		TransactionalTestExecutionListener.class
+		//,WithSecurityContextTestExecutionListener.class
+		})
 public class BaseUnitTest {
 	@Autowired
 	protected WebApplicationContext wac;

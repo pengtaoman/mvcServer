@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 
 import com.lilai.framework.web.config.WebConfig;
 
-@Configuration
+//@Configuration
 @PropertySource(value = {"classpath:resource/properties/business-config.properties" })
 @ComponentScan(basePackages = {"${business.base.packages}"}, 
 		excludeFilters = {@Filter(type = FilterType.ANNOTATION, value=Controller.class ) })
