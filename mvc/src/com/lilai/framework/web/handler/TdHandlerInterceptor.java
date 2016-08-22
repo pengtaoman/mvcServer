@@ -3,18 +3,21 @@ package com.lilai.framework.web.handler;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
+import com.lilai.crm.es.controller.EsStdAddressController;
 
 public class TdHandlerInterceptor implements HandlerInterceptor{
-
+	private Logger logger = LogManager.getLogger(TdHandlerInterceptor.class);
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@  preHandl::" + new Gson().toJson(request.getParameterNames()));
+		logger.info("preHandl request.getParameterNames ::" + new Gson().toJson(request.getParameterNames()));
 		return true;
 	}
 
@@ -32,7 +35,7 @@ public class TdHandlerInterceptor implements HandlerInterceptor{
 			HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@  afterCompletion afterCompletion afterCompletion afterCompletion afterCompletion afterCompletion");
+		logger.info("afterCompletion");
 	}
 
 }

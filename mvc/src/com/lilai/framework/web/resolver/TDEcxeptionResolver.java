@@ -17,9 +17,9 @@ public class TDEcxeptionResolver implements HandlerExceptionResolver{
 	public ModelAndView resolveException(HttpServletRequest request,
 			HttpServletResponse response, Object handler, Exception ex) {
 		
-		System.out.println("????????????????????????  resolveException ?????? " + ex.getMessage());
 		logger.error(ex.getMessage());
-		ex.printStackTrace();
+		//ex.printStackTrace();
+		request.setAttribute("ErrorMessage", ex.getMessage());
 		ModelAndView mav=new ModelAndView("/error/500");
         return mav;
 	}

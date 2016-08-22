@@ -25,11 +25,23 @@ public class ContainerInitializer implements ServletContainerInitializer {
 	    servletContext.addListener(new Log4jServletContextListener());
 	    
 	    servletContext.addListener(new net.bull.javamelody.SessionListener());
-
-	    FilterRegistration fr = servletContext.addFilter("jmelodymonitoring", "net.bull.javamelody.MonitoringFilter");
 	    
-	    ServletRegistration sr = servletContext.addServlet("jcaptcha", "com.lilai.framework.security.servlet.TDCaptchaServlet");
-	    sr.addMapping("/resources/jcaptcha.jpg");
+	    //for CORS
+	    FilterRegistration corsFilter = 
+	    		servletContext.addFilter("corsFilter", "com.thetransactioncompany.cors.CORSFilter");
+	    
+	    corsFilter.setInitParameter("cors.allowOrigin", "*");
+	    corsFilter.setInitParameter("cors.supportedMethods", "GET, POST, HEAD, PUT, DELETE");
+	    corsFilter.setInitParameter("cors.supportedHeaders", "Accept, Origin, X-Requested-With, Content-Type, Last-Modified");
+	    corsFilter.setInitParameter("cors.exposedHeaders", "Set-Cookie");
+	    corsFilter.setInitParameter("cors.supportsCredentials", "true");
+	    
+	    corsFilter.addMappingForUrlPatterns(null, true, "/*");
+	    
+	    //FilterRegistration fr = servletContext.addFilter("jmelodymonitoring", "net.bull.javamelody.MonitoringFilter");
+	    
+	    //ServletRegistration sr = servletContext.addServlet("jcaptcha", "com.lilai.framework.security.servlet.TDCaptchaServlet");
+	    //sr.addMapping("/resources/jcaptcha.jpg");
 	    
 	    //如果在service层hibernate session，在view层或ut层session会置空，导致异常
 //	    FilterRegistration openSessionInViewFilter = 
@@ -37,6 +49,8 @@ public class ContainerInitializer implements ServletContainerInitializer {
 //	    
 //	    openSessionInViewFilter.setInitParameter("sessionFactoryBean", "entityManagerFactory");
 //	    openSessionInViewFilter.addMappingForUrlPatterns(null, true, "/*");
+	    
+
 	    
 	}
 
